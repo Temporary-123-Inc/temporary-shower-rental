@@ -30,12 +30,12 @@ const disclosedTitleReferences: Record<
   "temporary-shower-trailers": {
     title: "20 ft Shower Trailer",
     caption:
-      "Approved 20 ft five-stall shower-trailer photography with exterior handwashing sinks. Confirm the available unit's floor plan with your quote.",
+      "Approved 20 ft five-stall shower-trailer photography with exterior handwashing sinks. These images do not depict a 22 ft ten-stall trailer; confirm the available unit's floor plan with your quote.",
   },
   "shower-trailer": {
     title: "20 ft Shower Trailer",
     caption:
-      "Approved 20 ft five-stall shower-trailer photography with exterior handwashing sinks. Confirm the available unit's floor plan with your quote.",
+      "Approved 20 ft five-stall shower-trailer photography with exterior handwashing sinks. These images do not depict a 22 ft ten-stall trailer; confirm the available unit's floor plan with your quote.",
   },
 };
 const reviewed: Record<

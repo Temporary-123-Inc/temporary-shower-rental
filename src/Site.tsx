@@ -449,33 +449,40 @@ export function Footer({ showClosing = true }: { showClosing?: boolean }) {
           </div>
         </section>
       )}
-      <footer className="wrap footer">
-        <div>
-          <a className="wordmark" href="/">
-            Temporary Shower Rental <span>123</span>
+      <footer className="site-footer">
+        <div className="wrap footer">
+          <div className="footer-brand-block">
+            <a className="footer-brand" href="/" aria-label={`${site.brand} home`}>
+              <img
+                src="/images/shower-rental-logo.webp"
+                alt={site.brand}
+                width="424"
+                height="280"
+              />
+            </a>
+            <p>Clean, dependable hygiene facilities for the work ahead.</p>
+            <small>© {new Date().getFullYear()} {site.brand}</small>
+          </div>
+          <nav className="footer-nav" aria-label="Explore">
+            <strong>Explore</strong>
+            <a href="/equipment-rental/">Rental Inventory</a>
+            <a href="/equipment-rental/shower-trailer/">Shower Trailers</a>
+            <a href="/equipment-rental/restroom-trailers/">Restroom Trailers</a>
+            <a href="/services/shower-restroom-combination-trailers/">Combination Units</a>
+            <a href="/industries/">Industries Served</a>
+            <a href="/service-areas/">Service Areas</a>
+            <a href="/government/">Government Services</a>
+          </nav>
+          <nav className="footer-nav" aria-label="Get in touch">
+            <strong>Get in touch</strong>
+            <a href="/contact-us/">Contact Us</a>
+            <a href="/planning/">Project Planning</a>
+            <a href="/privacy/">Privacy</a>
+          </nav>
+          <a className="back-top" href="#top">
+            Back to top ↑
           </a>
-          <p>Clean, dependable hygiene facilities for the work ahead.</p>
-          <small>© {new Date().getFullYear()} {site.brand}</small>
         </div>
-        <div>
-          <strong>Explore</strong>
-          <a href="/equipment-rental/">Rental Inventory</a>
-          <a href="/equipment-rental/shower-trailer/">Shower Trailers</a>
-          <a href="/equipment-rental/restroom-trailers/">Restroom Trailers</a>
-          <a href="/services/shower-restroom-combination-trailers/">Combination Units</a>
-          <a href="/industries/">Industries Served</a>
-          <a href="/service-areas/">Service Areas</a>
-          <a href="/government/">Government Services</a>
-        </div>
-        <div>
-          <strong>Get in touch</strong>
-          <a href="/contact-us/">Contact Us</a>
-          <a href="/planning/">Project Planning</a>
-          <a href="/privacy/">Privacy</a>
-        </div>
-        <a className="back-top" href="#top">
-          Back to top ↑
-        </a>
       </footer>
     </>
   );

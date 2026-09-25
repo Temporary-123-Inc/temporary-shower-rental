@@ -1,5 +1,36 @@
 # Temporary123 Test Results
 
+## Production release — 2026-09-24 (LIVE PASS)
+
+- Vercel deployment `dpl_Cj4hAp1J6q5hkjhdCjzHTjrdmT4n`: **READY**, production target, existing project `temporary-shower-rental-najm`.
+- Live HTTP checks returned **200** for the homepage, 13 ft/3-stall, 3-stall + 1 ADA, and 8-stall + 1 ADA combination-trailer routes.
+- `vercel logs --level error --since 1h`: **No logs found**.
+- GitHub: no push performed.
+
+## Combination-trailer archive image audit — 2026-09-24 (LOCAL PASS)
+
+- Inspected `Equipments-20260924T050725Z-1-001.zip` and copied only assets from the matching 3-stall + 1 ADA and 8-stall + 1 ADA folders into the local equipment media tree.
+- `npm run typecheck`: passed.
+- `npm run build`: passed; generated **754 pages plus 404**.
+- Local browser verification passed for the affected child routes: 3-stall + 1 ADA now uses 4 archive-based images; 8-stall + 1 ADA now uses 6 archive-based images. The existing 13 ft/3-stall and 22 ft/6-stall galleries were checked and left unchanged because they already matched their named folders.
+- Captions and alt text identify the matching supplied folder and avoid claiming unverified dimensions or accessibility details.
+- No GitHub push or production deployment.
+
+## Production release — 2026-09-24 (LIVE PASS)
+
+- Local `npm run build`: passed; generated **754 pages plus 404**.
+- Vercel deployment `dpl_8zEEaeV2sMEkTaw4zHcnyXDZX3rj`: **READY**, production target.
+- Live HTTP checks: homepage, `/contact-us/`, and `/base-camps-for-rent/` each returned **200**.
+- Post-deploy error scan: `vercel logs --level error --since 1h` returned **No logs found**.
+- GitHub: no push performed in this release.
+
+## Contact form field-journal redesign — 2026-09-24 (LOCAL PASS)
+
+- `npm run typecheck`: passed.
+- `npm run build`: passed; generated **754 pages plus 404**.
+- Local browser: opened the Contact Us drawer at `http://localhost:4318/`; verified the redesigned project-desk header, request actions, project-brief intro, form controls, consent control, and disabled-submit state without changing form behavior.
+- Scope boundary: CSS presentation only; no live inquiry, push, or production deployment.
+
 ## Whole-site QA continuation — 2026-09-19 (LIVE PASS; SECURITY EVIDENCE PARTIAL)
 
 - Isolation: all source changes and builds used `C:\Users\Charles\.codex\worktrees\whole-site-qa-origin\Temporary 123`; the dirty primary checkout and its unfinished 1,000-city draft were not changed or published.
@@ -645,3 +676,63 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Vercel build output contained both canonical and physical JSON functions, including `api/contact` and `api/contact.json`, confirming the repair is part of the authoritative source deployment rather than a temporary promotion.
 - Final live checks on `https://temporary123.com`: `/api/public-config.json` returned HTTP 200 with all five required public values present; `/contact-us/` and `/rental-calculator/` returned HTTP 200; `/api/contact.json` returned 405 for HEAD and 403 for an unauthenticated POST, both with no redirect. The 403 is expected App Check enforcement and proves the POST reached the function.
 - Delivery boundary: the two earlier fictional QA submissions on the same code path returned saved-success and HTTP 201, and their server executions recorded no `delivery_pending`, demonstrating Resend provider acceptance. Recipient-mailbox receipt was not independently inspected.
+
+## Updated-skill content QA — 2026-09-24 (local only)
+
+- Changed `src/content.ts` so `/service-areas/` title begins with its rendered H1 (`USA Temporary Facilities Rental Service Areas`).
+- Expanded the 12 ft restroom and legacy shower lead descriptions in `content/service-details.json` so generated meta descriptions are substantive.
+- Clarified the legacy shower gallery and catalog captions in `src/serviceHeroImages.ts` and `src/catalogImageCoverage.ts`: approved 20 ft five-stall photos do not depict a 22 ft ten-stall trailer.
+- `npm run typecheck`: PASS.
+- `npm run build`: PASS; generated 754 pages plus 404.
+- `scripts/check-location-headlines.mjs`: PASS; 548 location pages, zero issues.
+- Generated-output checks: service-area title/H1 alignment PASS; legacy shower description length 116; 12 ft restroom description length 119; zero images missing an `alt` attribute.
+- `scripts/check-preview.mjs`: existing warnings remain for redirect-only mobile-kitchen aliases linked from the refrigeration page; no new content/image error was introduced. No push or deployment.
+
+## Full-site readiness QA — 2026-09-24 (local only)
+
+- Crawl scope: 754 generated non-404 pages.
+- H1 count: 754/754 exactly one.
+- Title and meta description presence: 754/754.
+- Substantive main content: 754/754; no thin pages.
+- Placeholder/error text: 0 findings.
+- Broken local images: 0; missing `alt` attributes: 0.
+- `npm run check:release`: PASS after aligning the canonical origin with `temporary-shower-rental.com` and setting the scoped batch size to 25.
+- Preview indexing remains intentionally disabled (`mode: preview`, `domainRoutingReady: false`); no production release, push or indexing request was performed.
+
+## Production release verification — 2026-09-24
+
+- Production flags enabled in `site.json`; canonical policy now uses `https://temporary-shower-rental.com`.
+- `npm run check:release`: PASS.
+- Production build: PASS; Vercel generated 754 pages plus 404.
+- Deployment: READY, `dpl_Ga9vNPxgTfoqV6b959fQEyZzMgwh`, existing project `temporary-shower-rental-najm`.
+- Live checks: homepage HTTP 200 with `index,follow`; `/service-areas/` and the legacy shower detail HTTP 200 with controlled `noindex,follow`; robots.txt and sitemap.xml HTTP 200.
+- Live sitemap on the Vercel deployment contains the approved 25-page batch and points to `https://temporary-shower-rental.com/sitemap.xml`.
+- Vercel error-log scan for the last hour returned no logs.
+- `vercel domains ls` reports no attached domains for the project; `temporary-shower-rental.com` still serves the previous site and needs an owner-authorized domain cutover.
+- No GitHub push or indexing request was performed.
+
+## Availability modal visual redesign — 2026-09-24 (local only)
+
+- Scope limited to `src/contact-refresh.css`; no component, form, validation, route or submission logic changed.
+- Visual inspection confirmed the redesigned project-desk header, action row, form surfaces and mobile-responsive layout.
+- `npm run typecheck`: PASS.
+- `npm run build`: PASS; generated 754 production pages plus 404.
+- No deployment or GitHub push for this modal-only change.
+## 2026-09-24 — Super 9 inventory expansion (local)
+
+- Scope: `src/serviceMenu.ts` plus coordination records only.
+- Result: Remote Man Camp / Workforce Housing and Remote Basecamp appear in the primary inventory menu; existing shower inventory remains visible; Handwashing remains a supporting route.
+- Evidence: `npm run build` passed and generated 754 pages plus 404; all four remote landing paths generated; `npx vitest run tests/routes.test.ts` passed 4/4.
+- Release: No GitHub push or Vercel deployment.
+## 2026-09-24 — Emergency support popup layout refinement (local)
+
+- Scope: `src/contact-refresh.css` popup presentation only.
+- Result: Preserved the current teal/amber treatment and interaction hooks while improving heading measure, close-button placement, action spacing, disclaimer separation and mobile sizing.
+- Evidence: Typecheck and `npm run build` passed (754 pages plus 404); local browser inspection showed the expanded popup with visible title, copy, call action, urgent-availability action and confirmation note at the narrow viewport.
+- Release: No GitHub push or Vercel deployment.
+## 2026-09-24 — Emergency support popup unique layout pass (local)
+
+- Scope: `src/contact-refresh.css` emergency popup presentation only.
+- Result: Introduced a status-led header row, custom kicker marker, balanced desktop two-action layout, responsive mobile stacking and separated confirmation note while preserving all copy, palette and interaction hooks.
+- Evidence: Typecheck and `npm run build` passed (754 pages plus 404); local browser inspection passed at desktop and narrow viewport with visible title, copy, close control, phone action, urgent-availability action and confirmation note.
+- Release: No GitHub push or Vercel deployment.

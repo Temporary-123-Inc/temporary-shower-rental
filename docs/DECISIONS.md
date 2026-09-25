@@ -1,5 +1,13 @@
 # Temporary123 Decision Log
 
+## 2026-09-24 — Match combination galleries to named archive folders
+
+Use images from the exact client-supplied equipment folder when a named combination-trailer configuration exists. Do not let a generic family fallback (for example, a generic 22 ft or generic ADA reference) represent a different child route. Keep captions and alt text factual, and defer unverified dimensions or accessibility specifications to quote confirmation.
+
+## 2026-09-24 — Keep the contact form visually distinct without changing its contract
+
+Use a project-brief / field-journal composition for the Contact Us drawer so it does not mirror the Temp123 reference layout. Keep the existing form markup, field names, validation, consent and submission contract unchanged; constrain this refinement to `src/contact-refresh.css`, with a responsive one-column fallback below 680px.
+
 ## 2026-09-19 — Require crawl links only for indexable pages
 
 Treat a page as an SEO orphan only when it is approved for indexing and has no incoming internal link. Intentionally `noindex` utilities such as `/seo-dashboard/` and staged content may remain outside the public crawl graph. This does not suppress missing-link findings for any `index,follow` route.
@@ -366,3 +374,8 @@ The supplied restroom-only interior set may appear on the registered 12 ft, 14 f
 - Decision: Use physical `.json` Vercel functions for browser POST and scheduled API traffic. Do not depend on extensionless API routes while the site-wide trailing-slash rule is enabled.
 - Decision: Accept `FIREBASE_PRIVATE_KEY_BASE64` only when it decodes to a complete PEM, including both boundary lines. A missing closing boundary is invalid and must fail with an actionable server configuration error.
 - Reason: This removes the production dependency on unavailable `VITE_*` build variables, prevents POST redirects, and avoids exposing private credentials in the browser bundle.
+## 2026-09-24 — Preserve Super 9 families while retaining supporting inventory
+
+- Decision: Add Remote Man Camp / Workforce Housing and Remote Basecamp as distinct inventory families using existing, already-rendered route slugs. Keep standalone Shower visible because it is a target-specific core offering even though it is outside the canonical Super 9 taxonomy. Keep Handwashing as supporting inventory outside the primary Super 9 menu.
+- Reason: The updated skill requires the two remote-facility families to remain distinct and forbids silently replacing a target-specific offering. No new route, image claim, or production/indexing change was introduced.
+- Verification: Typecheck, production build (754 pages plus 404), generated route checks for all four remote landing paths, and `tests/routes.test.ts` (4/4) passed locally.

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-22T18:08:27.351Z",
-  "mode": "preview",
+  "generatedAt": "2026-09-24T13:33:24.772Z",
+  "mode": "production",
   "indexingScope": "homepage-and-service-areas",
-  "indexingBatchSize": 100,
+  "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
   "eligibleIndexingRoutes": 303,
-  "activeIndexingRoutes": 0,
-  "domainRoutingReady": false,
+  "activeIndexingRoutes": 25,
+  "domainRoutingReady": true,
   "pages": [
     {
       "path": "/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/services/",
@@ -416,50 +416,6 @@
       "indexable": false
     },
     {
-      "path": "/inventory/mobile-kitchen-models/24ft-mobile-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/mobile-kitchen-models/26ft-bulk-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/mobile-kitchen-models/28ft-mobile-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/mobile-kitchen-models/26ft-mobile-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/mobile-kitchen-models/40ft-mobile-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/mobile-kitchen-models/40ft-combo-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/mobile-kitchen-models/40ft-bulk-combo-kitchen/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/dishwashing-models/22ft-dishwashing/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/dishwashing-models/40ft-dishwasher/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/dishwashing-models/26ft-dishwashing/",
-      "indexable": false
-    },
-    {
-      "path": "/inventory/dishwashing-models/38ft-dishwashing/",
-      "indexable": false
-    },
-    {
       "path": "/refrigeration/12ft-trailer-medium-high-temperature/",
       "indexable": false
     },
@@ -540,80 +496,124 @@
       "indexable": false
     },
     {
-      "path": "/service-areas/alabama/north-alabama/",
+      "path": "/services/mobile-kitchen-trailers/24ft/",
       "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/26ft-bulk/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/28ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/38ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/40ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/40ft-combination/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/22ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/24ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/26ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/38ft-conveyor/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alabama/north-alabama/",
+      "indexable": true
     },
     {
       "path": "/service-areas/alabama/central-alabama/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alabama/wiregrass/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alabama/gulf-coast/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alaska/southcentral/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alaska/interior/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alaska/southeast/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alaska/southwest/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alaska/arctic/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arizona/northern-arizona/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arizona/phoenix-area/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arizona/southern-arizona/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arkansas/ozarks/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arkansas/arkansas-river-valley/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arkansas/delta/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arkansas/southwest-arkansas/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/california/north-coast/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/california/bay-area/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/california/central-valley/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/california/los-angeles-basin/",
@@ -2529,23 +2529,23 @@
     },
     {
       "path": "/service-areas/alabama/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/alaska/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arizona/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/arkansas/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/california/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/service-areas/colorado/",

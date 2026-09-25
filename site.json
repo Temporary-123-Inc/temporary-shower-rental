@@ -3,11 +3,11 @@
   "origin": "https://temporary-shower-rental.com",
   "phoneDisplay": "+1 (888) 385-5513",
   "phoneE164": "+18883855513",
-  "mode": "preview",
+  "mode": "production",
   "indexingScope": "homepage-and-service-areas",
-  "indexingBatchSize": 100,
+  "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
   "indexingStartDate": "2026-09-22",
   "inquiriesEnabled": false,
-  "domainRoutingReady": false
+  "domainRoutingReady": true
 }

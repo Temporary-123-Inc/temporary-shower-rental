@@ -1,4 +1,4 @@
-export const publicOrigin = "https://temporary123.com";
+export const publicOrigin = "https://temporary-shower-rental.com";
 
 export type IndexingScope =
   "full" | "homepage-and-service-areas" | "locations-and-priority-services";

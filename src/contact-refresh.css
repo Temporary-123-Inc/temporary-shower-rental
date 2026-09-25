@@ -677,9 +677,10 @@
 .emergency-dispatch-panel::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  border-radius: var(--radius-large) 0 0 var(--radius-large);
+  inset: 0 0 auto;
+  width: auto;
+  height: 4px;
+  border-radius: var(--radius-large) var(--radius-large) 0 0;
   background: var(--dispatch-amber);
 }
 
@@ -1050,6 +1051,451 @@ body.contact-drawer-open .emergency-dispatch {
   overflow-wrap: anywhere;
 }
 
+/* Availability desk — scoped visual redesign. The form markup, fields and
+   interaction hooks stay unchanged; this layer only changes the presentation. */
+.contact-drawer {
+  inset: 12px 12px 12px auto;
+  width: min(520px, calc(100% - 24px));
+  height: calc(100dvh - 24px);
+  color: #102f3a;
+  background: #f4f8f7;
+  border: 1px solid #b9c9ce;
+  border-radius: 22px;
+  box-shadow: -18px 20px 56px rgb(16 47 58 / 28%);
+}
+
+.contact-drawer::backdrop {
+  background: rgb(16 47 58 / 66%);
+  backdrop-filter: blur(2px);
+}
+
+.contact-drawer-shell {
+  overflow: hidden;
+  border-radius: inherit;
+  background: #f4f8f7;
+}
+
+.contact-drawer-call {
+  min-height: 76px;
+  padding: 16px 18px 14px 24px;
+  color: #fff;
+  background: #102f3a;
+  border-bottom: 4px solid #e36a3d;
+}
+
+.contact-drawer-call > span {
+  max-width: 18rem;
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  letter-spacing: 0.13em;
+}
+
+.contact-drawer-call button {
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 50%;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.contact-drawer-header {
+  padding: 28px 28px 24px;
+  background: #fff;
+  border-bottom: 1px solid #d2dfe1;
+}
+
+.contact-drawer-header .contact-drawer-kicker {
+  margin-bottom: 8px;
+  color: #087f8c;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.contact-drawer-header h2 {
+  margin: 0 0 10px;
+  color: #102f3a;
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
+  letter-spacing: -0.045em;
+}
+
+.contact-drawer-header p {
+  max-width: 38ch;
+  color: #4c636b;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.contact-drawer-actions {
+  grid-template-columns: 1.15fr 1fr;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.contact-drawer-actions :is(button, a) {
+  min-height: 52px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.contact-drawer-actions button {
+  color: #fff;
+  background: #087f8c;
+  border-color: #087f8c;
+  box-shadow: 0 8px 18px rgb(8 127 140 / 18%);
+}
+
+.contact-drawer-actions a {
+  color: #102f3a;
+  background: #f4f8f7;
+  border-color: #b9c9ce;
+}
+
+.contact-drawer-actions :is(button, a):is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgb(16 47 58 / 14%);
+}
+
+.contact-drawer-actions button:is(:hover, :focus-visible) {
+  background: #096c77;
+}
+
+.contact-drawer-actions a span {
+  color: #e36a3d;
+}
+
+.contact-drawer-scroll {
+  padding: 22px 28px 32px;
+  background: #f4f8f7;
+}
+
+.contact-drawer .form-intro {
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  color: #23434c;
+  background: #e5f0ef;
+  border: 1px solid #c4dedd;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  box-shadow: 0 8px 18px rgb(16 47 58 / 6%);
+}
+
+.contact-drawer .quote-form label {
+  margin-bottom: 18px;
+  color: #102f3a;
+  font-size: 0.9rem;
+}
+
+.contact-drawer .field-label small {
+  color: #6c8188;
+}
+
+.contact-drawer .quote-form input:not([type="checkbox"]),
+.contact-drawer .quote-form select,
+.contact-drawer .quote-form textarea {
+  min-height: 54px;
+  padding: 13px 15px;
+  color: #102f3a;
+  background: #fff;
+  border: 1px solid #c3d3d6;
+  border-radius: 12px;
+}
+
+.contact-drawer .quote-form input:focus,
+.contact-drawer .quote-form select:focus,
+.contact-drawer .quote-form textarea:focus {
+  outline: 3px solid rgb(8 127 140 / 20%);
+  outline-offset: 1px;
+  border-color: #087f8c;
+}
+
+@media (max-width: 600px) {
+  .contact-drawer {
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .contact-drawer-shell {
+    border-radius: 0;
+  }
+
+  .contact-drawer-header {
+    padding: 24px 22px 20px;
+  }
+
+  .contact-drawer-scroll {
+    padding: 18px 22px 28px;
+  }
+
+  .contact-drawer-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project brief form — a distinct field-journal composition for the shower
+   brand. Markup, validation and submission behavior remain untouched. */
+.contact-drawer {
+  width: min(700px, calc(100% - 18px));
+  color: #102f3a;
+  background: linear-gradient(#e36a3d 0 4px, #edf3f4 4px);
+  box-shadow: -22px 0 56px rgb(16 47 58 / 30%);
+}
+
+.contact-drawer-shell {
+  background: #edf3f4;
+}
+
+.contact-drawer-call {
+  position: relative;
+  min-height: 70px;
+  padding: 16px 28px;
+  background: #102f3a;
+  border-bottom: 1px solid rgb(255 255 255 / 16%);
+}
+
+.contact-drawer-call::after {
+  content: "01  /  CONTACT DESK";
+  position: absolute;
+  left: 28px;
+  bottom: 8px;
+  color: #7dd9e5;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.contact-drawer-call > span {
+  max-width: 22rem;
+  padding-bottom: 11px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+}
+
+.contact-drawer-call button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgb(125 217 229 / 48%);
+  border-radius: 10px;
+  background: rgb(125 217 229 / 12%);
+  font-size: 1.1rem;
+}
+
+.contact-drawer-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(190px, 0.85fr);
+  grid-template-areas:
+    "kicker kicker"
+    "title copy"
+    "title actions";
+  column-gap: 30px;
+  align-items: start;
+  padding: 30px 30px 28px;
+  background: #fff;
+  border-bottom: 1px solid #cbdcdf;
+}
+
+.contact-drawer-header .contact-drawer-kicker {
+  grid-area: kicker;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 13px;
+  color: #00809a;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-drawer-header .contact-drawer-kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e36a3d;
+  box-shadow: 0 0 0 4px rgb(227 106 61 / 15%);
+}
+
+.contact-drawer-header h2 {
+  grid-area: title;
+  max-width: 9ch;
+  margin: 0;
+  color: #102f3a;
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.contact-drawer-header p {
+  grid-area: copy;
+  max-width: 30ch;
+  margin: 0;
+  color: #4c636b;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.contact-drawer-actions {
+  grid-area: actions;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.contact-drawer-actions :is(button, a) {
+  min-height: 48px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  font-size: 0.78rem;
+}
+
+.contact-drawer-scroll {
+  padding: 26px 30px 36px;
+  background: #edf3f4;
+}
+
+.contact-drawer-scroll::before {
+  content: "02  /  PROJECT BRIEF";
+  display: block;
+  margin: 0 0 14px;
+  color: #00809a;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.contact-drawer .form-intro {
+  margin-bottom: 22px;
+  padding: 15px 17px;
+  color: #23434c;
+  background: #fff;
+  border: 1px solid #c3d7da;
+  border-radius: 9px;
+  box-shadow: 5px 5px 0 rgb(0 128 154 / 8%);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.contact-drawer .quote-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.contact-drawer .quote-form .form-grid > label:last-child {
+  grid-column: 1 / -1;
+}
+
+.contact-drawer .quote-form label {
+  margin-bottom: 16px;
+  color: #102f3a;
+  font-size: 0.82rem;
+}
+
+.contact-drawer .field-label {
+  margin-bottom: 7px;
+  letter-spacing: 0.01em;
+}
+
+.contact-drawer .field-label small {
+  color: #6c8188;
+  font-size: 0.72rem;
+}
+
+.contact-drawer .quote-form input:not([type="checkbox"]),
+.contact-drawer .quote-form select,
+.contact-drawer .quote-form textarea {
+  min-height: 49px;
+  padding: 11px 13px;
+  color: #102f3a;
+  background: #fff;
+  border: 1px solid #b9cdd1;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.contact-drawer .quote-form textarea {
+  min-height: 118px;
+}
+
+.contact-drawer .quote-form input:focus,
+.contact-drawer .quote-form select:focus,
+.contact-drawer .quote-form textarea:focus {
+  outline: 3px solid rgb(0 166 194 / 20%);
+  outline-offset: 1px;
+  border-color: #00809a;
+}
+
+.contact-drawer .quote-form .button {
+  min-height: 52px;
+  margin-top: 8px;
+  border-radius: 9px;
+  background: #00809a;
+  box-shadow: 5px 5px 0 rgb(16 47 58 / 11%);
+}
+
+@media (max-width: 680px) {
+  .contact-drawer {
+    width: 100%;
+    border-left: 0;
+  }
+
+  .contact-drawer-call {
+    padding-inline: 21px;
+  }
+
+  .contact-drawer-call::after {
+    left: 21px;
+  }
+
+  .contact-drawer-header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "kicker"
+      "title"
+      "copy"
+      "actions";
+    gap: 0;
+    padding: 25px 22px 22px;
+  }
+
+  .contact-drawer-header h2 {
+    max-width: 12ch;
+    margin-bottom: 14px;
+    font-size: clamp(2rem, 10vw, 2.7rem);
+  }
+
+  .contact-drawer-header p {
+    max-width: 38ch;
+  }
+
+  .contact-drawer-actions {
+    margin-top: 19px;
+  }
+
+  .contact-drawer-scroll {
+    padding: 22px 22px 30px;
+  }
+
+  .contact-drawer .quote-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-drawer .quote-form .form-grid > label:last-child {
+    grid-column: auto;
+  }
+}
+
 /* Shower-rental support CTA: keep it visible at mid-right without competing
    with the navigation or the mobile call bar. */
 @media (min-width: 768px) {
@@ -1126,7 +1572,7 @@ body.contact-drawer-open .emergency-dispatch {
 }
 
 .emergency-dispatch-panel::before {
-  width: 5px;
+  display: none;
   background: #35c5d9;
 }
 
@@ -1209,4 +1655,120 @@ body.contact-drawer-open .emergency-dispatch {
   gap: 0.75rem;
   padding-inline: 0.75rem;
   white-space: normal;
+}
+
+/* Emergency support popup — distinct dispatch-card layout. The existing
+   teal/amber palette, copy, controls and interaction hooks stay unchanged. */
+.emergency-dispatch-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "kicker close"
+    "title title"
+    "copy copy"
+    "actions actions"
+    "note note";
+  gap: 0;
+  width: min(420px, calc(100dvw - 32px));
+  padding: 29px 28px 24px;
+  border-radius: 24px 24px 10px 24px;
+}
+
+.emergency-dispatch-panel::before {
+  inset: 0 0 auto;
+  width: auto;
+  height: 4px;
+  border-radius: 24px 24px 0 0;
+}
+
+.emergency-dispatch-kicker {
+  grid-area: kicker;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  line-height: 1.2;
+}
+
+.emergency-dispatch-kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #ffd166;
+  box-shadow: 0 0 0 4px rgb(255 209 102 / 18%);
+}
+
+.emergency-dispatch-panel h2 {
+  grid-area: title;
+  max-width: 12ch;
+  margin: 0 0 14px;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.emergency-dispatch-panel p {
+  grid-area: copy;
+  max-width: 34ch;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.emergency-dispatch-actions {
+  grid-area: actions;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.emergency-dispatch-call,
+.emergency-dispatch-request {
+  min-height: 50px;
+  padding: 12px 15px;
+  border-radius: 13px;
+  line-height: 1.2;
+}
+
+.emergency-dispatch-close {
+  grid-area: close;
+  position: static;
+  justify-self: end;
+  align-self: start;
+  margin: -7px -7px 0 12px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.05rem;
+}
+
+.emergency-dispatch-panel > small {
+  grid-area: note;
+  margin-top: 17px;
+  padding-top: 12px;
+  border-top: 1px solid rgb(255 255 255 / 19%);
+  font-size: 0.69rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 600px) {
+  .emergency-dispatch-panel {
+    width: min(390px, calc(100dvw - 24px));
+    padding: 25px 21px 21px;
+  }
+
+  .emergency-dispatch-panel h2 {
+    max-width: 13ch;
+    font-size: clamp(1.65rem, 8vw, 2rem);
+  }
+
+  .emergency-dispatch-panel p {
+    max-width: 36ch;
+  }
+
+  .emergency-dispatch-actions {
+    grid-template-columns: 1fr;
+  }
 }

@@ -151,10 +151,16 @@
   z-index: auto;
   display: block;
   margin: 0;
-  padding: 0.85rem 0 0;
-  color: #405a63;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(68 208 223 / 38%);
+  border-radius: 0.35rem;
+  background: linear-gradient(135deg, #103e4b, #0f5d72);
+  color: #f7fdff;
   font-size: 0.82rem;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  box-shadow: inset 0 1px rgb(255 255 255 / 12%);
 }
 .state-preview-dialog [data-state-gallery-host] {
   margin: 1.25rem 0;

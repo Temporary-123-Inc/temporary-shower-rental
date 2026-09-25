@@ -27,7 +27,7 @@ const titles: Record<string, string> = {
   "/services/": "Temporary Shower and Restroom Trailer Solutions",
   "/equipment-rental/": "Temporary Shower Trailer Rental Inventory",
   "/industries/": "Industries We Serve",
-  "/service-areas/": "Temporary Shower Rental Service Areas",
+  "/service-areas/": "USA Temporary Facilities Rental Service Areas",
   "/seo-dashboard/": "SEO Migration Dashboard",
   "/planning/": "Plan Your Temporary Shower Rental",
   "/about-us/": "About Temporary Shower Rental 123",

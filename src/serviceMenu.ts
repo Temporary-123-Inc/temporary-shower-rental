@@ -220,6 +220,38 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
+    name: "Remote Man Camp / Workforce Housing",
+    href: "/man-camp-rental/",
+    description:
+      "Plan remote workforce housing around crew occupancy, sleeping arrangements and the support facilities the site needs.",
+    links: [
+      {
+        name: "Man Camp Rental",
+        href: "/man-camp-rental/",
+      },
+      {
+        name: "Remote Man Camp Rental",
+        href: "/remote-man-camp-rental/",
+      },
+    ],
+  },
+  {
+    name: "Remote Basecamp",
+    href: "/remote-basecamp-temporary-housing-rent-mobile-trailers-modular-buildings-restroom-shower-laundry-dining-temporary-building-rentals/",
+    description:
+      "Coordinate remote basecamp housing and supporting facilities for construction, emergency response and workforce projects.",
+    links: [
+      {
+        name: "Base Camps for Rent",
+        href: "/base-camps-for-rent/",
+      },
+      {
+        name: "Remote Basecamp Temporary Housing",
+        href: "/remote-basecamp-temporary-housing-rent-mobile-trailers-modular-buildings-restroom-shower-laundry-dining-temporary-building-rentals/",
+      },
+    ],
+  },
+  {
     name: "Handwashing Trailers",
     href: "/equipment-rental/handwashing-stations/",
     description:
@@ -237,9 +269,11 @@ export const serviceCategories: ServiceCategory[] = [
   },
 ];
 
-// The inventory menu follows the approved eight-category Super 8 structure.
-// Handwashing remains available through its dedicated inventory route and footer links.
-export const showerServiceCategories = serviceCategories.slice(0, 8);
+// The inventory menu now includes the two Super 9 remote-facility families.
+// Standalone shower and handwashing remain target-specific supporting options.
+export const showerServiceCategories = serviceCategories.filter(
+  (category) => category.name !== "Handwashing Trailers",
+);
 export const kitchenServiceCategories = showerServiceCategories;
 
 const establishedPaths = new Set([
