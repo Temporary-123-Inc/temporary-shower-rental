@@ -222,7 +222,7 @@ const stateGuideDetails: Record<
   "New York": {
     focus: "Distinguish the property conditions",
     intro:
-      "A New York city-center renovation and an upstate field operation need different delivery briefs. Specify the property type, usable access, installation window and distance between the temporary kitchen and the serving area.",
+      "A New York city-center renovation and an upstate field operation need different briefs. Specify property type, usable access, installation window and distance between the temporary kitchen and serving area.",
     question:
       "What property-specific constraint will determine equipment placement?",
   },

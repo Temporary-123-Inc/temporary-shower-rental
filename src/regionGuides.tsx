@@ -31,7 +31,7 @@ type ContextualLink = {
 
 const priorityServices = [
   {
-    href: "/equipment-rental/mobile-kitchen-trailers/",
+    href: "/inventory/mobile-kitchen-models/",
     labels: [
       "mobile commercial kitchen rentals",
       "temporary kitchen facilities for rent",

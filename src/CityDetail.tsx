@@ -10,7 +10,7 @@ import { LocationImageCarousel } from "./LocationImageCarousel";
 const serviceLinks = [
   {
     label: "Mobile commercial kitchen rentals",
-    href: "/equipment-rental/mobile-kitchen-trailers/",
+    href: "/inventory/mobile-kitchen-models/",
   },
   {
     label: "Shower and restroom combination trailers",

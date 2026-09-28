@@ -736,3 +736,22 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Result: Introduced a status-led header row, custom kicker marker, balanced desktop two-action layout, responsive mobile stacking and separated confirmation note while preserving all copy, palette and interaction hooks.
 - Evidence: Typecheck and `npm run build` passed (754 pages plus 404); local browser inspection passed at desktop and narrow viewport with visible title, copy, close control, phone action, urgent-availability action and confirmation note.
 - Release: No GitHub push or Vercel deployment.
+# V16.2 updated-skill local audit — 2026-09-28
+
+- `npm run build`: passed; generated **754 pages plus 404**.
+- `npm test`: **62/62 tests passed** across 10 files.
+- `npm run check:seo`: passed with **755 unique titles, 755 unique descriptions, zero problems and zero pending migration links**; the report still records the inherited migration recovery as incomplete (625/98,253 source records), so this is not a claim of full source migration.
+- `npm run check:headlines`: **548/548** unique location headlines, zero issues.
+- `npm run check:links`: **754 pages**, zero capitalization issues, zero missing targets.
+- `npm run check:secrets`: **1,122 scanned**, zero findings.
+- The Python-based skill-package contract tests could not run because neither `python` nor `py` is installed on this workstation.
+- No GitHub push or Vercel deployment was performed.
+# Equipment archive image re-audit — 2026-09-28
+
+- Archive checked: `Equipments-20260924T050725Z-1-001.zip`.
+- Route checked: `/services/shower-restroom-combination-trailers/13ft-3-stall/`.
+- Static preview response: HTTP **200**.
+- Current gallery full-image sources match the archive exactly: `luxury-shower-restroom-trailer-interior.png` and `mobile-luxury-shower-restroom-trailer-bathroom-interior.png`.
+- H1, rental/lease caption, and image alt text are present and aligned to the 13 ft, 3-stall combination configuration.
+- The archive also contains five exterior references; the current approved gallery intentionally displays two matching interior references. No additional image was added without a route-content decision.
+- No code, GitHub or Vercel changes were made during this re-audit.

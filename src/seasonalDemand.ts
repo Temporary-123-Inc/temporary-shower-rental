@@ -597,7 +597,7 @@ export function buildStateSeasonalDemand(
     summary: [
       `${profile.season} Work near ${profile.corridors[0]} and ${profile.landmarks[0]} commonly includes ${profile.work}.`,
       `Normal planning conditions include ${profile.risks}; these are regional patterns rather than a claim that an emergency is active.`,
-      `Temporary mobile commercial kitchens, shower and restroom combinations, 22 ft shower trailers with 10 stalls, sleeper and bunkbed trailers, laundry, refrigeration, dishwashing, restrooms and handwashing units can support construction, man camps, renovations, commercial kitchen fires, Health Department closures, equipment failures, cleanup and emergency base camps.`,
+      `Temporary mobile commercial kitchens, shower and restroom combinations, 20 ft shower trailers with 5 stalls, sleeper and bunkbed trailers, laundry, refrigeration, dishwashing, restrooms and handwashing units can support construction, man camps, renovations, commercial kitchen fires, Health Department closures, equipment failures, cleanup and emergency base camps.`,
       regionalModifiers[index % regionalModifiers.length],
     ],
     basis: `Estimated Seasonal Facility Demand Code ${code}, ${demandLabels[code]}. This estimate applies to the ${state} statewide service area because seasonal work patterns, travel conditions and regional hazards can affect temporary facility planning. It is an estimate for project planning and is not an official government risk rating.`,
@@ -636,7 +636,7 @@ export function buildRegionSeasonalDemand(
     summary: [
       variants[regionIndex % variants.length],
       `Relevant planning risks include ${profile.risks}; this describes normal regional patterns and does not state that an emergency is happening now.`,
-      `Temporary mobile commercial kitchens, shower and restroom combination trailers, 22 ft shower trailers with 10 stalls, sleeper and bunkbed trailer rentals, laundry, refrigeration, dishwashing, restrooms and handwashing units can support construction projects, man camps, renovations, commercial kitchen fires, Health Department closures, cleanup work, equipment failures and emergency base camps.`,
+      `Temporary mobile commercial kitchens, shower and restroom combination trailers, 20 ft shower trailers with 5 stalls, sleeper and bunkbed trailer rentals, laundry, refrigeration, dishwashing, restrooms and handwashing units can support construction projects, man camps, renovations, commercial kitchen fires, Health Department closures, cleanup work, equipment failures and emergency base camps.`,
       regionalModifiers[
         (regionIndex + state.length) % regionalModifiers.length
       ],

@@ -46,31 +46,31 @@ export const serviceCategories: ServiceCategory[] = [
     links: [
       {
         name: "24ft Mobile Kitchen Trailer",
-        href: "/inventory/mobile-kitchen-models/24ft-mobile-kitchen/",
+        href: "/services/mobile-kitchen-trailers/24ft/",
       },
       {
         name: "26ft Bulk Mobile Kitchen",
-        href: "/inventory/mobile-kitchen-models/26ft-bulk-kitchen/",
+        href: "/services/mobile-kitchen-trailers/26ft-bulk/",
       },
       {
         name: "28ft Mobile Kitchen Trailer",
-        href: "/inventory/mobile-kitchen-models/28ft-mobile-kitchen/",
+        href: "/services/mobile-kitchen-trailers/28ft/",
       },
       {
         name: "26ft Mobile Kitchen Trailer",
-        href: "/inventory/mobile-kitchen-models/26ft-mobile-kitchen/",
+        href: "/services/mobile-kitchen-trailers/26ft-bulk/",
       },
       {
         name: "40ft Mobile Kitchen Trailer",
-        href: "/inventory/mobile-kitchen-models/40ft-mobile-kitchen/",
+        href: "/services/mobile-kitchen-trailers/40ft/",
       },
       {
         name: "40ft Combination Mobile Kitchen",
-        href: "/inventory/mobile-kitchen-models/40ft-combo-kitchen/",
+        href: "/services/mobile-kitchen-trailers/40ft-combination/",
       },
       {
         name: "40ft Bulk Combination Mobile Kitchen",
-        href: "/inventory/mobile-kitchen-models/40ft-bulk-combo-kitchen/",
+        href: "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
       },
     ],
   },
@@ -82,19 +82,19 @@ export const serviceCategories: ServiceCategory[] = [
     links: [
       {
         name: "22ft Dishwashing Trailer",
-        href: "/inventory/dishwashing-models/22ft-dishwashing/",
+        href: "/services/dishwashing-trailers/22ft/",
       },
       {
         name: "24ft Dishwashing Trailer",
-        href: "/inventory/dishwashing-models/40ft-dishwasher/",
+        href: "/services/dishwashing-trailers/24ft/",
       },
       {
         name: "26ft Dishwashing Trailer",
-        href: "/inventory/dishwashing-models/26ft-dishwashing/",
+        href: "/services/dishwashing-trailers/26ft/",
       },
       {
         name: "38ft Conveyor Dishwashing Trailer",
-        href: "/inventory/dishwashing-models/38ft-dishwashing/",
+        href: "/services/dishwashing-trailers/38ft-conveyor/",
       },
     ],
   },

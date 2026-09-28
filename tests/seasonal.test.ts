@@ -68,7 +68,7 @@ describe("state and regional planning content", () => {
       expect(copy, state).toMatch(/base camp|man camp/i);
       expect(copy, state).toMatch(/mobile commercial kitchens/i);
       expect(copy, state).toMatch(/shower and restroom combination/i);
-      expect(copy, state).toMatch(/22 ft shower trailers with 10 stalls/i);
+      expect(copy, state).toMatch(/20 ft shower trailers with 5 stalls/i);
       expect(copy, state).toMatch(/sleeper and bunkbed/i);
       expect(copy, state).not.toMatch(/[—*]/);
     }
@@ -218,7 +218,7 @@ describe("location media and shower inventory", () => {
     );
     expect(shower?.links).toEqual([
       {
-        name: "22 ft Shower Trailer, 10 Stalls",
+        name: "20 ft Shower Trailer, 5 Stalls",
         href: "/services/shower-trailers/22ft-10-stall/",
       },
       {

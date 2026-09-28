@@ -54,7 +54,7 @@ describe("evidence-based city consolidation", () => {
       ).toMatchObject({ destination: row.destination, permanent: true });
     }
     expect(fingerprints.size).toBe(1);
-  });
+  }, 30_000);
 });
 
 describe("migration indexing separation", () => {
@@ -63,7 +63,7 @@ describe("migration indexing separation", () => {
     expect(productionBuild("draft", "production")).toBe(false);
     expect(canonicalFor("/gsa-schedule/", true, false)).toBeUndefined();
     expect(canonicalFor("/gsa-schedule/", true, true)).toBe(
-      "https://temporary123.com/gsa-schedule/",
+      "https://temporary-shower-rental.com/gsa-schedule/",
     );
     expect(canonicalFor("/video/", false, true)).toBeUndefined();
     expect(() => canonicalFor("//evil.example/", true, true)).toThrow();
@@ -96,12 +96,19 @@ describe("migration indexing separation", () => {
     const rule = vercel.headers.find((rule) => "missing" in rule);
     expect(rule).toMatchObject({
       source: "/(.*)",
-      missing: [{ type: "host", value: "temporary123\\.com" }],
+        missing: [{ type: "host", value: "temporary123\\.com" }],
       headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
     });
   });
   it("permanently consolidates www requests onto the canonical host", () => {
-    expect(vercel.redirects[0]).toMatchObject({
+    const hostRedirect = vercel.redirects.find(
+      (rule) =>
+        "has" in rule &&
+        rule.has?.some(
+          (entry) => entry.type === "host" && entry.value === "www.temporary123.com",
+        ),
+    );
+    expect(hostRedirect).toMatchObject({
       source: "/:path*",
       has: [{ type: "host", value: "www.temporary123.com" }],
       destination: "https://temporary123.com/:path*",

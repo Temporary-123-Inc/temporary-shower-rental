@@ -29,7 +29,7 @@ export function StateDetail({ name }: { name: string }) {
   );
   const labels: Record<string, string> = {
     "Mobile Kitchens": "Mobile commercial kitchen rentals",
-    Shower: "Shower trailer rentals, 22 ft with 10 stalls",
+    Shower: "Shower trailer rentals, 20 ft with 5 stalls",
     Sleeper: "Sleeper and bunkbed trailer rentals",
   };
   return (
@@ -62,8 +62,8 @@ export function StateDetail({ name }: { name: string }) {
           <span className="eyebrow">DISTINCT TRAVEL REGIONS</span>
           <h2>Find your rental location</h2>
           <p>
-            {guide.fact} Explore each regional guide for local cities, equipment
-            and rental planning conditions.
+            {guide.fact} Explore regional guides for cities, equipment and rental
+            planning.
           </p>
         </div>
         <nav
@@ -119,7 +119,7 @@ export function StateDetail({ name }: { name: string }) {
           <span className="eyebrow">RENTAL EQUIPMENT</span>
           <h2>Temporary Facilities for your project</h2>
           <p>
-            Rent equipment for a short assignment or discuss a longer lease.
+            Rent equipment for an assignment or discuss a longer lease.
             Confirm occupancy, utilities and site access with the rental team.
           </p>
           <ul className="state-guide-services">

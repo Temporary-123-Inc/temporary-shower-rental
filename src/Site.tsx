@@ -71,7 +71,7 @@ function ShowerInventoryDirectory() {
       <h2 id="shower-inventory-title">Choose the facility mix your site needs.</h2>
       <div className="shower-unit-grid">
         {[
-          ["Mobile kitchens", "/equipment-rental/mobile-kitchen-trailers/", "/images/service-heroes/24ft-mobile-kitchen/01-960.webp"],
+          ["Mobile kitchens", "/inventory/mobile-kitchen-models/", "/images/service-heroes/24ft-mobile-kitchen/01-960.webp"],
           ["Dishwashing trailers", "/inventory/dishwashing-models/", "/images/service-heroes/38ft-high-temp-dish/01-960.webp"],
           ["Refrigeration trailers", "/refrigeration/", "/images/service-heroes/20ft-refrigerated-trailer/01-960.webp"],
           ["Shower trailers", "/equipment-rental/shower-trailer/", "/images/service-heroes/20ft-shower-trailer-sink/01-960.webp"],
@@ -635,7 +635,7 @@ export function Site({
               </div>
               <form
                 className="location-planner"
-                action="/equipment-rental/mobile-kitchen-trailers/"
+                action="/inventory/mobile-kitchen-models/"
                 method="get"
               >
                 <label className="search-label" htmlFor="project-location">
@@ -1108,7 +1108,7 @@ export function Site({
                     staffing. Then confirm power, potable water, wastewater,
                     ventilation clearance and delivery access at the site.
                   </p>
-                  <a href="/equipment-rental/mobile-kitchen-trailers/">
+                  <a href="/inventory/mobile-kitchen-models/">
                     Explore mobile kitchen trailers ↗
                   </a>
                 </article>

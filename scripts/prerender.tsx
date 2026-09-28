@@ -174,6 +174,25 @@ const sourceDescription = (page: SourcePage) => {
 };
 const unresolvedSourceLinks = new Set<string>();
 const dimensions: Record<string, { width: number; height: number }> = {};
+// Keep the published inventory aliases distinct in search metadata while
+// reusing the same reviewed equipment records and page content.
+const detailMetadata: Record<string, { title: string; description: string }> = {
+  "/refrigeration/12ft-trailer-medium-high-temperature/": {
+    title: "12ft Refrigeration Trailer Rental for Compact Cold Storage",
+    description:
+      "Plan compact temporary cold storage with the 12ft refrigeration trailer. Confirm the temperature range, shelving, delivery access and rental dates for your project.",
+  },
+  "/refrigeration/20ft-low-temperature/": {
+    title: "20ft Low-Temperature Refrigeration Trailer Rental",
+    description:
+      "Use a 20ft refrigeration trailer for temporary refrigerated or frozen storage. Confirm temperature requirements, shelving, access and rental timing before booking.",
+  },
+  "/refrigeration/40ft-container-all-ranges/": {
+    title: "40ft All-Range Refrigerated Container Rental",
+    description:
+      "Plan larger or longer-term temperature-controlled storage with a 40ft refrigerated container. Confirm range, racking, placement and service requirements for the site.",
+  },
+};
 for (const entry of Object.values(media)) {
   if (!entry.local?.endsWith(".png")) continue;
   try {
@@ -225,7 +244,12 @@ for (const path of [...allRoutes, "/404/"]) {
   const industry = industryGuideByPath[path];
   const legacyAuthorityPage = legacyAuthorityPageByPath[path];
   const hubHeadline = rentalHubHeadline(path);
-  const info = legacyAuthorityPage
+  const info = detailMetadata[path]
+    ? {
+        title: `${detailMetadata[path].title} | ${site.brand}`,
+        description: detailMetadata[path].description,
+      }
+    : legacyAuthorityPage
     ? {
         title: `${legacyAuthorityPage.title} | ${site.brand}`,
         description: legacyAuthorityPage.description,

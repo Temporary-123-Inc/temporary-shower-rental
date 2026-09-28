@@ -30,8 +30,13 @@ const titles: Record<string, string> = {
   "/service-areas/": "USA Temporary Facilities Rental Service Areas",
   "/seo-dashboard/": "SEO Migration Dashboard",
   "/planning/": "Plan Your Temporary Shower Rental",
-  "/about-us/": "About Temporary Shower Rental 123",
-  "/about-temporary-shower-rental/": "About Temporary Shower Rental 123",
+  "/about-us/": "About Temporary Shower Rental 123 | Our Planning Approach",
+  "/about-temporary-shower-rental/": "About Temporary Shower Rental 123 | Nationwide Facility Support",
+  "/inventory/": "Temporary Facility Rental Inventory",
+  "/existing-mobile-kitchen-layouts/": "Existing Mobile Kitchen Layouts | Temporary Shower Rental 123",
+  "/rental-calculator/": "Temporary Facility Rental Calculator | Temporary Shower Rental 123",
+  "/blog/": "Temporary Facility Planning Guides | Temporary Shower Rental 123",
+  "/404/": "Page Not Found | Temporary Shower Rental 123",
   "/contact-us/": "Contact Our Team",
   "/privacy/": "Privacy",
 };
@@ -53,7 +58,17 @@ const descriptions: Record<string, string> = {
   "/about-us/":
     "Learn how Temporary Shower Rental 123 coordinates clean, dependable shower and restroom facilities nationwide.",
   "/about-temporary-shower-rental/":
-    "Learn how Temporary Shower Rental 123 coordinates clean, dependable shower and restroom facilities nationwide.",
+    "Review the planning approach Temporary Shower Rental 123 uses to coordinate shower, restroom and hygiene facilities for active sites.",
+  "/inventory/":
+    "Browse temporary shower, restroom, combination and supporting facility rentals, then confirm the right configuration for your site.",
+  "/existing-mobile-kitchen-layouts/":
+    "Review existing mobile-kitchen layouts as planning references for workflow, utilities, access and temporary facility placement.",
+  "/rental-calculator/":
+    "Estimate the project details to discuss for a temporary facility rental, including location, users, dates, access and utilities.",
+  "/blog/":
+    "Read practical planning guides for temporary shower, restroom, kitchen and workforce-support facility rentals.",
+  "/404/":
+    "The requested page could not be found. Browse the temporary facility rental inventory or return to the home page.",
   "/contact-us/":
     "Call Temporary Shower Rental 123 at +1 (888) 385-5513, available 24/7. Discuss your location, occupancy, rental dates, access and utility requirements.",
   "/privacy/":

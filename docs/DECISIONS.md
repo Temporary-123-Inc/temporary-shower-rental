@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-09-28 — Apply V16.2 metadata and route hygiene locally
+
+Use direct canonical service links for internal navigation when a legacy inventory alias only redirects. Keep the legacy URL itself addressable through the existing redirect map, but do not make customers traverse that alias from menus or regional content. Correct unsupported shower configuration wording to the verified 20 ft, 5-stall reference. Give every released route a distinct, truthful title and description, including about-page pairs and refrigeration aliases. This audit is local-only; do not push or deploy until the owner separately authorizes release and the missing V16.2 authority/research/completion evidence is assembled.
+
 ## 2026-09-24 — Match combination galleries to named archive folders
 
 Use images from the exact client-supplied equipment folder when a named combination-trailer configuration exists. Do not let a generic family fallback (for example, a generic 22 ft or generic ADA reference) represent a different child route. Keep captions and alt text factual, and defer unverified dimensions or accessibility specifications to quote confirmation.
