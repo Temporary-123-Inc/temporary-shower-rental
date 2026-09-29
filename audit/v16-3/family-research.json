@@ -1,0 +1,668 @@
+{
+  "version": 1,
+  "target_url": "https://temporary-shower-rental.com/",
+  "review_status": "reviewed",
+  "reviewer": "Codex builder; independent review remains separately required",
+  "families": [
+    {
+      "family": "mobile-commercial-kitchen",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 49 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/mobile-commercial-kitchen.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "mobile-commercial-kitchen is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/mobile-commercial-kitchen.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "49 rendered family-specific routes preserve the mobile-commercial-kitchen rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/mobile-commercial-kitchen.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/mobile-commercial-kitchen.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/mobile-commercial-kitchen.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "commercial-dishwashing",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 6 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/commercial-dishwashing.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "commercial-dishwashing is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/commercial-dishwashing.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "6 rendered family-specific routes preserve the commercial-dishwashing rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/commercial-dishwashing.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/commercial-dishwashing.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/commercial-dishwashing.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "refrigerated",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 8 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/refrigerated.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "refrigerated is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/refrigerated.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "8 rendered family-specific routes preserve the refrigerated rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/refrigerated.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/refrigerated.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/refrigerated.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "shower-restroom-combination",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 34 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/shower-restroom-combination.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "shower-restroom-combination is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/shower-restroom-combination.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "34 rendered family-specific routes preserve the shower-restroom-combination rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/shower-restroom-combination.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/shower-restroom-combination.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/shower-restroom-combination.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "shower",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 239 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/shower.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "shower is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/shower.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "239 rendered family-specific routes preserve the shower rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/shower.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/shower.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/shower.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "restroom-bathroom",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 59 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/restroom-bathroom.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "restroom-bathroom is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/restroom-bathroom.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "59 rendered family-specific routes preserve the restroom-bathroom rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/restroom-bathroom.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/restroom-bathroom.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/restroom-bathroom.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "laundry",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 3 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/laundry.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "laundry is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/laundry.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "3 rendered family-specific routes preserve the laundry rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/laundry.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/laundry.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/laundry.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "sleeper-bunkhouse",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 9 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/sleeper-bunkhouse.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "sleeper-bunkhouse is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/sleeper-bunkhouse.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "9 rendered family-specific routes preserve the sleeper-bunkhouse rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/sleeper-bunkhouse.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/sleeper-bunkhouse.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/sleeper-bunkhouse.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "remote-man-camp-workforce-housing",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 27 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/remote-man-camp-workforce-housing.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "remote-man-camp-workforce-housing is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/remote-man-camp-workforce-housing.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "27 rendered family-specific routes preserve the remote-man-camp-workforce-housing rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/remote-man-camp-workforce-housing.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/remote-man-camp-workforce-housing.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/remote-man-camp-workforce-housing.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    },
+    {
+      "family": "remote-basecamp",
+      "disposition": "approved",
+      "rationale": "Preserved target offering with 1 family-specific rendered routes and owner confirmation to retain existing offerings.",
+      "dossier": "family-dossiers/remote-basecamp.json",
+      "dimensions": {
+        "purpose": {
+          "status": "supported",
+          "finding": "remote-basecamp is presented as a commercial rental family in the rendered route/H1 inventory.",
+          "evidence": [
+            "family-dossiers/remote-basecamp.json",
+            "family-distribution.json"
+          ]
+        },
+        "configurations": {
+          "status": "unknown",
+          "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+          "evidence": []
+        },
+        "utilities": {
+          "status": "unknown",
+          "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+          "evidence": []
+        },
+        "deployment": {
+          "status": "unknown",
+          "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+          "evidence": []
+        },
+        "service_scope": {
+          "status": "supported",
+          "finding": "1 rendered family-specific routes preserve the remote-basecamp rental offering without expanding it.",
+          "evidence": [
+            "family-dossiers/remote-basecamp.json",
+            "family-distribution.json"
+          ]
+        },
+        "location_evidence": {
+          "status": "supported",
+          "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+          "evidence": [
+            "family-dossiers/remote-basecamp.json",
+            "family-distribution.json"
+          ]
+        },
+        "visual_evidence": {
+          "status": "unknown",
+          "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+          "evidence": []
+        },
+        "claims_and_gaps": {
+          "status": "supported",
+          "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+          "evidence": [
+            "family-dossiers/remote-basecamp.json"
+          ]
+        }
+      },
+      "unresolved_claims": [
+        {
+          "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+          "handling": "request-confirmation",
+          "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+        }
+      ]
+    }
+  ]
+}

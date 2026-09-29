@@ -1,0 +1,40 @@
+
+> temporary123@0.1.0 build
+> tsc --noEmit && vite build && node --import tsx scripts/prerender.tsx
+
+vite v7.3.6 building client environment for production...
+transforming...
+node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+node_modules/zod/v4/core/regexes.js (72:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 157 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                0.75 kB │ gzip:  0.41 kB
+dist/assets/manrope-cyrillic-ext-wght-normal-C8S-KRRz.woff2    2.55 kB
+dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2      8.52 kB
+dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2           9.44 kB
+dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2       14.50 kB
+dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2      15.12 kB
+dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2          24.84 kB
+dist/assets/index-Dr4ev2Sb.css                               278.18 kB │ gzip: 51.72 kB
+dist/assets/index--vqu0vPH.js                                  0.47 kB │ gzip:  0.33 kB
+dist/assets/index.esm-BiyETd7w.js                              0.74 kB │ gzip:  0.41 kB
+dist/assets/index-D0SoiyhN.js                                  8.05 kB │ gzip:  3.07 kB
+dist/assets/index.esm-D0ikA-ri.js                             16.72 kB │ gzip:  5.65 kB
+dist/assets/index.esm-G5UxrOIH.js                             28.38 kB │ gzip:  9.22 kB
+dist/assets/SeoDashboard-CpHQbdws.js                          34.52 kB │ gzip:  8.57 kB
+dist/assets/QuoteForm-B7XQi7Mk.js                             89.33 kB │ gzip: 26.40 kB
+dist/assets/client-J5Wg25Zp.js                               213.54 kB │ gzip: 66.41 kB
+dist/assets/index-kNBUp3Yf.js                                277.18 kB │ gzip: 95.74 kB
+✓ built in 28.06s
+Static HTML generated for 754 pages + 404 (production).

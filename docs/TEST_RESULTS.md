@@ -1,5 +1,19 @@
 # Temporary123 Test Results
 
+## V16.3 family-allocation correction — 2026-09-30 (LOCAL PASS; TWO INHERITED GATES DOCUMENTED)
+
+- Official V16.3 plan validator: **PASS**, 0 errors and 0 warnings.
+- `npm test`: **PASS**, 11 files and 66/66 tests.
+- `npm run typecheck`: **PASS**.
+- `npm run build`: **PASS**, 754 pages plus 404 generated.
+- `npm run check:families`: **PASS** — complete route inventory 435; controlled commercial cohort 233/297 shower-primary (**78.45%**); released cohort 21/25 (**84%**); homepage modules 9/11 (**81.82%**); strict family/H1/copy/image/alt/schema alignment passed.
+- `npm run check:links`, `check:headlines`, `check:seo`, `check:release`, and `check:secrets`: **PASS**. SEO inspected 755 HTML documents, 100,296 local links, and 13,188 local images with no reported problems.
+- Local browser verification at 1280x800: one H1, no horizontal overflow, no failed images, 308 shower-primary words versus 75 supporting words (**80.42%**), and **82.37%** shower-primary rendered visual area.
+- Local browser verification at 390x844: one H1, no horizontal overflow, no failed images, the same **80.42%** content allocation, **79.54%** shower-primary rendered visual area, and a one-column 327 px fleet-card layout.
+- `npm run check:cities`: inherited failure because five reviewed city pages are not linked once in the existing map; the map exposes 0 of the expected 5. This V16.3 correction does not alter that map or those routes.
+- `npm run check:security`: inherited evidence-gate failure for path containment plus AUTHZ, CORS_HEADERS, APP_CHECK, INTEGRATIONS, SECRETS, DEPLOY, OBSERVE, and RECOVERY proof. No security check was weakened or represented as passed.
+- No form was submitted. No GitHub push or Vercel production deployment has yet occurred for this candidate.
+
 ## Production release — 2026-09-24 (LIVE PASS)
 
 - Vercel deployment `dpl_Cj4hAp1J6q5hkjhdCjzHTjrdmT4n`: **READY**, production target, existing project `temporary-shower-rental-najm`.

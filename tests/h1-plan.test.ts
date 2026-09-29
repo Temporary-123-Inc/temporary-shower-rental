@@ -13,16 +13,16 @@ import { reviewedCityPages } from "../src/cityDirectory";
 describe("Boss-approved Temporary123 H1 plan", () => {
   it("keeps location before the commercial use case, equipment, and rental intent", () => {
     expect(stateRentalHeadline("Alabama")).toBe(
-      "Alabama Emergency Basecamp Shower Trailer Rental",
+      "Alabama Workforce Camp Shower Trailer Long-Term Rental",
     );
     expect(stateRentalHeadline("California")).toBe(
-      "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "California Industrial Basecamp Shower Trailer For Rent",
     );
     expect(stateRentalHeadline("Colorado")).toBe(
-      "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "Colorado Workforce Camp Shower Trailer Long-Term Rental",
     );
     expect(stateRentalHeadline("Texas")).toBe(
-      "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "Texas Workforce Camp Shower Trailer Long-Term Rental",
     );
   });
 

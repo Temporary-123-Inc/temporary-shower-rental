@@ -34,6 +34,19 @@
   line-height: 1.35;
 }
 
+/* Supporting specialties stay secondary in count and copy, but their two
+   approved references need enough rendered area to remain visible in the
+   V16.3 15–25% homepage allocation at both review viewports. */
+.shower-unit-card--supporting img {
+  height: 380px;
+}
+
+@media (max-width: 800px) {
+  .shower-unit-card--supporting img {
+    height: 300px;
+  }
+}
+
 /* Shared child-page theme. This is intentionally visual-only: existing page
    structure, copy, controls and URL slugs remain unchanged. */
 :is(.secondary-page, .service-option-page, .model-page, .location-page, .catalog-page) {
@@ -179,5 +192,11 @@
 @media (max-width: 1000px) {
   .shower-unit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .shower-unit-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

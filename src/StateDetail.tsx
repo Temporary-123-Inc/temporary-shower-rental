@@ -60,7 +60,7 @@ export function StateDetail({ name }: { name: string }) {
       <section className="wrap section state-guide-regions">
         <div>
           <span className="eyebrow">DISTINCT TRAVEL REGIONS</span>
-          <h2>Find your rental location</h2>
+          <h2>Find your location</h2>
           <p>
             {guide.fact} Explore regional guides for cities, equipment and rental
             planning.

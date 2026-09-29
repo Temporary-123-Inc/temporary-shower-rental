@@ -1,0 +1,45 @@
+
+> temporary123@0.1.0 test
+> vitest run --exclude "work/**" tests/contact.test.ts tests/public-config.test.ts tests/routes.test.ts tests/import.test.mjs tests/migration.test.ts tests/legacy-url-restoration.test.ts tests/legacyVisibleImageAlt.test.ts tests/prerender-text.test.ts tests/seasonal.test.ts tests/calculator.test.ts tests/v163FamilyAllocation.test.tsx
+
+
+ RUN  v3.2.7 C:/Users/Charles/Documents/Codex/2026-09-30/temporary-shower-rental-v163
+
+ ✓ tests/legacy-url-restoration.test.ts (6 tests) 745ms
+   ✓ legacy backlink URL restoration > keeps every restored HTML route unique and out of redirect rules  622ms
+ ✓ tests/public-config.test.ts (5 tests) 10ms
+ ✓ tests/calculator.test.ts (5 tests) 9ms
+stderr | tests/contact.test.ts > contact application boundary > preserves stored success when email fails
+{"event":"delivery_pending","id":"test-id"}
+
+ ✓ tests/contact.test.ts (18 tests) 43ms
+ ✓ tests/import.test.mjs (1 test) 64ms
+ ✓ tests/prerender-text.test.ts (2 tests) 117ms
+ ✓ tests/v163FamilyAllocation.test.tsx (4 tests) 250ms
+ ✓ tests/legacyVisibleImageAlt.test.ts (2 tests) 2345ms
+   ✓ legacy visible image alternatives > identifies all 36 linked military seals without a generic link label  2330ms
+ ✓ tests/seasonal.test.ts (8 tests) 2623ms
+   ✓ state and regional planning content > keeps each state brief direct, qualified and locally useful  1610ms
+   ✓ state and regional planning content > keeps every regional brief within the requested reading length  336ms
+   ✓ state and regional planning content > creates a verified contextual linking network for every region  325ms
+   ✓ location media and shower inventory > retains licensed location imagery with provenance in the source archive  334ms
+stderr | tests/routes.test.ts > actual Vercel entry points > contact rejects GET before initializing credentials
+{"event":"inquiry_rejected","status":405}
+
+stderr | tests/routes.test.ts > actual Vercel entry points > contact fails closed without configuration
+{"event":"inquiry_rejected","status":503}
+
+stderr | tests/routes.test.ts > actual Vercel entry points > outbox rejects GET mutations
+{"event":"inquiry_rejected","status":405}
+
+stderr | tests/routes.test.ts > actual Vercel entry points > outbox rejects an invalid scheduler credential
+{"event":"inquiry_rejected","status":401}
+
+ ✓ tests/routes.test.ts (4 tests) 17ms
+ ✓ tests/migration.test.ts (11 tests) 7942ms
+   ✓ evidence-based city consolidation > retains source archives and only consolidates identical location articles  7903ms
+
+ Test Files  11 passed (11)
+      Tests  66 passed (66)
+   Start at  02:59:18
+   Duration  36.57s (transform 49.08s, setup 0ms, collect 125.62s, tests 14.17s, environment 62ms, prepare 9.69s)

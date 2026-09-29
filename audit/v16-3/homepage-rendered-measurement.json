@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "measuredAt": "2026-09-30T03:31:00+08:00",
+  "source": "local production build at http://127.0.0.1:4183/",
+  "reviewer": "Codex primary builder; independent confirmation required before release",
+  "method": {
+    "content": "For every visible main [data-family-content] block, count whitespace-delimited rendered text words and divide primary-family words by primary plus supporting words.",
+    "visual": "For every visible main [data-family-visual] block, compute getBoundingClientRect().width * height and divide primary-family area by primary plus supporting area.",
+    "visibility": "display is not none, visibility is not hidden, and the element has positive rendered width and height."
+  },
+  "desktop": {
+    "viewport": { "width": 1280, "height": 800 },
+    "contentPrimaryWords": 308,
+    "contentSupportingWords": 75,
+    "contentPrimaryPercent": 80.42,
+    "visualPrimaryArea": 953868.6401748656,
+    "visualSupportingArea": 204135.21606445312,
+    "visualPrimaryPercent": 82.37,
+    "primaryLeads": true,
+    "primaryLargestIndividual": true,
+    "horizontalOverflow": false,
+    "h1Count": 1
+  },
+  "mobile": {
+    "viewport": { "width": 390, "height": 844 },
+    "contentPrimaryWords": 308,
+    "contentSupportingWords": 75,
+    "contentPrimaryPercent": 80.42,
+    "visualPrimaryArea": 762099,
+    "visualSupportingArea": 196000,
+    "visualPrimaryPercent": 79.54,
+    "primaryLeads": true,
+    "primaryLargestIndividual": true,
+    "horizontalOverflow": false,
+    "h1Count": 1,
+    "failedImages": [],
+    "gridColumns": "326.667px",
+    "supportCardWidths": [327, 327]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "version": "16.3",
+  "family": "shower-restroom-combination",
+  "targetUrl": "https://temporary-shower-rental.com/",
+  "renderedRouteCount": 34,
+  "approvedOfferingProfile": "shower-restroom-combination-rental",
+  "evidence": [
+    {
+      "source_type": "rendered-build",
+      "source": "family-distribution.json",
+      "observed_fact": "The complete rendered route inventory contains preserved shower-restroom-combination pages with explicit family classifications.",
+      "independent_group": "target-rendered-output"
+    },
+    {
+      "source_type": "owner",
+      "source": "requirements-source.md",
+      "observed_fact": "The owner directed that the existing shower-restroom-combination offering and URLs be preserved without fabricated expansion.",
+      "independent_group": "owner-confirmation"
+    }
+  ],
+  "examples": [
+    {
+      "route": "/service-areas/arizona/phoenix-area/",
+      "h1": "Phoenix area, Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "scope": "controlled-plan"
+    },
+    {
+      "route": "/service-areas/arkansas/arkansas-river-valley/",
+      "h1": "Arkansas River Valley, Arkansas Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "scope": "controlled-plan"
+    },
+    {
+      "route": "/service-areas/connecticut/connecticut-river-valley/",
+      "h1": "Connecticut River Valley, Connecticut Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "scope": "controlled-plan"
+    },
+    {
+      "route": "/service-areas/hawaii/hawaii-island/",
+      "h1": "Hawaii Island, Hawaii Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "scope": "controlled-plan"
+    },
+    {
+      "route": "/service-areas/iowa/central-iowa/",
+      "h1": "Central Iowa Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "scope": "controlled-plan"
+    }
+  ],
+  "publicationBoundary": "Verified supporting family represented in the controlled plan and homepage.",
+  "dimensions": {
+    "purpose": {
+      "status": "supported",
+      "finding": "shower-restroom-combination is presented as a commercial rental family in the rendered route/H1 inventory.",
+      "evidence": [
+        "family-dossiers/shower-restroom-combination.json",
+        "family-distribution.json"
+      ]
+    },
+    "configurations": {
+      "status": "unknown",
+      "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+      "evidence": []
+    },
+    "utilities": {
+      "status": "unknown",
+      "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+      "evidence": []
+    },
+    "deployment": {
+      "status": "unknown",
+      "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+      "evidence": []
+    },
+    "service_scope": {
+      "status": "supported",
+      "finding": "34 rendered family-specific routes preserve the shower-restroom-combination rental offering without expanding it.",
+      "evidence": [
+        "family-dossiers/shower-restroom-combination.json",
+        "family-distribution.json"
+      ]
+    },
+    "location_evidence": {
+      "status": "supported",
+      "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+      "evidence": [
+        "family-dossiers/shower-restroom-combination.json",
+        "family-distribution.json"
+      ]
+    },
+    "visual_evidence": {
+      "status": "unknown",
+      "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+      "evidence": []
+    },
+    "claims_and_gaps": {
+      "status": "supported",
+      "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+      "evidence": [
+        "family-dossiers/shower-restroom-combination.json"
+      ]
+    }
+  },
+  "unresolvedClaims": [
+    {
+      "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+      "handling": "request-confirmation",
+      "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": "16.3",
+  "capturedAt": "2026-09-29T17:38:00.000Z",
+  "targetUrl": "https://temporary-shower-rental.com/",
+  "methodology": "Rendered baseline build; denominator is homepage plus state and regional service-area landing pages. Protected legacy, catalog, utility, city-editorial, and legal routes are excluded.",
+  "fullPlan": {
+    "total": 297,
+    "primary": 41,
+    "supporting": 256,
+    "primaryPercent": 13.8,
+    "supportingPercent": 86.2
+  },
+  "released": {
+    "total": 25,
+    "primary": 4,
+    "supporting": 21,
+    "primaryPercent": 16,
+    "supportingPercent": 84
+  },
+  "homepage": {
+    "content": {
+      "total": 9,
+      "primary": 2,
+      "supporting": 7,
+      "primaryPercent": 22.22
+    },
+    "visual": {
+      "total": 9,
+      "primary": 2,
+      "supporting": 7,
+      "primaryPercent": 22.22
+    }
+  },
+  "result": "FAIL"
+}

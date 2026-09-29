@@ -1,0 +1,80 @@
+
+> temporary123@0.1.0 check:families
+> node scripts/audit-v163-family-distribution.mjs dist --check
+
+{
+  "generatedAt": "2026-09-29T19:10:18.344Z",
+  "distDir": "C:\\Users\\Charles\\Documents\\Codex\\2026-09-30\\temporary-shower-rental-v163\\dist",
+  "methodology": {
+    "primaryFamily": "shower",
+    "fullPlan": "Homepage plus rendered state and regional service-area landing pages; protected legacy, catalog, utility, editorial city, and legal routes are excluded from the V16.3 allocation denominator.",
+    "released": "V16.3 full-plan routes present in the generated XML sitemap.",
+    "homepage": "Independently tagged substantive family content modules and family visual modules inside main; shared responsive DOM is later checked for visibility at desktop and mobile widths."
+  },
+  "routeInventory": {
+    "rendered": 754,
+    "sitemap": 25,
+    "fullPlan": 297,
+    "releasedPlan": 25
+  },
+  "fullPlan": {
+    "total": 297,
+    "primary": 233,
+    "supporting": 64,
+    "primaryPercent": 78.45,
+    "supportingPercent": 21.55,
+    "byFamily": {
+      "shower": 233,
+      "shower-restroom-combination": 27,
+      "mobile-commercial-kitchen": 37
+    }
+  },
+  "released": {
+    "total": 25,
+    "primary": 21,
+    "supporting": 4,
+    "primaryPercent": 84,
+    "supportingPercent": 16,
+    "byFamily": {
+      "shower": 21,
+      "shower-restroom-combination": 2,
+      "mobile-commercial-kitchen": 2
+    }
+  },
+  "homepage": {
+    "content": {
+      "total": 11,
+      "primary": 9,
+      "supporting": 2,
+      "primaryPercent": 81.82,
+      "supportingPercent": 18.18,
+      "byFamily": {
+        "shower": 9,
+        "shower-restroom-combination": 1,
+        "mobile-commercial-kitchen": 1
+      }
+    },
+    "visual": {
+      "total": 11,
+      "primary": 9,
+      "supporting": 2,
+      "primaryPercent": 81.82,
+      "supportingPercent": 18.18,
+      "byFamily": {
+        "shower": 9,
+        "shower-restroom-combination": 1,
+        "mobile-commercial-kitchen": 1
+      }
+    }
+  },
+  "gates": {
+    "fullPlanPrimaryInBand": true,
+    "releasedPrimaryInBand": true,
+    "homepageContentPrimaryInBand": true,
+    "homepageVisualPrimaryInBand": true,
+    "strictAlignment": true,
+    "homepageModuleAlignment": true
+  },
+  "alignmentViolations": [],
+  "homepageViolations": []
+}

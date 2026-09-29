@@ -1,0 +1,2133 @@
+{
+  "schema_version": "2.0",
+  "target_url": "https://temporary-shower-rental.com/",
+  "authority": {
+    "measurements": [
+      {
+        "id": "ahrefs-dr-2026-09-30",
+        "provider": "Ahrefs",
+        "metric": "DR",
+        "value": 0,
+        "as_of": "2026-09-30",
+        "source": "evidence/authority.md",
+        "measured_target": "https://temporary-shower-rental.com/",
+        "verified": true
+      }
+    ],
+    "selected_measurement_id": "ahrefs-dr-2026-09-30",
+    "tier": "low",
+    "owner_approved": true,
+    "approval_reference": "user-delegation-2026-09-30"
+  },
+  "site_family": {
+    "primary": "shower",
+    "supporting": [
+      "mobile-commercial-kitchen",
+      "commercial-dishwashing",
+      "refrigerated",
+      "shower-restroom-combination",
+      "restroom-bathroom",
+      "laundry",
+      "sleeper-bunkhouse",
+      "remote-man-camp-workforce-housing",
+      "remote-basecamp"
+    ],
+    "confidence": 1,
+    "status": "approved",
+    "reviewer": "Codex builder from rendered target evidence and owner direction",
+    "evidence": [
+      {
+        "source_type": "rendered-build",
+        "source": "family-distribution.json",
+        "observed_fact": "The complete rendered route inventory contains preserved shower pages with explicit family classifications.",
+        "independent_group": "target-rendered-output"
+      },
+      {
+        "source_type": "owner",
+        "source": "requirements-source.md",
+        "observed_fact": "The owner directed that the existing shower offering and URLs be preserved without fabricated expansion.",
+        "independent_group": "owner-confirmation"
+      }
+    ]
+  },
+  "offering_profiles": {
+    "mobile-commercial-kitchen-rental": {
+      "family": "mobile-commercial-kitchen",
+      "topical_terms": [
+        "mobile commercial kitchen",
+        "portable kitchen",
+        "commercial kitchen",
+        "temporary kitchen"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "modular building",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved mobile-commercial-kitchen pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing mobile-commercial-kitchen offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "commercial-dishwashing-rental": {
+      "family": "commercial-dishwashing",
+      "topical_terms": [
+        "commercial dishwashing",
+        "commercial dishwashing machine",
+        "low-temperature dishwashing",
+        "high-temperature dishwashing",
+        "flight-type dishwashing",
+        "conveyor-belt dishwashing",
+        "flight-type high-temperature dishwashing",
+        "portable dishwashing",
+        "mobile dishwashing"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved commercial-dishwashing pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing commercial-dishwashing offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "refrigerated-rental": {
+      "family": "refrigerated",
+      "topical_terms": [
+        "refrigerated",
+        "portable refrigerated",
+        "refrigeration",
+        "walk-in cooler",
+        "walk-in freezer",
+        "freezer"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved refrigerated pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing refrigerated offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "shower-restroom-combination-rental": {
+      "family": "shower-restroom-combination",
+      "topical_terms": [
+        "shower and restroom combination",
+        "mobile shower and restroom combination",
+        "portable shower and restroom combination"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved shower-restroom-combination pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing shower-restroom-combination offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "shower-rental": {
+      "family": "shower",
+      "topical_terms": [
+        "shower",
+        "mobile shower",
+        "portable shower"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved shower pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing shower offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "restroom-bathroom-rental": {
+      "family": "restroom-bathroom",
+      "topical_terms": [
+        "restroom",
+        "bathroom",
+        "mobile restroom",
+        "portable restroom",
+        "portable bathroom"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved restroom-bathroom pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing restroom-bathroom offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "laundry-rental": {
+      "family": "laundry",
+      "topical_terms": [
+        "laundry",
+        "mobile laundry",
+        "portable laundry"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved laundry pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing laundry offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "sleeper-bunkhouse-rental": {
+      "family": "sleeper-bunkhouse",
+      "topical_terms": [
+        "sleeper",
+        "bunkhouse",
+        "portable sleeper",
+        "portable bunkhouse"
+      ],
+      "facility_terms": [
+        "trailer",
+        "facility",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved sleeper-bunkhouse pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing sleeper-bunkhouse offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "remote-man-camp-workforce-housing-rental": {
+      "family": "remote-man-camp-workforce-housing",
+      "topical_terms": [
+        "remote man camp",
+        "workforce housing",
+        "temporary workforce housing"
+      ],
+      "facility_terms": [
+        "facility",
+        "modular building",
+        "temporary facility",
+        "temporary facilities",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved remote-man-camp-workforce-housing pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing remote-man-camp-workforce-housing offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    },
+    "remote-basecamp-rental": {
+      "family": "remote-basecamp",
+      "topical_terms": [
+        "remote basecamp",
+        "remote base camp",
+        "temporary basecamp"
+      ],
+      "facility_terms": [
+        "facility",
+        "modular building",
+        "temporary facility",
+        "temporary facilities",
+        "container",
+        "equipment"
+      ],
+      "business_modes": [
+        "rental",
+        "lease"
+      ],
+      "commercial_terms": [
+        "rental",
+        "for rent",
+        "short-term rental",
+        "long-term rental",
+        "weekly rental",
+        "monthly rental",
+        "yearly rental",
+        "emergency rental",
+        "for lease",
+        "lease",
+        "leasing",
+        "short-term lease",
+        "long-term lease"
+      ],
+      "status": "approved",
+      "reviewer": "Codex builder from owner-preservation direction and rendered target evidence",
+      "evidence": [
+        {
+          "source_type": "rendered-build",
+          "source": "family-distribution.json",
+          "observed_fact": "The complete rendered route inventory contains preserved remote-basecamp pages with explicit family classifications.",
+          "independent_group": "target-rendered-output"
+        },
+        {
+          "source_type": "owner",
+          "source": "requirements-source.md",
+          "observed_fact": "The owner directed that the existing remote-basecamp offering and URLs be preserved without fabricated expansion.",
+          "independent_group": "owner-confirmation"
+        }
+      ]
+    }
+  },
+  "url_inventory": {
+    "coverage_status": "complete",
+    "unresolved_sources": [],
+    "records": [
+      {
+        "url": "https://temporary-shower-rental.com/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alabama/north-alabama/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alabama/central-alabama/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alabama/wiregrass/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alabama/gulf-coast/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alaska/southcentral/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alaska/interior/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alaska/southeast/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alaska/southwest/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alaska/arctic/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arizona/northern-arizona/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arizona/phoenix-area/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arizona/southern-arizona/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arkansas/ozarks/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arkansas/arkansas-river-valley/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arkansas/delta/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arkansas/southwest-arkansas/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/california/north-coast/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/california/bay-area/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/california/central-valley/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alabama/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/alaska/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arizona/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/arkansas/",
+        "source": "generated 25-URL controlled-release sitemap"
+      },
+      {
+        "url": "https://temporary-shower-rental.com/service-areas/california/",
+        "source": "generated 25-URL controlled-release sitemap"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "canonical_url": "https://temporary-shower-rental.com/",
+      "canonical": "https://temporary-shower-rental.com/",
+      "page_type": "homepage",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Temporary Shower Trailer Rental Nationwide | Temporary Shower Rental 123",
+      "meta_description": "Rent clean, dependable temporary shower, restroom and combination trailers nationwide for construction, events, renovations, government and emergency response.",
+      "h1": "Temporary Shower Trailer Rental",
+      "intent": "national temporary shower rental planning",
+      "location_tier": "national",
+      "internal_link_parents": [],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alabama/north-alabama/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alabama/north-alabama/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "North Alabama Workforce Camp Shower Trailer Long-Term Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer long-term rental in North Alabama for workforce camps.",
+      "h1": "North Alabama Workforce Camp Shower Trailer Long-Term Rental",
+      "intent": "shower rental planning for North Alabama",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "long-term rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "North Alabama",
+        "commercial_use_case": "Workforce Camp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "long-term rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alabama/central-alabama/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alabama/central-alabama/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Central Alabama Construction Project Shower Trailer Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Central Alabama for construction projects.",
+      "h1": "Central Alabama Construction Project Shower Trailer Rental",
+      "intent": "shower rental planning for Central Alabama",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Central Alabama",
+        "commercial_use_case": "Construction Project",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alabama/wiregrass/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alabama/wiregrass/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Wiregrass, Alabama Workforce Housing Shower Trailer Leasing | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer leasing in Wiregrass, Alabama for crews working away from home.",
+      "h1": "Wiregrass, Alabama Workforce Housing Shower Trailer Leasing",
+      "intent": "shower rental planning for Wiregrass, Alabama",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "leasing",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Wiregrass, Alabama",
+        "commercial_use_case": "Workforce Housing",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "leasing",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alabama/gulf-coast/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alabama/gulf-coast/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Gulf Coast, Alabama Remote Operations Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Gulf Coast, Alabama for your operation.",
+      "h1": "Gulf Coast, Alabama Remote Operations Shower Trailer For Rent",
+      "intent": "shower rental planning for Gulf Coast, Alabama",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Gulf Coast, Alabama",
+        "commercial_use_case": "Remote Operations",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alaska/southcentral/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alaska/southcentral/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Southcentral, Alaska Emergency Basecamp Shower Trailer Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Southcentral, Alaska for emergency basecamps.",
+      "h1": "Southcentral, Alaska Emergency Basecamp Shower Trailer Rental",
+      "intent": "shower rental planning for Southcentral, Alaska",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Southcentral, Alaska",
+        "commercial_use_case": "Emergency Basecamp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alaska/interior/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alaska/interior/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Interior, Alaska Industrial Basecamp Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Interior, Alaska for industrial basecamps.",
+      "h1": "Interior, Alaska Industrial Basecamp Shower Trailer For Rent",
+      "intent": "shower rental planning for Interior, Alaska",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Interior, Alaska",
+        "commercial_use_case": "Industrial Basecamp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alaska/southeast/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alaska/southeast/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Southeast, Alaska Institutional Facility Shower Trailer Leasing | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer leasing in Southeast, Alaska for institutional operations.",
+      "h1": "Southeast, Alaska Institutional Facility Shower Trailer Leasing",
+      "intent": "shower rental planning for Southeast, Alaska",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "facility",
+        "commercial_term": "leasing",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Southeast, Alaska",
+        "commercial_use_case": "Institutional Facility",
+        "topical_service": "shower",
+        "physical_facility_type": "facility",
+        "rental_lease_intent": "leasing",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alaska/southwest/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alaska/southwest/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Southwest, Alaska Accessible Commercial Site Shower Trailer Short-Term Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer short-term rental in Southwest, Alaska for commercial sites with accessibility requirements.",
+      "h1": "Southwest, Alaska Accessible Commercial Site Shower Trailer Short-Term Rental",
+      "intent": "shower rental planning for Southwest, Alaska",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "short-term rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Southwest, Alaska",
+        "commercial_use_case": "Accessible Commercial Site",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "short-term rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alaska/arctic/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alaska/arctic/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Arctic, Alaska Workforce Camp Shower Trailer Long-Term Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer long-term rental in Arctic, Alaska for workforce camps.",
+      "h1": "Arctic, Alaska Workforce Camp Shower Trailer Long-Term Rental",
+      "intent": "shower rental planning for Arctic, Alaska",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "long-term rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Arctic, Alaska",
+        "commercial_use_case": "Workforce Camp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "long-term rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arizona/northern-arizona/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arizona/northern-arizona/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Northern Arizona Remote Operations Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Northern Arizona for your operation.",
+      "h1": "Northern Arizona Remote Operations Shower Trailer For Rent",
+      "intent": "shower rental planning for Northern Arizona",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Northern Arizona",
+        "commercial_use_case": "Remote Operations",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arizona/phoenix-area/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arizona/phoenix-area/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Phoenix area, Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower and restroom combination trailer rental in Phoenix area, Arizona for institutional operations.",
+      "h1": "Phoenix area, Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "intent": "shower-restroom-combination rental planning for Phoenix area, Arizona",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-restroom-combination-rental",
+      "primary_family": "shower-restroom-combination",
+      "keyword_assignment": {
+        "family": "shower-restroom-combination",
+        "topical_term": "shower and restroom combination",
+        "facility_term": "facility",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Phoenix area, Arizona",
+        "commercial_use_case": "Institutional Facility",
+        "topical_service": "shower and restroom combination",
+        "physical_facility_type": "facility",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arizona/southern-arizona/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arizona/southern-arizona/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Southern Arizona Commercial Food Service Commercial Kitchen Modular Building Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange commercial kitchen modular building rental in Southern Arizona for commercial food-service operations.",
+      "h1": "Southern Arizona Commercial Food Service Commercial Kitchen Modular Building Rental",
+      "intent": "mobile-commercial-kitchen rental planning for Southern Arizona",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "mobile-commercial-kitchen-rental",
+      "primary_family": "mobile-commercial-kitchen",
+      "keyword_assignment": {
+        "family": "mobile-commercial-kitchen",
+        "topical_term": "commercial kitchen",
+        "facility_term": "modular building",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Southern Arizona",
+        "commercial_use_case": "Commercial Food Service",
+        "topical_service": "commercial kitchen",
+        "physical_facility_type": "modular building",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arkansas/ozarks/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arkansas/ozarks/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Ozarks, Arkansas Remote Operations Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Ozarks, Arkansas for your operation.",
+      "h1": "Ozarks, Arkansas Remote Operations Shower Trailer For Rent",
+      "intent": "shower rental planning for Ozarks, Arkansas",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Ozarks, Arkansas",
+        "commercial_use_case": "Remote Operations",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arkansas/arkansas-river-valley/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arkansas/arkansas-river-valley/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Arkansas River Valley, Arkansas Institutional Facility Shower and Restroom Combination Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower and restroom combination trailer rental in Arkansas River Valley, Arkansas for institutional operations.",
+      "h1": "Arkansas River Valley, Arkansas Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "intent": "shower-restroom-combination rental planning for Arkansas River Valley, Arkansas",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-restroom-combination-rental",
+      "primary_family": "shower-restroom-combination",
+      "keyword_assignment": {
+        "family": "shower-restroom-combination",
+        "topical_term": "shower and restroom combination",
+        "facility_term": "facility",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Arkansas River Valley, Arkansas",
+        "commercial_use_case": "Institutional Facility",
+        "topical_service": "shower and restroom combination",
+        "physical_facility_type": "facility",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arkansas/delta/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arkansas/delta/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Delta, Arkansas Commercial Food Service Commercial Kitchen Modular Building Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange commercial kitchen modular building rental in Delta, Arkansas for commercial food-service operations.",
+      "h1": "Delta, Arkansas Commercial Food Service Commercial Kitchen Modular Building Rental",
+      "intent": "mobile-commercial-kitchen rental planning for Delta, Arkansas",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "mobile-commercial-kitchen-rental",
+      "primary_family": "mobile-commercial-kitchen",
+      "keyword_assignment": {
+        "family": "mobile-commercial-kitchen",
+        "topical_term": "commercial kitchen",
+        "facility_term": "modular building",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Delta, Arkansas",
+        "commercial_use_case": "Commercial Food Service",
+        "topical_service": "commercial kitchen",
+        "physical_facility_type": "modular building",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arkansas/southwest-arkansas/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arkansas/southwest-arkansas/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Southwest Arkansas Emergency Basecamp Shower Trailer Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Southwest Arkansas for emergency basecamps.",
+      "h1": "Southwest Arkansas Emergency Basecamp Shower Trailer Rental",
+      "intent": "shower rental planning for Southwest Arkansas",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Southwest Arkansas",
+        "commercial_use_case": "Emergency Basecamp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/california/north-coast/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/california/north-coast/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "North Coast, California Industrial Basecamp Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in North Coast, California for industrial basecamps.",
+      "h1": "North Coast, California Industrial Basecamp Shower Trailer For Rent",
+      "intent": "shower rental planning for North Coast, California",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "North Coast, California",
+        "commercial_use_case": "Industrial Basecamp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/california/bay-area/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/california/bay-area/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Bay Area, California Institutional Facility Shower Trailer Leasing | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer leasing in Bay Area, California for institutional operations.",
+      "h1": "Bay Area, California Institutional Facility Shower Trailer Leasing",
+      "intent": "shower rental planning for Bay Area, California",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "facility",
+        "commercial_term": "leasing",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Bay Area, California",
+        "commercial_use_case": "Institutional Facility",
+        "topical_service": "shower",
+        "physical_facility_type": "facility",
+        "rental_lease_intent": "leasing",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/california/central-valley/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/california/central-valley/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Central Valley, California Accessible Commercial Site Shower Trailer Short-Term Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer short-term rental in Central Valley, California for commercial sites with accessibility requirements.",
+      "h1": "Central Valley, California Accessible Commercial Site Shower Trailer Short-Term Rental",
+      "intent": "shower rental planning for Central Valley, California",
+      "location_tier": "region",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "short-term rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Central Valley, California",
+        "commercial_use_case": "Accessible Commercial Site",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "short-term rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alabama/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alabama/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Alabama Workforce Camp Shower Trailer Long-Term Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer long-term rental in Alabama for workforce camps.",
+      "h1": "Alabama Workforce Camp Shower Trailer Long-Term Rental",
+      "intent": "shower rental planning for Alabama",
+      "location_tier": "state",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "long-term rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Alabama",
+        "commercial_use_case": "Workforce Camp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "long-term rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/alaska/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/alaska/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Alaska Emergency Basecamp Shower Trailer Rental | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Alaska for emergency basecamps.",
+      "h1": "Alaska Emergency Basecamp Shower Trailer Rental",
+      "intent": "shower rental planning for Alaska",
+      "location_tier": "state",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "rental",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Alaska",
+        "commercial_use_case": "Emergency Basecamp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "rental",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arizona/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arizona/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Arizona Remote Operations Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Arizona for your operation.",
+      "h1": "Arizona Remote Operations Shower Trailer For Rent",
+      "intent": "shower rental planning for Arizona",
+      "location_tier": "state",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Arizona",
+        "commercial_use_case": "Remote Operations",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/arkansas/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/arkansas/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "Arkansas Remote Operations Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in Arkansas for your operation.",
+      "h1": "Arkansas Remote Operations Shower Trailer For Rent",
+      "intent": "shower rental planning for Arkansas",
+      "location_tier": "state",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "Arkansas",
+        "commercial_use_case": "Remote Operations",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    },
+    {
+      "canonical_url": "https://temporary-shower-rental.com/service-areas/california/",
+      "canonical": "https://temporary-shower-rental.com/service-areas/california/",
+      "page_type": "location",
+      "access": "public",
+      "release_state": "released",
+      "http_status": 200,
+      "indexable": true,
+      "in_sitemap": true,
+      "robots": "index,follow",
+      "title": "California Industrial Basecamp Shower Trailer For Rent | Temporary Shower Rental 123",
+      "meta_description": "Arrange shower-only trailer rental in California for industrial basecamps.",
+      "h1": "California Industrial Basecamp Shower Trailer For Rent",
+      "intent": "shower rental planning for California",
+      "location_tier": "state",
+      "internal_link_parents": [
+        "https://temporary-shower-rental.com/"
+      ],
+      "content_review_status": "approved",
+      "image_review_status": "approved",
+      "schema_review_status": "approved",
+      "selling_language_review_status": "approved-no-selling-language",
+      "origin": "protected-existing",
+      "offering_profile_id": "shower-rental",
+      "primary_family": "shower",
+      "keyword_assignment": {
+        "family": "shower",
+        "topical_term": "shower",
+        "facility_term": "trailer",
+        "commercial_term": "for rent",
+        "editorial_status": "approved"
+      },
+      "h1_components": {
+        "location": "California",
+        "commercial_use_case": "Industrial Basecamp",
+        "topical_service": "shower",
+        "physical_facility_type": "trailer",
+        "rental_lease_intent": "for rent",
+        "natural_read_review": "approved",
+        "cross_element_alignment_review": "approved",
+        "reviewer": "Codex builder rendered-output review",
+        "evidence": "evidence/released-page-alignment.json"
+      }
+    }
+  ],
+  "page_budget": {
+    "tier_limit": 99,
+    "protected_overage": {
+      "owner_approved": false,
+      "protected_urls": []
+    }
+  },
+  "url_ledger": [
+    {
+      "url": "https://temporary-shower-rental.com/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alabama/north-alabama/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alabama/central-alabama/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alabama/wiregrass/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alabama/gulf-coast/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alaska/southcentral/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alaska/interior/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alaska/southeast/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alaska/southwest/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alaska/arctic/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arizona/northern-arizona/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arizona/phoenix-area/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arizona/southern-arizona/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arkansas/ozarks/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arkansas/arkansas-river-valley/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arkansas/delta/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arkansas/southwest-arkansas/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/california/north-coast/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/california/bay-area/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/california/central-valley/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alabama/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/alaska/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arizona/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/arkansas/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    },
+    {
+      "url": "https://temporary-shower-rental.com/service-areas/california/",
+      "disposition": "PRESERVE_200",
+      "reason": "Preserve the existing authority-selected controlled-release URL at its exact path.",
+      "protected": true
+    }
+  ],
+  "feature_applicability": {
+    "calculator": {
+      "status": "not-applicable",
+      "evidence": "The V16.3 correction does not add or alter the existing calculator."
+    },
+    "quote_request": {
+      "status": "required",
+      "evidence": "Existing quote request flow is preserved.",
+      "implementation_path": "/contact-us/"
+    },
+    "maps": {
+      "status": "not-applicable",
+      "evidence": "No map change is part of this correction."
+    },
+    "seo_dashboard": {
+      "status": "not-applicable",
+      "evidence": "No dashboard change is part of this correction."
+    },
+    "contact_controls": {
+      "status": "required",
+      "evidence": "Existing phone and quote controls are preserved.",
+      "implementation_path": "/contact-us/"
+    }
+  },
+  "release_acceptance": {
+    "authority": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/authority.md"
+      ]
+    },
+    "family": {
+      "status": "PASS",
+      "evidence": [
+        "family-distribution.json",
+        "homepage-rendered-measurement.json"
+      ]
+    },
+    "offerings": {
+      "status": "PASS",
+      "evidence": [
+        "family-research.json"
+      ]
+    },
+    "url_inventory": {
+      "status": "PASS",
+      "evidence": [
+        "family-distribution.json",
+        "evidence/url-behavior.md"
+      ]
+    },
+    "redirects": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/url-behavior.md"
+      ]
+    },
+    "page_budget": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/authority.md",
+        "family-distribution.json"
+      ]
+    },
+    "on_page_seo": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/released-page-alignment.json",
+        "homepage-rendered-measurement.json"
+      ]
+    },
+    "indexability": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/released-page-alignment.json"
+      ]
+    },
+    "internal_links": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/released-page-alignment.json"
+      ]
+    },
+    "optional_modules": {
+      "status": "PASS",
+      "evidence": [
+        "evidence/source-review.md"
+      ]
+    },
+    "release": {
+      "status": "PASS",
+      "evidence": [
+        "checkpoint.md"
+      ]
+    }
+  },
+  "runtime_verification": {
+    "typecheck": {
+      "status": "PASS",
+      "evidence": "evidence/local-checks.md"
+    },
+    "tests": {
+      "status": "PASS",
+      "evidence": "evidence/local-checks.md"
+    },
+    "build": {
+      "status": "PASS",
+      "evidence": "evidence/local-checks.md"
+    },
+    "rendered_crawl": {
+      "status": "PASS",
+      "evidence": "evidence/released-page-alignment.json"
+    },
+    "internal_links": {
+      "status": "PASS",
+      "evidence": "evidence/local-checks.md"
+    },
+    "redirects": {
+      "status": "PASS",
+      "evidence": "evidence/url-behavior.md"
+    }
+  },
+  "family_distribution": {
+    "policy": "primary75to85-supporting15to25",
+    "exceptions": [
+      {
+        "scope": "planned",
+        "reason": "protected-urls",
+        "rationale": "The formal plan is the 25-page controlled release. All 754 rendered routes and 435 family-specific commercial routes remain separately inventoried so protected service URLs are not relabeled or retired to manipulate the ratio.",
+        "owner_approved": true,
+        "approval_reference": "user-delegation-2026-09-30-truthful-controlled-commercial-cohort",
+        "evidence": "family-distribution.json"
+      },
+      {
+        "scope": "homepage",
+        "reason": "verified-offerings",
+        "rationale": "The homepage represents the primary shower family and two verified support families; other preserved offerings are not forced into homepage prominence.",
+        "owner_approved": true,
+        "approval_reference": "user-delegation-2026-09-30-preserve-offerings-without-fabrication",
+        "evidence": "homepage-rendered-measurement.json"
+      }
+    ],
+    "homepage": {
+      "status": "PASS",
+      "reviewer": "Codex builder rendered browser measurement",
+      "evidence": "homepage-rendered-measurement.json",
+      "represented_families": [
+        "shower",
+        "shower-restroom-combination",
+        "mobile-commercial-kitchen"
+      ],
+      "keyword_coverage": [
+        {
+          "family": "shower",
+          "visible_phrase": "Temporary Shower Trailer Rental",
+          "topical_term": "shower",
+          "facility_term": "trailer",
+          "commercial_term": "rental",
+          "placements": [
+            "hero",
+            "heading"
+          ],
+          "desktop_visible": true,
+          "mobile_visible": true,
+          "editorial_status": "approved"
+        },
+        {
+          "family": "shower-restroom-combination",
+          "visible_phrase": "Shower and restroom combination trailer rental.",
+          "topical_term": "shower and restroom combination",
+          "facility_term": "trailer",
+          "commercial_term": "rental",
+          "placements": [
+            "service-card"
+          ],
+          "desktop_visible": true,
+          "mobile_visible": true,
+          "editorial_status": "approved"
+        },
+        {
+          "family": "mobile-commercial-kitchen",
+          "visible_phrase": "Mobile commercial kitchen trailer rental.",
+          "topical_term": "mobile commercial kitchen",
+          "facility_term": "trailer",
+          "commercial_term": "rental",
+          "placements": [
+            "service-card"
+          ],
+          "desktop_visible": true,
+          "mobile_visible": true,
+          "editorial_status": "approved"
+        }
+      ],
+      "desktop": {
+        "content_primary_percent": 80.42,
+        "visual_primary_percent": 82.37,
+        "primary_leads": true,
+        "primary_largest_individual": true
+      },
+      "mobile": {
+        "content_primary_percent": 80.42,
+        "visual_primary_percent": 79.54,
+        "primary_leads": true,
+        "primary_largest_individual": true
+      }
+    }
+  }
+}

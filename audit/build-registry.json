@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T13:33:24.772Z",
+  "generatedAt": "2026-09-29T21:07:46.015Z",
   "mode": "production",
   "indexingScope": "homepage-and-service-areas",
   "indexingBatchSize": 25,
@@ -416,6 +416,46 @@
       "indexable": false
     },
     {
+      "path": "/services/mobile-kitchen-trailers/24ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/26ft-bulk/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/28ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/40ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/40ft-combination/",
+      "indexable": false
+    },
+    {
+      "path": "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/22ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/24ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/26ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/dishwashing-trailers/38ft-conveyor/",
+      "indexable": false
+    },
+    {
       "path": "/refrigeration/12ft-trailer-medium-high-temperature/",
       "indexable": false
     },
@@ -496,47 +536,7 @@
       "indexable": false
     },
     {
-      "path": "/services/mobile-kitchen-trailers/24ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/mobile-kitchen-trailers/26ft-bulk/",
-      "indexable": false
-    },
-    {
-      "path": "/services/mobile-kitchen-trailers/28ft/",
-      "indexable": false
-    },
-    {
       "path": "/services/mobile-kitchen-trailers/38ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/mobile-kitchen-trailers/40ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/mobile-kitchen-trailers/40ft-combination/",
-      "indexable": false
-    },
-    {
-      "path": "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
-      "indexable": false
-    },
-    {
-      "path": "/services/dishwashing-trailers/22ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/dishwashing-trailers/24ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/dishwashing-trailers/26ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/dishwashing-trailers/38ft-conveyor/",
       "indexable": false
     },
     {

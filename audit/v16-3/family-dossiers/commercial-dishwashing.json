@@ -1,0 +1,109 @@
+{
+  "version": "16.3",
+  "family": "commercial-dishwashing",
+  "targetUrl": "https://temporary-shower-rental.com/",
+  "renderedRouteCount": 6,
+  "approvedOfferingProfile": "commercial-dishwashing-rental",
+  "evidence": [
+    {
+      "source_type": "rendered-build",
+      "source": "family-distribution.json",
+      "observed_fact": "The complete rendered route inventory contains preserved commercial-dishwashing pages with explicit family classifications.",
+      "independent_group": "target-rendered-output"
+    },
+    {
+      "source_type": "owner",
+      "source": "requirements-source.md",
+      "observed_fact": "The owner directed that the existing commercial-dishwashing offering and URLs be preserved without fabricated expansion.",
+      "independent_group": "owner-confirmation"
+    }
+  ],
+  "examples": [
+    {
+      "route": "/inventory/dishwashing-models/",
+      "h1": "Dishwashing Trailer Rental",
+      "scope": "protected-existing-commercial"
+    },
+    {
+      "route": "/portable-dishwashing-trailer-rental/",
+      "h1": "Portable Dishwashing Trailer Rental",
+      "scope": "protected-existing-commercial"
+    },
+    {
+      "route": "/services/dishwashing-trailers/22ft/",
+      "h1": "22ft Dishwashing Trailer Rental",
+      "scope": "protected-existing-commercial"
+    },
+    {
+      "route": "/services/dishwashing-trailers/24ft/",
+      "h1": "24ft Dishwashing Trailer Rental",
+      "scope": "protected-existing-commercial"
+    },
+    {
+      "route": "/services/dishwashing-trailers/26ft/",
+      "h1": "26ft Dishwashing Trailer Rental",
+      "scope": "protected-existing-commercial"
+    }
+  ],
+  "publicationBoundary": "Verified protected offering retained in the complete route inventory but not added to the controlled release cohort.",
+  "dimensions": {
+    "purpose": {
+      "status": "supported",
+      "finding": "commercial-dishwashing is presented as a commercial rental family in the rendered route/H1 inventory.",
+      "evidence": [
+        "family-dossiers/commercial-dishwashing.json",
+        "family-distribution.json"
+      ]
+    },
+    "configurations": {
+      "status": "unknown",
+      "finding": "The inventory contains representative route names, but current configuration availability must be confirmed for the project.",
+      "evidence": []
+    },
+    "utilities": {
+      "status": "unknown",
+      "finding": "Project-specific power, water, drainage and related utility requirements are not established by the route inventory.",
+      "evidence": []
+    },
+    "deployment": {
+      "status": "unknown",
+      "finding": "Delivery timing, placement constraints and servicing cadence require project confirmation.",
+      "evidence": []
+    },
+    "service_scope": {
+      "status": "supported",
+      "finding": "6 rendered family-specific routes preserve the commercial-dishwashing rental offering without expanding it.",
+      "evidence": [
+        "family-dossiers/commercial-dishwashing.json",
+        "family-distribution.json"
+      ]
+    },
+    "location_evidence": {
+      "status": "supported",
+      "finding": "Rendered route examples record whether the offering appears on protected existing or controlled location pages; they do not claim a locally deployed unit.",
+      "evidence": [
+        "family-dossiers/commercial-dishwashing.json",
+        "family-distribution.json"
+      ]
+    },
+    "visual_evidence": {
+      "status": "unknown",
+      "finding": "The family inventory does not by itself establish a reviewed asset for every protected route.",
+      "evidence": []
+    },
+    "claims_and_gaps": {
+      "status": "supported",
+      "finding": "Unverified availability, configuration, utility and deployment claims remain quote-confirmed and are not promoted as established facts.",
+      "evidence": [
+        "family-dossiers/commercial-dishwashing.json"
+      ]
+    }
+  },
+  "unresolvedClaims": [
+    {
+      "claim": "Current model availability, project-specific utilities, capacities and delivery timing",
+      "handling": "request-confirmation",
+      "reason": "The rendered route and H1 inventory establishes the offering family, but it does not establish live stock or project-specific specifications."
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-09-30 — Apply the 75–85% target to the truthful controlled commercial cohort
+
+Measure the requested family allocation across the homepage, 50 state pages, and 246 regional pages, because those pages can truthfully lead with temporary shower rental while retaining supporting commercial-facility context. Use an 8-of-10 deterministic shower-primary rotation for that cohort and preserve every service-specific URL as its actual offering; do not relabel mobile kitchens, restrooms, laundry, housing, refrigeration, or other protected routes merely to improve a ratio. The resulting controlled cohort is 78.45% shower-primary and the released 25-page cohort is 84%. Measure the homepage both by content modules and rendered image/card area at desktop and mobile; keep both rendered ratios inside 75–85%. Preserve the 25-URL rollout, canonical domain, project binding, routes, forms, and verified offerings. This release authorizes the existing production project only and does not authorize DNS, registrar, custom-domain, or manual alias changes.
+
 ## 2026-09-28 — Apply V16.2 metadata and route hygiene locally
 
 Use direct canonical service links for internal navigation when a legacy inventory alias only redirects. Keep the legacy URL itself addressable through the existing redirect map, but do not make customers traverse that alias from menus or regional content. Correct unsupported shower configuration wording to the verified 20 ft, 5-stall reference. Give every released route a distinct, truthful title and description, including about-page pairs and refrigeration aliases. This audit is local-only; do not push or deploy until the owner separately authorizes release and the missing V16.2 authority/research/completion evidence is assembled.

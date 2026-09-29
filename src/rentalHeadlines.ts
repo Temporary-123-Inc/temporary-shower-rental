@@ -45,16 +45,73 @@ export type LocationHeadlineOption = {
   rentalIntent: (typeof locationRentalIntents)[number];
 };
 
-const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
+export const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
   {
     commercialUseCase: "Emergency Basecamp",
     equipmentFamily: "Shower Trailer",
     rentalIntent: "Rental",
   },
   {
+    commercialUseCase: "Industrial Basecamp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "For Rent",
+  },
+  {
+    commercialUseCase: "Institutional Facility",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Leasing",
+  },
+  {
+    commercialUseCase: "Accessible Commercial Site",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Short-Term Rental",
+  },
+  {
+    commercialUseCase: "Workforce Camp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Long-Term Rental",
+  },
+  {
+    commercialUseCase: "Construction Project",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Workforce Housing",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Leasing",
+  },
+  {
+    commercialUseCase: "Remote Operations",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "For Rent",
+  },
+  {
     commercialUseCase: "Institutional Facility",
     equipmentFamily: "Shower and Restroom Combination Trailer",
     rentalIntent: "For Rent",
+  },
+  {
+    commercialUseCase: "Commercial Food Service",
+    equipmentFamily: "Commercial Kitchen Modular Building",
+    rentalIntent: "Rental",
+  },
+] as const;
+
+export const isPrimaryLocationOption = (option: LocationHeadlineOption) =>
+  option.equipmentFamily === "Shower Trailer";
+
+const acceptedLocationHeadlineOptions: readonly LocationHeadlineOption[] = [
+  ...locationHeadlineRotation,
+  {
+    commercialUseCase: "Industrial Basecamp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Workforce Camp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Short-Term Rental",
   },
   {
     commercialUseCase: "Accessible Commercial Site",
@@ -72,9 +129,9 @@ const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
     rentalIntent: "Rental",
   },
   {
-    commercialUseCase: "Commercial Food Service",
-    equipmentFamily: "Commercial Kitchen Modular Building",
-    rentalIntent: "For Rent",
+    commercialUseCase: "Industrial Basecamp",
+    equipmentFamily: "Commercial Kitchen Trailer",
+    rentalIntent: "Rental",
   },
   {
     commercialUseCase: "Workforce Housing",
@@ -87,37 +144,6 @@ const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
     rentalIntent: "Rental",
   },
 ] as const;
-
-const acceptedLocationHeadlineOptions: readonly LocationHeadlineOption[] = [
-  ...locationHeadlineRotation,
-  {
-    commercialUseCase: "Industrial Basecamp",
-    equipmentFamily: "Commercial Kitchen Trailer",
-    rentalIntent: "Rental",
-  },
-  {
-    commercialUseCase: "Industrial Basecamp",
-    equipmentFamily: "Commercial Kitchen Modular Building",
-    rentalIntent: "Rental",
-  },
-  {
-    commercialUseCase: "Industrial Basecamp",
-    equipmentFamily: "Shower Trailer",
-    rentalIntent: "Rental",
-  },
-  {
-    commercialUseCase: "Workforce Camp",
-    equipmentFamily: "Shower Trailer",
-    rentalIntent: "Short-Term Rental",
-  },
-] as const;
-
-const approvedStateOptions: Record<string, LocationHeadlineOption> = {
-  Alabama: locationHeadlineRotation[0],
-  California: locationHeadlineRotation[1],
-  Colorado: locationHeadlineRotation[4],
-  Texas: locationHeadlineRotation[7],
-};
 
 export const buildLocationRentalHeadline = (
   location: string,
@@ -145,7 +171,7 @@ export const regionLocationLabel = (region: string, state: string) =>
     : `${region}, ${state}`;
 
 export const stateRentalOption = (state: string): LocationHeadlineOption =>
-  approvedStateOptions[state] || select(locationHeadlineRotation, state);
+  select(locationHeadlineRotation, state);
 
 export const stateRentalHeadline = (state: string) =>
   buildLocationRentalHeadline(state, stateRentalOption(state));
@@ -190,27 +216,59 @@ const cityServiceHeadlines = {
   ],
   combination: [
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[1]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Institutional Facility",
+        equipmentFamily: "Shower and Restroom Combination Trailer",
+        rentalIntent: "For Rent",
+      }),
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[2]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Accessible Commercial Site",
+        equipmentFamily: "ADA Shower and Restroom Combination Trailer",
+        rentalIntent: "Leasing",
+      }),
   ],
   restroom: [
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[1]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Institutional Facility",
+        equipmentFamily: "Shower and Restroom Combination Trailer",
+        rentalIntent: "For Rent",
+      }),
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[2]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Accessible Commercial Site",
+        equipmentFamily: "ADA Shower and Restroom Combination Trailer",
+        rentalIntent: "Leasing",
+      }),
   ],
   sleeper: [
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[6]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Workforce Housing",
+        equipmentFamily: "Sleeper Bunk-Bed Facility",
+        rentalIntent: "Leasing",
+      }),
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[7]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Remote Operations",
+        equipmentFamily: "Man Camp Temporary Facilities",
+        rentalIntent: "Rental",
+      }),
   ],
   facility: [
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[3]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Workforce Camp",
+        equipmentFamily: "Laundry Temporary Facilities",
+        rentalIntent: "Long-Term Rental",
+      }),
     (location: string) =>
-      buildLocationRentalHeadline(location, locationHeadlineRotation[7]),
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Remote Operations",
+        equipmentFamily: "Man Camp Temporary Facilities",
+        rentalIntent: "Rental",
+      }),
   ],
 } as const;
 
