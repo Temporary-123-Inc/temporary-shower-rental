@@ -50,23 +50,26 @@ const verifiedAltByLocalMedia: Record<string, string> = {
 };
 
 export function renderSourceContent(html: string, options: Options) {
-  const $ = load(html, undefined, false);
   // Keep the source archive untouched while ensuring imported copy presents
-  // the assigned brand and contact details on the rendered site.
-  if (options.brand || options.phoneDisplay) {
-    $.root().find("*").contents().each((_, node) => {
-      if (node.type !== "text" || !("data" in node)) return;
-      let value = node.data;
-      if (options.brand) value = value.replace(/Temporary123\b/g, options.brand);
-      if (options.phoneDisplay) {
-        value = value.replace(
-          /(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b/g,
-          options.phoneDisplay,
-        );
-      }
-      node.data = value;
-    });
+  // the assigned brand and contact details on the rendered site. Normalize the
+  // bounded legacy tokens before parsing so each archived page is traversed once.
+  let normalizedHtml = html;
+  if (options.brand) {
+    normalizedHtml = normalizedHtml.replace(/Temporary123\b/g, options.brand);
   }
+  if (options.phoneHref) {
+    normalizedHtml = normalizedHtml.replace(
+      /(href\s*=\s*["'])tel:(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b(["'])/gi,
+      `$1${options.phoneHref}$2`,
+    );
+  }
+  if (options.phoneDisplay) {
+    normalizedHtml = normalizedHtml.replace(
+      /(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b/g,
+      options.phoneDisplay,
+    );
+  }
+  const $ = load(normalizedHtml, undefined, false);
   if (options.phoneHref) {
     $('a[href^="tel:"]').each((_, el) => {
       const anchor = $(el);
