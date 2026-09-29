@@ -759,7 +759,7 @@ export function Site({
             </div>
           </section>
         ) : equipmentBrief ? (
-          <EquipmentBrief item={equipmentBrief} />
+          <EquipmentBrief item={equipmentBrief} acceptsProjectLocation={path === consolidatedLocations.destination} />
         ) : ["/services/", "/inventory/", "/equipment-rental/", "/industries/"].includes(
             path,
           ) ? (

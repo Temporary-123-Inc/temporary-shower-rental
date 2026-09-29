@@ -266,9 +266,9 @@ test("desktop inventory menu exposes clear rental categories", async ({
   await expect(menu).toBeVisible();
   await expect(menu.locator(".service-category")).toHaveCount(10);
   await expect(
-    menu.getByRole("button", { name: "Restroom", exact: true }),
+    menu.getByRole("button", { name: "Shower and Restroom Combination Trailers", exact: true }),
   ).toBeVisible();
-  await menu.getByRole("button", { name: "Restroom", exact: true }).click();
+  await menu.getByRole("button", { name: "Shower and Restroom Combination Trailers", exact: true }).click();
   await expect(
     menu.getByRole("link", {
       name: "30 ft Luxury Combination Trailer, 8 Stalls",
@@ -614,7 +614,7 @@ test("initial HTML and unknown-route status work without JavaScript", async ({
   expect(html).toContain('id="shower-hero-title"');
   expect(html).toContain("Temporary Shower Trailer Rentals Nationwide");
   expect(html).toContain("Request a Quote");
-  expect(html).toContain("Explore rental options");
+  expect(html).toContain("View Rental Equipment");
   expect(html).not.toContain("April");
   const missing = await request.get("/missing-synthetic-test-page/");
   expect(missing.status()).toBe(404);

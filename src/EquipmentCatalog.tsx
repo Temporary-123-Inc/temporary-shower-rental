@@ -132,7 +132,7 @@ export function EquipmentCatalog() {
   );
 }
 
-export function EquipmentBrief({ item }: { item: CatalogItem }) {
+export function EquipmentBrief({ item, acceptsProjectLocation = false }: { item: CatalogItem; acceptsProjectLocation?: boolean }) {
   const photo = catalogPhotoCoverage(item);
   const related = catalog.items
     .filter(
@@ -150,6 +150,11 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
         <div>
           <span className="eyebrow">TEMPORARY SHOWER RENTAL EQUIPMENT</span>
           <h1>{rentalProductHeadline(item.name)}</h1>
+          {acceptsProjectLocation && (
+            <p className="selected-project-location" data-location-context hidden>
+              Your project location: <strong data-project-location />. Include the state and full delivery address in your inquiry so we can confirm the correct destination.
+            </p>
+          )}
           <p data-h1-intro>{alignedPageIntro(item.path, item.name, item.summary)}</p>
           <a className="button" href={`tel:${site.phoneE164}`}>
             Call {site.phoneDisplay}
@@ -209,6 +214,11 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
             ))}
           </div>
         </section>
+      )}
+      {acceptsProjectLocation && (
+        <a className="button" href="/contact-us/">
+          Discuss your kitchen project <span aria-hidden="true">↗</span>
+        </a>
       )}
       <a className="text-link" href="/equipment-rental/#all-equipment">
         ← Browse all equipment
