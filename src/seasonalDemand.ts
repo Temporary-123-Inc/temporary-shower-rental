@@ -566,8 +566,8 @@ const federalSources = (climate: string) => [
     href: "https://www.fhwa.dot.gov/majorprojects/schedule_estimating/",
   },
   {
-    label: "Temporary123 delivery and logistics",
-    href: "https://temporary123.com/planning/",
+    label: "Temporary Shower Rental 123 delivery and logistics",
+    href: "/planning/",
   },
   {
     label: "2024 Census Gazetteer place data",

@@ -1,5 +1,13 @@
 # Temporary123 Decision Log
 
+## 2026-09-29 — Keep the shower site primary without hiding the verified portfolio
+
+Use one customer-facing homepage H1, `Temporary Shower Trailer Rentals Nationwide`, rather than listing every equipment type in the heading. Put the verified cross-portfolio offer in the adjacent description and immediately following cards. Represent the requested commercial emphasis with eight equal service cards: shower trailers and shower containers occupy two cards (25%), while combination units, workforce housing, mobile kitchens, refrigeration/freezer support, dishwashing facilities and restroom trailers occupy six cards collectively (75%). This keeps showers first and the largest individual family without inventing a service. Use `View Rental Equipment` and `Request a Quote` as the hero actions. Keep availability, delivery, specifications and contract terms subject to project confirmation.
+
+## 2026-09-29 — Scope routing and identity corrections to the named shower project
+
+Treat `temporary-shower-rental.com` as the canonical public origin, redirect current `www` requests to the same apex path, and apply preview `noindex` headers only to `*.vercel.app` hosts. Normalize imported customer-visible brand and phone text at render time while preserving archived source evidence and legacy-domain redirects. Release only through GitHub `Temporary-123-Inc/temporary-shower-rental` and Vercel `temporary-124/temporary-shower-rental`; never use the separate Temporary-123 repository, project or domain for this correction.
+
 ## 2026-09-28 — Apply V16.2 metadata and route hygiene locally
 
 Use direct canonical service links for internal navigation when a legacy inventory alias only redirects. Keep the legacy URL itself addressable through the existing redirect map, but do not make customers traverse that alias from menus or regional content. Correct unsupported shower configuration wording to the verified 20 ft, 5-stall reference. Give every released route a distinct, truthful title and description, including about-page pairs and refrigeration aliases. This audit is local-only; do not push or deploy until the owner separately authorizes release and the missing V16.2 authority/research/completion evidence is assembled.

@@ -10,7 +10,7 @@ import {
 import { cityHeadline } from "../src/CityDetail";
 import { reviewedCityPages } from "../src/cityDirectory";
 
-describe("Boss-approved Temporary123 H1 plan", () => {
+describe("Boss-approved Temporary Shower Rental 123 H1 plan", () => {
   it("keeps location before the commercial use case, equipment, and rental intent", () => {
     expect(stateRentalHeadline("Alabama")).toBe(
       "Alabama Emergency Basecamp Shower Trailer Rental",

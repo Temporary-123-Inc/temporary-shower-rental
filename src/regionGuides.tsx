@@ -131,13 +131,13 @@ const introTemplates = [
   (state: string, region: string) =>
     `A ${region} project in ${state} may need a temporary facility plan that connects food service, hygiene and crew support. Compare short-term rental options with a longer lease, then confirm delivery access and utility requirements for the exact site.`,
   (state: string, region: string) =>
-    `For work across ${region}, ${state}, Temporary123 helps project teams plan rental facilities before mobilization. The conversation can cover mobile commercial kitchens, 22 ft 10-stall shower trailers, combination units and sleeper or bunkbed rentals for short or extended assignments.`,
+    `For work across ${region}, ${state}, ${site.brand} helps project teams plan rental facilities before mobilization. The conversation can cover mobile commercial kitchens, shower-trailer options, combination units and sleeper or bunkbed rentals for short or extended assignments.`,
   (state: string, region: string) =>
     `Project managers in ${region}, ${state} can use a temporary facilities rental plan to keep crews supported during construction, renovation or remote work. Review the site route, equipment footprint and servicing plan before choosing a rent or lease arrangement.`,
   (state: string, region: string) =>
     `When a site is located in ${region}, ${state}, a coordinated temporary facility rental keeps the next phase moving. Discuss kitchen capacity, shower and restroom combinations, sleeper or bunkbed trailers and the delivery sequence with our team.`,
   (state: string, region: string) =>
-    `A clear rental brief for ${region}, ${state} should name the work area, crew size and operating dates. Temporary123 can help compare mobile kitchen, hygiene and sleeper trailer options for a short-term rent or a longer lease.`,
+    `A clear rental brief for ${region}, ${state} should name the work area, crew size and operating dates. ${site.brand} can help compare mobile kitchen, hygiene and sleeper trailer options for a short-term rent or a longer lease.`,
 ] as const;
 
 const formatCityList = (cities: string[]) => {

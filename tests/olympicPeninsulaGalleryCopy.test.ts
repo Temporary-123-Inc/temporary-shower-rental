@@ -20,7 +20,7 @@ describe("Olympic Peninsula gallery review copy", () => {
         `Olympic Peninsula, Washington ${equipment} Rental or Lease`,
       );
       expect(caption).toMatch(/weekly rental, monthly rental, or yearly rental and lease options/);
-      expect(caption).toContain("Call us now at 800-443-5212 — available 24/7.");
+      expect(caption).toContain("Call us now at +1 (888) 385-5513 — available 24/7.");
     }
   });
 

@@ -41,7 +41,7 @@ test("old city link retains location and the approved service names", async ({
   await page.locator('.service-category-cards a[href*="/24ft/"]').click();
   await expect(page.locator("h1")).toHaveText(/Akiak/);
   await page
-    .getByRole("link", { name: "Contact Us at Temporary123", exact: true })
+    .getByRole("link", { name: "Contact Us at Temporary Shower Rental 123", exact: true })
     .click();
   await expect(
     page.locator('#contact-drawer input[name="location"]'),

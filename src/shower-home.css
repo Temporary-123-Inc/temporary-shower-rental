@@ -15,6 +15,10 @@
 .brand-logo{width:7rem!important;height:3.8rem!important;object-fit:contain!important}.brand-wordmark{display:none!important}.utility-refresh{background:#ed3b3d!important}.header-sticky.header-refresh{background:#fff!important;border-bottom-color:#d7e6ea!important}.header-refresh .header-contact{background:#198fbd!important;border-color:#198fbd!important}.header-refresh .header-contact:is(:hover,:focus-visible){background:#1479a1!important;border-color:#1479a1!important}.header-refresh .header-contact .header-phone-icon{color:#fff!important}.header-refresh .header > nav > a[href="/contact-us/"]{color:#ed3b3d!important}.shower-hero{background:#1c95c2!important}.shower-hero h1{max-width:14ch}.shower-actions .button:first-child{background:#fff!important;border-color:#fff!important;color:#16799b!important}.shower-actions .button:first-child:hover{background:#f1fbfd!important;border-color:#f1fbfd!important}.shower-actions .button.secondary{background:transparent!important;border-color:#fff!important;color:#fff!important}.shower-cta{background:#1c95c2!important;color:#fff!important}.shower-cta h2,.shower-cta p{color:#fff!important}.shower-cta .button{background:#fff!important;border-color:#fff!important;color:#16799b!important}.shower-cta .button.secondary{background:transparent!important;color:#fff!important;border-color:#fff!important}.contact-rail.contact-rail-refresh{background:#16a9df!important}.contact-rail.contact-rail-refresh:is(:hover,:focus-visible){background:#078fc3!important}.mobile-call.mobile-call-refresh{background:#1c95c2!important;border-top-color:#1c95c2!important}
 .brand-logo{width:12.5rem!important;height:4.7rem!important;object-fit:contain!important;object-position:left center}
 
+.shower-unit-card h3 {
+  overflow-wrap: anywhere;
+}
+
 .shower-hero-image,
 .shower-unit-card figure {
   position: relative;

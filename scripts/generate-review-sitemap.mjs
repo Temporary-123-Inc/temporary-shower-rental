@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
+import site from "../site.json" with { type: "json" };
 
-const productionOrigin = "https://temporary123.com";
+const productionOrigin = site.origin;
 const registryPath = new URL("../audit/build-registry.json", import.meta.url);
 const outputPath = new URL("../public/sitemap-review.xml", import.meta.url);
 

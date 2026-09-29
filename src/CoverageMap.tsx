@@ -390,7 +390,7 @@ export function CoverageMap({
 
               <section
                 className="state-dialog-visual"
-                aria-label="Temporary123 equipment photographs"
+                aria-label={`${site.brand} equipment photographs`}
               >
                 <div className="state-visual-heading">
                   <div>

@@ -45,7 +45,7 @@ export function applyCityRentalView(location: string) {
 
   // All reviewed galleries, specifications, product tabs and supporting copy stay intact.
   // In particular, never substitute a modular kitchen for a trailer or ADA for non-ADA.
-  document.title = copy.heading + " | Temporary123";
+  document.title = copy.heading + " | Temporary Shower Rental 123";
   document.querySelector('meta[name="description"]')?.setAttribute("content", copy.introduction);
   for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
     try {

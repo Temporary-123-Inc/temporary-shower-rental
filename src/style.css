@@ -2640,6 +2640,9 @@ body:has(.state-services-dialog[open]) {
     max-height: calc(100dvh - 10rem);
     overflow-y: auto;
   }
+  .mobile-nav:not([open]) > nav {
+    display: none;
+  }
   .mobile-nav nav a {
     padding: var(--space-3) 0;
     border-bottom: 1px solid var(--line);

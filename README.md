@@ -1,6 +1,6 @@
 # Temporary 123 website upgrade
 
-Upgrade of **temporary123.com**, preserving the business and source URLs. The April concept has been replaced with Temporary 123 branding and original equipment photography.
+Production website for **Temporary Shower Rental 123** at **temporary-shower-rental.com**. The repository preserves reviewed legacy URLs and source evidence while presenting the current shower-rental brand and verified equipment photography.
 
 **In progress:** 625 of the source API's 98,253 public pages have been recovered. Public WordPress export requests subsequently returned HTTP 500 responses. Completing the migration requires a reliable WordPress export or hosting backup. Do not move the live domain until recovery is complete.
 

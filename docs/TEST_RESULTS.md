@@ -1,5 +1,17 @@
 # Temporary123 Test Results
 
+## Named production correction — 2026-09-29 (PRE-RELEASE)
+
+- Scope identity: `Temporary-123-Inc/temporary-shower-rental`, `temporary-124/temporary-shower-rental`, and `https://temporary-shower-rental.com`; no separate Temporary-123 repository/project/domain action.
+- `npm test`: **67/67 passed**, including production identity, hostname routing, imported brand/phone normalization, and the homepage 25/75 portfolio contract.
+- `npm run typecheck`: **passed**.
+- `npm run test:rules`: **7/7 passed** against the isolated Firebase Realtime Database emulator.
+- `npm run check:release`: **passed**; `npm run check:secrets`: **392 files, zero findings**.
+- Production client bundle: **passed** (157 modules transformed). Exhaustive 754-route local prerender and build-dependent SEO/headline/city/link checks are still pending because several unrelated Node builds are contending for the workstation; these checks must be rerun on the completed release artifact or production deployment.
+- Browser baseline before the mandatory homepage wording follow-up passed 11/11 across 320, 390, 768, 1024, 1280 and 1440 px, including keyboard navigation and zero horizontal overflow. A new rendered desktop/mobile pass for the final H1, intro, card order and CTA labels is required before live completion is claimed.
+- Dependency audit: **0 critical, 0 high, 2 moderate** transitive findings (`gaxios` through `uuid`); no unrelated dependency upgrade was forced into this release.
+- Security evidence: the existing evidence checker remains intentionally blocked for controls that lack required in-bundle staging/provider proof. No live inquiry or downstream message was sent.
+
 ## Production release — 2026-09-24 (LIVE PASS)
 
 - Vercel deployment `dpl_Cj4hAp1J6q5hkjhdCjzHTjrdmT4n`: **READY**, production target, existing project `temporary-shower-rental-najm`.

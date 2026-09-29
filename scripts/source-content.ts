@@ -2,6 +2,9 @@ import { load } from "cheerio";
 
 type Options = {
   origin: string;
+  brand?: string;
+  phoneDisplay?: string;
+  phoneHref?: string;
   routes: Set<string>;
   redirects: Map<string, string>;
   media: Record<string, { local?: string }>;
@@ -48,6 +51,30 @@ const verifiedAltByLocalMedia: Record<string, string> = {
 
 export function renderSourceContent(html: string, options: Options) {
   const $ = load(html, undefined, false);
+  // Keep the source archive untouched while ensuring imported copy presents
+  // the assigned brand and contact details on the rendered site.
+  if (options.brand || options.phoneDisplay) {
+    $.root().find("*").contents().each((_, node) => {
+      if (node.type !== "text" || !("data" in node)) return;
+      let value = node.data;
+      if (options.brand) value = value.replace(/Temporary123\b/g, options.brand);
+      if (options.phoneDisplay) {
+        value = value.replace(
+          /(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b/g,
+          options.phoneDisplay,
+        );
+      }
+      node.data = value;
+    });
+  }
+  if (options.phoneHref) {
+    $('a[href^="tel:"]').each((_, el) => {
+      const anchor = $(el);
+      if (/800\D*443\D*5212/.test(anchor.attr("href") || "")) {
+        anchor.attr("href", options.phoneHref);
+      }
+    });
+  }
   if (options.removeLeadParagraph) {
     // Site renders the aligned H1 lead. Preserve navigation, images and archives.
     const normalizeLead = (s: string) => s.replace(/\s+/g, ' ').trim();

@@ -222,7 +222,7 @@ const stateGuideDetails: Record<
   "New York": {
     focus: "Distinguish the property conditions",
     intro:
-      "A New York city-center renovation and an upstate field operation need different briefs. Specify property type, usable access, installation window and distance between the temporary kitchen and serving area.",
+      "A New York city-center renovation and an upstate field operation need distinct briefs. Specify property type, access, installation window and distance between the kitchen and serving area.",
     question:
       "What property-specific constraint will determine equipment placement?",
   },
@@ -882,7 +882,7 @@ const stateVisuals = [
   ],
   [
     "/media/41a2ee3cfcd6483b1a9c9939.png",
-    "Tow vehicle transporting a Temporary123 facility trailer",
+    "Tow vehicle transporting a temporary facility trailer",
   ],
   [
     "/media/655fb7048f20d305203873c3.jpg",
@@ -1175,10 +1175,10 @@ const baseCampGalleryVisuals = [
 ] as const;
 
 const serviceSummaries = [
-  "Base camp rentals include mobile commercial kitchens, 22 ft 10-stall shower trailers, shower and restroom combinations, and sleeper/bunkbed trailers. Dishwashing, laundry, refrigeration, restroom and handwashing facilities are also available.",
+  "Base camp rentals include mobile commercial kitchens, shower-trailer options, shower and restroom combinations, and sleeper/bunkbed trailers. Dishwashing, laundry, refrigeration, restroom and handwashing facilities are also available.",
   "Core base camp services include kitchen trailers, mobile showers, shower and restroom combination trailers, and sleeper/bunkbed rentals. Supporting refrigeration, laundry, dishwashing, restroom and handwashing units can be added.",
   "Temporary base camp equipment includes mobile kitchens, showers, shower and restroom combinations, and sleeper/bunkbed trailers. Rental plans can also include dishwashing, refrigeration, laundry, restroom and handwashing facilities.",
-  "Rent mobile commercial kitchens, 22 ft 10-stall shower trailers, combination shower and restroom units, and sleeper/bunkbed trailers for a base camp. Additional temporary facilities include laundry, refrigeration, dishwashing, restrooms and handwashing.",
+  "Rent mobile commercial kitchens, shower-trailer options, combination shower and restroom units, and sleeper/bunkbed trailers for a base camp. Additional temporary facilities include laundry, refrigeration, dishwashing, restrooms and handwashing.",
   "Base camp facility leases can combine kitchen, shower, shower and restroom combination, and sleeper/bunkbed trailers. Refrigeration, dishwashing, laundry, restroom and handwashing rentals remain available for wider site needs.",
 ] as const;
 

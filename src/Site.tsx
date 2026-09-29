@@ -635,7 +635,7 @@ export function Site({
               </div>
               <form
                 className="location-planner"
-                action="/inventory/mobile-kitchen-models/"
+                action={consolidatedLocations.destination}
                 method="get"
               >
                 <label className="search-label" htmlFor="project-location">

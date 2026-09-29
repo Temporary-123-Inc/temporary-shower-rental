@@ -119,8 +119,8 @@ export function StateDetail({ name }: { name: string }) {
           <span className="eyebrow">RENTAL EQUIPMENT</span>
           <h2>Temporary Facilities for your project</h2>
           <p>
-            Rent equipment for an assignment or discuss a longer lease.
-            Confirm occupancy, utilities and site access with the rental team.
+            Rent equipment or discuss a longer lease. Confirm occupancy,
+            utilities and access with the rental team.
           </p>
           <ul className="state-guide-services">
             {services.map((service) => (

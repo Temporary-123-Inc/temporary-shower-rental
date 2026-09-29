@@ -39,7 +39,7 @@ test("calculator requires contact consent before a quote request", async ({
   await expect(calculator.getByLabel("Name")).toHaveAttribute("required", "");
   await expect(calculator.getByLabel("Phone")).toHaveAttribute("required", "");
   await expect(calculator.getByLabel("Email")).toHaveAttribute("required", "");
-  await expect(calculator.getByLabel(/I agree that Temporary123/)).toHaveAttribute(
+  await expect(calculator.getByLabel(/I agree that Temporary Shower Rental 123/)).toHaveAttribute(
     "required",
     "",
   );

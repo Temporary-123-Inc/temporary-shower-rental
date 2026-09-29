@@ -16,6 +16,29 @@ import { gunzipSync } from "node:zlib";
 import { createHash } from "node:crypto";
 import { load } from "cheerio";
 
+describe("imported source identity", () => {
+  it("normalizes visible branding and phone links without rewriting source URLs", () => {
+    const result = renderSourceContent(
+      '<p>Call Temporary123 at <a href="tel:+18004435212">800-443-5212</a>.</p><a href="https://temporary123.com/reference/">Source</a>',
+      {
+        origin: "https://temporary-shower-rental.com",
+        brand: "Temporary Shower Rental 123",
+        phoneDisplay: "+1 (888) 385-5513",
+        phoneHref: "tel:+18883855513",
+        routes: new Set(),
+        redirects: new Map(),
+        media: {},
+        unresolved: new Set(),
+      },
+    );
+
+    expect(result).toContain("Call Temporary Shower Rental 123 at");
+    expect(result).toContain('href="tel:+18883855513"');
+    expect(result).toContain("+1 (888) 385-5513");
+    expect(result).toContain('href="https://temporary123.com/reference/"');
+  });
+});
+
 describe("evidence-based city consolidation", () => {
   it("retains source archives and only consolidates identical location articles", () => {
     const fingerprints = new Set<string>();
@@ -93,10 +116,16 @@ describe("migration indexing separation", () => {
     expect(routesForIndexingBatch(routes, 3, 25)).toEqual(routes);
   });
   it("protects nonproduction hostnames, including static downloads", () => {
-    const rule = vercel.headers.find((rule) => "missing" in rule);
+    const rule = vercel.headers.find(
+      (rule) =>
+        "has" in rule &&
+        rule.has?.some(
+          (entry) => entry.type === "host" && entry.value === ".*\\.vercel\\.app",
+        ),
+    );
     expect(rule).toMatchObject({
       source: "/(.*)",
-        missing: [{ type: "host", value: "temporary123\\.com" }],
+      has: [{ type: "host", value: ".*\\.vercel\\.app" }],
       headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
     });
   });
@@ -105,13 +134,17 @@ describe("migration indexing separation", () => {
       (rule) =>
         "has" in rule &&
         rule.has?.some(
-          (entry) => entry.type === "host" && entry.value === "www.temporary123.com",
+          (entry) =>
+            entry.type === "host" &&
+            entry.value === "www\\.temporary-shower-rental\\.com",
         ),
     );
     expect(hostRedirect).toMatchObject({
       source: "/:path*",
-      has: [{ type: "host", value: "www.temporary123.com" }],
-      destination: "https://temporary123.com/:path*",
+      has: [
+        { type: "host", value: "www\\.temporary-shower-rental\\.com" },
+      ],
+      destination: "https://temporary-shower-rental.com/:path*",
       permanent: true,
     });
   });

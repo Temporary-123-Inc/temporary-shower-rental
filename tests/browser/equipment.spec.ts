@@ -13,7 +13,7 @@ test("all 25 equipment entries and legacy destinations resolve", async ({
   for (const item of catalog.items) {
     const page = await request.get(item.path);
     expect(page.status(), item.path).toBe(200);
-    expect(await page.text()).toContain("Temporary123");
+    expect(await page.text()).toContain("Temporary Shower Rental 123");
     const redirect = await request.get(item.legacyPath, { maxRedirects: 0 });
     expect(redirect.status(), item.legacyPath).toBe(308);
     expect(redirect.headers().location).toBe(item.path);
@@ -87,8 +87,8 @@ test("equipment briefs remain readable and connected on mobile", async ({
           : rentalProductHeadline(item.name),
     );
     await expect(
-      page.locator("main a[href='tel:+18004435212']").first(),
-    ).toHaveAttribute("href", "tel:+18004435212");
+      page.locator("main a[href='tel:+18883855513']").first(),
+    ).toHaveAttribute("href", "tel:+18883855513");
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,

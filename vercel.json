@@ -27,10 +27,10 @@
     },
     {
       "source": "/(.*)",
-      "missing": [
+      "has": [
         {
           "type": "host",
-          "value": "temporary123\\.com"
+          "value": ".*\\.vercel\\.app"
         }
       ],
       "headers": [
@@ -42,6 +42,17 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www\\.temporary-shower-rental\\.com"
+        }
+      ],
+      "destination": "https://temporary-shower-rental.com/:path*",
+      "permanent": true
+    },
     {
       "source": "/inventory/mobile-kitchen-models/24ft-mobile-kitchen/",
       "destination": "/services/mobile-kitchen-trailers/24ft/",

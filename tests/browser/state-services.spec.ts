@@ -152,7 +152,7 @@ test("state click opens localized service choices and a direct call action", asy
   expect(stateIntro).toMatch(/\blease\b/i);
   await expect(
     modal.getByRole("link", { name: "Call now", exact: false }),
-  ).toHaveAttribute("href", "tel:+18004435212");
+  ).toHaveAttribute("href", "tel:+18883855513");
   const countryReferences = (
     (await modal.innerText()).match(/\b(?:USA|United States)\b/g) || []
   ).length;
@@ -218,7 +218,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   );
   await expect(
     modal.getByRole("link", { name: "Call now", exact: false }),
-  ).toHaveAttribute("href", "tel:+18004435212");
+  ).toHaveAttribute("href", "tel:+18883855513");
   await page.screenshot({ path: "test-results/state-services-mobile.png" });
   await page.keyboard.press("Escape");
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -239,7 +239,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await state.press("Enter");
   await expect(
     modal.getByRole("link", { name: "Call now", exact: false }),
-  ).toHaveAttribute("href", "tel:+18004435212");
+  ).toHaveAttribute("href", "tel:+18883855513");
   await page.keyboard.press("Escape");
   await page.keyboard.press("Escape");
   await expect(page.locator(".map-dialog")).not.toBeVisible();

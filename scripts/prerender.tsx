@@ -211,6 +211,9 @@ for (const entry of Object.values(media)) {
 const renderContent = (page: SourcePage) =>
   renderSourceContent(page.html, {
     origin: site.origin,
+    brand: site.brand,
+    phoneDisplay: site.phoneDisplay,
+    phoneHref: `tel:${site.phoneE164}`,
     routes: new Set(allRoutes),
     redirects: redirectDestinations,
     media,
