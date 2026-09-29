@@ -19,7 +19,7 @@ import { load } from "cheerio";
 describe("imported source identity", () => {
   it("normalizes visible branding and phone links without rewriting source URLs", () => {
     const result = renderSourceContent(
-      '<p>Call Temporary123 at <a href="tel:+18004435212">800-443-5212</a>.</p><a href="https://temporary123.com/reference/">Source</a>',
+      '<p>Call Temporary123 at <a href="tel:+18004435212">800-443-5212</a>.</p><a href="https://temporary123.com/reference/">Source</a><img src="https://temporary123.com/correctional-Temporary123-1.png" alt="Temporary123 equipment">',
       {
         origin: "https://temporary-shower-rental.com",
         brand: "Temporary Shower Rental 123",
@@ -27,7 +27,11 @@ describe("imported source identity", () => {
         phoneHref: "tel:+18883855513",
         routes: new Set(),
         redirects: new Map(),
-        media: {},
+        media: {
+          "https://temporary123.com/correctional-Temporary123-1.png": {
+            local: "/media/correctional-Temporary123-1.png",
+          },
+        },
         unresolved: new Set(),
       },
     );
@@ -36,6 +40,8 @@ describe("imported source identity", () => {
     expect(result).toContain('href="tel:+18883855513"');
     expect(result).toContain("+1 (888) 385-5513");
     expect(result).toContain('href="https://temporary123.com/reference/"');
+    expect(result).toContain('src="/media/correctional-Temporary123-1.png"');
+    expect(result).toContain('alt="Temporary Shower Rental 123 equipment"');
   });
 });
 

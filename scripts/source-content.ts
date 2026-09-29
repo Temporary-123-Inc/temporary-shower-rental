@@ -50,26 +50,43 @@ const verifiedAltByLocalMedia: Record<string, string> = {
 };
 
 export function renderSourceContent(html: string, options: Options) {
+  const $ = load(html, undefined, false);
   // Keep the source archive untouched while ensuring imported copy presents
-  // the assigned brand and contact details on the rendered site. Normalize the
-  // bounded legacy tokens before parsing so each archived page is traversed once.
-  let normalizedHtml = html;
-  if (options.brand) {
-    normalizedHtml = normalizedHtml.replace(/Temporary123\b/g, options.brand);
+  // the assigned brand and contact details on the rendered site. Walk the
+  // parsed tree once so attributes and archived source URLs remain byte-stable.
+  if (options.brand || options.phoneDisplay) {
+    const normalizeIdentity = (value: string) => {
+      let normalized = value;
+      if (options.brand) {
+        normalized = normalized.replace(/Temporary123\b/g, options.brand);
+      }
+      if (options.phoneDisplay) {
+        normalized = normalized.replace(
+          /(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b/g,
+          options.phoneDisplay,
+        );
+      }
+      return normalized;
+    };
+    const nodes = [...($.root()[0]?.children ?? [])];
+    while (nodes.length) {
+      const node = nodes.pop();
+      if (!node) continue;
+      if (node.type === "text") {
+        node.data = normalizeIdentity(node.data);
+      }
+      if ("children" in node && node.children) {
+        nodes.push(...node.children);
+      }
+    }
+    $("[alt],[title],[aria-label]").each((_, el) => {
+      const element = $(el);
+      for (const attribute of ["alt", "title", "aria-label"]) {
+        const value = element.attr(attribute);
+        if (value) element.attr(attribute, normalizeIdentity(value));
+      }
+    });
   }
-  if (options.phoneHref) {
-    normalizedHtml = normalizedHtml.replace(
-      /(href\s*=\s*["'])tel:(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b(["'])/gi,
-      `$1${options.phoneHref}$2`,
-    );
-  }
-  if (options.phoneDisplay) {
-    normalizedHtml = normalizedHtml.replace(
-      /(?:\+?1[-.\s]?)?800[-.\s]?443[-.\s]?5212\b/g,
-      options.phoneDisplay,
-    );
-  }
-  const $ = load(normalizedHtml, undefined, false);
   if (options.phoneHref) {
     $('a[href^="tel:"]').each((_, el) => {
       const anchor = $(el);
