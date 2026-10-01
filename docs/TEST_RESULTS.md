@@ -787,3 +787,12 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - H1, rental/lease caption, and image alt text are present and aligned to the 13 ft, 3-stall combination configuration.
 - The archive also contains five exterior references; the current approved gallery intentionally displays two matching interior references. No additional image was added without a route-content decision.
 - No code, GitHub or Vercel changes were made during this re-audit.
+
+## Homepage and Keller copy — production verification (2026-10-02)
+
+- GitHub: commit `0514ef6c17a8840dcc3741f303a02ad5e7891aa9` was pushed to `Temporary-123-Inc/temporary-shower-rental` `main`, based on fetched main `0549e90`.
+- Vercel: production deployment `CmbQfxE89RUSdwMxHvoWG118Xd66` reached Ready; deployment URL `https://temporary-shower-rental-q53jo0v53-temporary-124.vercel.app/`; custom-domain alias `https://temporary-shower-rental.com/`.
+- Live homepage: HTTP 200; title and H1 are `Commercial Shower Trailer Rental Nationwide` / `Commercial Shower Trailer Rental`; meta description includes 24/7 live-agent support; browser shows the longer use-case/site-planning paragraph.
+- Live Keller page: HTTP 200; updated commercial rental title, H1 and meta description verified; current `noindex,follow` retained.
+- Pre-deploy checks: TypeScript check; Vite/prerender 755 pages plus 404; application tests 62/62; SEO preview audit 756 HTML pages, unique metadata and `problems: []`; Keller rendered check passed; internal-link check 755 pages, zero missing targets or capitalization issues.
+- Scope excludes unrelated modified audit outputs and untracked `equipment-archive-review/`. No Google Business Profile edit was made.
