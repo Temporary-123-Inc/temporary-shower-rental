@@ -10,5 +10,5 @@
 - Google evidence: public profile matches supplied NAP/hours; website currently points to http://temporary-shower-rental.com/. Exact embed extracted from Share > Embed a map.
 - Profile edit blocker: signed-in Business Profile Manager has 0 businesses; user asked to switch to owner account.
 - Unknown: email/social URLs, delivery lead times, price range. No placeholders published.
-- Deployment: not committed, pushed or deployed; no Google changes submitted.
+- Repository: commit `be2756e` is pushed on `codex/apply-local-changes-to-official-main`; PR pending. Not merged or deployed; no Google changes submitted.
 - Next: user switches to the managing Google account; resolve existing release evidence and online inquiry setup, publish and verify the Keller URL before changing its profile website field or the other site.

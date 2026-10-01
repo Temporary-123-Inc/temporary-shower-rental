@@ -24,8 +24,9 @@
     "build": "755 pages + 404",
     "tests": "62 existing application tests reconciled across runs; 5 headline tests"
   },
-  "committed": false,
-  "pushed": false,
+  "committed": true,
+  "pushed": true,
+  "pull_request": "pending",
   "deployed": false,
   "google_profile_changed": false
 }
