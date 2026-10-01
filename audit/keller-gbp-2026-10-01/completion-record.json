@@ -1,0 +1,32 @@
+{
+  "version": "16.1",
+  "scope": "Keller location and Google Business Profile alignment; local scoped implementation, not full rebuild release completion",
+  "target_url": "https://temporary-shower-rental.com/service-areas/texas/north-texas/keller/",
+  "builder": "/root",
+  "requirements_source": "requirements-source.md",
+  "checkpoint": "checkpoint.md",
+  "decision_log": "decisions.md",
+  "status": "INCOMPLETE",
+  "blockers": [
+    "Google owner account not available",
+    "Live release and existing full-site release evidence outstanding",
+    "Online inquiry delivery disabled in existing configuration",
+    "Email/social profiles and lead times not supplied",
+    "Conditional shower-rental.com cleanup awaits live Keller page"
+  ],
+  "local_verification": {
+    "status": "PASS",
+    "evidence": [
+      "rendered-check.json",
+      "browser-check.json",
+      "../../docs/TEST_RESULTS.md"
+    ],
+    "build": "755 pages + 404",
+    "tests": "62 existing application tests reconciled across runs; 5 headline tests"
+  },
+  "committed": true,
+  "pushed": true,
+  "pull_request": "pending",
+  "deployed": false,
+  "google_profile_changed": false
+}

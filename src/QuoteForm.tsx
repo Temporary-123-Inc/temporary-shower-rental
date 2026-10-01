@@ -3,6 +3,7 @@ import site from "../site.json" with { type: "json" };
 import { services } from "./content";
 import { leadSchema } from "../server/schema";
 import { appCheckToken } from "./appCheck";
+import { contactForPath } from "./kellerLocation";
 
 const contactServiceLabels: Partial<
   Record<(typeof services)[number]["slug"], string>
@@ -16,7 +17,8 @@ const contactServiceLabels: Partial<
   sink: "Sink Trailers",
 };
 
-export function QuoteForm() {
+export function QuoteForm({ path = "" }: { path?: string }) {
+  const phone = contactForPath(path);
   const formRef = useRef<HTMLFormElement>(null);
   useEffect(() => {
     const form = formRef.current;
@@ -150,7 +152,7 @@ export function QuoteForm() {
       {!site.inquiriesEnabled && (
         <p className="form-intro">
           Online submission is being prepared. Complete the project brief, or
-          call <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a> for
+          call <a href={`tel:${phone.phoneE164}`}>{phone.phoneDisplay}</a> for
           immediate assistance.
         </p>
       )}

@@ -4,6 +4,8 @@ import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
 import { rentalCategoryHeadline, rentalHubHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
 import { CityDetail } from "./CityDetail";
+import { KellerLocationPage } from "./KellerLocationPage";
+import { contactForPath, kellerLocation } from "./kellerLocation";
 import { cityPageByPath } from "./cityDirectory";
 import { CoverageMap } from "./CoverageMap";
 import { MapLocationDirectory } from "./MapLocationDirectory";
@@ -93,6 +95,7 @@ function ShowerInventoryDirectory() {
   );
 }
 export function Header({ path }: { path: string }) {
+  const phone = contactForPath(path);
   return (
     <>
       <a href="#main" className="skip">
@@ -192,7 +195,7 @@ export function Header({ path }: { path: string }) {
               </a>
             ))}
           </nav>
-          <a className="header-contact" href={"tel:" + site.phoneE164}>
+          <a className="header-contact" href={"tel:" + phone.phoneE164}>
             <svg
               className="header-phone-icon"
               viewBox="0 0 24 24"
@@ -210,7 +213,7 @@ export function Header({ path }: { path: string }) {
               />
             </svg>
             <span>Call our team, 24/7</span>
-            <strong>{site.phoneDisplay}</strong>
+            <strong>{phone.phoneDisplay}</strong>
           </a>
           <details className="mobile-nav">
             <summary>
@@ -262,10 +265,10 @@ export function Header({ path }: { path: string }) {
       </div>
       <a
         className="mobile-call mobile-call-refresh"
-        href={"tel:" + site.phoneE164}
+        href={"tel:" + phone.phoneE164}
       >
         <span>Call our team, 24/7</span>
-        <strong>{site.phoneDisplay}</strong>
+        <strong>{phone.phoneDisplay}</strong>
         <svg
           className="mobile-phone-icon"
           viewBox="0 0 24 24"
@@ -331,9 +334,9 @@ export function Header({ path }: { path: string }) {
           <div className="emergency-dispatch-actions">
             <a
               className="emergency-dispatch-call"
-              href={"tel:" + site.phoneE164}
+              href={"tel:" + phone.phoneE164}
             >
-              Call {site.phoneDisplay} <span aria-hidden="true">↗</span>
+              Call {phone.phoneDisplay} <span aria-hidden="true">↗</span>
             </a>
             <a
               className="emergency-dispatch-request"
@@ -376,7 +379,8 @@ export function Header({ path }: { path: string }) {
   );
 }
 
-function ContactDrawer() {
+function ContactDrawer({ path = "" }: { path?: string }) {
+  const phone = contactForPath(path);
   return (
     <dialog
       id="contact-drawer"
@@ -408,14 +412,14 @@ function ContactDrawer() {
             <button type="button" data-focus-availability>
               Request availability
             </button>
-            <a href={"tel:" + site.phoneE164}>
-              Call now <span>{site.phoneDisplay}</span>
+            <a href={"tel:" + phone.phoneE164}>
+              Call now <span>{phone.phoneDisplay}</span>
             </a>
           </div>
         </header>
         <div className="contact-drawer-scroll">
           <div id="quote-island" aria-label="Availability request form">
-            <QuoteForm />
+            <QuoteForm path={path} />
           </div>
         </div>
       </div>
@@ -423,7 +427,8 @@ function ContactDrawer() {
   );
 }
 
-export function Footer({ showClosing = true }: { showClosing?: boolean }) {
+export function Footer({ showClosing = true, path = "" }: { showClosing?: boolean; path?: string }) {
+  const phone = contactForPath(path);
   return (
     <>
       {showClosing && (
@@ -441,8 +446,8 @@ export function Footer({ showClosing = true }: { showClosing?: boolean }) {
                 Tell us where, when, and what your team needs. Our specialists
                 will help you take the next step.
               </p>
-              <a className="phone-link" href={"tel:" + site.phoneE164}>
-                {site.phoneDisplay} ↗
+              <a className="phone-link" href={"tel:" + phone.phoneE164}>
+                {phone.phoneDisplay} ↗
               </a>
               <span className="small">Call our team, 24 hours a day.</span>
             </div>
@@ -509,7 +514,7 @@ export function Site({
   return (
     <div id="top">
       <Header path={path} />
-      <ContactDrawer />
+      <ContactDrawer path={path} />
       <script src="/location-product-tabs.js" defer />
       <main id="main" tabIndex={-1}>
         {path === "/" || path === "/home/" ? (
@@ -552,6 +557,8 @@ export function Site({
               </div>
             </div>
           </section>
+        ) : path === kellerLocation.path ? (
+          <KellerLocationPage />
         ) : industryGuideByPath[path] ? (
           <IndustryDetail path={path} />
         ) : statePageByPath[path] ? (
@@ -1289,7 +1296,9 @@ export function Site({
         <LegacyAuthorityDirectory path={path} />
       </main>
       <Footer
+        path={path}
         showClosing={
+          path !== kellerLocation.path &&
           !regionPageByPath[path] &&
           !regionPageByPath[directoryParent] &&
           !cityPageByPath[path] &&

@@ -24,7 +24,7 @@ for (const width of [390, 1440]) {
         page.locator(".coverage-map-stage [data-state]"),
       ).toHaveCount(50);
       await expect(page.locator(".map-location-state")).toHaveCount(50);
-      await expect(page.locator("[data-directory-city]")).toHaveCount(5);
+      await expect(page.locator("[data-directory-city]")).toHaveCount(6);
       await page.locator("[data-state-picker]").selectOption("Texas");
       const dialog = page.locator("#state-services-dialog");
       await expect(dialog).toBeVisible();

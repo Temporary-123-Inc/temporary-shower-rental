@@ -1,5 +1,17 @@
 # Temporary123 Decision Log
 
+## 2026-10-02 — Include dedicated city pages in location navigation
+
+The Keller route uses its own page component and therefore is absent from the generic `cityEditorial` registry. Use `cityPagesWithGuides` for directory/map navigation and let `hasCityGuide` recognize the exact Keller route. Keep `reviewedCityPages` and `cityPageByPath` scoped to the generic editorial renderer so navigation cannot select that renderer for Keller. Reuse the existing slug and preserve indexing policy.
+
+## 2026-10-02 — Align the Keller page to its existing Google listing
+
+Use the exact user-supplied Keller URL, H1, metadata and introductory copy. The public Google profile independently confirms Mobile Shower Trailer Rental, 1710 Keller Pkwy #4114, Keller, TX 76248, (972) 544-6598 and Open 24 hours. Scope the local phone to this page's shared header, emergency callout and quote drawer, including hydration; preserve the general site phone elsewhere. Retrieve the map from the exact listing's Share > Embed a map UI. Do not invent email/social URLs, prices, lead times or ratings.
+
+The user's direct 2026-10-01 confirmation establishes the 22 ft / 10-stall model as inventory and supersedes the earlier uncertainty. Restore its product name, details, menu and headline while preserving the explicit disclosure that the existing reference gallery depicts a different 20 ft / 5-stall trailer. Keller uses the two previously archive-verified 13 ft combination interior images with descriptive copies and truthful captions.
+
+Keep the new candidate outside the existing indexing pilot pending release review. The public Keller URL presently shows Page Not Found; Google Manager in the available account lists zero businesses. Do not change the profile website field to a missing destination or carry out the conditional shower-rental.com cleanup before publication. Existing full-site release evidence and online-inquiry activation remain outstanding. Detailed scoped evidence is in `audit/keller-gbp-2026-10-01/`.
+
 ## 2026-09-28 — Apply V16.2 metadata and route hygiene locally
 
 Use direct canonical service links for internal navigation when a legacy inventory alias only redirects. Keep the legacy URL itself addressable through the existing redirect map, but do not make customers traverse that alias from menus or regional content. Correct unsupported shower configuration wording to the verified 20 ft, 5-stall reference. Give every released route a distinct, truthful title and description, including about-page pairs and refrigeration aliases. This audit is local-only; do not push or deploy until the owner separately authorizes release and the missing V16.2 authority/research/completion evidence is assembled.

@@ -244,7 +244,9 @@ export const rentalProductHeadline = (name: string) => {
       return `${size} ft ${stalls}-Stall Shower and Restroom Combination Trailer Rental`;
     return "Shower and Restroom Combination Trailer Rental";
   }
-  if (/^(22 ft Shower Trailer, 10 Stalls|20 ft Shower Trailer, 5 Stalls)$/i.test(name))
+  if (/^22 ft Shower Trailer, 10 Stalls$/i.test(name))
+    return "22 ft 10-Stall Shower Trailer Rental";
+  if (/^20 ft Shower Trailer, 5 Stalls$/i.test(name))
     return "20 ft 5-Stall Shower Trailer Rental";
   if (/^20 ft Shower Container, 5 Stalls$/i.test(name))
     return "20 ft 5-Stall Shower Container Rental";

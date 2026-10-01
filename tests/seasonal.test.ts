@@ -218,7 +218,7 @@ describe("location media and shower inventory", () => {
     );
     expect(shower?.links).toEqual([
       {
-        name: "20 ft Shower Trailer, 5 Stalls",
+        name: "22 ft Shower Trailer, 10 Stalls",
         href: "/services/shower-trailers/22ft-10-stall/",
       },
       {
@@ -229,6 +229,12 @@ describe("location media and shower inventory", () => {
     expect(serviceDetails).toHaveProperty(
       "/services/shower-trailers/22ft-10-stall/",
     );
+    // Owner confirmed this model on 2026-10-01; 20 ft gallery references
+    // remain explicitly disclosed instead of changing the image identity.
+    const trailer = serviceDetails["/services/shower-trailers/22ft-10-stall/"];
+    expect(trailer.name).toBe("22 ft Shower Trailer, 10 Stalls");
+    expect(trailer.intro).toMatch(/22 ft.*10 individual stalls/);
+    expect(trailer.unknown).toContain("different 20 ft five-stall unit");
     expect(serviceDetails).toHaveProperty(
       "/services/shower-containers/20ft-5-stall/",
     );
