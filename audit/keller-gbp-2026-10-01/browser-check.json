@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-02",
+  "timezone": "Asia/Manila",
+  "tool": "Codex in-app browser through cua_repl",
+  "url": "http://localhost:4326/service-areas/texas/north-texas/keller/",
+  "checks": {
+    "texas_directory_navigation": "PASS: expanded Regions and cities in Texas, clicked Keller, Texas and verified the exact Keller URL and H1",
+    "north_texas_city_search": "PASS: searched Keller, saw one matching location, clicked it and verified the exact Keller URL and H1",
+    "desktop_render": "PASS: heading, profile block and real Google business map visible",
+    "desktop_overflow": "PASS: viewport 1280, document width 1265",
+    "mobile_render": "PASS: inspected at 390 x 844",
+    "mobile_overflow": "PASS: viewport 390, document width 375",
+    "telephone_links": "PASS: all 8 telephone anchors use +19725446598",
+    "top_quote_button": "PASS: opens accessible drawer, Keller, TX prefilled",
+    "bottom_quote_button": "PASS: opens the same drawer on mobile, Keller, TX prefilled",
+    "hydrated_form_phone": "PASS: both drawer and form fallback retain (972) 544-6598",
+    "submission_state": "PASS: honest online-submission-unavailable notice and disabled submit button",
+    "faq": "PASS: first summary expands to display the matching answer",
+    "photos": "PASS: both images decoded at 960 x 1280 and 960 x 1273",
+    "console_errors": "PASS: 0 captured browser error logs after opening and closing the hydrated quote form"
+  },
+  "external_state": {
+    "google_profile": "Public name, address, phone and displayed hours match the supplied brief",
+    "google_owner_access": "BLOCKED: signed-in manager lists 0 businesses",
+    "canonical_keller_page": "Page Not Found visible at the public HTTPS destination",
+    "google_changes_submitted": false,
+    "live_inquiry_submitted": false
+  }
+}

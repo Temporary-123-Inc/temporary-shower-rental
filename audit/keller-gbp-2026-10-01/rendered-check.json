@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "path": "/service-areas/texas/north-texas/keller/",
+  "telLinks": 8,
+  "linkedTargets": 11,
+  "equipmentLinks": 7,
+  "faqSchemaMatches": 5,
+  "archiveMatchedPhotos": 2,
+  "texasMenuAndCityDirectory": "PASS: Keller links to its exact existing route",
+  "scope": "Local rendered candidate; no Google edits or deployment claimed",
+  "indexing": "Outside existing pilot; noindex,follow; self-canonical; absent from sitemap",
+  "onlineSubmission": "Disabled by existing site configuration; browser flow checked separately"
+}

@@ -1,5 +1,5 @@
 import states from "./usStates.json" with { type: "json" };
-import { reviewedCityPages } from "./cityDirectory";
+import { cityPagesWithGuides } from "./cityDirectory";
 import { StateGuideCards } from "./StateGuideCards";
 import { MapLocationDirectory } from "./MapLocationDirectory";
 import { LocationImageCarousel } from "./LocationImageCarousel";
@@ -43,7 +43,7 @@ const stateServices = [...serviceCategories].sort((left, right) => {
 const mapCitiesByState = states
   .map((state) => ({
     state: state.name,
-    cities: reviewedCityPages
+    cities: cityPagesWithGuides
       .filter((city) => city.state === state.name)
       .sort(
         (left, right) =>

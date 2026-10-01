@@ -1,4 +1,5 @@
 import site from "../site.json" with { type: "json" };
+import { kellerFaqs, kellerLocation } from "../src/kellerLocation";
 
 const origin = site.origin.replace(/\/$/, "");
 export function pageSchema(input: {
@@ -14,6 +15,30 @@ export function pageSchema(input: {
   const url = new URL(input.path, origin).href;
   const organizationId = `${origin}/#organization`;
   const websiteId = `${origin}/#website`;
+  if (input.path === kellerLocation.path) {
+    const businessId = `${url}#business`;
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness", "@id": businessId,
+          name: kellerLocation.name, url,
+          telephone: kellerLocation.phoneE164,
+          address: { "@type": "PostalAddress", streetAddress: kellerLocation.streetAddress, addressLocality: "Keller", addressRegion: "TX", postalCode: "76248", addressCountry: "US" },
+          openingHours: "Mo-Su 00:00-24:00",
+          hasMap: kellerLocation.mapUrl,
+          areaServed: [
+            ...kellerLocation.cities.map(name => ({ "@type": "City", name })),
+            { "@type": "State", name: "Texas" },
+            { "@type": "Country", name: "United States" },
+          ],
+        },
+        { "@type": "WebPage", "@id": `${url}#webpage`, url, name: input.title, description: input.description, mainEntity: { "@id": businessId }, breadcrumb: { "@id": `${url}#breadcrumb` } },
+        { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: kellerFaqs.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+        { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: input.crumbs.map((crumb, index) => ({ "@type": "ListItem", position: index + 1, name: crumb.name, item: crumb.item })) },
+      ],
+    };
+  }
   const graph: Record<string, unknown>[] = [
     {
       "@type": "Organization",

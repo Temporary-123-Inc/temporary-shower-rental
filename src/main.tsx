@@ -11,6 +11,7 @@ import "./secondary-refresh.css";
 import "./location-refresh.css";
 import "./location-image-gallery.css";
 import "./shower-home.css";
+import "./keller-location.css";
 import "./seo-dashboard.css";
 import "@fontsource-variable/manrope";
 import {
@@ -753,7 +754,7 @@ function mountQuoteForm() {
     import("./QuoteForm"),
   ])
     .then(([{ hydrateRoot }, React, { QuoteForm }]) => {
-      hydrateRoot(island, React.createElement(QuoteForm));
+      hydrateRoot(island, React.createElement(QuoteForm, { path: location.pathname }));
     })
     .catch(() => {
       quoteHydration = undefined;

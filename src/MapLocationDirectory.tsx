@@ -1,7 +1,7 @@
 import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPath } from "./regionGuides";
-import { reviewedCityPages } from "./cityDirectory";
+import { cityPagesWithGuides } from "./cityDirectory";
 
 export function MapLocationDirectory() {
   return (
@@ -30,7 +30,7 @@ export function MapLocationDirectory() {
                       <a href={regionPath(name, region)}>{region}</a>
                     </li>
                   ))}
-                  {reviewedCityPages
+                  {cityPagesWithGuides
                     .filter((city) => city.state === name)
                     .map((city) => (
                       <li key={city.path}>

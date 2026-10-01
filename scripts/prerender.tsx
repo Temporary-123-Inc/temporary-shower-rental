@@ -31,6 +31,7 @@ import { serviceCategories, serviceOptions } from "../src/serviceMenu";
 import { regionPages, regionPageByPath } from "../src/regionGuides";
 import { cityPageByPath, reviewedCityPages } from "../src/cityDirectory";
 import { cityHeadline } from "../src/CityDetail";
+import { kellerLocation } from "../src/kellerLocation";
 import { alignedLocationIntro } from "../src/alignedIntroductions";
 import {
   regionLocationLabel,
@@ -74,6 +75,7 @@ for (const entry of index) {
   pages.push(page);
 }
 const coreRoutes = [
+  kellerLocation.path,
   "/",
   "/services/",
   "/inventory/",
@@ -244,7 +246,9 @@ for (const path of [...allRoutes, "/404/"]) {
   const industry = industryGuideByPath[path];
   const legacyAuthorityPage = legacyAuthorityPageByPath[path];
   const hubHeadline = rentalHubHeadline(path);
-  const info = detailMetadata[path]
+  const info = path === kellerLocation.path
+    ? { title: kellerLocation.title, description: kellerLocation.description }
+    : detailMetadata[path]
     ? {
         title: `${detailMetadata[path].title} | ${site.brand}`,
         description: detailMetadata[path].description,
@@ -349,7 +353,7 @@ for (const path of [...allRoutes, "/404/"]) {
     canonicalFor(path, indexableRoutes.includes(path), release) || "";
   const canonical =
     indexableCanonical ||
-    (path === "/service-areas/oklahoma/panhandle/"
+    (path === "/service-areas/oklahoma/panhandle/" || path === kellerLocation.path
       ? new URL(path, site.origin).href
       : "");
   if (!info.description.trim()) {

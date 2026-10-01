@@ -2,6 +2,7 @@ import inventory from "./cityDirectory.json" with { type: "json" };
 import { cityEditorial } from "./cityEditorial";
 import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
+import { kellerLocation } from "./kellerLocation";
 
 type CensusRow = [
   geoid: string,
@@ -81,7 +82,11 @@ export const cityPageByPath = Object.fromEntries(
 ) as Record<string, CityPage | undefined>;
 
 export const hasCityGuide = (city: CityPage): boolean =>
-  Boolean(cityEditorial[city.geoid]);
+  Boolean(cityEditorial[city.geoid]) || city.path === kellerLocation.path;
+
+// Navigation includes dedicated location pages as well as generic city guides.
+// Keep reviewedCityPages scoped to the CityDetail editorial renderer.
+export const cityPagesWithGuides = cityPages.filter(hasCityGuide);
 
 const byRegion = new Map<string, CityPage[]>();
 for (const city of cityPages) {

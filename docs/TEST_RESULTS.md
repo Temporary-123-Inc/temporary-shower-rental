@@ -1,5 +1,26 @@
 # Temporary123 Test Results
 
+## Keller directory-link follow-up — 2026-10-02 (LOCAL PASS)
+
+- TypeScript check and Vite/prerender passed: 755 pages plus 404.
+- Extended `scripts/check-keller-location.mjs` passed, including the Texas regions/cities disclosure, Texas map city link and North Texas alphabetical city directory, all targeting the exact existing Keller URL.
+- Full internal-link audit passed across 755 pages: zero missing targets and zero capitalization issues.
+- Browser: expanded the Texas disclosure and clicked Keller, Texas; verified the exact Keller URL and H1. Searched Keller in the North Texas city directory, saw one matching location, clicked the link and verified the same destination. Left the local service-area page open with Texas expanded.
+- Updated the existing map-discovery browser test's city-link count from five to six; that broader suite was not rerun because its homepage-map assumptions predate the current local homepage. Direct browser checks and generated-output checks cover this change.
+- Local files only; no push, deployment or Google edits.
+
+## Keller location and Google profile alignment — 2026-10-02 (LOCAL PASS; EXTERNAL WORK PENDING)
+
+- Final TypeScript check: PASS. Final Vite + prerender build: PASS, 755 pages plus 404. Bundled Node 24 was used because the workstation npm wrapper pointed at an inaccessible nvm directory; build/test dependency reads needed the approved elevated execution path. Zod emitted non-fatal comment-annotation warnings.
+- Existing application suite: 60/62 passed initially. One expected inventory assertion still named the former 20 ft model; updated it to the user's direct confirmation of the 22 ft / 10-stall model and added assertions retaining the honest reference-image distinction. The unrelated large archive scan timed out during concurrent build/test I/O. A serial rerun with a 90-second ceiling passed all 19 seasonal/migration assertions (the archive test completed in about 8 seconds). This reconciles all 62 existing tests to PASS; the 5 headline-plan tests also passed.
+- The first rendered audit exposed a pre-existing headline rule that converted the newly confirmed 22 ft model into 20 ft. Corrected the exact mapping while retaining the separate 20 ft model mapping. Rebuilt the final candidate. An audit attempted during regeneration encountered a missing not-yet-generated parent file; the complete-build audit subsequently passed.
+- `node scripts/check-keller-location.mjs`: PASS. Exact H1/title/description/canonical, exact NAP, all 8 telephone links, profile-specific iframe ID and review target, both quote entry points, 7 equipment links, 11 direct generated internal targets, North Texas parent link, 5 visible FAQ/schema matches, 2 photo SHA-256 matches, corrected 22 ft product H1, honest reference-photo disclosure, and unchanged general homepage phone. Machine evidence: `audit/keller-gbp-2026-10-01/rendered-check.json`.
+- Browser: PASS at desktop and 390 x 844 mobile. Desktop document width 1265 within 1280 viewport; mobile document width 375 within 390 viewport. Both quote CTAs open the existing accessible drawer with Keller, TX prefilled. Hydrated drawer/form retain local phone. Submit is visibly disabled with the existing truthful notice. FAQ expands; both photos decode; exact Google profile map is visible; 0 captured console errors after form interactions. Corrected product heading and reference-photo disclaimer also verified in browser. No inquiry submitted. Evidence: `audit/keller-gbp-2026-10-01/browser-check.json`.
+- Whitespace diff check and secret pattern scan passed (721 scanned, zero findings).
+- Completed-build internal-link check: PASS across all 755 pages, zero missing targets and zero capitalization issues.
+- Google public listing: supplied business name/address/phone/displayed hours match. Exact embed obtained from Share > Embed a map. Owner manager account reports 0 businesses, so no profile edits were submitted. Public Keller URL visibly shows Page Not Found. See `google-profile-status.md` in the same audit folder.
+- Release boundary: local candidate only; no commit/push/deploy. Keller retains `noindex,follow` outside the existing pilot and sitemap, with an exact self-canonical. Existing full-site authority/research/completion evidence and production inquiry setup are still outstanding. Email/social URLs and delivery lead times were not fabricated. Conditional shower-rental.com removal has not run because the new page is not yet live.
+
 ## Production release — 2026-09-24 (LIVE PASS)
 
 - Vercel deployment `dpl_Cj4hAp1J6q5hkjhdCjzHTjrdmT4n`: **READY**, production target, existing project `temporary-shower-rental-najm`.

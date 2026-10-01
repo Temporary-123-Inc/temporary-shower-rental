@@ -122,10 +122,10 @@ export const serviceCategories: ServiceCategory[] = [
     name: "Shower",
     href: "/equipment-rental/shower-trailer/",
     description:
-      "Shower-only options include an approved 20 ft trailer with 5 stalls and a 20 ft container with 5 stalls.",
+      "Shower-only options include a 22 ft trailer with 10 stalls and a 20 ft container with 5 stalls.",
     links: [
       {
-        name: "20 ft Shower Trailer, 5 Stalls",
+        name: "22 ft Shower Trailer, 10 Stalls",
         href: "/services/shower-trailers/22ft-10-stall/",
       },
       {
