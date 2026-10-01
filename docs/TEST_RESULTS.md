@@ -1,5 +1,16 @@
 # Temporary123 Test Results
 
+## Homepage H1 and 24/7 description — 2026-10-02 (local)
+
+- Updated homepage H1/title to “Commercial Shower Trailer Rental”/“Commercial Shower Trailer Rental Nationwide,” added “24/7 live agent support” to the meta description, and rewrote the visible hero paragraph in the longer practical style requested. The copy distinguishes support from delivery and keeps equipment/availability/timing subject to confirmation.
+- Final revised version passed TypeScript and Vite/prerender (755 pages + 404). Built homepage HTML has the updated title/meta description, and local browser verified the final longer intro and H1. Keller H1/title/intro also verified on localhost. No push/deployment yet.
+
+## Keller H1 and description — 2026-10-02 (local)
+
+- Updated the Keller H1, title, meta description and visible introduction to make the commercial shower-trailer rental topic explicit and describe construction, events, facility renovations and site utility coordination.
+- Preserved the route, canonical, phone and `noindex,follow` behavior. The rendered-check script now asserts the new H1/title/description.
+- TypeScript check and Vite/prerender passed as part of the homepage update build (755 pages + 404). Browser verification showed the new Keller H1/title/introduction; static output preserves the existing `noindex,follow` and canonical behavior. No Google Profile edit or deployment yet.
+
 ## Keller directory-link follow-up — 2026-10-02 (LOCAL PASS)
 
 - TypeScript check and Vite/prerender passed: 755 pages plus 404.

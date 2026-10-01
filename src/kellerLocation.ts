@@ -15,10 +15,10 @@ export const kellerLocation = {
   reviewUrl: "https://g.page/r/CVWLHyBkolhOECE/review",
   // Copied from this profile's Share > Embed a map, not a city search.
   embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.676731310437!2d-97.2121073!3d32.93313820000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dd770afc0e903%3A0x4e58a264201f8b55!2sMobile%20Shower%20Trailer%20Rental!5e0!3m2!1sen!2sph!4v1790869259748!5m2!1sen!2sph",
-  title: "Shower Trailer Rental in Keller, TX | Mobile Shower Trailer Rental",
-  description: "Shower trailers delivered from Keller, TX to job sites across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598.",
-  headline: "Shower Trailer Rental in Keller, TX",
-  intro: "Mobile Shower Trailer Rental delivers shower trailers from our Keller, TX yard to construction sites, events, renovations and emergency response operations across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598 for sizing and delivery times.",
+  title: "Commercial Shower Trailer Rental in Keller, TX | Mobile Shower Trailer Rental",
+  description: "Rent a commercial shower trailer in Keller, TX for construction crews, events and facility renovations. We coordinate site access, water, power and drainage. Call (972) 544-6598 for equipment and timing.",
+  headline: "Commercial Shower Trailer Rental in Keller, TX",
+  intro: "Rent a commercial shower trailer from our Keller yard for construction projects, events and facility renovations across Dallas–Fort Worth. We coordinate placement around site access and available water, power and drainage. Call (972) 544-6598 to confirm equipment and delivery timing.",
   cities: ["Keller", "Fort Worth", "Dallas", "Arlington", "Southlake", "Grapevine", "Denton", "Irving", "Plano", "Frisco"],
 } as const;
 

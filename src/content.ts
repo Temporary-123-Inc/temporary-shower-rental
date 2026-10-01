@@ -22,8 +22,8 @@ export const routes = [
   "/privacy/",
 ];
 const titles: Record<string, string> = {
-  "/": "Temporary Shower Trailer Rental Nationwide",
-  "/home/": "Temporary Shower Trailer Rental Nationwide",
+  "/": "Commercial Shower Trailer Rental Nationwide",
+  "/home/": "Commercial Shower Trailer Rental Nationwide",
   "/services/": "Temporary Shower and Restroom Trailer Solutions",
   "/equipment-rental/": "Temporary Shower Trailer Rental Inventory",
   "/industries/": "Industries We Serve",
@@ -41,8 +41,8 @@ const titles: Record<string, string> = {
   "/privacy/": "Privacy",
 };
 const descriptions: Record<string, string> = {
-  "/": "Rent clean, dependable temporary shower, restroom and combination trailers nationwide for construction, events, renovations, government and emergency response.",
-  "/home/": "Rent clean, dependable temporary shower, restroom and combination trailers nationwide for construction, events, renovations, government and emergency response.",
+  "/": "Rent commercial shower, restroom and combination trailers nationwide for construction, events, renovations and government sites. Call for 24/7 live agent support.",
+  "/home/": "Rent commercial shower, restroom and combination trailers nationwide for construction, events, renovations and government sites. Call for 24/7 live agent support.",
   "/equipment-rental/":
     "Browse temporary shower trailers, restroom trailers, combination units and workforce-support facilities. Confirm occupancy, access, utilities and rental dates with Temporary Shower Rental 123.",
   "/services/":
