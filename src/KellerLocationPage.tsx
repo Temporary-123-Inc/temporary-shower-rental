@@ -78,8 +78,8 @@ export function KellerLocationPage() {
       <h3>13 ft, 3-stall shower/restroom combination trailer</h3>
       <p>These separate photos show the 13 ft combination trailer collection, not the shower-only container above.</p>
       <div className="keller-photos">
-        <figure><img src="/images/keller/shower-restroom-trailer-13ft-3-stall-interior.webp" alt="Interior of a 13 ft three-stall shower and restroom combination trailer" width="960" height="1280" loading="lazy"/><figcaption>13 ft, 3-stall combination trailer interior.</figcaption></figure>
-        <figure><img src="/images/keller/shower-restroom-trailer-13ft-3-stall-bathroom.webp" alt="Bathroom interior in the 13 ft three-stall shower and restroom combination trailer" width="960" height="1273" loading="lazy"/><figcaption>Bathroom interior from the same combination trailer collection.</figcaption></figure>
+        <figure><img src="/images/keller/shower-restroom-trailer-13ft-3-stall-interior.webp" alt="Interior of a 13 ft, 3-stall shower and restroom combination trailer" width="960" height="1280" loading="lazy"/><figcaption>13 ft, 3-stall combination trailer interior.</figcaption></figure>
+        <figure><img src="/images/keller/shower-restroom-trailer-13ft-3-stall-bathroom.webp" alt="Restroom inside a 13 ft, 3-stall shower and restroom combination trailer" width="960" height="1273" loading="lazy"/><figcaption>Bathroom interior from the same combination trailer collection.</figcaption></figure>
       </div>
     </section>
     <section className="keller-closing">

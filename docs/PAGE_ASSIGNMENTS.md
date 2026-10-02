@@ -1,5 +1,7 @@
 # Page and File Assignments
 
+**2026-10-03 screenshot final pass — PUBLISH FOLLOW-UP:** Own exact alt text for the two 13 ft/3-stall gallery photos and rename the shared logo asset to `public/images/temporary-shower-rental-123-logo.webp`, updating its header/footer references and focused checks. Preserve visual appearance and page layout. User requested GitHub push and Vercel deployment for these corrections.
+
 **2026-10-03 robots.txt source — DEPLOYED AND LIVE VERIFIED:** Added `public/robots.txt`, its focused rendered assertions, and coordination records. It permits public crawling, disallows `/api/`, and references the canonical production sitemap. Production prerender preserves the same policy and preview builds omit the production sitemap. Commit `e643c5d` is live at `temporary-shower-rental.com`.
 
 **2026-10-03 Keller visual-review corrections — DEPLOYED AND LIVE VERIFIED:** Updated `src/kellerLocation.ts`, `src/KellerLocationPage.tsx`, `src/Site.tsx` (logo `alt` values only), `scripts/check-keller-location.mjs`, descriptive Keller photo copies under `public/images/keller/`, and coordination records. Restored the brief's short “Shower Trailer Rental in Keller, TX” H1/title; removed “verified” from photo alternatives; added descriptive photo filenames; set header/footer logo alternatives to the brand name. Commit `e643c5d` is live at `temporary-shower-rental.com`.

@@ -106,7 +106,7 @@ export function Header({ path }: { path: string }) {
           <a className="brand" href="/" aria-label={`${site.brand} home`}>
             <img
               className="brand-logo"
-              src="/images/shower-rental-logo.webp"
+              src="/images/temporary-shower-rental-123-logo.webp"
               alt="Temporary Shower Rental 123 logo"
               width="420"
               height="290"
@@ -459,7 +459,7 @@ export function Footer({ showClosing = true, path = "" }: { showClosing?: boolea
           <div className="footer-brand-block">
             <a className="footer-brand" href="/" aria-label={`${site.brand} home`}>
               <img
-                src="/images/shower-rental-logo.webp"
+                src="/images/temporary-shower-rental-123-logo.webp"
                 alt="Temporary Shower Rental 123 logo"
                 width="424"
                 height="280"

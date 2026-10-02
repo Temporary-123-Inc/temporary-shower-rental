@@ -87,10 +87,20 @@ for (const [i, img] of photos.slice(4).entries()) {
   const copied = await readFile(`public${$(img).attr("src")}`);
   const source = await readFile(`public/images/service-heroes/13ft-shower-restroom-combination/0${i + 1}-960.webp`);
   assert.equal(createHash("sha256").update(copied).digest("hex"), createHash("sha256").update(source).digest("hex"));
-  assert.ok($(img).attr("alt").length > 15);
+  assert.equal(
+    $(img).attr("alt"),
+    [
+      "Interior of a 13 ft, 3-stall shower and restroom combination trailer",
+      "Restroom inside a 13 ft, 3-stall shower and restroom combination trailer",
+    ][i],
+  );
 }
 assert.equal($(".brand-logo").attr("alt"), "Temporary Shower Rental 123 logo");
 assert.equal($(".footer-brand img").attr("alt"), "Temporary Shower Rental 123 logo");
+assert.equal($(".brand-logo").attr("src"), "/images/temporary-shower-rental-123-logo.webp");
+assert.equal($(".footer-brand img").attr("src"), "/images/temporary-shower-rental-123-logo.webp");
+await access("public/images/temporary-shower-rental-123-logo.webp");
+await access("dist/images/temporary-shower-rental-123-logo.webp");
 const containerArchive = await readdir("equipment-archive-review/Equipments/20ft Shower Container (5 Stalls)");
 for (const name of [
   "mobile-shower-container-interior.png",
