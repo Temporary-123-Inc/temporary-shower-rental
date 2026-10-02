@@ -7,8 +7,8 @@ const path = "/service-areas/texas/north-texas/keller/";
 const html = await readFile(`dist${path}index.html`, "utf8");
 const $ = load(html);
 assert.equal($("h1").length, 1);
-assert.equal($("h1").text(), "Commercial Shower Trailer Rental in Keller, TX");
-assert.equal($("title").text(), "Commercial Shower Trailer Rental in Keller, TX | Mobile Shower Trailer Rental");
+assert.equal($("h1").text(), "Shower Trailer Rental in Keller, TX");
+assert.equal($("title").text(), "Shower Trailer Rental in Keller, TX");
 assert.equal($("meta[name=description]").attr("content"), "Rent a commercial shower trailer in Keller, TX for construction crews, events and facility renovations. We coordinate site access, water, power and drainage. Call (972) 544-6598 for equipment and timing.");
 assert.equal($("link[rel=canonical]").attr("href"), `https://temporary-shower-rental.com${path}`);
 assert.ok($("address").text().includes("1710 Keller Pkwy #4114, Keller, TX 76248"));
@@ -60,18 +60,37 @@ const cityDirectory = load(await readFile("dist/service-areas/texas/north-texas/
 assert.equal(cityDirectory(`a[data-city-name='keller']`).attr("href"), path);
 const photos = $(".keller-photos img").toArray();
 assert.equal(photos.length, 6);
+assert.deepEqual(
+  photos.slice(0, 4).map((img) => $(img).attr("src")),
+  [
+    "/images/keller/20ft-5-stall-shower-container-private-stall.webp",
+    "/images/keller/20ft-5-stall-shower-container-stall-row.webp",
+    "/images/keller/20ft-5-stall-shower-container-two-stalls.webp",
+    "/images/keller/20ft-5-stall-shower-container-three-stalls.webp",
+  ],
+);
+const containerAlt = [
+  "Private shower stall inside a 20 ft, 5-stall shower container",
+  "Row of private shower stalls inside a 20 ft, 5-stall shower container",
+  "Two private shower stalls in a 20 ft, 5-stall shower container",
+  "Three shower stalls in a 20 ft, 5-stall shower container",
+];
+for (const [i, img] of photos.slice(0, 4).entries()) {
+  assert.equal($(img).attr("alt"), containerAlt[i]);
+  assert.doesNotMatch($(img).attr("alt"), /verified/i);
+  const copied = await readFile(`public${$(img).attr("src")}`);
+  const source = await readFile(`public/images/service-heroes/20ft-shower-container/0${i + 1}-960.webp`);
+  assert.equal(createHash("sha256").update(copied).digest("hex"), createHash("sha256").update(source).digest("hex"));
+  await access(`dist${$(img).attr("src")}`);
+}
 for (const [i, img] of photos.slice(4).entries()) {
   const copied = await readFile(`public${$(img).attr("src")}`);
   const source = await readFile(`public/images/service-heroes/13ft-shower-restroom-combination/0${i + 1}-960.webp`);
   assert.equal(createHash("sha256").update(copied).digest("hex"), createHash("sha256").update(source).digest("hex"));
   assert.ok($(img).attr("alt").length > 15);
 }
-for (const img of photos.slice(0, 4)) {
-  assert.match($(img).attr("src"), /^\/images\/service-heroes\/20ft-shower-container\/0[1-4]-960\.webp$/);
-  assert.ok($(img).attr("alt").includes("20 ft, 5-stall shower container"));
-  await access(`public${$(img).attr("src")}`);
-  await access(`dist${$(img).attr("src")}`);
-}
+assert.equal($(".brand-logo").attr("alt"), "Temporary Shower Rental 123 logo");
+assert.equal($(".footer-brand img").attr("alt"), "Temporary Shower Rental 123 logo");
 const containerArchive = await readdir("equipment-archive-review/Equipments/20ft Shower Container (5 Stalls)");
 for (const name of [
   "mobile-shower-container-interior.png",
@@ -92,6 +111,10 @@ const canonicalUrl = `https://temporary-shower-rental.com${path}`;
 assert.equal(sitemapUrls.filter((url) => url === canonicalUrl).length, 1);
 assert.equal(sitemapUrls.length, 26);
 assert.equal(new Set(sitemapUrls).size, 26);
+const robots = await readFile("dist/robots.txt", "utf8");
+assert.match(robots, /User-agent: \*\s+Allow: \/\s+Disallow: \/api\//);
+assert.ok(robots.includes("Sitemap: https://temporary-shower-rental.com/sitemap.xml"));
+await access("public/robots.txt");
 const vercelConfig = JSON.parse(await readFile("vercel.json", "utf8"));
 const noindexHeader = vercelConfig.headers.find((rule) =>
   rule.headers.some((header) => header.key === "X-Robots-Tag" && /noindex/i.test(header.value)),
@@ -108,6 +131,7 @@ const result = {
   equipmentLinks: 7, faqSchemaMatches: 5, archiveMatchedPhotos: 6, containerArchiveSources: 4,
   texasMenuAndCityDirectory: "PASS: Keller is nested under North Texas and links to its exact existing route",
   responseHeader: "PASS: canonical hosts exempt; preview and other hosts protected",
+  robotsTxt: "PASS: public crawl policy and canonical sitemap reference",
   scope: "Local rendered candidate; no Google edits or deployment claimed",
   indexing: "Owner-approved priority route; index,follow; self-canonical; included in sitemap alongside 25-page batch",
   onlineSubmission: "Disabled by existing site configuration; browser flow checked separately",

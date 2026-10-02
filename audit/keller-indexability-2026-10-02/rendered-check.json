@@ -9,6 +9,7 @@
   "containerArchiveSources": 4,
   "texasMenuAndCityDirectory": "PASS: Keller is nested under North Texas and links to its exact existing route",
   "responseHeader": "PASS: canonical hosts exempt; preview and other hosts protected",
+  "robotsTxt": "PASS: public crawl policy and canonical sitemap reference",
   "scope": "Local rendered candidate; no Google edits or deployment claimed",
   "indexing": "Owner-approved priority route; index,follow; self-canonical; included in sitemap alongside 25-page batch",
   "onlineSubmission": "Disabled by existing site configuration; browser flow checked separately"

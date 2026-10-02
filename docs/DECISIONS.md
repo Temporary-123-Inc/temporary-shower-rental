@@ -1,5 +1,13 @@
 # Temporary123 Decision Log
 
+## 2026-10-03 — Add a tracked robots.txt source
+
+Keep a checked-in public source at `public/robots.txt` so Vite serves `/robots.txt` locally and Vite builds include it. Allow public pages, disallow `/api/`, and declare the canonical production sitemap. Preserve `scripts/prerender.tsx` as the authority for production versus preview output; preview robots must not advertise the production sitemap. This change is local only until separately published.
+
+## 2026-10-03 — Apply Keller visual-review wording and media feedback
+
+Use the brief-approved concise `Shower Trailer Rental in Keller, TX` for both the Keller H1 and document title. Keep the approved description and route unchanged. Keep customer-facing image alternatives factual and free of internal verification language. Give the four Keller-specific 20 ft/5-stall reference-photo copies descriptive filenames that identify the pictured layout; preserve the existing shared service-product image paths. Describe header/footer logo images with the brand name and “logo,” not a sales tagline. This correction is local only until separately published.
+
 ## 2026-10-02 — Add Keller as an owner-approved indexable priority route
 
 The owner explicitly changed the previous noindex decision for `/service-areas/texas/north-texas/keller/`: release it with `index,follow`, a self-canonical and sitemap membership. Preserve the existing 25-route batch and add Keller as one explicit priority route, making the sitemap 26 URLs rather than displacing a page in the controlled batch. The former broad Vercel `X-Robots-Tag: noindex` exception covered every host other than `temporary123.com`, including the new canonical `temporary-shower-rental.com` domain. Narrow that rule so it protects other/preview hosts while allowing both canonical domains and their `www` hosts. This approves the requested public-page state, not Google index inclusion or ranking. The route remains a Keller-specific shower rental page. Include the archive-verified 20 ft, 5-stall shower container gallery separately from the existing 13 ft, 3-stall shower/restroom combo photos; do not imply either is a Keller installation. Leave contact/social structured data untouched until the owner supplies those actual links.

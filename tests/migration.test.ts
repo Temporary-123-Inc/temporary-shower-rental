@@ -94,11 +94,23 @@ describe("migration indexing separation", () => {
   });
   it("protects nonproduction hostnames, including static downloads", () => {
     const rule = vercel.headers.find((rule) => "missing" in rule);
+    expect(rule).toBeDefined();
+    if (!rule || !("missing" in rule)) throw new Error("Missing host-scoped robots rule");
     expect(rule).toMatchObject({
       source: "/(.*)",
-        missing: [{ type: "host", value: "temporary123\\.com" }],
       headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
     });
+    const hostPattern = rule.missing?.find((condition) => condition.type === "host")?.value;
+    expect(hostPattern).toBeDefined();
+    const hostException = new RegExp(hostPattern ?? "a^");
+    for (const host of [
+      "temporary123.com",
+      "www.temporary123.com",
+      "temporary-shower-rental.com",
+      "www.temporary-shower-rental.com",
+    ]) expect(hostException.test(host), `${host} should be indexable`).toBe(true);
+    for (const host of ["temporary-shower-rental-preview.vercel.app", "preview.example.com"])
+      expect(hostException.test(host), `${host} should remain noindex`).toBe(false);
   });
   it("permanently consolidates www requests onto the canonical host", () => {
     const hostRedirect = vercel.redirects.find(

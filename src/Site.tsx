@@ -107,7 +107,7 @@ export function Header({ path }: { path: string }) {
             <img
               className="brand-logo"
               src="/images/shower-rental-logo.webp"
-              alt="Shower Rental — professional high-definition temporary shower rentals"
+              alt="Temporary Shower Rental 123 logo"
               width="420"
               height="290"
             />
@@ -460,7 +460,7 @@ export function Footer({ showClosing = true, path = "" }: { showClosing?: boolea
             <a className="footer-brand" href="/" aria-label={`${site.brand} home`}>
               <img
                 src="/images/shower-rental-logo.webp"
-                alt={site.brand}
+                alt="Temporary Shower Rental 123 logo"
                 width="424"
                 height="280"
               />

@@ -1,5 +1,21 @@
 # Temporary123 Test Results
 
+## robots.txt source — 2026-10-03 (LOCAL ONLY)
+
+- Added `public/robots.txt` with `User-agent: *`, `Allow: /`, `Disallow: /api/`, and `Sitemap: https://temporary-shower-rental.com/sitemap.xml`.
+- Existing prerender behavior remains intact: production build emits that canonical sitemap reference; preview builds retain their established no-sitemap policy.
+- `npm run build`: PASS, 755 pages plus 404. `node scripts/check-keller-location.mjs`: PASS, including the rendered robots policy/reference. Local `/robots.txt`: HTTP 200 with all expected directives.
+- Not pushed or deployed; production still serves the prior version.
+
+## Keller visual-review corrections — 2026-10-03 (LOCAL ONLY)
+
+- Restored the requested short H1 and title, `Shower Trailer Rental in Keller, TX`; left the existing meta description and route unchanged.
+- Rewrote four 20 ft/5-stall container-photo alt descriptions without the internal word “verified,” and pointed the Keller gallery at descriptive, photo-specific filenames. Focused checks hash each copy against its reviewed source image and verify the exact alt text.
+- Changed both header and footer logo image alternatives to `Temporary Shower Rental 123 logo`; shared layout and wordmark remain unchanged.
+- `npm run build`: PASS, TypeScript and static prerender generated 755 pages plus 404. `npm test`: PASS, 62/62. `node scripts/check-keller-location.mjs`: PASS. `npm run check:links`: PASS across 755 pages, zero missing targets or capitalization issues.
+- Local Vite page at `http://localhost:4326/service-areas/texas/north-texas/keller/`: HTTP 200; rendered H1 is the concise approved phrase; four descriptive gallery image references and two brand-only logo alternatives are present; no photo alt contains “verified.” `npm run check:headlines`: PASS across 548 location pages with 548 unique headlines and no issues.
+- This is a local-only follow-up. No commit, push or deployment was requested or performed; production still serves the prior deployed version.
+
 ## Keller indexability and shower photo follow-up — 2026-10-02 (PRODUCTION LIVE VERIFIED)
 
 - TypeScript: PASS. Vite production build and prerender: PASS, 755 pages plus 404.
