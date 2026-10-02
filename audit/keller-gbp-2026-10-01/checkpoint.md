@@ -23,3 +23,10 @@
 - Deployed to Vercel production as `AJ5rDpmYDQu6kKqzbYfotUmm379J`, aliased at `https://temporary-shower-rental.com`. Live Keller route and sitemap returned HTTP 200; Keller is `index,follow`, self-canonical, has no `X-Robots-Tag`, and appears once in the 26-URL sitemap. Four container gallery images are present.
 - Repository-wide V16.1 evidence package remains incomplete. Google Business Profile changes and indexing requests are not claimed. Email, YouTube and social URLs have not yet been supplied.
 - Navigation follow-up: the Texas service-area disclosure now nests Keller beneath North Texas and removes the duplicate Texas-level city link. The existing `/service-areas/texas/north-texas/keller/` route is preserved. The local Vite page tree shows the Keller link with that exact destination.
+
+## 2026-10-03 robots and visual-review deployment
+
+- Commit `e643c5de6a0c7ee14789b1d8e39a987e57edd2fa` is pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy` and deployed to Vercel production as `dpl_3Z9ViB46NRh3ijLigPJ8gqyPZCya`, aliased at `https://temporary-shower-rental.com`.
+- Added the source `public/robots.txt`; production robots returns HTTP 200 with Allow `/`, Disallow `/api/`, and the canonical sitemap declaration. Preview-specific generated policy remains controlled by prerender.
+- Keller live route and sitemap return HTTP 200; H1/title are `Shower Trailer Rental in Keller, TX`, robots meta is `index,follow`, canonical is self, X-Robots-Tag is absent, sitemap has 26 URLs and includes Keller once. All four descriptive Keller photo URLs return HTTP 200.
+- V16.1 repository-wide evidence remains incomplete. No Google Business Profile edits or indexing requests were made; remaining profile URLs are not yet supplied.

@@ -9,7 +9,7 @@
   "status": "INCOMPLETE",
   "blockers": [
     "Google owner account not available",
-    "Live release and existing full-site release evidence outstanding",
+    "Repository-wide release evidence remains incomplete",
     "Online inquiry delivery disabled in existing configuration",
     "Email/social profiles and lead times not supplied",
     "Conditional shower-rental.com cleanup awaits live Keller page"
@@ -27,7 +27,22 @@
   "committed": true,
   "pushed": true,
   "pull_request": "pending",
-  "deployed": false,
+  "deployed": true,
+  "latest_deployment": {
+    "commit": "e643c5de6a0c7ee14789b1d8e39a987e57edd2fa",
+    "github_branch": "https://github.com/Temporary-123-Inc/temporary-shower-rental/tree/codex/homepage-keller-copy",
+    "vercel_deployment_id": "dpl_3Z9ViB46NRh3ijLigPJ8gqyPZCya",
+    "production_url": "https://temporary-shower-rental.com",
+    "robots_txt_http_status": 200,
+    "keller_http_status": 200,
+    "sitemap_http_status": 200,
+    "sitemap_url_count": 26,
+    "keller_sitemap_entries": 1,
+    "image_http_statuses": [200, 200, 200, 200],
+    "live_robots_meta": "index,follow",
+    "live_canonical": "self",
+    "live_x_robots_tag": null
+  },
   "google_profile_changed": false,
   "indexability_follow_up_2026_10_02": {
     "status": "DEPLOYED_AND_LIVE_VERIFIED",
@@ -60,5 +75,19 @@
       "Email, YouTube and social URLs have not been supplied",
       "No Google Business Profile edits or indexing requests were made"
     ]
+  },
+  "robots_and_visual_review_follow_up_2026_10_03": {
+    "status": "DEPLOYED_AND_LIVE_VERIFIED",
+    "commit": "e643c5de6a0c7ee14789b1d8e39a987e57edd2fa",
+    "robots_txt": "Public crawl allowed; /api/ disallowed; canonical sitemap declared",
+    "live_title_and_h1": "Shower Trailer Rental in Keller, TX",
+    "photo_alts": "Four image-specific descriptions without internal verification wording",
+    "photo_filenames": "Descriptive 20 ft / 5-stall names; all live URLs returned 200",
+    "logo_alts": "Header and footer identify Temporary Shower Rental 123 logo",
+    "live_page_http_status": 200,
+    "live_sitemap_http_status": 200,
+    "sitemap_url_count": 26,
+    "keller_sitemap_entries": 1,
+    "vercel_deployment_id": "dpl_3Z9ViB46NRh3ijLigPJ8gqyPZCya"
   }
 }

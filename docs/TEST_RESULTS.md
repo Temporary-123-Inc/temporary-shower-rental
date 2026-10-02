@@ -1,20 +1,20 @@
 # Temporary123 Test Results
 
-## robots.txt source — 2026-10-03 (LOCAL ONLY)
+## robots.txt source — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Added `public/robots.txt` with `User-agent: *`, `Allow: /`, `Disallow: /api/`, and `Sitemap: https://temporary-shower-rental.com/sitemap.xml`.
 - Existing prerender behavior remains intact: production build emits that canonical sitemap reference; preview builds retain their established no-sitemap policy.
 - `npm run build`: PASS, 755 pages plus 404. `node scripts/check-keller-location.mjs`: PASS, including the rendered robots policy/reference. Local `/robots.txt`: HTTP 200 with all expected directives.
-- Not pushed or deployed; production still serves the prior version.
+- Commit `e643c5de6a0c7ee14789b1d8e39a987e57edd2fa` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy` and deployed as Vercel production deployment `dpl_3Z9ViB46NRh3ijLigPJ8gqyPZCya`. Live `/robots.txt` returned HTTP 200 with the expected policy and sitemap URL; live sitemap returned HTTP 200 with 26 URLs and Keller once.
 
-## Keller visual-review corrections — 2026-10-03 (LOCAL ONLY)
+## Keller visual-review corrections — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Restored the requested short H1 and title, `Shower Trailer Rental in Keller, TX`; left the existing meta description and route unchanged.
 - Rewrote four 20 ft/5-stall container-photo alt descriptions without the internal word “verified,” and pointed the Keller gallery at descriptive, photo-specific filenames. Focused checks hash each copy against its reviewed source image and verify the exact alt text.
 - Changed both header and footer logo image alternatives to `Temporary Shower Rental 123 logo`; shared layout and wordmark remain unchanged.
 - `npm run build`: PASS, TypeScript and static prerender generated 755 pages plus 404. `npm test`: PASS, 62/62. `node scripts/check-keller-location.mjs`: PASS. `npm run check:links`: PASS across 755 pages, zero missing targets or capitalization issues.
 - Local Vite page at `http://localhost:4326/service-areas/texas/north-texas/keller/`: HTTP 200; rendered H1 is the concise approved phrase; four descriptive gallery image references and two brand-only logo alternatives are present; no photo alt contains “verified.” `npm run check:headlines`: PASS across 548 location pages with 548 unique headlines and no issues.
-- This is a local-only follow-up. No commit, push or deployment was requested or performed; production still serves the prior deployed version.
+- The same commit and deployment serve the corrections. Live Keller route returned HTTP 200 with the concise H1/title, `index,follow`, exact self-canonical, no `X-Robots-Tag`, four descriptive image paths and two brand-name logo alternatives; all four image URLs returned HTTP 200. The 26-URL sitemap contains the Keller route exactly once.
 
 ## Keller indexability and shower photo follow-up — 2026-10-02 (PRODUCTION LIVE VERIFIED)
 

@@ -2,11 +2,11 @@
 
 ## 2026-10-03 — Add a tracked robots.txt source
 
-Keep a checked-in public source at `public/robots.txt` so Vite serves `/robots.txt` locally and Vite builds include it. Allow public pages, disallow `/api/`, and declare the canonical production sitemap. Preserve `scripts/prerender.tsx` as the authority for production versus preview output; preview robots must not advertise the production sitemap. This change is local only until separately published.
+Keep a checked-in public source at `public/robots.txt` so Vite serves `/robots.txt` locally and Vite builds include it. Allow public pages, disallow `/api/`, and declare the canonical production sitemap. Preserve `scripts/prerender.tsx` as the authority for production versus preview output; preview robots must not advertise the production sitemap. Commit `e643c5d` was deployed; live robots and sitemap responses were verified.
 
 ## 2026-10-03 — Apply Keller visual-review wording and media feedback
 
-Use the brief-approved concise `Shower Trailer Rental in Keller, TX` for both the Keller H1 and document title. Keep the approved description and route unchanged. Keep customer-facing image alternatives factual and free of internal verification language. Give the four Keller-specific 20 ft/5-stall reference-photo copies descriptive filenames that identify the pictured layout; preserve the existing shared service-product image paths. Describe header/footer logo images with the brand name and “logo,” not a sales tagline. This correction is local only until separately published.
+Use the brief-approved concise `Shower Trailer Rental in Keller, TX` for both the Keller H1 and document title. Keep the approved description and route unchanged. Keep customer-facing image alternatives factual and free of internal verification language. Give the four Keller-specific 20 ft/5-stall reference-photo copies descriptive filenames that identify the pictured layout; preserve the existing shared service-product image paths. Describe header/footer logo images with the brand name and “logo,” not a sales tagline. Commit `e643c5d` was deployed and live-verified.
 
 ## 2026-10-02 — Add Keller as an owner-approved indexable priority route
 
