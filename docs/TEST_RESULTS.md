@@ -1,12 +1,13 @@
 # Temporary123 Test Results
 
-## Keller approved-copy restoration — 2026-10-03 (LOCAL VERIFIED; RELEASE PENDING)
+## Keller approved-copy restoration — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Restored the exact requested title, meta description, and introductory paragraph. Kept the current H1 and route unchanged.
 - Renamed the gallery heading to “Shower Trailer and Container Photos”; removed “Verified” and “Archive-matched reference” editorial wording from the photo block and simplified captions that described photos as references. Image files and alt text are unchanged.
 - `npm run build`: PASS, TypeScript/Vite and prerender generated 755 pages plus 404. `node scripts/check-keller-location.mjs`: PASS, including exact title/meta/intro, heading and removed-phrase assertions.
 - `npm test`: PASS, 62/62. `npm run check:links`: PASS across 755 pages, zero missing targets or capitalization errors. `npm run check:headlines`: PASS, 548 unique location headlines, zero issues.
-- Push, Vercel deployment and live response verification pending.
+- Commit `d7dfa23` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy` and deployed to Vercel production as `dpl_5Xnxqic1odiExBQN66AcM8nF3iUd`, aliased at `https://temporary-shower-rental.com`.
+- Live canonical Keller route returned HTTP 200. Verified the exact title, meta description, and intro; the gallery heading matches exactly and the gallery contains no “Verified” or “Archive-matched reference” wording.
 
 ## Keller screenshot final pass — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 

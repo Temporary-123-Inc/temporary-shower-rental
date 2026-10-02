@@ -2,7 +2,7 @@
 
 ## 2026-10-03 — Restore Keller brief copy and neutral photo labels
 
-Use the owner's exact Keller title, meta description, and intro strings in the page metadata/content model. Keep the existing H1, route, image files, and image alternatives. Label the gallery “Shower Trailer and Container Photos,” and keep visible photo copy customer-facing by removing internal verification/archive-reference terminology. Exact rendered output is enforced by the focused Keller check.
+Use the owner's exact Keller title, meta description, and intro strings in the page metadata/content model. Keep the existing H1, route, image files, and image alternatives. Label the gallery “Shower Trailer and Container Photos,” and keep visible photo copy customer-facing by removing internal verification/archive-reference terminology. Exact rendered output is enforced by the focused Keller check. Commit `d7dfa23` is live on `temporary-shower-rental.com`; HTTPS verification returned HTTP 200 and confirmed the exact approved strings.
 
 ## 2026-10-03 — Complete Keller screenshot media corrections
 
