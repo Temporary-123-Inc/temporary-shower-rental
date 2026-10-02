@@ -7,6 +7,9 @@
   "indexingScope": "homepage-and-service-areas",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
+  "priorityIndexingRoutes": [
+    "/service-areas/texas/north-texas/keller/"
+  ],
   "indexingStartDate": "2026-09-22",
   "inquiriesEnabled": false,
   "domainRoutingReady": true

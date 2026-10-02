@@ -1,5 +1,16 @@
 # Temporary123 Test Results
 
+## Keller indexability and shower photo follow-up — 2026-10-02 (LOCAL CANDIDATE)
+
+- TypeScript: PASS. Vite production build and prerender: PASS, 755 pages plus 404.
+- `scripts/check-keller-location.mjs`: PASS. Keller emits `index,follow`, the exact self-canonical and exactly one sitemap entry. Sitemap contains 26 URLs: the existing 25-route batch plus Keller. The page check also confirms the exact Keller NAP, 8 phone links, 7 equipment links, five FAQ/schema pairs, directory/parent links, and all six product photos.
+- Full internal-link audit: PASS across 755 pages, zero missing targets or capitalization issues. Application test suite: PASS, 62/62.
+- Local static preview at `http://localhost:4326/service-areas/texas/north-texas/keller/`: HTTP 200, exact canonical, `index,follow`, sitemap count 26/Keller count 1, all four new container images HTTP 200. Browser review confirmed the archive-matched 20 ft / 5-stall shower-container photos and the existing 13 ft / 3-stall combination photos are presented as separate equipment groups.
+- Updated Vercel's response-header host matcher so noindex remains on preview/other hosts but does not apply on `temporary-shower-rental.com` or its `www` host. No live response-header verification is claimed before deployment.
+- The four new images come from the exact `20ft Shower Container (5 Stalls)` archive-backed asset set. No verified 22 ft / 10-stall photo set was found, so no photo was labeled as that model.
+- Independent read-only review reported no implementation defect in route selection, Vercel host matching or photo grouping. It identified a test-evidence gap around archive/file presence; the final rendered check was strengthened afterward and now asserts those files and outputs exist. The follow-up assertion change was not independently re-reviewed. Review notes: `audit/keller-indexability-2026-10-02/independent-review.md`.
+- Production release remains blocked: the repository lacks the required full V16.1 completion/evidence package and release-scope review; the scoped read-only review is not a substitute. No commit, push, Vercel deployment, Google profile edit, or indexing request was performed. Email, YouTube and social URLs remain pending owner input.
+
 ## Homepage H1 and 24/7 description — 2026-10-02 (local)
 
 - Updated homepage H1/title to “Commercial Shower Trailer Rental”/“Commercial Shower Trailer Rental Nationwide,” added “24/7 live agent support” to the meta description, and rewrote the visible hero paragraph in the longer practical style requested. The copy distinguishes support from delivery and keeps equipment/availability/timing subject to confirmation.

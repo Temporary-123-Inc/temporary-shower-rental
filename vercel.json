@@ -30,7 +30,7 @@
       "missing": [
         {
           "type": "host",
-          "value": "temporary123\\.com"
+          "value": "^(?:www\\.)?(?:temporary123\\.com|temporary-shower-rental\\.com)$"
         }
       ],
       "headers": [

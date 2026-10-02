@@ -2,6 +2,7 @@ import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPath } from "./regionGuides";
 import { cityPagesWithGuides } from "./cityDirectory";
+import { kellerLocation } from "./kellerLocation";
 
 export function MapLocationDirectory() {
   return (
@@ -25,13 +26,33 @@ export function MapLocationDirectory() {
               <details>
                 <summary>Regions and cities in {name}</summary>
                 <ul>
-                  {guide.regions.map((region) => (
-                    <li key={region}>
-                      <a href={regionPath(name, region)}>{region}</a>
-                    </li>
-                  ))}
+                  {guide.regions.map((region) => {
+                    const isKellerParent =
+                      name === "Texas" && region === "North Texas";
+                    return (
+                      <li key={region}>
+                        <a href={regionPath(name, region)}>{region}</a>
+                        {isKellerParent && (
+                          <ul className="map-location-sublist">
+                            <li>
+                              <a
+                                data-directory-city
+                                href={kellerLocation.path}
+                              >
+                                Keller, Texas
+                              </a>
+                            </li>
+                          </ul>
+                        )}
+                      </li>
+                    );
+                  })}
                   {cityPagesWithGuides
-                    .filter((city) => city.state === name)
+                    .filter(
+                      (city) =>
+                        city.state === name &&
+                        city.path !== kellerLocation.path,
+                    )
                     .map((city) => (
                       <li key={city.path}>
                         <a data-directory-city href={city.path}>

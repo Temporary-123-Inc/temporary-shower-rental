@@ -12,3 +12,13 @@
 - Unknown: email/social URLs, delivery lead times, price range. No placeholders published.
 - Repository: commit `be2756e` is pushed on `codex/apply-local-changes-to-official-main`; PR pending. Not merged or deployed; no Google changes submitted.
 - Next: user switches to the managing Google account; resolve existing release evidence and online inquiry setup, publish and verify the Keller URL before changing its profile website field or the other site.
+
+## 2026-10-02 indexability follow-up
+
+- Owner directly approved including Keller as an additional priority indexing route, keeping the existing 25-page pilot intact. Local prerender now emits 26 sitemap URLs, with Keller once, `index,follow`, and its self-canonical.
+- Added four source-verified 20 ft / 5-stall shower-container photos from `equipment-archive-review/Equipments/20ft Shower Container (5 Stalls)`, visually reviewed in the local page. The two 13 ft / 3-stall combination photos remain labeled separately. No verified 22 ft / 10-stall photos were found.
+- Updated the Vercel robots-header host exception for `temporary-shower-rental.com` (apex and `www`); preview/other host protection remains. This is local config evidence only; live headers have not been checked.
+- Local checks pass: production build (755 pages + 404), TypeScript, 62 existing tests, internal-link casing audit, Keller-specific route/assets/schema check, and local HTTP/browser check. Evidence: `audit/keller-indexability-2026-10-02/` and `docs/TEST_RESULTS.md`.
+- This follow-up is uncommitted and unpushed on `codex/homepage-keller-copy` at `c4e366979815d8e3bf56971d8bd227c8c8a65f31`. Earlier commit/PR status above describes the preceding Keller work only.
+- Production release remains pending the complete repository V16.1 evidence package and release-scope review; live response headers, deployment, indexing, and Google Business Profile changes are not claimed. Email, YouTube and social URLs have not yet been supplied.
+- Navigation follow-up: the Texas service-area disclosure now nests Keller beneath North Texas and removes the duplicate Texas-level city link. The existing `/service-areas/texas/north-texas/keller/` route is preserved. The local Vite page tree shows the Keller link with that exact destination.

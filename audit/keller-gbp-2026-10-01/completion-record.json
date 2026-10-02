@@ -28,5 +28,30 @@
   "pushed": true,
   "pull_request": "pending",
   "deployed": false,
-  "google_profile_changed": false
+  "google_profile_changed": false,
+  "indexability_follow_up_2026_10_02": {
+    "status": "IMPLEMENTED_LOCALLY_RELEASE_BLOCKED",
+    "branch": "codex/homepage-keller-copy",
+    "base_commit": "c4e366979815d8e3bf56971d8bd227c8c8a65f31",
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "robots_meta": "index,follow",
+    "canonical": "self",
+    "sitemap_url_count": 26,
+    "keller_sitemap_entries": 1,
+    "existing_25_page_batch_preserved": true,
+    "container_photos": "4 archive-verified 20 ft / 5-stall shower-container photos; visually reviewed",
+    "verified_22ft_photos": false,
+    "live_response_headers_checked": false,
+    "google_profile_changed": false,
+    "email_and_social_links": "pending owner-provided URLs",
+    "verification_evidence": "../keller-indexability-2026-10-02/",
+    "review_limitation": "Scoped independent review completed; follow-up archive/source assertions added afterward were not independently re-reviewed.",
+    "blockers": [
+      "Complete repository V16.1 release evidence package and release-scope review are outstanding",
+      "Live deployment and production X-Robots-Tag verification are outstanding",
+      "Email, YouTube and social URLs have not been supplied"
+    ]
+  }
 }

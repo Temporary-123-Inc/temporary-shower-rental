@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile, writeFile, access } from "node:fs/promises";
+import { readFile, writeFile, access, mkdir, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { load } from "cheerio";
 
@@ -42,18 +42,43 @@ const parent = await readFile("dist/service-areas/texas/north-texas/index.html",
 assert.ok(parent.includes(`href="${path}"`));
 const directory = load(await readFile("dist/service-areas/index.html", "utf8"));
 const texas = directory(".map-location-grid > div").filter((_, el) => directory(el).find("summary").text() === "Regions and cities in Texas");
-assert.equal(texas.find(`a[data-directory-city][href='${path}']`).text(), "Keller, Texas");
+assert.equal(
+  texas
+    .find("li")
+    .filter((_, el) => directory(el).children("a").text() === "North Texas")
+    .find(`ul a[data-directory-city][href='${path}']`)
+    .text(),
+  "Keller, Texas",
+);
+assert.equal(
+  texas.find(`> ul > li > a[data-directory-city][href='${path}']`).length,
+  0,
+  "Keller should be nested under North Texas, not listed as a Texas-level sibling",
+);
 assert.equal(directory(`[data-map-city-state='Texas'] a[href='${path}']`).length, 1);
 const cityDirectory = load(await readFile("dist/service-areas/texas/north-texas/cities/index.html", "utf8"));
 assert.equal(cityDirectory(`a[data-city-name='keller']`).attr("href"), path);
 const photos = $(".keller-photos img").toArray();
-assert.equal(photos.length, 2);
-for (const [i, img] of photos.entries()) {
+assert.equal(photos.length, 6);
+for (const [i, img] of photos.slice(4).entries()) {
   const copied = await readFile(`public${$(img).attr("src")}`);
   const source = await readFile(`public/images/service-heroes/13ft-shower-restroom-combination/0${i + 1}-960.webp`);
   assert.equal(createHash("sha256").update(copied).digest("hex"), createHash("sha256").update(source).digest("hex"));
   assert.ok($(img).attr("alt").length > 15);
 }
+for (const img of photos.slice(0, 4)) {
+  assert.match($(img).attr("src"), /^\/images\/service-heroes\/20ft-shower-container\/0[1-4]-960\.webp$/);
+  assert.ok($(img).attr("alt").includes("20 ft, 5-stall shower container"));
+  await access(`public${$(img).attr("src")}`);
+  await access(`dist${$(img).attr("src")}`);
+}
+const containerArchive = await readdir("equipment-archive-review/Equipments/20ft Shower Container (5 Stalls)");
+for (const name of [
+  "mobile-shower-container-interior.png",
+  "portable-shower-container-multiple-stalls.png",
+  "shower-container-private-shower-stall.png",
+  "shower-container-rental-private-stalls.png",
+]) assert.ok(containerArchive.includes(name), `Missing archive-backed shower-container source ${name}`);
 const product = load(await readFile("dist/services/shower-trailers/22ft-10-stall/index.html", "utf8"));
 assert.equal(product("h1").text(), "22 ft 10-Stall Shower Trailer Rental");
 assert.ok(product("body").text().includes("These images do not depict a 22 ft ten-stall trailer"));
@@ -61,15 +86,32 @@ const home = load(await readFile("dist/index.html", "utf8"));
 assert.ok(home("a[href='tel:+18883855513']").length > 0);
 assert.equal(home("a[href='tel:+19725446598']").length, 0);
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
-assert.equal($("meta[name=robots]").attr("content"), "noindex,follow");
-assert.ok(!sitemap.includes(path));
+assert.equal($("meta[name=robots]").attr("content"), "index,follow");
+const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+const canonicalUrl = `https://temporary-shower-rental.com${path}`;
+assert.equal(sitemapUrls.filter((url) => url === canonicalUrl).length, 1);
+assert.equal(sitemapUrls.length, 26);
+assert.equal(new Set(sitemapUrls).size, 26);
+const vercelConfig = JSON.parse(await readFile("vercel.json", "utf8"));
+const noindexHeader = vercelConfig.headers.find((rule) =>
+  rule.headers.some((header) => header.key === "X-Robots-Tag" && /noindex/i.test(header.value)),
+);
+const noindexHostMatcher = new RegExp(noindexHeader.missing.find((condition) => condition.type === "host").value);
+for (const host of ["temporary123.com", "www.temporary123.com", "temporary-shower-rental.com", "www.temporary-shower-rental.com"]) {
+  assert.ok(noindexHostMatcher.test(host), `${host} must be exempt from the noindex response header`);
+}
+for (const host of ["temporary-shower-rental-preview.vercel.app", "preview.example.com"]) {
+  assert.ok(!noindexHostMatcher.test(host), `${host} must retain preview/other-host noindex protection`);
+}
 const result = {
   status: "PASS", path, telLinks: phones.length, linkedTargets: targets.length,
-  equipmentLinks: 7, faqSchemaMatches: 5, archiveMatchedPhotos: 2,
-  texasMenuAndCityDirectory: "PASS: Keller links to its exact existing route",
+  equipmentLinks: 7, faqSchemaMatches: 5, archiveMatchedPhotos: 6, containerArchiveSources: 4,
+  texasMenuAndCityDirectory: "PASS: Keller is nested under North Texas and links to its exact existing route",
+  responseHeader: "PASS: canonical hosts exempt; preview and other hosts protected",
   scope: "Local rendered candidate; no Google edits or deployment claimed",
-  indexing: "Outside existing pilot; noindex,follow; self-canonical; absent from sitemap",
+  indexing: "Owner-approved priority route; index,follow; self-canonical; included in sitemap alongside 25-page batch",
   onlineSubmission: "Disabled by existing site configuration; browser flow checked separately",
 };
-await writeFile("audit/keller-gbp-2026-10-01/rendered-check.json", JSON.stringify(result, null, 2) + "\n");
+await mkdir("audit/keller-indexability-2026-10-02", { recursive: true });
+await writeFile("audit/keller-indexability-2026-10-02/rendered-check.json", JSON.stringify(result, null, 2) + "\n");
 console.log(JSON.stringify(result));

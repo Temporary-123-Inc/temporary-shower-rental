@@ -1,5 +1,7 @@
 # Page and File Assignments
 
+**2026-10-02 Keller indexability and shower photo follow-up — IMPLEMENTED LOCALLY; RELEASE GATE PENDING:** Supersedes the prior instruction to preserve Keller `noindex` after the owner explicitly requested public indexability and sitemap membership. Owns Keller priority inclusion in `site.json` / `scripts/prerender.tsx`, its rendered assertions, the preview-only Vercel `X-Robots-Tag` exception in `vercel.json`, and the scoped shower-container gallery in `src/KellerLocationPage.tsx`. Keep the existing 25-route batch unchanged and include Keller as one explicit extra page. Use only archive-backed 20 ft/5-stall shower-container assets; retain the 13 ft/3-stall combo gallery with separate captions. Do not invent profile email/social URLs; add those later when supplied. No Google profile edit.
+
 **2026-10-02 homepage H1/description follow-up — LIVE VERIFIED:** Owns the homepage H1 and customer-facing hero description in `src/Home.tsx` plus homepage title/meta-description entries in `src/content.ts`. Use commercial shower-trailer rental wording and identify the phone line's 24/7 live-agent support; do not imply 24/7 delivery. No route or indexing changes.
 
 **2026-10-02 Keller H1 and description follow-up — UPDATED LOCALLY:** Owns only `src/kellerLocation.ts`, the exact Keller rendered-check assertion and coordination records. Align the heading and descriptions with commercial shower-trailer rental, verified local uses and factual logistics. Preserve the URL and noindex status; no Google Profile edit or deployment.

@@ -155,6 +155,17 @@ const indexableRoutes = routesForIndexingBatch(
   site.activeIndexingBatch,
   site.indexingBatchSize,
 );
+const priorityIndexingRoutes = site.priorityIndexingRoutes || [];
+for (const path of priorityIndexingRoutes) {
+  if (
+    !allRoutes.includes(path) ||
+    editorialNoindex.has(path) ||
+    !routeInIndexingScope(path, indexingScope)
+  ) {
+    throw new Error(`Invalid priority indexing route: ${path}`);
+  }
+}
+const releasedIndexableRoutes = [...new Set([...indexableRoutes, ...priorityIndexingRoutes])];
 const compact = (value: string, maximum: number) => {
   const clean = value.replace(/\s+/g, " ").trim();
   if (clean.length <= maximum) return clean;
@@ -350,7 +361,7 @@ for (const path of [...allRoutes, "/404/"]) {
                                 }
                               : pageInfo(path);
   const indexableCanonical =
-    canonicalFor(path, indexableRoutes.includes(path), release) || "";
+    canonicalFor(path, releasedIndexableRoutes.includes(path), release) || "";
   const canonical =
     indexableCanonical ||
     (path === "/service-areas/oklahoma/panhandle/" || path === kellerLocation.path
@@ -556,7 +567,7 @@ await writeFile(
 const restoredAssets = await preserveMedia(media);
 const registry = allRoutes.map((path) => ({
   path,
-  indexable: release && indexableRoutes.includes(path),
+  indexable: release && releasedIndexableRoutes.includes(path),
   modified:
     coreRoutes.includes(path) || modelDetails[path as keyof typeof modelDetails]
       ? undefined
@@ -569,7 +580,7 @@ await writeFile(
   sitemapXml(
     registry.map((row) => ({
       ...row,
-      indexable: indexableRoutes.includes(row.path),
+      indexable: releasedIndexableRoutes.includes(row.path),
     })),
     true,
   ),
@@ -584,7 +595,7 @@ await writeFile(
       indexingBatchSize: site.indexingBatchSize,
       activeIndexingBatch: site.activeIndexingBatch,
       eligibleIndexingRoutes: scopedIndexingRoutes.length,
-      activeIndexingRoutes: release ? indexableRoutes.length : 0,
+      activeIndexingRoutes: release ? releasedIndexableRoutes.length : 0,
       domainRoutingReady: domainReady,
       pages: registry,
       unresolvedSourceLinks: [...unresolvedSourceLinks].sort(),
