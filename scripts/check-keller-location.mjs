@@ -122,6 +122,12 @@ assert.ok(product("body").text().includes("These images do not depict a 22 ft te
 const home = load(await readFile("dist/index.html", "utf8"));
 assert.ok(home("a[href='tel:+18883855513']").length > 0);
 assert.equal(home("a[href='tel:+19725446598']").length, 0);
+for (const [url, name] of [
+  ["https://www.facebook.com/mobileshowertrailerrental", "Facebook"],
+  ["https://www.youtube.com/@temporaryshowerrental123", "YouTube"],
+]) {
+  assert.equal(home(`.site-footer nav[aria-label='Follow us'] a[href='${url}']`).text().startsWith(name), true);
+}
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
 assert.equal($("meta[name=robots]").attr("content"), "index,follow");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);

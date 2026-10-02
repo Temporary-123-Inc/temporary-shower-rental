@@ -466,6 +466,10 @@ export function Footer({ showClosing = true, path = "" }: { showClosing?: boolea
               />
             </a>
             <p>Clean, dependable hygiene facilities for the work ahead.</p>
+            <nav className="footer-nav" aria-label="Follow us">
+              <strong>Follow us</strong>
+              {kellerLocation.socialProfiles.map(({ name, url }) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{name} ↗</a>)}
+            </nav>
             <small>© {new Date().getFullYear()} {site.brand}</small>
           </div>
           <nav className="footer-nav" aria-label="Explore">

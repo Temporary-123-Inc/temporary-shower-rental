@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-03 — Show verified social profiles in the global footer
+
+Display the owner-provided Facebook and YouTube links in a site-wide “Follow us” footer navigation. Reuse Keller's confirmed profile URL source to prevent duplicate configuration. Keep JSON-LD `sameAs` localized to Keller's LocalBusiness schema. The focused rendered check covers the homepage footer and Keller block.
+
 ## 2026-10-03 — Add owner-supplied Keller social profiles
 
 Show the provided Facebook and YouTube profile URLs in the Keller business information block and include the same URLs in that route's LocalBusiness `sameAs`. Do not populate email until the owner provides it. Validate that visible links and JSON-LD stay in sync with the focused Keller render check. Commit `23140f2` is live on the canonical production domain; live HTML returned HTTP 200 with the exact social links and `sameAs` values.
