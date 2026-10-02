@@ -29,7 +29,12 @@ assert.equal(business.openingHours, "Mo-Su 00:00-24:00");
 assert.equal(business.hasMap, "https://maps.google.com/?cid=5645440683828284245");
 assert.equal(business.url, `https://temporary-shower-rental.com${path}`);
 assert.equal(business.email, undefined);
-assert.equal(business.sameAs, undefined);
+assert.deepEqual(business.sameAs, [
+  "https://www.facebook.com/mobileshowertrailerrental",
+  "https://www.youtube.com/@temporaryshowerrental123",
+]);
+assert.equal($(".keller-business a[href='https://www.facebook.com/mobileshowertrailerrental']").text(), "Facebook ↗");
+assert.equal($(".keller-business a[href='https://www.youtube.com/@temporaryshowerrental123']").text(), "YouTube ↗");
 const faqs = graph.find(node => node["@type"] === "FAQPage").mainEntity;
 assert.equal(faqs.length, 5);
 $(".keller-faqs details").each((i, detail) => {

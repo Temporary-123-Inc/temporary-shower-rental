@@ -1,7 +1,7 @@
 import site from "../site.json" with { type: "json" };
 
 // NAP and hours checked against the exact Google listing on 2026-10-01.
-// Missing email/social profiles and delivery times are deliberately omitted.
+// Email and other unconfirmed profile URLs are deliberately omitted.
 export const kellerLocation = {
   path: "/service-areas/texas/north-texas/keller/",
   regionPath: "/service-areas/texas/north-texas/",
@@ -13,6 +13,10 @@ export const kellerLocation = {
   hours: "Open 24 hours",
   mapUrl: "https://maps.google.com/?cid=5645440683828284245",
   reviewUrl: "https://g.page/r/CVWLHyBkolhOECE/review",
+  socialProfiles: [
+    { name: "Facebook", url: "https://www.facebook.com/mobileshowertrailerrental" },
+    { name: "YouTube", url: "https://www.youtube.com/@temporaryshowerrental123" },
+  ],
   // Copied from this profile's Share > Embed a map, not a city search.
   embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.676731310437!2d-97.2121073!3d32.93313820000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dd770afc0e903%3A0x4e58a264201f8b55!2sMobile%20Shower%20Trailer%20Rental!5e0!3m2!1sen!2sph!4v1790869259748!5m2!1sen!2sph",
   title: "Shower Trailer Rental in Keller, TX | Mobile Shower Trailer Rental",

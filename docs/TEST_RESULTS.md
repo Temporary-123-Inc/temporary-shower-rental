@@ -1,5 +1,12 @@
 # Temporary123 Test Results
 
+## Keller social profile links — 2026-10-03 (LOCAL VERIFIED; RELEASE PENDING)
+
+- Added the owner-supplied Facebook and YouTube URLs to the Keller business information block, opening in new tabs, and to the LocalBusiness JSON-LD `sameAs` array.
+- Email stays unset because the owner said it will be sent later.
+- `npm run build`: PASS, TypeScript/Vite and prerender generated 755 pages plus 404. `node scripts/check-keller-location.mjs`: PASS; exact Facebook and YouTube anchors and `sameAs` values verified in prerendered HTML.
+- Push, production deploy and live response verification pending.
+
 ## Keller approved-copy restoration — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Restored the exact requested title, meta description, and introductory paragraph. Kept the current H1 and route unchanged.

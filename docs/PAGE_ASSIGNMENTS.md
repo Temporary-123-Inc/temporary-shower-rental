@@ -1,5 +1,7 @@
 # Page and File Assignments
 
+**2026-10-03 Keller social profile follow-up — VERIFIED LOCALLY; RELEASE PENDING:** Added owner-provided Facebook and YouTube URLs to the Keller business information block and LocalBusiness `sameAs` schema. Email remains pending. Focused rendered assertion confirms both links and both schema URLs. Production push/deploy and live verification pending.
+
 **2026-10-03 Keller approved-copy restoration — DEPLOYED AND LIVE VERIFIED:** Restored exact owner-provided title, meta description, and intro; renamed the photo heading and removed internal verification/archive language from visible photo copy. Current H1, route, image files and alt text are preserved. Commit `d7dfa23` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy`, then deployed to Vercel production as `dpl_5Xnxqic1odiExBQN66AcM8nF3iUd`, aliased at `https://temporary-shower-rental.com`. Live Keller route returned HTTP 200 with exact metadata/intro and clean gallery copy.
 
 **2026-10-03 screenshot final pass — DEPLOYED AND LIVE VERIFIED:** Matched both 13 ft/3-stall gallery alt descriptions to the review table and renamed the shared header/footer logo asset to `public/images/temporary-shower-rental-123-logo.webp`. Focused check confirms both exact alt values and shared asset path. Commit `91d7731` is live at `temporary-shower-rental.com`; all seven screenshot-listed image URLs returned HTTP 200.

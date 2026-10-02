@@ -27,6 +27,7 @@ export function pageSchema(input: {
           address: { "@type": "PostalAddress", streetAddress: kellerLocation.streetAddress, addressLocality: "Keller", addressRegion: "TX", postalCode: "76248", addressCountry: "US" },
           openingHours: "Mo-Su 00:00-24:00",
           hasMap: kellerLocation.mapUrl,
+          sameAs: kellerLocation.socialProfiles.map(({ url }) => url),
           areaServed: [
             ...kellerLocation.cities.map(name => ({ "@type": "City", name })),
             { "@type": "State", name: "Texas" },

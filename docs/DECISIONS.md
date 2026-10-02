@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-03 — Add owner-supplied Keller social profiles
+
+Show the provided Facebook and YouTube profile URLs in the Keller business information block and include the same URLs in that route's LocalBusiness `sameAs`. Do not populate email until the owner provides it. Validate that visible links and JSON-LD stay in sync with the focused Keller render check.
+
 ## 2026-10-03 — Restore Keller brief copy and neutral photo labels
 
 Use the owner's exact Keller title, meta description, and intro strings in the page metadata/content model. Keep the existing H1, route, image files, and image alternatives. Label the gallery “Shower Trailer and Container Photos,” and keep visible photo copy customer-facing by removing internal verification/archive-reference terminology. Exact rendered output is enforced by the focused Keller check. Commit `d7dfa23` is live on `temporary-shower-rental.com`; HTTPS verification returned HTTP 200 and confirmed the exact approved strings.
