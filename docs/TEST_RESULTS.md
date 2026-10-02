@@ -1,11 +1,12 @@
 # Temporary123 Test Results
 
-## Keller social profile links — 2026-10-03 (LOCAL VERIFIED; RELEASE PENDING)
+## Keller social profile links — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Added the owner-supplied Facebook and YouTube URLs to the Keller business information block, opening in new tabs, and to the LocalBusiness JSON-LD `sameAs` array.
 - Email stays unset because the owner said it will be sent later.
 - `npm run build`: PASS, TypeScript/Vite and prerender generated 755 pages plus 404. `node scripts/check-keller-location.mjs`: PASS; exact Facebook and YouTube anchors and `sameAs` values verified in prerendered HTML.
-- Push, production deploy and live response verification pending.
+- Commit `23140f2` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy` and deployed as Vercel production deployment `dpl_BMczAshvvXNVUdn2qsWHHLUFH1fJ`, aliased at `https://temporary-shower-rental.com`.
+- Live Keller route returned HTTP 200. Verified the Facebook and YouTube anchors point to the exact supplied URLs, JSON-LD `sameAs` contains the same two URLs, and no email property was emitted.
 
 ## Keller approved-copy restoration — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
