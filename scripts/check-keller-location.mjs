@@ -8,8 +8,9 @@ const html = await readFile(`dist${path}index.html`, "utf8");
 const $ = load(html);
 assert.equal($("h1").length, 1);
 assert.equal($("h1").text(), "Shower Trailer Rental in Keller, TX");
-assert.equal($("title").text(), "Shower Trailer Rental in Keller, TX");
-assert.equal($("meta[name=description]").attr("content"), "Rent a commercial shower trailer in Keller, TX for construction crews, events and facility renovations. We coordinate site access, water, power and drainage. Call (972) 544-6598 for equipment and timing.");
+assert.equal($("title").text(), "Shower Trailer Rental in Keller, TX | Mobile Shower Trailer Rental");
+assert.equal($("meta[name=description]").attr("content"), "Shower trailers delivered from Keller, TX to job sites across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598.");
+assert.equal($("[data-h1-intro]").text(), "Mobile Shower Trailer Rental delivers shower trailers from our Keller, TX yard to construction sites, events, renovations and emergency response operations across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598 for sizing and delivery times.");
 assert.equal($("link[rel=canonical]").attr("href"), `https://temporary-shower-rental.com${path}`);
 assert.ok($("address").text().includes("1710 Keller Pkwy #4114, Keller, TX 76248"));
 const phones = $("a[href^='tel:']").map((_, el) => $(el).attr("href")).get();
@@ -60,6 +61,8 @@ const cityDirectory = load(await readFile("dist/service-areas/texas/north-texas/
 assert.equal(cityDirectory(`a[data-city-name='keller']`).attr("href"), path);
 const photos = $(".keller-photos img").toArray();
 assert.equal(photos.length, 6);
+assert.equal($("#keller-photos-title").text(), "Shower Trailer and Container Photos");
+assert.doesNotMatch($("#keller-photos-title").parent().text(), /verified|archive-matched reference/i);
 assert.deepEqual(
   photos.slice(0, 4).map((img) => $(img).attr("src")),
   [

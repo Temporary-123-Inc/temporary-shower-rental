@@ -1,5 +1,7 @@
 # Page and File Assignments
 
+**2026-10-03 Keller approved-copy restoration — VERIFIED LOCALLY; RELEASE PENDING:** Restored the exact owner-provided title, meta description, and intro in `src/kellerLocation.ts`; renamed the photo heading to “Shower Trailer and Container Photos,” removed internal verification/archive language from visible photo copy, and added exact rendered assertions in `scripts/check-keller-location.mjs`. Current H1, route, image files, alt text and other page content are preserved. Build and focused/site-wide checks passed; push/deploy and live verification pending.
+
 **2026-10-03 screenshot final pass — DEPLOYED AND LIVE VERIFIED:** Matched both 13 ft/3-stall gallery alt descriptions to the review table and renamed the shared header/footer logo asset to `public/images/temporary-shower-rental-123-logo.webp`. Focused check confirms both exact alt values and shared asset path. Commit `91d7731` is live at `temporary-shower-rental.com`; all seven screenshot-listed image URLs returned HTTP 200.
 
 **2026-10-03 robots.txt source — DEPLOYED AND LIVE VERIFIED:** Added `public/robots.txt`, its focused rendered assertions, and coordination records. It permits public crawling, disallows `/api/`, and references the canonical production sitemap. Production prerender preserves the same policy and preview builds omit the production sitemap. Commit `e643c5d` is live at `temporary-shower-rental.com`.

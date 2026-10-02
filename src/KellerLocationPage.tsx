@@ -66,14 +66,14 @@ export function KellerLocationPage() {
     </section>
     <section className="wrap keller-section" aria-labelledby="keller-photos-title">
       <span className="eyebrow">INSIDE OUR EQUIPMENT</span>
-      <h2 id="keller-photos-title">Verified Shower Equipment Photos</h2>
+      <h2 id="keller-photos-title">Shower Trailer and Container Photos</h2>
       <h3>20 ft, 5-stall shower container</h3>
-      <p>Archive-matched reference photos of the 20 ft shower container. They show equipment interiors, not a Keller job-site installation.</p>
+      <p>Photos show interiors of the 20 ft shower container, not a Keller job-site installation.</p>
       <div className="keller-photos">
         <figure><img src="/images/keller/20ft-5-stall-shower-container-private-stall.webp" alt="Private shower stall inside a 20 ft, 5-stall shower container" width="960" height="1280" loading="lazy"/><figcaption>Private shower stall in the 20 ft, 5-stall shower container.</figcaption></figure>
-        <figure><img src="/images/keller/20ft-5-stall-shower-container-stall-row.webp" alt="Row of private shower stalls inside a 20 ft, 5-stall shower container" width="960" height="1280" loading="lazy"/><figcaption>Multiple shower stalls in the same 20 ft container reference.</figcaption></figure>
+        <figure><img src="/images/keller/20ft-5-stall-shower-container-stall-row.webp" alt="Row of private shower stalls inside a 20 ft, 5-stall shower container" width="960" height="1280" loading="lazy"/><figcaption>Multiple shower stalls inside a 20 ft container.</figcaption></figure>
         <figure><img src="/images/keller/20ft-5-stall-shower-container-two-stalls.webp" alt="Two private shower stalls in a 20 ft, 5-stall shower container" width="960" height="1280" loading="lazy"/><figcaption>Two enclosed shower stalls with individual fixtures.</figcaption></figure>
-        <figure><img src="/images/keller/20ft-5-stall-shower-container-three-stalls.webp" alt="Three shower stalls in a 20 ft, 5-stall shower container" width="960" height="1280" loading="lazy"/><figcaption>Three shower stalls shown in the container interior reference.</figcaption></figure>
+        <figure><img src="/images/keller/20ft-5-stall-shower-container-three-stalls.webp" alt="Three shower stalls in a 20 ft, 5-stall shower container" width="960" height="1280" loading="lazy"/><figcaption>Three shower stalls inside the container.</figcaption></figure>
       </div>
       <h3>13 ft, 3-stall shower/restroom combination trailer</h3>
       <p>These separate photos show the 13 ft combination trailer collection, not the shower-only container above.</p>

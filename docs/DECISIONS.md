@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-03 — Restore Keller brief copy and neutral photo labels
+
+Use the owner's exact Keller title, meta description, and intro strings in the page metadata/content model. Keep the existing H1, route, image files, and image alternatives. Label the gallery “Shower Trailer and Container Photos,” and keep visible photo copy customer-facing by removing internal verification/archive-reference terminology. Exact rendered output is enforced by the focused Keller check.
+
 ## 2026-10-03 — Complete Keller screenshot media corrections
 
 Match both 13 ft/3-stall gallery alternatives to the reviewed table verbatim. Rename the shared logo asset to `temporary-shower-rental-123-logo.webp` and use that path in both header and footer; keep the image bytes and layout unchanged. Commit `91d7731` was deployed to production and all seven screenshot-referenced image URLs returned HTTP 200.
