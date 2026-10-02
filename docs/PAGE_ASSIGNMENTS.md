@@ -1,6 +1,6 @@
 # Page and File Assignments
 
-**2026-10-03 Global footer social links — VERIFIED LOCALLY; RELEASE PENDING:** Added the owner-provided Facebook and YouTube links to the shared footer, reusing Keller’s profile configuration. Keller `sameAs` remains scoped to the Keller business schema. Build and rendered checks confirm both links in the homepage footer and Keller profile block; push/deploy and live verification pending.
+**2026-10-03 Global footer social links — DEPLOYED AND LIVE VERIFIED:** Added the owner-provided Facebook and YouTube links to the shared footer, reusing Keller’s profile configuration. Keller `sameAs` remains scoped to the Keller business schema. Commit `5beb783` was pushed on `codex/homepage-keller-copy` and deployed as Vercel production deployment `dpl_6Tc4Bi4CPqn4rHBD1e4DW6Q8LUau`. Live homepage and Keller pages returned HTTP 200 and both contain the social links in the global footer; Keller schema retains the matching `sameAs` URLs.
 
 **2026-10-03 Keller social profile follow-up — DEPLOYED AND LIVE VERIFIED:** Added owner-provided Facebook and YouTube URLs to the Keller business information block and LocalBusiness `sameAs` schema. Email remains pending. Commit `23140f2` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy` and deployed as Vercel production deployment `dpl_BMczAshvvXNVUdn2qsWHHLUFH1fJ`, aliased at `https://temporary-shower-rental.com`. Live page returned HTTP 200 and showed both exact profile links and schema URLs.
 

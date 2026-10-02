@@ -1,11 +1,12 @@
 # Temporary123 Test Results
 
-## Global footer social links — 2026-10-03 (LOCAL VERIFIED; RELEASE PENDING)
+## Global footer social links — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Added Facebook and YouTube to the site-wide footer's “Follow us” navigation, reusing the verified Keller social-profile URLs.
 - The focused `scripts/check-keller-location.mjs` now checks both links in the homepage footer as well as in the Keller business info block; its existing JSON-LD assertions confirm Keller `sameAs` still contains the same exact URLs.
 - `npm run build`: PASS, TypeScript/Vite and prerender generated 755 pages plus 404. `node scripts/check-keller-location.mjs`: PASS.
-- Push, production deploy and live response verification pending.
+- Commit `5beb783` was pushed on `codex/homepage-keller-copy` and deployed as Vercel production deployment `dpl_6Tc4Bi4CPqn4rHBD1e4DW6Q8LUau`.
+- Live homepage and Keller pages both returned HTTP 200 and expose both exact social URLs in the “Follow us” footer nav. Keller LocalBusiness schema retains the matching `sameAs` entries.
 
 ## Keller social profile links — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
