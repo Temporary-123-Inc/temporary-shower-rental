@@ -30,3 +30,8 @@
 - Added the source `public/robots.txt`; production robots returns HTTP 200 with Allow `/`, Disallow `/api/`, and the canonical sitemap declaration. Preview-specific generated policy remains controlled by prerender.
 - Keller live route and sitemap return HTTP 200; H1/title are `Shower Trailer Rental in Keller, TX`, robots meta is `index,follow`, canonical is self, X-Robots-Tag is absent, sitemap has 26 URLs and includes Keller once. All four descriptive Keller photo URLs return HTTP 200.
 - V16.1 repository-wide evidence remains incomplete. No Google Business Profile edits or indexing requests were made; remaining profile URLs are not yet supplied.
+
+## 2026-10-03 screenshot final pass
+
+- Published commit `91d7731c0f18cc371ff5e8e9527bb96d6167b4ce` to branch `codex/homepage-keller-copy`, then deployed Vercel production `dpl_6KA1Exq6W578se9s4YPELrDZYAPN` to `https://temporary-shower-rental.com`.
+- All six photo alt descriptions and the descriptive logo filename now match the screenshot. Live `/robots.txt`, Keller route, sitemap and all seven referenced image URLs returned HTTP 200. Sitemap has 26 URLs with Keller once; robots meta is `index,follow`, the canonical is self, and `X-Robots-Tag` is absent.

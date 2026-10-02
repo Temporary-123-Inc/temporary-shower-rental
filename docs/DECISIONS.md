@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-03 — Complete Keller screenshot media corrections
+
+Match both 13 ft/3-stall gallery alternatives to the reviewed table verbatim. Rename the shared logo asset to `temporary-shower-rental-123-logo.webp` and use that path in both header and footer; keep the image bytes and layout unchanged. Commit `91d7731` was deployed to production and all seven screenshot-referenced image URLs returned HTTP 200.
+
 ## 2026-10-03 — Add a tracked robots.txt source
 
 Keep a checked-in public source at `public/robots.txt` so Vite serves `/robots.txt` locally and Vite builds include it. Allow public pages, disallow `/api/`, and declare the canonical production sitemap. Preserve `scripts/prerender.tsx` as the authority for production versus preview output; preview robots must not advertise the production sitemap. Commit `e643c5d` was deployed; live robots and sitemap responses were verified.

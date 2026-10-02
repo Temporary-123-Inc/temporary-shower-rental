@@ -1,5 +1,12 @@
 # Temporary123 Test Results
 
+## Keller screenshot final pass — 2026-10-03 (PRODUCTION LIVE VERIFIED)
+
+- Exact alt text now matches all six image rows in the screenshot. Header/footer share `/images/temporary-shower-rental-123-logo.webp` and use `Temporary Shower Rental 123 logo`; the underlying logo image bytes are unchanged.
+- `npm run build`: PASS, 755 pages plus 404. `npm test`: PASS, 62/62. `scripts/check-keller-location.mjs`: PASS; internal links: PASS (755 pages, zero missing/case errors); location headlines: PASS (548 unique).
+- Commit `91d7731c0f18cc371ff5e8e9527bb96d6167b4ce` was pushed on `codex/homepage-keller-copy` and deployed as `dpl_6KA1Exq6W578se9s4YPELrDZYAPN` at `https://temporary-shower-rental.com`.
+- Live Keller route, `/robots.txt`, `/sitemap.xml`, the four 20 ft image URLs, two combination-photo URLs, and the renamed logo URL all returned HTTP 200. Keller has the requested title/H1, `index,follow`, a self-canonical and exactly one entry in the 26-URL sitemap; no `X-Robots-Tag` header was present.
+
 ## robots.txt source — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Added `public/robots.txt` with `User-agent: *`, `Allow: /`, `Disallow: /api/`, and `Sitemap: https://temporary-shower-rental.com/sitemap.xml`.

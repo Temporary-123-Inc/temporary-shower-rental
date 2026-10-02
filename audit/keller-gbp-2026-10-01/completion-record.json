@@ -29,16 +29,16 @@
   "pull_request": "pending",
   "deployed": true,
   "latest_deployment": {
-    "commit": "e643c5de6a0c7ee14789b1d8e39a987e57edd2fa",
+    "commit": "91d7731c0f18cc371ff5e8e9527bb96d6167b4ce",
     "github_branch": "https://github.com/Temporary-123-Inc/temporary-shower-rental/tree/codex/homepage-keller-copy",
-    "vercel_deployment_id": "dpl_3Z9ViB46NRh3ijLigPJ8gqyPZCya",
+    "vercel_deployment_id": "dpl_6KA1Exq6W578se9s4YPELrDZYAPN",
     "production_url": "https://temporary-shower-rental.com",
     "robots_txt_http_status": 200,
     "keller_http_status": 200,
     "sitemap_http_status": 200,
     "sitemap_url_count": 26,
     "keller_sitemap_entries": 1,
-    "image_http_statuses": [200, 200, 200, 200],
+    "image_http_statuses": [200, 200, 200, 200, 200, 200, 200],
     "live_robots_meta": "index,follow",
     "live_canonical": "self",
     "live_x_robots_tag": null
@@ -78,16 +78,17 @@
   },
   "robots_and_visual_review_follow_up_2026_10_03": {
     "status": "DEPLOYED_AND_LIVE_VERIFIED",
-    "commit": "e643c5de6a0c7ee14789b1d8e39a987e57edd2fa",
+    "commit": "91d7731c0f18cc371ff5e8e9527bb96d6167b4ce",
     "robots_txt": "Public crawl allowed; /api/ disallowed; canonical sitemap declared",
     "live_title_and_h1": "Shower Trailer Rental in Keller, TX",
-    "photo_alts": "Four image-specific descriptions without internal verification wording",
+    "photo_alts": "All six screenshot-listed alternatives match exactly",
     "photo_filenames": "Descriptive 20 ft / 5-stall names; all live URLs returned 200",
+    "logo_asset": "temporary-shower-rental-123-logo.webp",
     "logo_alts": "Header and footer identify Temporary Shower Rental 123 logo",
     "live_page_http_status": 200,
     "live_sitemap_http_status": 200,
     "sitemap_url_count": 26,
     "keller_sitemap_entries": 1,
-    "vercel_deployment_id": "dpl_3Z9ViB46NRh3ijLigPJ8gqyPZCya"
+    "vercel_deployment_id": "dpl_6KA1Exq6W578se9s4YPELrDZYAPN"
   }
 }
