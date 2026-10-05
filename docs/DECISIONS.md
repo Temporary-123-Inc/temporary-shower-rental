@@ -2,7 +2,7 @@
 
 ## 2026-10-06 — Use Pomona details for general site contact
 
-The owner supplied `11012 Kadota Ave Unit 9, Pomona, CA 91766` and `1-866-455-7214` and clarified that they are general site contact details. Source them from `site.json` for visible site contact information and Organization structured data. Keep the separately verified Keller location address, local phone and LocalBusiness schema as its own listing. The change is local pending release.
+The owner supplied `11012 Kadota Ave Unit 9, Pomona, CA 91766` and `1-866-455-7214` and clarified that they are general site contact details. Source them from `site.json` for visible site contact information and Organization structured data. Keep the separately verified Keller location address, local phone and LocalBusiness schema as its own listing. Source commit `4979454` was deployed to Vercel production as `dpl_4dxkPQKDJVcW9YHrUv5kMFfKBBEu`; live contact and schema checks passed.
 
 ## 2026-10-03 — Show verified social profiles in the global footer
 

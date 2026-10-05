@@ -1,11 +1,13 @@
 # Temporary123 Test Results
 
-## General contact details — 2026-10-06 (LOCAL RENDERED CANDIDATE)
+## General contact details — 2026-10-06 (PRODUCTION LIVE VERIFIED)
 
 - Updated the general site number to `1-866-455-7214` and business address to `11012 Kadota Ave Unit 9, Pomona, CA 91766`; retained Keller's separate local listing.
 - `npm run build`: PASS after the sandboxed Node launcher hit an access error and the project build was rerun with its installed runtime available. TypeScript and Vite passed; prerender produced 755 pages plus 404.
 - `node scripts/check-keller-location.mjs` with the bundled Node runtime: PASS. Checked the general number in homepage and Contact Us links, the address in Contact Us and footer, the Organization telephone and PostalAddress, and Keller's local phone/address/schema. `git diff --check`: PASS.
-- No commit, push, deployment or live-site verification. Existing unrelated audit/EOD working files were not reset or discarded.
+- Source commit `4979454` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy`. A clean detached checkout at that commit was deployed to the linked Vercel production project; deployment `dpl_4dxkPQKDJVcW9YHrUv5kMFfKBBEu` reached READY and was aliased to `https://temporary-shower-rental.com`.
+- Live homepage, `/contact-us/` and `/service-areas/texas/north-texas/keller/` each returned HTTP 200. All three include the new general footer address and phone. The homepage and Contact Us main content use the new phone; Keller retains its local phone in page content. Live homepage Organization schema has the new telephone and Pomona street address, with the old global telephone absent; Keller LocalBusiness retains its local telephone and Keller street address.
+- Existing unrelated audit/EOD working files were not reset, discarded, committed or deployed.
 
 ## Global footer social links — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
