@@ -47,6 +47,11 @@ export function pageSchema(input: {
       name: site.brand,
       url: `${origin}/`,
       telephone: site.phoneE164,
+      address: {
+        "@type": "PostalAddress",
+        ...site.address,
+        addressCountry: "US",
+      },
       logo: `${origin}/images/temporary123-logo.png`,
       areaServed: { "@type": "Country", name: "United States" },
       contactPoint: {

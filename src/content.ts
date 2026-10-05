@@ -70,7 +70,7 @@ const descriptions: Record<string, string> = {
   "/404/":
     "The requested page could not be found. Browse the temporary facility rental inventory or return to the home page.",
   "/contact-us/":
-    "Call Temporary Shower Rental 123 at +1 (888) 385-5513, available 24/7. Discuss your location, occupancy, rental dates, access and utility requirements.",
+    `Call Temporary Shower Rental 123 at ${site.phoneDisplay}, available 24/7. Find us at ${site.address.streetAddress}, ${site.address.addressLocality}, ${site.address.addressRegion} ${site.address.postalCode}. Discuss rental dates, access and utility requirements.`,
   "/privacy/":
     "Read how the Temporary Shower Rental 123 website handles visitor information and contact the team with questions about your information.",
 };

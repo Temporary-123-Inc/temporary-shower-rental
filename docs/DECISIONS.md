@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-06 — Use Pomona details for general site contact
+
+The owner supplied `11012 Kadota Ave Unit 9, Pomona, CA 91766` and `1-866-455-7214` and clarified that they are general site contact details. Source them from `site.json` for visible site contact information and Organization structured data. Keep the separately verified Keller location address, local phone and LocalBusiness schema as its own listing. The change is local pending release.
+
 ## 2026-10-03 — Show verified social profiles in the global footer
 
 Display the owner-provided Facebook and YouTube links in a site-wide “Follow us” footer navigation. Reuse Keller's confirmed profile URL source to prevent duplicate configuration. Keep JSON-LD `sameAs` localized to Keller's LocalBusiness schema. The focused rendered check covers the homepage footer and Keller block. Commit `5beb783` is live; both production routes returned HTTP 200 with the footer links, and Keller schema remained correct.

@@ -1,5 +1,12 @@
 # Temporary123 Test Results
 
+## General contact details — 2026-10-06 (LOCAL RENDERED CANDIDATE)
+
+- Updated the general site number to `1-866-455-7214` and business address to `11012 Kadota Ave Unit 9, Pomona, CA 91766`; retained Keller's separate local listing.
+- `npm run build`: PASS after the sandboxed Node launcher hit an access error and the project build was rerun with its installed runtime available. TypeScript and Vite passed; prerender produced 755 pages plus 404.
+- `node scripts/check-keller-location.mjs` with the bundled Node runtime: PASS. Checked the general number in homepage and Contact Us links, the address in Contact Us and footer, the Organization telephone and PostalAddress, and Keller's local phone/address/schema. `git diff --check`: PASS.
+- No commit, push, deployment or live-site verification. Existing unrelated audit/EOD working files were not reset or discarded.
+
 ## Global footer social links — 2026-10-03 (PRODUCTION LIVE VERIFIED)
 
 - Added Facebook and YouTube to the site-wide footer's “Follow us” navigation, reusing the verified Keller social-profile URLs.

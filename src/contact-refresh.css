@@ -1050,6 +1050,11 @@ body.contact-drawer-open .emergency-dispatch {
   white-space: normal;
   overflow-wrap: anywhere;
 }
+.contact-grid .contact-address {
+  margin-top: 1.5rem;
+  font-style: normal;
+  line-height: 1.6;
+}
 
 /* Availability desk — scoped visual redesign. The form markup, fields and
    interaction hooks stay unchanged; this layer only changes the presentation. */
