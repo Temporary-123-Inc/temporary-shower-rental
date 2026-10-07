@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-08 — Omit the number from editorial copy
+
+The owner asked to remove `123` from eyebrow labels and descriptions. Use “Temporary Shower Rental” in customer-facing prose and generated meta/social descriptions, including migrated source-page text, while preserving the original source archives. Keep the existing logo artwork and asset path, URLs, factual counts, contact information and business identity in structural fields. A rendered audit checks all 755 pages for the unwanted suffix in eyebrow/kicker text, meta descriptions and customer-facing paragraphs; it excludes the owner-facing SEO dashboard's historical URLs and evidence.
+
 ## 2026-10-08 — Apply family leads to service pages and Remote to camp headings
 
 The owner scoped the 70–120-word paragraph requirement to Kitchen and Remote Man Camp family/service pages, rather than all city and state pages. Use the existing equipment-specific lead as the opening and add planned/emergency uses, short-/long-term rental context, customer types, delivery coordination and a final availability/quote invitation. Present both exact service-family lists on the Services hub. Whenever an H1 names a camp, include Remote in that heading and align its page title; preserve the existing routes. The shower homepage and location pages retain shower equipment as their only subject matter.

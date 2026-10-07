@@ -373,7 +373,7 @@ export function SeoDashboard() {
             </span>
             <h1>SEO Migration Dashboard</h1>
             <p data-h1-intro>
-              Review Temporary123 migration evidence, protected URLs and preview
+              Review migration evidence, protected URLs and preview
               crawl checks. Indexing and authority values remain unknown until
               supported by their connected providers; a successful HTTP check is
               not proof of Google indexing.

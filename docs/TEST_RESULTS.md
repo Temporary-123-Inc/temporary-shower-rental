@@ -1,5 +1,12 @@
 # Temporary123 Test Results
 
+## Remove 123 from eyebrows and descriptions — 2026-10-08 (LOCAL VERIFIED; RELEASE PENDING)
+
+- Updated the homepage kicker, About and equipment eyebrow labels, current product descriptions, generated meta/social descriptions, and customer-facing text in migrated source pages. Source archives, logo artwork/path, URLs, contact details and factual numeric counts were preserved.
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
+- `scripts/check-no-123-copy.mjs`: PASS. Across 755 rendered pages, zero unwanted matches in eyebrow/kicker labels, meta descriptions or customer-facing paragraphs. Historical links and facts in the owner-facing SEO dashboard and the factual “123 Census-listed locations” count were intentionally preserved.
+- `npm test`: PASS, 62/62. `scripts/check-service-family-copy.mjs`: PASS, 173 family/service pages and 318 camp headings. `npm run check:shower-focus`: PASS, 549 pages. `npm run check:links`: PASS, 755 pages with zero missing targets or casing issues.
+
 ## Service families and Remote camp wording — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
 - The Services hub renders the owner-defined Kitchen Family (mobile kitchens, dishwashing, commercial refrigeration, walk-in coolers, freezers and refrigerated containers) and Remote Man Camp Family (shower trailers, shower/restroom combinations, laundry, bunk-bed sleepers and remote man camp services).

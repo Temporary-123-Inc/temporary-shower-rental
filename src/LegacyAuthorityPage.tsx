@@ -81,7 +81,7 @@ export function LegacyAuthorityPage({ page }: { page: LegacyAuthorityPageRecord 
         <article className="source-content">
           <h2>Plan the facility around the operating site</h2>
           <p>
-            Temporary123 reviews the actual delivery address, schedule, expected
+            Our team reviews the actual delivery address, schedule, expected
             users and available utilities before recommending a configuration
             {locationPhrase}. Equipment availability, delivery timing and rental
             terms are confirmed for each request.
@@ -102,7 +102,7 @@ export function LegacyAuthorityPage({ page }: { page: LegacyAuthorityPageRecord 
         <span className="eyebrow">REQUEST A PROJECT REVIEW</span>
         <h2>Share your site requirements.</h2>
         <p>Include the location, dates, expected users and available utilities.</p>
-        <a className="button" href="/contact-us/">Contact Temporary123 <span aria-hidden="true">↗</span></a>
+        <a className="button" href="/contact-us/">Contact our team <span aria-hidden="true">↗</span></a>
       </aside>
     </section>
   );

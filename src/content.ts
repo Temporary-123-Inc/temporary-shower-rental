@@ -1,4 +1,5 @@
 import site from "../site.json" with { type: "json" };
+import { removeBrandNumber } from "./publicCopy";
 export const services = [
   { slug: "shower-trailers", name: "Shower trailers" },
   { slug: "restroom-trailers", name: "Restroom trailers" },
@@ -77,8 +78,9 @@ const descriptions: Record<string, string> = {
 export function pageInfo(path: string) {
   return {
     title: `${titles[path] || "Page not found"} | ${site.brand}`,
-    description:
+    description: removeBrandNumber(
       descriptions[path] ||
       `Find the right temporary shower or restroom facility for your project. Explore ${site.brand} equipment or call ${site.phoneDisplay} for help.`,
+    ),
   };
 }

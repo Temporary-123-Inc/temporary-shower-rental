@@ -148,7 +148,7 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
       </nav>
       <div className="brief-intro">
         <div>
-          <span className="eyebrow">TEMPORARY123 EQUIPMENT</span>
+          <span className="eyebrow">RENTAL EQUIPMENT</span>
           <h1>{remoteCampHeadline(rentalProductHeadline(item.name))}</h1>
           <p data-h1-intro>{serviceFamilyIntro(item.path, remoteCampHeadline(rentalProductHeadline(item.name)), item.summary)}</p>
           <a className="button" href={`tel:${site.phoneE164}`}>

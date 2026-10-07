@@ -8,6 +8,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { Site, isLocationPagePath, type SourcePage } from "../src/Site";
 import { remoteCampHeadline } from "../src/serviceFamilyCopy";
+import { removeBrandNumber } from "../src/publicCopy";
 import { legacyAuthorityPageByPath, legacyAuthorityPages } from "../src/LegacyAuthorityPage";
 import { readdir } from "node:fs/promises";
 import { gunzipSync } from "node:zlib";
@@ -362,6 +363,7 @@ for (const path of [...allRoutes, "/404/"]) {
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || `${site.brand} facilities`}. Call ${site.brand} at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
+  info.description = removeBrandNumber(info.description);
   const head =
     (fontAsset
       ? `<link rel="preload" href="/assets/${fontAsset}" as="font" type="font/woff2" crossorigin>`
@@ -369,7 +371,7 @@ for (const path of [...allRoutes, "/404/"]) {
     `<meta name="description" content="${esc(info.description)}"><meta property="og:title" content="${esc(info.title)}"><meta property="og:description" content="${esc(info.description)}"><meta property="og:type" content="website">` +
     `<meta property="og:site_name" content="${esc(site.brand)}"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(info.title)}"><meta name="twitter:description" content="${esc(info.description)}">` +
     (canonical
-      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + (showerShareImage ? "/shower-social-card.png" : "/social-card.png"))}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(showerShareImage ? "Commercial shower trailer rentals nationwide" : site.brand + " temporary facility planning")}">`
+      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + (showerShareImage ? "/shower-social-card.png" : "/social-card.png"))}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(removeBrandNumber(showerShareImage ? "Commercial shower trailer rentals nationwide" : site.brand + " temporary facility planning"))}">`
       : "");
   const rawHtml = source
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)

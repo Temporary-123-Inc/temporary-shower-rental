@@ -1,4 +1,5 @@
 import { load } from "cheerio";
+import { removeBrandNumber } from "../src/publicCopy";
 
 type Options = {
   origin: string;
@@ -189,6 +190,12 @@ export function renderSourceContent(html: string, options: Options) {
       !figure.text().trim()
     )
       figure.remove();
+  });
+  // Keep the source archive intact while updating visible prose in migrated pages.
+  $("*").contents().each((_, node) => {
+    if (node.type !== "text" || !('data' in node) || typeof node.data !== "string") return;
+    if ($(node).parent().is("script,style")) return;
+    node.data = removeBrandNumber(node.data);
   });
   return $.html();
 }

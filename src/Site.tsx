@@ -1,4 +1,5 @@
 import { alignedPageIntro } from "./alignedIntroductions";
+import { editorialBrand } from "./publicCopy";
 import { kitchenFamilyServices, remoteManCampFamilyServices, remoteCampHeadline, serviceFamilyIntro } from "./serviceFamilyCopy";
 import { ApprovedEquipmentPhotoOptions } from './ApprovedEquipmentPhotoOptions';
 import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
@@ -879,7 +880,7 @@ export function Site({
                   </h2>
                   <p>
                     Browse specialized temporary kitchen, food-service,
-                    government and emergency support pages from {site.brand}.
+                    government and emergency support pages from {editorialBrand}.
                   </p>
                 </div>
                 <details>
@@ -967,12 +968,12 @@ export function Site({
             <section className="about-hero" aria-labelledby="about-title">
               <div className="wrap section about-hero-grid">
                 <div className="secondary-intro-copy">
-                  <span className="eyebrow">ABOUT {site.brand.toUpperCase()}</span>
+                  <span className="eyebrow">ABOUT {editorialBrand.toUpperCase()}</span>
                   <h1 id="about-title">
                     Clean facilities built around the work.
                   </h1>
                   <p data-h1-intro>
-                    {site.brand} helps project teams plan temporary shower and
+                    {editorialBrand} helps project teams plan temporary shower and
                     restroom facilities around the operation that must continue.
                     Unit selection, site access, utilities and rental timing are
                     reviewed together for construction, events and emergencies.
@@ -991,7 +992,7 @@ export function Site({
                     sizes="(max-width: 760px) calc(100vw - 40px), 480px"
                     width="850"
                     height="650"
-                    alt={`Private shower stalls inside a ${site.brand} trailer`}
+                    alt={`Private shower stalls inside a ${editorialBrand} trailer`}
                     fetchPriority="high"
                     decoding="async"
                   />
@@ -1074,7 +1075,7 @@ export function Site({
                     arrangements are finalized.
                   </p>
                   <p>
-                    Call the {site.brand} team at{" "}
+                    Call the {editorialBrand} team at{" "}
                     <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a> to
                     discuss commercial, institutional, government or emergency
                     kitchen needs. Availability and project requirements are
@@ -1305,7 +1306,7 @@ export function Site({
           <section className="wrap section narrow">
             <h1>Privacy</h1>
             <p data-h1-intro>
-              Review the information on this page about using the {site.brand}
+              Review the information on this page about using the {editorialBrand}
               website and contacting the business. For questions about information
               you provide during a rental inquiry, contact the team using the
               published telephone number.
@@ -1316,7 +1317,7 @@ export function Site({
               team.
             </p>
             <p>
-              For questions about your information, contact {site.brand} at{" "}
+              For questions about your information, contact {editorialBrand} at{" "}
               {site.phoneDisplay}.
             </p>
           </section>
