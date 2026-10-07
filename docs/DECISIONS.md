@@ -1,5 +1,10 @@
 # Temporary123 Decision Log
 
+## 2026-10-08 — Reuse the reviewed logo for browser and touch icons
+
+The prior favicon and Apple touch icon pointed to a nonexistent WebP path. Point both tags to the existing `/images/temporary-shower-rental-123-logo.webp` already used in the site header and footer, avoiding a second unreviewed brand asset.
+
+
 ## 2026-10-08 — Give each state its own shower-rental context
 
 Use an explicit editorial lead and planning heading for each of the 50 states, shared across the state page, service-area listing and map dialog. Derive state metadata from that same lead so search snippets do not revert to the old repeated text. Regional pages use their own shower rental guide copy and nearby city context. Include shower trailers, shower containers and shower/restroom combinations, but do not infer shower prices, delivery times, local inventory or active incidents from the attached mobile-kitchen JSON. Keep routes and Keller's separate local listing unchanged.

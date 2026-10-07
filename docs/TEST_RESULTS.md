@@ -1,5 +1,11 @@
 # Temporary123 Test Results
 
+## Logo favicon — 2026-10-08 (LOCAL VERIFIED; RELEASE PENDING)
+
+- `index.html` now uses `/images/temporary-shower-rental-123-logo.webp` for both `rel="icon"` and `rel="apple-touch-icon"`, matching the reviewed header/footer logo. The previous `/images/shower-rental-logo.webp` target is absent from `public`.
+- Vite production asset build: PASS. Built `dist/index.html` contains both corrected references and no old favicon path; the built logo is 44,006 bytes and its hash matches the source asset. Remote deployment and live HTTP verification pending.
+
+
 ## Unique state and regional shower descriptions — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
 - Replaced the common state hero text with 50 authored descriptions, each tied to a different commercial or institutional shower-rental context. The same state-specific lead and focus heading appear in the state guide, service-area listing and map dialog. State meta descriptions use the matching first sentence. Added shower/restroom combination equipment links to state guides and refreshed 246 regional hero descriptions with their own regional and city context.
