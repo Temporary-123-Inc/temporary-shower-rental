@@ -142,8 +142,19 @@ for (const row of inventory.records) {
     issues.push(`City equipment gallery lacks a caption: ${cityPath}`);
   if (!$(".city-sources a[href]").length)
     issues.push(`Missing local source: ${cityPath}`);
-  if ($(".breadcrumb a").length < 4)
-    issues.push(`Incomplete breadcrumb: ${cityPath}`);
+  const crumbs = $(".breadcrumb")
+    .first()
+    .find('a[href], [aria-current="page"]')
+    .map((_, element) => $(element).text().trim())
+    .get();
+  if (JSON.stringify(crumbs) !== JSON.stringify(["Home", "Service Area Pages", state, row[1]]))
+    issues.push(`Incorrect city breadcrumb: ${cityPath}: ${crumbs.join(" → ")}`);
+  const graph = JSON.parse($('script[type="application/ld+json"]').text())["@graph"];
+  const structuredCrumbs = graph
+    .find((node) => node["@type"] === "BreadcrumbList")
+    ?.itemListElement.map((item) => item.name);
+  if (JSON.stringify(structuredCrumbs) !== JSON.stringify(crumbs))
+    issues.push(`City breadcrumb schema mismatch: ${cityPath}`);
   if (!html.includes("24/7 live agent support"))
     issues.push(`Missing 24/7 support information: ${cityPath}`);
   const editorial = cityEditorial[geoid];

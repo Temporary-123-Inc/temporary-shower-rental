@@ -1,4 +1,3 @@
-import { alignedLocationIntro } from "./alignedIntroductions";
 import { stateGuides, stateAnchor } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPath } from "./regionGuides";
@@ -30,9 +29,9 @@ export function StateGuideCards() {
             <span aria-hidden="true">+</span>
           </summary>
           <div>
-            <h3 data-guide-focus>Plan shower access for the exact site</h3>
+            <h3 data-guide-focus>{guide.focus}</h3>
             <a href={statePath(name)}>View {name} rental guide</a>
-            <p data-guide-intro>{alignedLocationIntro(stateRentalHeadline(name), name)}</p>
+            <p data-guide-intro>{guide.intro}</p>
             <div className="state-planning-regions" data-guide-regions>
               <strong>Travel regions</strong>
               <ul>

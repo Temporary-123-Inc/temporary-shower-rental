@@ -13,8 +13,8 @@ export function KellerLocationPage() {
       <div className="wrap">
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a><span>/</span>
-          <a href="/service-areas/">Service Areas</a><span>/</span>
-          <a href={location.regionPath}>North Texas</a><span>/</span>
+          <a href="/service-areas/">Service Area Pages</a><span>/</span>
+          <a href="/service-areas/texas/">Texas</a><span>/</span>
           <span aria-current="page">Keller</span>
         </nav>
         <span className="eyebrow">KELLER, TEXAS · NATIONWIDE DELIVERY</span>

@@ -299,14 +299,7 @@ for (const path of [...allRoutes, "/404/"]) {
             ? {
                 title: `${regionRentalHeadline(region.region, region.state, region.index)} | ${site.brand}`,
                 description: compact(
-                  alignedLocationIntro(
-                    regionRentalHeadline(
-                      region.region,
-                      region.state,
-                      region.index,
-                    ),
-                    regionLocationLabel(region.region, region.state),
-                  ).split(/(?<!\bSt)\. /)[0] + ".",
+                  region.intro.split(/(?<!\bSt)\. /)[0] + ".",
                   155,
                 ),
               }
@@ -314,10 +307,7 @@ for (const path of [...allRoutes, "/404/"]) {
               ? {
                   title: `${stateRentalHeadline(stateName)} | ${site.brand}`,
                   description: compact(
-                    alignedLocationIntro(
-                      stateRentalHeadline(stateName),
-                      stateName,
-                    ).split(/(?<!\bSt)\. /)[0] + ".",
+                    stateGuides[stateName].intro.split(/(?<!\bSt)\. /)[0] + ".",
                     155,
                   ),
                 }

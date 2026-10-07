@@ -46,7 +46,7 @@ describe("H1, introduction and equipment consistency", () => {
           .filter((_, e) => $(e).attr("data-state-guide") === state)
           .find("[data-guide-intro]")
           .text(),
-      ).toBe(alignedLocationIntro(stateRentalHeadline(state), state));
+      ).toBe(stateGuides[state].intro);
   });
   it("renders every exact service with one H1 and its own lead", () => {
     for (const [path, item] of Object.entries(detail)) {

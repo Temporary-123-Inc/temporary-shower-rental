@@ -1,5 +1,6 @@
 import { buildStateSeasonalDemand } from "./seasonalDemand";
 import { stateRentalOption } from "./rentalHeadlines";
+import { stateShowerEditorial } from "./stateShowerEditorial";
 
 // Editorial planning prompts, not claims of local inventory, delivery times,
 // permitting approval or completed projects. Service labels live in serviceMenu.
@@ -352,15 +353,6 @@ const stateGuideDetails: Record<
       "Who coordinates food, water and servicing deliveries during the working week?",
   },
 };
-
-const firstSentence = (copy: string) =>
-  copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
-
-// The state H1 is the source of truth for the lead and planning question.
-// Legacy state notes sometimes describe a different equipment family; only
-// retain their location-specific sentence when it does not name equipment.
-const equipmentWords =
-  /\b(kitchens?|cook(?:ing)?|meals?|food|refrigera\w*|cold storage|dishwash\w*|shower\w*|restroom\w*|laundry|washers?|dryers?|sleep\w*|bunk\w*|accommodation|handwash\w*)\b/i;
 
 const stateEquipmentBrief: Record<string, { purpose: string; question: string }> = {
   "Shower Trailer": {
@@ -1207,23 +1199,21 @@ export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide], index) => {
     const local = stateLocalDetails[name];
     const brief = stateEquipmentBrief[stateRentalOption(name).equipmentFamily];
-    const siteNote = firstSentence(guide.intro);
     const gallery = buildStateGallery(index, name);
     const seasonal = buildStateSeasonalDemand(name, index);
     return [
       name,
       {
         ...guide,
-        intro: `For ${name} projects, ${brief.purpose.charAt(0).toLowerCase()}${brief.purpose.slice(1)}${equipmentWords.test(siteNote) ? "" : ` ${siteNote}`}`,
+        intro: stateShowerEditorial[name].intro,
+        focus: stateShowerEditorial[name].focus,
         question: brief.question,
         image: gallery[0].image,
         imageAlt: gallery[0].imageAlt,
         gallery,
         regions: local.regions,
         fact: local.fact,
-        serviceSummary:
-          focusedServiceSummaries[stateRentalOption(name).equipmentFamily] ||
-          serviceSummaries[index % serviceSummaries.length],
+        serviceSummary: `For projects from ${local.regions[0]} to ${local.regions.at(-1)}, compare shower trailer and shower container rental layouts with shower and restroom combination units when both functions are needed. Confirm the available equipment, stall arrangement and utilities for the exact ${name} site.`,
         abbreviation: stateCodes[index],
         layout: String(index % 5),
         motion: String((index + Math.floor(index / 5) * 2) % 10),

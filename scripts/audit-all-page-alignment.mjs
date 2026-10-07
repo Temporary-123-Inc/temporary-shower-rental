@@ -6,7 +6,6 @@ import {
   resolveLocationGallery,
   detectEquipmentFamily,
 } from "../src/locationCarouselImages.ts";
-import { alignedLocationIntro } from "../src/alignedIntroductions.ts";
 import { stateGuides } from "../src/stateGuides.ts";
 import { stateRentalHeadline } from "../src/rentalHeadlines.ts";
 import { catalog } from "../src/EquipmentCatalog.tsx";
@@ -292,7 +291,7 @@ for (const [kind, route] of [
     );
     const intro = normalized(guide.find("[data-guide-intro]").text());
     check(
-      intro === normalized(alignedLocationIntro(title, state)),
+      intro === normalized(stateGuides[state].intro),
       "State intro mismatch",
       errors,
     );

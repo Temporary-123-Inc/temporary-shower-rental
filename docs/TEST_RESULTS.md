@@ -1,5 +1,19 @@
 # Temporary123 Test Results
 
+## Unique state and regional shower descriptions — 2026-10-08 (LOCAL VERIFIED; RELEASE PENDING)
+
+- Replaced the common state hero text with 50 authored descriptions, each tied to a different commercial or institutional shower-rental context. The same state-specific lead and focus heading appear in the state guide, service-area listing and map dialog. State meta descriptions use the matching first sentence. Added shower/restroom combination equipment links to state guides and refreshed 246 regional hero descriptions with their own regional and city context.
+- TypeScript `tsc --noEmit`: PASS. Vite build and production prerender: PASS, 755 pages plus 404. `npm test`: PASS, 62/62. `tests/stateShowerEditorial.test.tsx`: PASS, confirming 50 distinct state leads/focuses and 246 distinct regional heroes. `tests/seasonal.test.ts`: PASS, including word limits and shower-only focus.
+- Rendered `scripts/check-state-shower-copy.mjs`: PASS, 50 unique state leads, 50 unique planning headings, 50 unique meta descriptions, and 246 region intros with local guide/city context. `check-shower-focus`: PASS, 549 pages, zero off-topic issues. `check-location-headlines`: PASS, 548 unique headlines. `check-city-pages`: PASS, 19,702 directory places, 246 regional directories, five reviewed city pages. Internal-link check: PASS, 755 pages, zero missing or case errors.
+- `tests/allPageAlignment.test.tsx`: 55/56 passed; the remaining older test could not read `work/qa/all-page-alignment-20260916/before.json`, which is absent in this checkout. Its current state-card intro assertion passed. Release and live production checks remain pending.
+
+## Shower city source and breadcrumb — 2026-10-08 (LOCAL VERIFIED; DATA REQUIRED)
+
+- Parsed `C:\Users\dev01\Downloads\site-40.json`: `site_id` is `site-40`, `service_type` is `Mobile kitchen trailer rental`, 246 `service_area_data` records are present, and zero records or other fields mention showers. Only Port Angeles and Seattle match current reviewed shower city names, but their records are kitchen-specific and were not used.
+- Updated the five reviewed shower city pages and Keller to show exactly `Home → Service Area Pages → State → City`; the generated BreadcrumbList schema follows the same four labels. Keller's approved H1, contact details and local listing remain intact.
+- `npm run build`: PASS; TypeScript, Vite and prerender generated 755 pages plus 404. `npm run check:cities`: PASS for the 19,702-place directory, 246 regional directories and five reviewed city pages, including exact visible/schema breadcrumbs. `node scripts/check-keller-location.mjs`: PASS, including exact visible/schema breadcrumbs. `npm run check:links`: PASS, 755 pages, zero missing or capitalization errors.
+- No kitchen price, ETA, distance, service hours, inventory, incident, nearby-area or rental terms were imported into shower pages. No commit, push or deployment for this follow-up yet; a shower-specific `service_area_data` source is required to complete those fields.
+
 ## Shower-only homepage and location pages — 2026-10-07 (PRODUCTION LIVE VERIFIED)
 
 - Used the owner's clarification to focus the homepage and service-area/state/region/city content on shower trailers and shower containers. Did not apply the attached mobile-kitchen JSON. Kept the existing routes and Keller's approved H1, metadata, address, local phone and schema.

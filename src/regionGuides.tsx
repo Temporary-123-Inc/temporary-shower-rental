@@ -1,4 +1,4 @@
-import { alignedLocationIntro, locationRentalPlanningAnswer } from "./alignedIntroductions";
+import { locationRentalPlanningAnswer } from "./alignedIntroductions";
 import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
 import { stateGuides } from "./stateGuides";
@@ -113,18 +113,18 @@ const buildServiceLinks = (globalIndex: number): ContextualLink[] =>
   }));
 
 const introTemplates = [
-  (state: string, region: string) =>
-    `Teams planning work in ${region}, ${state} can arrange temporary shower trailers or shower containers around the site's access, users and schedule. Confirm hot water, drainage and servicing before choosing a unit.`,
-  (state: string, region: string) =>
-    `A ${region} project in ${state} may need private shower access during construction, renovation or a facility shutdown. Compare trailer and container layouts, then confirm delivery access and utility requirements for the exact site.`,
-  (state: string, region: string) =>
-    `For work across ${region}, ${state}, Temporary123 helps project teams plan temporary showers before mobilization. Discuss the available stall count, expected peak use and servicing for short or extended assignments.`,
-  (state: string, region: string) =>
-    `Project managers in ${region}, ${state} can use shower rentals to support crews during construction, renovation or remote work. Review the site route, equipment footprint and servicing plan before choosing a rent or lease arrangement.`,
-  (state: string, region: string) =>
-    `When a site is located in ${region}, ${state}, temporary showers can help bridge a renovation or provide crew washing capacity. Discuss trailer or container placement, water supply and the delivery sequence with our team.`,
-  (state: string, region: string) =>
-    `A clear shower rental brief for ${region}, ${state} should name the work area, crew size and operating dates. Temporary123 can help compare shower trailer and shower container options for a short-term rent or a longer lease.`,
+  (location: string) =>
+    `Shower trailer rentals in ${location} can support temporary basecamps and active crew sites. Compare a towable unit with a shower container, then confirm water, wastewater and the route used by service vehicles.`,
+  (location: string) =>
+    `For construction or a facility shutdown in ${location}, rent a shower trailer to keep private washing available. Check the receiving entrance, expected shift changes and hot-water capacity before choosing the layout.`,
+  (location: string) =>
+    `Project teams in ${location} can rent temporary shower trailers when fixed washrooms cannot serve the workforce. Share the stall count, peak use and drainage plan early enough to review delivery and servicing.`,
+  (location: string) =>
+    `A shower rental in ${location} can serve emergency staging or scheduled field work. Compare trailer and container footprints against the actual pad, utility connections and service-truck access.`,
+  (location: string) =>
+    `When permanent washing space is interrupted in ${location}, rent a shower-only trailer for crew access. Confirm where it can stand, how hot water will be supplied and who will handle wastewater servicing.`,
+  (location: string) =>
+    `For a project in ${location}, shower trailer rental capacity should follow the workforce schedule rather than a generic site estimate. Discuss a shorter rental or longer lease after checking the route, water supply and servicing interval.`,
 ] as const;
 
 const formatCityList = (cities: string[]) => {
@@ -216,7 +216,7 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
         image: visuals[0].image,
         imageAlt: visuals[0].imageAlt,
         gallery: visuals.slice(1, 3),
-        intro: `Rent or lease temporary shower equipment in ${region}, ${state}. ${introTemplates[index % introTemplates.length](state, region)}`,
+        intro: introTemplates[index % introTemplates.length](regionLocationLabel(region, state)),
         detail: detailTemplates[index % detailTemplates.length](state, region),
         fact: factTemplates[index % factTemplates.length](
           state,
@@ -313,7 +313,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             </nav>
             <p className="eyebrow">REGIONAL RENTAL GUIDE</p>
             <h1>{headline}</h1>
-            <p className="region-intro" data-h1-intro>{alignedLocationIntro(headline, location, guide.cities)}</p>
+            <p className="region-intro" data-h1-intro>{guide.intro} For work near {guide.cities.slice(0, 2).join(" or ")}, share the exact delivery address and access details.</p>
             <p className="region-emergency">24/7 live agent support</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call now {site.phoneDisplay}

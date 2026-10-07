@@ -8,6 +8,10 @@ const html = await readFile(`dist${path}index.html`, "utf8");
 const $ = load(html);
 assert.equal($("h1").length, 1);
 assert.equal($("h1").text(), "Shower Trailer Rental in Keller, TX");
+assert.deepEqual(
+  $(".breadcrumb").first().find('a[href], [aria-current="page"]').map((_, element) => $(element).text().trim()).get(),
+  ["Home", "Service Area Pages", "Texas", "Keller"],
+);
 assert.equal($("title").text(), "Shower Trailer Rental in Keller, TX | Mobile Shower Trailer Rental");
 assert.equal($("meta[name=description]").attr("content"), "Shower trailers delivered from Keller, TX to job sites across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598.");
 assert.equal($("[data-h1-intro]").text(), "Mobile Shower Trailer Rental delivers shower trailers from our Keller, TX yard to construction sites, events, renovations and emergency response operations across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598 for sizing and delivery times.");
@@ -22,6 +26,10 @@ assert.ok($("iframe").attr("src").includes("0x864dd770afc0e903%3A0x4e58a264201f8
 assert.equal($("a[href='https://g.page/r/CVWLHyBkolhOECE/review']").length, 1);
 assert.equal($(".keller-actions a[href='/contact-us/?location=Keller%2C%20TX']").length, 2);
 const graph = JSON.parse($("script[type='application/ld+json']").text())["@graph"];
+assert.deepEqual(
+  graph.find(node => node["@type"] === "BreadcrumbList")?.itemListElement.map(item => item.name),
+  ["Home", "Service Area Pages", "Texas", "Keller"],
+);
 const business = graph.find(node => node["@type"] === "LocalBusiness");
 assert.equal(business.name, "Mobile Shower Trailer Rental");
 assert.equal(business.telephone, "+19725446598");

@@ -1,4 +1,3 @@
-import { alignedLocationIntro } from "./alignedIntroductions";
 import site from "../site.json" with { type: "json" };
 import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
@@ -18,6 +17,7 @@ export function StateDetail({ name }: { name: string }) {
     { href: "/equipment-rental/shower-trailer/", label: "Shower trailer rentals" },
     { href: "/services/shower-trailers/22ft-10-stall/", label: "22 ft 10-stall shower trailer rentals" },
     { href: "/services/shower-containers/20ft-5-stall/", label: "20 ft 5-stall shower container rentals" },
+    { href: "/services/shower-restroom-combination-trailers/", label: "Shower and restroom combination trailers" },
   ];
   return (
     <article className={`state-page region-page region-layout-${guide.layout}`}>
@@ -33,7 +33,7 @@ export function StateDetail({ name }: { name: string }) {
             </nav>
             <p className="eyebrow">STATE RENTAL GUIDE</p>
             <h1>{headline}</h1>
-            <p className="region-intro" data-h1-intro>{alignedLocationIntro(headline, name)}</p>
+            <p className="region-intro" data-h1-intro>{guide.intro}</p>
             <p className="region-emergency">24/7 live agent support</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call the rental team {site.phoneDisplay}
@@ -106,8 +106,9 @@ export function StateDetail({ name }: { name: string }) {
           <span className="eyebrow">RENTAL EQUIPMENT</span>
           <h2>Shower rentals for your project</h2>
           <p>
-            Compare shower trailers and shower containers for an assignment or
-            longer lease. Confirm users, utilities and site access with the rental team.
+            Compare shower trailers, shower containers and shower and restroom
+            combinations for an assignment or longer lease. Confirm users,
+            utilities and site access with the rental team.
           </p>
           <ul className="state-guide-services">
             {services.map((service) => (

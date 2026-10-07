@@ -1,5 +1,13 @@
 # Temporary123 Decision Log
 
+## 2026-10-08 — Give each state its own shower-rental context
+
+Use an explicit editorial lead and planning heading for each of the 50 states, shared across the state page, service-area listing and map dialog. Derive state metadata from that same lead so search snippets do not revert to the old repeated text. Regional pages use their own shower rental guide copy and nearby city context. Include shower trailers, shower containers and shower/restroom combinations, but do not infer shower prices, delivery times, local inventory or active incidents from the attached mobile-kitchen JSON. Keep routes and Keller's separate local listing unchanged.
+
+## 2026-10-08 — Require shower records for city pricing and delivery data
+
+The supplied `site-40.json` is a mobile-kitchen dataset with 246 kitchen `service_area_data` records and no shower records. Do not copy its `page_layout_data`, prices, ETA, distance, hours, inventory family, incident articles, nearby areas or rental terms to shower city pages. Use the requested four-step breadcrumb on existing shower city pages now; complete record-driven city content only after a matching shower-specific source is available, with each page keyed to its own city record.
+
 ## 2026-10-07 — Focus homepage and location pages on showers
 
 The owner clarified that this shower website's homepage and service-area, state and city content should focus only on showers. Do not apply the attached `site-40.json` mobile-kitchen content here. Present the verified shower trailer and shower container options in the customer-facing main content and metadata; retain the existing routes and Keller's separately approved local listing. Keep other product pages reachable without promoting them from these location pages. Verify the generated location pages for shower-focused headings, links and body copy before release.

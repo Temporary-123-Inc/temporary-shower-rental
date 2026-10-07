@@ -45,11 +45,9 @@ export function CityDetail({ city }: { city: CityPage }) {
             <nav className="breadcrumb" aria-label="Breadcrumb">
               <a href="/">Home</a>
               <span>/</span>
-              <a href="/service-areas/">Service Areas</a>
+              <a href="/service-areas/">Service Area Pages</a>
               <span>/</span>
               <a href={city.statePath}>{city.state}</a>
-              <span>/</span>
-              <a href={city.regionPath}>{city.region}</a>
               <span>/</span>
               <span aria-current="page">{city.name}</span>
             </nav>

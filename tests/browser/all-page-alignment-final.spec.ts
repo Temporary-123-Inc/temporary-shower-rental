@@ -3,7 +3,6 @@ import fs from "node:fs";
 import { stateGuides } from "../../src/stateGuides";
 import { stateRentalHeadline } from "../../src/rentalHeadlines";
 import { resolveLocationGallery } from "../../src/locationCarouselImages";
-import { alignedLocationIntro } from "../../src/alignedIntroductions";
 import { equipment, equipmentGalleryForPath } from "../../src/Equipment";
 import { catalog } from "../../src/EquipmentCatalog";
 import { catalogPhotoCoverage } from "../../src/catalogImageCoverage";
@@ -164,7 +163,7 @@ for (const [kind, route, width] of [
         await expect(dialog).toBeVisible();
         await expect(dialog.locator("[data-state-headline]")).toHaveText(title);
         await expect(dialog.locator("#state-services-intro")).toHaveText(
-          alignedLocationIntro(title, state),
+          stateGuides[state].intro,
         );
         await checkGallery(
           page,
