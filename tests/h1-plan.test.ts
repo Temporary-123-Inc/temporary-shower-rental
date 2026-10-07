@@ -13,16 +13,16 @@ import { reviewedCityPages } from "../src/cityDirectory";
 describe("Shower-focused Temporary123 location H1 plan", () => {
   it("keeps location before the commercial use case, equipment, and rental intent", () => {
     expect(stateRentalHeadline("Alabama")).toBe(
-      "Alabama Emergency Basecamp Shower Trailer Rental",
+      "Alabama Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(stateRentalHeadline("California")).toBe(
-      "California Emergency Basecamp Shower Trailer Rental",
+      "California Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(stateRentalHeadline("Colorado")).toBe(
-      "Colorado Emergency Basecamp Shower Trailer Rental",
+      "Colorado Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(stateRentalHeadline("Texas")).toBe(
-      "Texas Emergency Basecamp Shower Trailer Rental",
+      "Texas Remote Emergency Base Camp Shower Trailer Rental",
     );
   });
 
@@ -39,13 +39,13 @@ describe("Shower-focused Temporary123 location H1 plan", () => {
   it("rejects missing or out-of-order formula components", () => {
     expect(
       matchesLocationRentalHeadline(
-        "Port Angeles, Washington Industrial Basecamp Shower Trailer Rental",
+        "Port Angeles, Washington Remote Industrial Base Camp Shower Trailer Rental",
         "Port Angeles, Washington",
       ),
     ).toBe(true);
     expect(
       matchesLocationRentalHeadline(
-        "Industrial Basecamp Shower Trailer Rental in Port Angeles, Washington",
+        "Remote Industrial Base Camp Shower Trailer Rental in Port Angeles, Washington",
         "Port Angeles, Washington",
       ),
     ).toBe(false);
@@ -57,7 +57,7 @@ describe("Shower-focused Temporary123 location H1 plan", () => {
     ).toBe(false);
     expect(
       matchesLocationRentalHeadline(
-        "Port Angeles, Washington Industrial Basecamp Rental Shower Trailer",
+        "Port Angeles, Washington Remote Industrial Base Camp Rental Shower Trailer",
         "Port Angeles, Washington",
       ),
     ).toBe(false);
@@ -68,19 +68,19 @@ describe("Shower-focused Temporary123 location H1 plan", () => {
       reviewedCityPages.map((city) => [city.name, city]),
     );
     expect(cityHeadline(byName["Port Angeles"])).toBe(
-      "Port Angeles, Washington Emergency Basecamp Shower Trailer Rental",
+      "Port Angeles, Washington Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Tacoma)).toBe(
-      "Tacoma, Washington Emergency Basecamp Shower Trailer Rental",
+      "Tacoma, Washington Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Olympia)).toBe(
-      "Olympia, Washington Emergency Basecamp Shower Trailer Rental",
+      "Olympia, Washington Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Seattle)).toBe(
-      "Seattle, Washington Emergency Basecamp Shower Trailer Rental",
+      "Seattle, Washington Remote Emergency Base Camp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Sequim)).toBe(
-      "Sequim, Washington Emergency Basecamp Shower Trailer Rental",
+      "Sequim, Washington Remote Emergency Base Camp Shower Trailer Rental",
     );
   });
 

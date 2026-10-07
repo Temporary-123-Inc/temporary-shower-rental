@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-08 — Apply family leads to service pages and Remote to camp headings
+
+The owner scoped the 70–120-word paragraph requirement to Kitchen and Remote Man Camp family/service pages, rather than all city and state pages. Use the existing equipment-specific lead as the opening and add planned/emergency uses, short-/long-term rental context, customer types, delivery coordination and a final availability/quote invitation. Present both exact service-family lists on the Services hub. Whenever an H1 names a camp, include Remote in that heading and align its page title; preserve the existing routes. The shower homepage and location pages retain shower equipment as their only subject matter.
+
 ## 2026-10-08 — Reuse the reviewed logo for browser and touch icons
 
 The prior favicon and Apple touch icon pointed to a nonexistent WebP path. Point both tags to the existing `/images/temporary-shower-rental-123-logo.webp` already used in the site header and footer, avoiding a second unreviewed brand asset.

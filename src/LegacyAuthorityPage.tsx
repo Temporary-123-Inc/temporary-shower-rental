@@ -1,4 +1,5 @@
 import legacyAuthorityData from "../content/legacy-authority-pages.json" with { type: "json" };
+import { remoteCampHeadline, serviceFamilyIntro } from "./serviceFamilyCopy";
 
 export type LegacyAuthorityPageRecord = {
   path: string;
@@ -74,8 +75,8 @@ export function LegacyAuthorityPage({ page }: { page: LegacyAuthorityPageRecord 
           <a href={page.parentPath}>Related rentals</a>
         </nav>
         <span className="eyebrow">{familyLabel[page.family]}</span>
-        <h1 className="page-title">{page.title}</h1>
-        <p className="source-lead" data-h1-intro>{page.description}</p>
+        <h1 className="page-title">{remoteCampHeadline(page.title)}</h1>
+        <p className="source-lead" data-h1-intro>{serviceFamilyIntro(page.path, remoteCampHeadline(page.title), page.description)}</p>
 
         <article className="source-content">
           <h2>Plan the facility around the operating site</h2>

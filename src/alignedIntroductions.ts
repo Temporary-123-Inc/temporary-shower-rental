@@ -68,7 +68,7 @@ export function alignedLocationIntro(
 ): string {
   const family = detectEquipmentFamily(headline);
   const use = /workforce camp/i.test(headline)
-    ? "workforce camps"
+    ? "remote workforce camps"
     : /workforce housing/i.test(headline)
       ? "crews working away from home"
       : /construction project/i.test(headline)
@@ -77,10 +77,10 @@ export function alignedLocationIntro(
           ? "institutional operations"
           : /accessible commercial site/i.test(headline)
             ? "commercial sites with accessibility requirements"
-            : /industrial basecamp/i.test(headline)
-              ? "industrial basecamps"
-              : /emergency basecamp/i.test(headline)
-                ? "emergency basecamps"
+            : /industrial base ?camp/i.test(headline)
+              ? "remote industrial base camps"
+              : /emergency base ?camp/i.test(headline)
+                ? "remote emergency base camps"
                 : /commercial food service/i.test(headline)
                   ? "commercial food-service operations"
                   : "your operation";

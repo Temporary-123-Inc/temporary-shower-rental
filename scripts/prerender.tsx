@@ -7,6 +7,7 @@ import imageDimensions from "../content/image-dimensions.json";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { Site, isLocationPagePath, type SourcePage } from "../src/Site";
+import { remoteCampHeadline } from "../src/serviceFamilyCopy";
 import { legacyAuthorityPageByPath, legacyAuthorityPages } from "../src/LegacyAuthorityPage";
 import { readdir } from "node:fs/promises";
 import { gunzipSync } from "node:zlib";
@@ -266,12 +267,12 @@ for (const path of [...allRoutes, "/404/"]) {
       }
     : legacyAuthorityPage
     ? {
-        title: `${legacyAuthorityPage.title} | ${site.brand}`,
+        title: `${remoteCampHeadline(legacyAuthorityPage.title)} | ${site.brand}`,
         description: legacyAuthorityPage.description,
       }
     : industry
     ? {
-        title: `${industry.title}: Temporary Facilities to Rent or Lease | ${site.brand}`,
+        title: `${remoteCampHeadline(industry.title)}: Temporary Facilities to Rent or Lease | ${site.brand}`,
         description: industry.description,
       }
     : detail
@@ -320,7 +321,7 @@ for (const path of [...allRoutes, "/404/"]) {
                   ? pageInfo(path)
                   : page
                     ? {
-                        title: page.title + ` | ${site.brand}`,
+                        title: remoteCampHeadline(page.title) + ` | ${site.brand}`,
                         description: sourceDescription(page),
                       }
                     : path === "/contact-us/"
@@ -336,7 +337,7 @@ for (const path of [...allRoutes, "/404/"]) {
                           }
                         : catalogItem
                           ? {
-                              title: `${rentalProductHeadline(catalogItem.name)} | ${site.brand}`,
+                              title: `${remoteCampHeadline(rentalProductHeadline(catalogItem.name))} | ${site.brand}`,
                               description: catalogItem.summary,
                             }
                           : serviceOption
@@ -346,7 +347,7 @@ for (const path of [...allRoutes, "/404/"]) {
                               }
                             : serviceCategory
                               ? {
-                                  title: `${rentalCategoryHeadline(serviceCategory.name)} | ${site.brand}`,
+                                  title: `${remoteCampHeadline(rentalCategoryHeadline(serviceCategory.name))} | ${site.brand}`,
                                   description: serviceCategory.description,
                                 }
                               : pageInfo(path);

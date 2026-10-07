@@ -1,7 +1,7 @@
 import { resolveLocationGallery } from "./locationCarouselImages";
 import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
 import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { alignedPageIntro } from "./alignedIntroductions";
+import { remoteCampHeadline, serviceFamilyIntro } from "./serviceFamilyCopy";
 import site from "../site.json" with { type: "json" };
 import { equipmentPhotos } from "./equipmentPhotos";
 import { serviceCategories } from "./serviceMenu";
@@ -172,8 +172,8 @@ export function IndustryDetail({ path }: { path: string }) {
           <div className="industry-hero-grid">
             <div>
               <span className="eyebrow">{guide.name}</span>
-              <h1>{guide.title}</h1>
-              <p data-h1-intro>{alignedPageIntro(path, guide.title, guide.intro)}</p>
+              <h1>{remoteCampHeadline(guide.title)}</h1>
+              <p data-h1-intro>{serviceFamilyIntro(path, remoteCampHeadline(guide.title), guide.intro)}</p>
               <a className="button" href={`tel:${site.phoneE164}`}>
                 Emergency 24/7 · {site.phoneDisplay}
               </a>

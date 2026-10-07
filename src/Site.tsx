@@ -1,4 +1,5 @@
 import { alignedPageIntro } from "./alignedIntroductions";
+import { kitchenFamilyServices, remoteManCampFamilyServices, remoteCampHeadline, serviceFamilyIntro } from "./serviceFamilyCopy";
 import { ApprovedEquipmentPhotoOptions } from './ApprovedEquipmentPhotoOptions';
 import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
 import { rentalCategoryHeadline, rentalHubHeadline } from "./rentalHeadlines";
@@ -696,7 +697,8 @@ export function Site({
               <span className="eyebrow">TEMPORARY FACILITY RENTALS</span>
               <div className="service-category-heading">
                 <div>
-                  <h1>{rentalCategoryHeadline(serviceCategory.name)}</h1>
+                  <h1>{remoteCampHeadline(rentalCategoryHeadline(serviceCategory.name))}</h1>
+                  <p data-h1-intro>{serviceFamilyIntro(path, remoteCampHeadline(rentalCategoryHeadline(serviceCategory.name)), serviceCategory.description)}</p>
                   {path === consolidatedLocations.destination && (
                     <p
                       className="selected-project-location"
@@ -708,7 +710,6 @@ export function Site({
                       inquiry so we can confirm the correct destination.
                     </p>
                   )}
-                  <p data-h1-intro>{alignedPageIntro(path, rentalCategoryHeadline(serviceCategory.name), serviceCategory.description)}</p>
                 </div>
                 <div className="service-category-actions">
                   <Button>Check availability</Button>
@@ -787,7 +788,27 @@ export function Site({
           <section className="wrap section">
             <span className="eyebrow">EQUIPMENT & PROJECT SOLUTIONS</span>
             <h1>{rentalHubHeadline(path)}</h1>
-            <p className="directory-intro" data-h1-intro>{alignedPageIntro(path, rentalHubHeadline(path) || "")}</p>
+            <p className="directory-intro" data-h1-intro>{serviceFamilyIntro(path, rentalHubHeadline(path) || "")}</p>
+            {path === "/services/" && (
+              <section className="service-library" aria-labelledby="service-families-title">
+                <span className="eyebrow">SERVICE FAMILIES</span>
+                <h2 id="service-families-title">Plan the facilities your site needs.</h2>
+                <div className="service-category-cards">
+                  <a href="/inventory/mobile-kitchen-models/">
+                    <span>01</span>
+                    <strong>Kitchen Family</strong>
+                    <p>{kitchenFamilyServices.join(", ")} support temporary food preparation, warewashing, and cold storage.</p>
+                    <b aria-hidden="true">↗</b>
+                  </a>
+                  <a href="/man-camp-rental/">
+                    <span>02</span>
+                    <strong>Remote Man Camp Family</strong>
+                    <p>{remoteManCampFamilyServices.join(", ")} support crew hygiene, accommodation, and daily operations at remote sites.</p>
+                    <b aria-hidden="true">↗</b>
+                  </a>
+                </div>
+              </section>
+            )}
             {path === "/industries/" ? (
               <div className="industry-briefs">
                 {[
@@ -886,9 +907,16 @@ export function Site({
               the kitchen arrives.
             </h1>
             <p data-h1-intro>
-              Review existing mobile-kitchen configurations as a starting point
-              for your project. Final equipment, work zones, utilities and
-              placement are confirmed for the selected unit and site.
+              Review existing mobile kitchen configurations to plan temporary
+              cooking and food preparation for planned renovations, scheduled
+              projects, or emergency interruptions. Compare preparation space,
+              cooking equipment, dishwashing, and cold storage with the meals
+              your team must serve. Short-term and long-term rentals can support
+              commercial kitchens, institutions, government teams, and remote
+              workforce sites. Share your menu, operating dates, expected meal
+              volume, utility connections, and delivery access so the team can
+              coordinate the available unit and its placement. Request
+              availability or a project quote.
             </p>
             <div className="industry-briefs">
               <article>
@@ -1228,8 +1256,8 @@ export function Site({
                   {isLocationPagePath(path) ? "Service Areas" : "Services"}
                 </a>
               </nav>
-              <h1 className="page-title">{page.title}</h1>
-              {alignedPageIntro(path, page.title) && <p className="source-lead" data-h1-intro>{alignedPageIntro(path, page.title)}</p>}
+              <h1 className="page-title">{remoteCampHeadline(page.title)}</h1>
+              {alignedPageIntro(path, page.title) && <p className="source-lead" data-h1-intro>{serviceFamilyIntro(path, remoteCampHeadline(page.title), page.description)}</p>}
               {path === "/gsa-schedule/" && (
                 <aside
                   className="procurement-documents"

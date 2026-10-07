@@ -1,5 +1,14 @@
 # Temporary123 Test Results
 
+## Service families and Remote camp wording — 2026-10-08 (LOCAL VERIFIED; RELEASE PENDING)
+
+- The Services hub renders the owner-defined Kitchen Family (mobile kitchens, dishwashing, commercial refrigeration, walk-in coolers, freezers and refrigerated containers) and Remote Man Camp Family (shower trailers, shower/restroom combinations, laundry, bunk-bed sleepers and remote man camp services).
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
+- `scripts/check-service-family-copy.mjs`: PASS. All 173 matching family/service pages have a 70–120-word paragraph immediately below the H1, ending with an availability/quote invitation; all 318 rendered camp H1s include Remote. Zero issues.
+- Focused `tests/h1-plan.test.ts` and `tests/serviceFamilyCopy.test.ts`: PASS, 9/9. `npm test`: PASS, 62/62 when run alone. One image-alt test initially timed out during six parallel audits, then passed in the isolated full-suite rerun.
+- Rendered location-headline audit: PASS, 548 unique location H1s. Shower-focus audit: PASS, 549 pages. City audit: PASS, 246 directories and five reviewed city pages. Internal-link audit: PASS, 755 pages, zero missing targets or casing issues.
+- The final rendered Services hub contains both family cards. Homepage/location equipment focus, existing URLs, Keller's approved listing, and unrelated audit/EOD/archive working files were preserved.
+
 ## Logo favicon — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
 - `index.html` now uses `/images/temporary-shower-rental-123-logo.webp` for both `rel="icon"` and `rel="apple-touch-icon"`, matching the reviewed header/footer logo. The previous `/images/shower-rental-logo.webp` target is absent from `public`.

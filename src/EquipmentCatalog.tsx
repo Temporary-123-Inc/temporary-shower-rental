@@ -1,6 +1,6 @@
 import { catalogPhotoCoverage } from "./catalogImageCoverage";
 import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { alignedPageIntro } from "./alignedIntroductions";
+import { remoteCampHeadline, serviceFamilyIntro } from "./serviceFamilyCopy";
 import catalog from "../content/equipment-catalog.json" with { type: "json" };
 import site from "../site.json" with { type: "json" };
 import { rentalProductHeadline } from "./rentalHeadlines";
@@ -149,8 +149,8 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
       <div className="brief-intro">
         <div>
           <span className="eyebrow">TEMPORARY123 EQUIPMENT</span>
-          <h1>{rentalProductHeadline(item.name)}</h1>
-          <p data-h1-intro>{alignedPageIntro(item.path, item.name, item.summary)}</p>
+          <h1>{remoteCampHeadline(rentalProductHeadline(item.name))}</h1>
+          <p data-h1-intro>{serviceFamilyIntro(item.path, remoteCampHeadline(rentalProductHeadline(item.name)), item.summary)}</p>
           <a className="button" href={`tel:${site.phoneE164}`}>
             Call {site.phoneDisplay}
             <span aria-hidden="true">↗</span>

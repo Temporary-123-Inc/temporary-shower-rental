@@ -8,11 +8,11 @@ const select = <T>(items: readonly T[], key: string) =>
   items[locationSeed(key) % items.length];
 
 export const commercialUseCases = [
-  "Emergency Basecamp",
-  "Industrial Basecamp",
+  "Remote Emergency Base Camp",
+  "Remote Industrial Base Camp",
   "Institutional Facility",
   "Accessible Commercial Site",
-  "Workforce Camp",
+  "Remote Workforce Camp",
   "Construction Project",
   "Commercial Food Service",
   "Workforce Housing",
@@ -28,7 +28,7 @@ export const locationEquipmentFamilies = [
   "Commercial Kitchen Trailer",
   "Commercial Kitchen Modular Building",
   "Sleeper Bunk-Bed Facility",
-  "Man Camp Temporary Facilities",
+  "Remote Man Camp Temporary Facilities",
 ] as const;
 
 export const locationRentalIntents = [
@@ -47,7 +47,7 @@ export type LocationHeadlineOption = {
 
 const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
   {
-    commercialUseCase: "Emergency Basecamp",
+    commercialUseCase: "Remote Emergency Base Camp",
     equipmentFamily: "Shower Trailer",
     rentalIntent: "Rental",
   },
@@ -62,7 +62,7 @@ const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
     rentalIntent: "Leasing",
   },
   {
-    commercialUseCase: "Workforce Camp",
+    commercialUseCase: "Remote Workforce Camp",
     equipmentFamily: "Laundry Temporary Facilities",
     rentalIntent: "Long-Term Rental",
   },
@@ -83,7 +83,7 @@ const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
   },
   {
     commercialUseCase: "Remote Operations",
-    equipmentFamily: "Man Camp Temporary Facilities",
+    equipmentFamily: "Remote Man Camp Temporary Facilities",
     rentalIntent: "Rental",
   },
 ] as const;
@@ -91,22 +91,22 @@ const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
 const acceptedLocationHeadlineOptions: readonly LocationHeadlineOption[] = [
   ...locationHeadlineRotation,
   {
-    commercialUseCase: "Industrial Basecamp",
+    commercialUseCase: "Remote Industrial Base Camp",
     equipmentFamily: "Commercial Kitchen Trailer",
     rentalIntent: "Rental",
   },
   {
-    commercialUseCase: "Industrial Basecamp",
+    commercialUseCase: "Remote Industrial Base Camp",
     equipmentFamily: "Commercial Kitchen Modular Building",
     rentalIntent: "Rental",
   },
   {
-    commercialUseCase: "Industrial Basecamp",
+    commercialUseCase: "Remote Industrial Base Camp",
     equipmentFamily: "Shower Trailer",
     rentalIntent: "Rental",
   },
   {
-    commercialUseCase: "Workforce Camp",
+    commercialUseCase: "Remote Workforce Camp",
     equipmentFamily: "Shower Trailer",
     rentalIntent: "Short-Term Rental",
   },
@@ -173,7 +173,7 @@ const cityServiceHeadlines = {
       buildLocationRentalHeadline(location, locationHeadlineRotation[0]),
     (location: string) =>
       buildLocationRentalHeadline(location, {
-        commercialUseCase: "Workforce Camp",
+        commercialUseCase: "Remote Workforce Camp",
         equipmentFamily: "Shower Trailer",
         rentalIntent: "Short-Term Rental",
       }),

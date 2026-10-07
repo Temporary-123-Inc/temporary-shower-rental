@@ -22,7 +22,7 @@ const serviceLinks = [
 ] as const;
 
 export const cityHeadline = (city: CityPage): string =>
-  `${city.name}, ${city.state} Emergency Basecamp Shower Trailer Rental`;
+  `${city.name}, ${city.state} Remote Emergency Base Camp Shower Trailer Rental`;
 
 export function CityDetail({ city }: { city: CityPage }) {
   const editorial = cityEditorial[city.geoid];

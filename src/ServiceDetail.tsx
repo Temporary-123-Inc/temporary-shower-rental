@@ -1,4 +1,4 @@
-import { alignedPageIntro } from "./alignedIntroductions";
+import { serviceFamilyIntro } from "./serviceFamilyCopy";
 import details from "../content/service-details.json" with { type: "json" };
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
@@ -53,7 +53,7 @@ export function ServiceDetail({ path }: { path: keyof typeof modelDetails }) {
               <span className="eyebrow">EXPLORE THE CONFIGURATION</span>
               <h1>{rentalProductHeadline(item.name)}</h1>
               <p className="model-intro" data-h1-intro>
-                {alignedPageIntro(path, item.name, item.intro)}
+                {serviceFamilyIntro(path, rentalProductHeadline(item.name), item.intro)}
               </p>
               <div className="model-actions">
                 <a className="button" href={"tel:" + site.phoneE164}>
