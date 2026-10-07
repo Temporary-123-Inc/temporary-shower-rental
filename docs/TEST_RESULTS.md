@@ -1,6 +1,6 @@
 # Temporary123 Test Results
 
-## Service families and Remote camp wording — 2026-10-08 (LOCAL VERIFIED; RELEASE PENDING)
+## Service families and Remote camp wording — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
 - The Services hub renders the owner-defined Kitchen Family (mobile kitchens, dishwashing, commercial refrigeration, walk-in coolers, freezers and refrigerated containers) and Remote Man Camp Family (shower trailers, shower/restroom combinations, laundry, bunk-bed sleepers and remote man camp services).
 - `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
@@ -8,6 +8,7 @@
 - Focused `tests/h1-plan.test.ts` and `tests/serviceFamilyCopy.test.ts`: PASS, 9/9. `npm test`: PASS, 62/62 when run alone. One image-alt test initially timed out during six parallel audits, then passed in the isolated full-suite rerun.
 - Rendered location-headline audit: PASS, 548 unique location H1s. Shower-focus audit: PASS, 549 pages. City audit: PASS, 246 directories and five reviewed city pages. Internal-link audit: PASS, 755 pages, zero missing targets or casing issues.
 - The final rendered Services hub contains both family cards. Homepage/location equipment focus, existing URLs, Keller's approved listing, and unrelated audit/EOD/archive working files were preserved.
+- Source commit `ad54f95` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy`. The clean checkout was built as READY production deployment `dpl_5iyLnBEZEAumbKdLC7RBCN1xPT29`. Authenticated staged checks found both family cards, the Remote Man Camp H1 and quote invitation, and Alabama's Remote Emergency Base Camp Shower Trailer H1. After promotion, the canonical Services, Remote Man Camp and Alabama pages each returned HTTP 200 with the expected content. `vercel inspect temporary-shower-rental.com` resolved to the same READY deployment.
 
 ## Logo favicon — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
