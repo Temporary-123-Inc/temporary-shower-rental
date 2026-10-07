@@ -1,9 +1,10 @@
 # Temporary123 Test Results
 
-## Logo favicon — 2026-10-08 (LOCAL VERIFIED; RELEASE PENDING)
+## Logo favicon — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
 - `index.html` now uses `/images/temporary-shower-rental-123-logo.webp` for both `rel="icon"` and `rel="apple-touch-icon"`, matching the reviewed header/footer logo. The previous `/images/shower-rental-logo.webp` target is absent from `public`.
-- Vite production asset build: PASS. Built `dist/index.html` contains both corrected references and no old favicon path; the built logo is 44,006 bytes and its hash matches the source asset. Remote deployment and live HTTP verification pending.
+- Vite production asset build: PASS. Built `dist/index.html` contains both corrected references and no old favicon path; the built logo is 44,006 bytes and its hash matches the source asset.
+- Source commit `27f06ad` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy`. A clean checkout at that commit was deployed to the existing `temporary-124/temporary-shower-rental` Vercel project as staged production deployment `dpl_DMZWvdTDdriysjSLeAS6u36Qm92S`. Authenticated staged checks found both corrected icon tags and an HTTP 200 `image/webp` response of 44,006 bytes. After promotion, the live homepage returned HTTP 200 with both corrected tags and no old path; the live logo URL returned HTTP 200 with the same content type and length. Vercel resolved the canonical domain to the same READY deployment.
 
 
 ## Unique state and regional shower descriptions — 2026-10-08 (PRODUCTION LIVE VERIFIED)

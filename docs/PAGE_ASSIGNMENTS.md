@@ -1,6 +1,6 @@
 # Page and File Assignments
 
-**2026-10-08 Logo favicon — LOCAL VERIFIED; RELEASE PENDING, `/root`:** Replaced both broken icon references in `index.html` with the reviewed header/footer logo asset. Vite build passed; built icon links and asset bytes were checked. Push only task-owned files and deploy from a clean checkout to the existing Vercel project, preserving unrelated audit/EOD/archive working files.
+**2026-10-08 Logo favicon — DEPLOYED AND LIVE VERIFIED, `/root`:** Replaced both broken icon references in `index.html` with the reviewed header/footer logo asset. Vite build and built asset check passed. Source commit `27f06ad` is on the official GitHub branch; Vercel deployment `dpl_DMZWvdTDdriysjSLeAS6u36Qm92S` is live at the canonical domain, where both icon tags and the HTTP 200 WebP asset were verified. Unrelated audit/EOD/archive working files were excluded.
 
 **2026-10-08 Unique state shower descriptions — DEPLOYED AND LIVE VERIFIED, `/root`:** Added 50 distinct state leads and planning headings across state pages, service-area listings and map dialog, with matching unique state metadata; updated all 246 regional hero descriptions and state links for shower/restroom combinations. TypeScript, local and remote builds, 62 application tests, the focused editorial test, rendered audits and live spot checks passed. Source commit `80d4b3f` is on the official GitHub branch; deployment `dpl_6iX6vevhc8gezFMUHm6NpqDeGm5c` is live at the canonical domain. Unrelated audit/EOD/archive working files were excluded.
 
