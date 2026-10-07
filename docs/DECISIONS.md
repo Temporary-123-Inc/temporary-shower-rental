@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-07 — Focus homepage and location pages on showers
+
+The owner clarified that this shower website's homepage and service-area, state and city content should focus only on showers. Do not apply the attached `site-40.json` mobile-kitchen content here. Present the verified shower trailer and shower container options in the customer-facing main content and metadata; retain the existing routes and Keller's separately approved local listing. Keep other product pages reachable without promoting them from these location pages. Verify the generated location pages for shower-focused headings, links and body copy before release.
+
 ## 2026-10-06 — Use Pomona details for general site contact
 
 The owner supplied `11012 Kadota Ave Unit 9, Pomona, CA 91766` and `1-866-455-7214` and clarified that they are general site contact details. Source them from `site.json` for visible site contact information and Organization structured data. Keep the separately verified Keller location address, local phone and LocalBusiness schema as its own listing. Source commit `4979454` was deployed to Vercel production as `dpl_4dxkPQKDJVcW9YHrUv5kMFfKBBEu`; live contact and schema checks passed.

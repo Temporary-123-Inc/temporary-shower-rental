@@ -30,7 +30,7 @@ export function StateGuideCards() {
             <span aria-hidden="true">+</span>
           </summary>
           <div>
-            <h3 data-guide-focus>{guide.focus}</h3>
+            <h3 data-guide-focus>Plan shower access for the exact site</h3>
             <a href={statePath(name)}>View {name} rental guide</a>
             <p data-guide-intro>{alignedLocationIntro(stateRentalHeadline(name), name)}</p>
             <div className="state-planning-regions" data-guide-regions>

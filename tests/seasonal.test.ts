@@ -65,11 +65,10 @@ describe("state and regional planning content", () => {
         "not an official government risk rating",
       );
 
-      expect(copy, state).toMatch(/base camp|man camp/i);
-      expect(copy, state).toMatch(/mobile commercial kitchens/i);
-      expect(copy, state).toMatch(/shower and restroom combination/i);
-      expect(copy, state).toMatch(/20 ft shower trailers with 5 stalls/i);
-      expect(copy, state).toMatch(/sleeper and bunkbed/i);
+      expect(copy, state).toMatch(/shower trailer/i);
+      expect(copy, state).toMatch(/shower container/i);
+      expect(copy, state).toMatch(/hot.water|water supply/i);
+      expect(copy, state).not.toMatch(/\b(?:kitchen|dishwashing|refrigeration|sleeper|laundry)\b/i);
       expect(copy, state).not.toMatch(/[—*]/);
     }
   });
@@ -98,11 +97,13 @@ describe("state and regional planning content", () => {
         "not an official government risk rating",
       );
 
-      expect(copy, guide.path).toMatch(/base camp|man camp/i);
+      expect(copy, guide.path).toMatch(/shower trailer/i);
+      expect(copy, guide.path).toMatch(/shower container/i);
       expect(copy, guide.path).toMatch(/rental|rentals/i);
       expect(copy, guide.path).toMatch(/for rent/i);
       expect(copy, guide.path).toMatch(/lease|leasing/i);
-      expect(copy, guide.path).toMatch(/temporary facilit(y|ies)/i);
+      expect(copy, guide.path).toMatch(/temporary shower/i);
+      expect(copy, guide.path).not.toMatch(/\b(?:kitchen|dishwashing|refrigeration|sleeper|laundry)\b/i);
       expect(copy, guide.path).not.toMatch(/[—*]/);
     }
     const primaryCopy = regionPages.map((guide) =>
@@ -131,7 +132,7 @@ describe("state and regional planning content", () => {
     const regionPaths = new Set(regionPages.map((guide) => guide.path));
     for (const guide of regionPages) {
       expect(guide.cityLinks, guide.path).toHaveLength(guide.cities.length);
-      expect(guide.serviceLinks, guide.path).toHaveLength(4);
+      expect(guide.serviceLinks, guide.path).toHaveLength(3);
       expect(
         new Set(guide.cityLinks.map((link) => link.label)).size,
         guide.path,
@@ -166,7 +167,7 @@ describe("state and regional planning content", () => {
       }
       const contextualLinkCount =
         guide.cityLinks.length + guide.serviceLinks.length + related.length + 1;
-      expect(contextualLinkCount, guide.path).toBeGreaterThanOrEqual(12);
+      expect(contextualLinkCount, guide.path).toBeGreaterThanOrEqual(10);
       expect(contextualLinkCount, guide.path).toBeLessThanOrEqual(16);
     }
   });

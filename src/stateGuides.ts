@@ -1,4 +1,3 @@
-import { equipmentSet } from "./equipmentPhotos";
 import { buildStateSeasonalDemand } from "./seasonalDemand";
 import { stateRentalOption } from "./rentalHeadlines";
 
@@ -403,6 +402,7 @@ const stateEquipmentBrief: Record<string, { purpose: string; question: string }>
 };
 
 const focusedServiceSummaries: Record<string, string> = {
+  "Shower Trailer": "Shower trailer and shower container rentals can provide private washing capacity for a temporary site. Confirm the stall layout, peak use, hot-water supply, drainage, delivery access and servicing for the available unit.",
   "Commercial Kitchen Modular Building": "For a modular commercial kitchen rental, confirm the building layout, installation footprint, food-service workflow and utility connections. Mobile kitchen trailers and the other base-camp facilities are separate equipment options.",
   "ADA Shower and Restroom Combination Trailer": "For an accessible shower and restroom combination trailer rental, review the accessible room, ramp, approach route, utilities and servicing requirements. Confirm the actual configuration; a standard combination trailer does not establish an accessible layout. Other base-camp facilities are separate rental options.",
   "Laundry Temporary Facilities": "For temporary laundry rental, plan washing and drying around crew numbers, laundry volume, power, water and drainage. Trailer and container options have different placement requirements; confirm the chosen configuration. Kitchens, hygiene units and crew accommodation are separate supporting rentals.",
@@ -1197,8 +1197,11 @@ const rentalContexts = [
     `Temporary facility rental planning in ${name}, USA supports customers who need to rent equipment for a short-term project or arrange a longer lease.`,
 ];
 
-const buildStateGallery = (index: number, state: string) =>
-  equipmentSet(index + 246);
+const buildStateGallery = (index: number, state: string) => [
+  { image: "/images/service-heroes/20ft-shower-trailer-sink/01-960.webp", imageAlt: "Private shower stall inside a 20 ft shower trailer" },
+  { image: "/images/service-heroes/20ft-shower-container/01-960.webp", imageAlt: "Shower facilities inside a 20 ft shower container" },
+  { image: "/images/service-heroes/20ft-shower-trailer-sink/02-960.webp", imageAlt: "Three sinks on the exterior service side of a 20 ft shower trailer" },
+];
 
 export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide], index) => {

@@ -10,19 +10,19 @@ import {
 import { cityHeadline } from "../src/CityDetail";
 import { reviewedCityPages } from "../src/cityDirectory";
 
-describe("Boss-approved Temporary123 H1 plan", () => {
+describe("Shower-focused Temporary123 location H1 plan", () => {
   it("keeps location before the commercial use case, equipment, and rental intent", () => {
     expect(stateRentalHeadline("Alabama")).toBe(
       "Alabama Emergency Basecamp Shower Trailer Rental",
     );
     expect(stateRentalHeadline("California")).toBe(
-      "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "California Emergency Basecamp Shower Trailer Rental",
     );
     expect(stateRentalHeadline("Colorado")).toBe(
-      "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "Colorado Emergency Basecamp Shower Trailer Rental",
     );
     expect(stateRentalHeadline("Texas")).toBe(
-      "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "Texas Emergency Basecamp Shower Trailer Rental",
     );
   });
 
@@ -63,24 +63,24 @@ describe("Boss-approved Temporary123 H1 plan", () => {
     ).toBe(false);
   });
 
-  it("uses the three reviewed city focus decisions and preserves held cities", () => {
+  it("keeps every reviewed city focused on shower trailers", () => {
     const byName = Object.fromEntries(
       reviewedCityPages.map((city) => [city.name, city]),
     );
     expect(cityHeadline(byName["Port Angeles"])).toBe(
-      "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+      "Port Angeles, Washington Emergency Basecamp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Tacoma)).toBe(
-      "Tacoma, Washington Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "Tacoma, Washington Emergency Basecamp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Olympia)).toBe(
-      "Olympia, Washington Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "Olympia, Washington Emergency Basecamp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Seattle)).toBe(
-      "Seattle, Washington Construction Project Kitchen Emergency Trailer Rental",
+      "Seattle, Washington Emergency Basecamp Shower Trailer Rental",
     );
     expect(cityHeadline(byName.Sequim)).toBe(
-      "Sequim, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "Sequim, Washington Emergency Basecamp Shower Trailer Rental",
     );
   });
 

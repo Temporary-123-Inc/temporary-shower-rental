@@ -2,6 +2,7 @@ import { readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
 import { load } from "cheerio";
 import { cityEditorial } from "../src/cityEditorial.ts";
+import { kellerLocation } from "../src/kellerLocation.ts";
 
 const inventory = JSON.parse(await readFile("src/cityDirectory.json", "utf8"));
 const stateGuides = (await import("../src/stateGuides.ts")).stateGuides;
@@ -38,7 +39,8 @@ if (expectedByRegion.size !== 246)
     `Expected 246 region directories, found ${expectedByRegion.size}`,
   );
 
-for (const route of ["/", "/service-areas/"]) {
+const publishedCityPaths = new Set([...reviewedPaths, kellerLocation.path]);
+for (const route of ["/service-areas/"]) {
   const serviceAreasHtml = await readFile(fileFor(route), "utf8");
   const serviceAreas = load(serviceAreasHtml);
   const mapCityLinks = new Map();
@@ -46,19 +48,19 @@ for (const route of ["/", "/service-areas/"]) {
     (_, element) => {
       const href = serviceAreas(element).attr("href");
       const label = serviceAreas(element).text().trim();
-      if (!href || !reviewedPaths.has(href))
+      if (!href || !publishedCityPaths.has(href))
         issues.push(`Map links unreviewed city ${href || "without href"}`);
       if (!label) issues.push(`Map city link lacks a readable name: ${href}`);
       if (href) mapCityLinks.set(href, (mapCityLinks.get(href) || 0) + 1);
     },
   );
-  for (const path of reviewedPaths) {
+  for (const path of publishedCityPaths) {
     if (mapCityLinks.get(path) !== 1)
       issues.push(`Map must link reviewed city exactly once: ${path}`);
   }
-  if (mapCityLinks.size !== reviewedPaths.size)
+  if (mapCityLinks.size !== publishedCityPaths.size)
     issues.push(
-      `Map exposes ${mapCityLinks.size} city links, expected ${reviewedPaths.size}`,
+      `Map exposes ${mapCityLinks.size} city links, expected ${publishedCityPaths.size}`,
     );
 }
 
@@ -70,7 +72,7 @@ for (const [regionPath, expected] of expectedByRegion) {
     issues.push(`${regionPath} lists ${entries.length}, expected ${expected}`);
   $(".city-directory-grid a[href]").each((_, element) => {
     const href = $(element).attr("href");
-    if (!reviewedPaths.has(href))
+    if (!publishedCityPaths.has(href))
       issues.push(`${regionPath} links unreviewed city ${href}`);
   });
 }
@@ -82,6 +84,7 @@ for (const row of inventory.records) {
   const region = stateGuides[state].regions[regionIndex];
   const cityPath = `/service-areas/${slug(state)}/${slug(region)}/${citySlug}/`;
   if (!cityEditorial[geoid]) {
+    if (cityPath === kellerLocation.path) continue;
     try {
       await stat(fileFor(cityPath));
       issues.push(`Unreviewed city generated as a page: ${cityPath}`);
@@ -141,8 +144,8 @@ for (const row of inventory.records) {
     issues.push(`Missing local source: ${cityPath}`);
   if ($(".breadcrumb a").length < 4)
     issues.push(`Incomplete breadcrumb: ${cityPath}`);
-  if (!html.includes("Emergency 24/7"))
-    issues.push(`Missing emergency support: ${cityPath}`);
+  if (!html.includes("24/7 live agent support"))
+    issues.push(`Missing 24/7 support information: ${cityPath}`);
   const editorial = cityEditorial[geoid];
   textBodies.push({
     path: cityPath,

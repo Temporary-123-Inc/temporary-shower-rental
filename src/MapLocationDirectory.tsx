@@ -8,12 +8,12 @@ export function MapLocationDirectory() {
   return (
     <section
       className="map-location-directory"
-      aria-label="Browse rental locations"
+      aria-label="Browse shower rental locations"
     >
-      <h3>Browse rental locations</h3>
+      <h3>Browse shower rental locations</h3>
       <p>
-        Open a state guide directly, or expand its regions and published city
-        guides. Confirm availability for your exact site and dates.
+        Open a state shower guide directly, or expand its regions and published city
+        guides. Confirm shower equipment availability for your exact site and dates.
       </p>
       <div className="map-location-grid">
         {Object.entries(stateGuides)

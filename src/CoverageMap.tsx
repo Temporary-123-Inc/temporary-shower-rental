@@ -5,7 +5,6 @@ import { MapLocationDirectory } from "./MapLocationDirectory";
 import { LocationImageCarousel } from "./LocationImageCarousel";
 import { stateGuides } from "./stateGuides";
 import { stateRentalHeadline } from "./rentalHeadlines";
-import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 const callouts = [
   "Vermont",
@@ -17,29 +16,11 @@ const callouts = [
   "Delaware",
   "Maryland",
 ];
-const baseCampServicePriority = new Map([
-  ["Mobile Kitchens", 0],
-  ["Shower and Restroom Combination Trailers", 1],
-  ["Shower", 2],
-  ["Sleeper", 3],
-]);
-const stateServiceLabels: Record<string, string> = {
-  "Mobile Kitchens": "Mobile commercial kitchen rentals",
-  "Shower and Restroom Combination Trailers":
-    "Shower and restroom combination trailers",
-  Shower: "22 ft shower trailer rental, 10 stalls",
-  Sleeper: "Sleeper and bunkbed trailer rentals",
-  Dishwashing: "Dishwashing trailer rentals",
-  Refrigeration: "Refrigeration trailer rentals",
-  Restroom: "Restroom trailer rentals",
-  Laundry: "Laundry trailer rentals",
-  "Handwashing Trailers": "Handwashing trailer rentals",
-};
-const stateServices = [...serviceCategories].sort((left, right) => {
-  const leftPriority = baseCampServicePriority.get(left.name) ?? 10;
-  const rightPriority = baseCampServicePriority.get(right.name) ?? 10;
-  return leftPriority - rightPriority;
-});
+const stateServices = [
+  { href: "/equipment-rental/shower-trailer/", label: "Shower trailer rentals" },
+  { href: "/services/shower-trailers/22ft-10-stall/", label: "22 ft 10-stall shower trailer rentals" },
+  { href: "/services/shower-containers/20ft-5-stall/", label: "20 ft 5-stall shower container rentals" },
+];
 const mapCitiesByState = states
   .map((state) => ({
     state: state.name,
@@ -264,7 +245,7 @@ export function CoverageMap({
             </button>
             <h2 id="state-services-title">
               <span data-state-headline>
-                Temporary Facilities Rental in your state
+                Shower Trailer Rental in your state
               </span>
             </h2>
             <p id="state-services-intro">
@@ -285,7 +266,7 @@ export function CoverageMap({
             <div className="state-dialog-composition">
               <div className="state-services-heading">
                 <p className="eyebrow">
-                  <span>Temporary facilities across the USA.</span>
+                  <span>Temporary showers across the USA.</span>
                   <span className="state-dialog-code" data-state-code>
                     State 01 of 50
                   </span>
@@ -306,21 +287,20 @@ export function CoverageMap({
                   </p>
                   <h2 id="state-services-title">
                     <span data-state-headline>
-                      Temporary Facilities Rental in your state
+                      Shower Trailer Rental in your state
                     </span>
                   </h2>
                   <p id="state-services-intro">
-                    Temporary facility rental services are available for
+                    Temporary shower rental services are available for
                     projects in <span data-state-name>your state</span>, USA.
-                    Customers can rent equipment for short-term projects or
+                    Customers can rent shower equipment for short-term projects or
                     request a longer lease for projects across the United
                     States.
                   </p>
                   <p className="state-service-summary" data-state-services-copy>
-                    Base camp rentals include mobile commercial kitchens, shower
-                    trailers, shower and restroom combinations, and
-                    sleeper/bunkbed trailers. Supporting temporary facilities
-                    are also available.
+                    Shower trailer and shower container rentals can support
+                    construction, renovations and temporary crew sites. Confirm
+                    stall capacity, hot water, drainage and delivery access.
                   </p>
                   <p className="state-dialog-question" data-state-question />
                 </div>
@@ -408,20 +388,16 @@ export function CoverageMap({
 
               <section
                 className="state-dialog-services"
-                aria-label="Temporary facility rental services"
+                aria-label="Temporary shower rental services"
               >
                 <div className="state-service-heading">
-                  <span>Base camp and supporting rentals</span>
-                  <strong>9 facility types</strong>
+                  <span>Shower rental options</span>
+                  <strong>3 options</strong>
                 </div>
                 <ul className="state-service-list">
                   {stateServices.map((service, index) => (
                     <li
-                      className={
-                        baseCampServicePriority.has(service.name)
-                          ? "basecamp-service"
-                          : undefined
-                      }
+                      className="basecamp-service"
                       key={service.href}
                     >
                       <a href={service.href}>
@@ -432,7 +408,7 @@ export function CoverageMap({
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <span>
-                          {stateServiceLabels[service.name] || service.name}
+                          {service.label}
                         </span>
                         <span aria-hidden="true">↗</span>
                       </a>

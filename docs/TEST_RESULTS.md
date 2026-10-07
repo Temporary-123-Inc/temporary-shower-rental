@@ -1,5 +1,15 @@
 # Temporary123 Test Results
 
+## Shower-only homepage and location pages — 2026-10-07 (LOCAL VERIFIED)
+
+- Used the owner's clarification to focus the homepage and service-area/state/region/city content on shower trailers and shower containers. Did not apply the attached mobile-kitchen JSON. Kept the existing routes and Keller's approved H1, metadata, address, local phone and schema.
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
+- `npm test`: PASS, 62/62. Updated the location-content assertions to require shower equipment and reject unrelated product families in state and regional copy.
+- `npm exec vitest run tests/h1-plan.test.ts tests/multifunctionalPlacement.test.tsx`: PASS, 7/7. These additional headline and gallery-policy tests now confirm the shower-focused published locations while retaining the legacy photo grouping for other routes.
+- `npm run check:shower-focus`: PASS across 549 generated homepage and location pages; all checked H1s contain shower and main content has no kitchen, dishwashing, refrigeration, sleeper or laundry text or links.
+- `npm run check:headlines`: PASS, 548 distinct location headlines; `npm run check:cities`: PASS for 19,702 Census places, 246 directories and five reviewed city pages; `npm run check:links`: PASS across 755 pages, zero missing targets or capitalization errors. The city audit now includes the separately reviewed Keller route and checks the current 24/7 support wording.
+- `node scripts/check-keller-location.mjs`: PASS; Keller's approved local content and the general contact information remain correct. `git diff --check` on changed source and test files: PASS. The new 1200 × 630 shower sharing card was visually inspected and uses `1-866-455-7214`.
+
 ## General contact details — 2026-10-06 (PRODUCTION LIVE VERIFIED)
 
 - Updated the general site number to `1-866-455-7214` and business address to `11012 Kadota Ave Unit 9, Pomona, CA 91766`; retained Keller's separate local listing.

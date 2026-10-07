@@ -1,5 +1,4 @@
 import { alignedLocationIntro, locationRentalPlanningAnswer } from "./alignedIntroductions";
-import { equipmentSet } from "./equipmentPhotos";
 import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
 import { stateGuides } from "./stateGuides";
@@ -32,19 +31,19 @@ type ContextualLink = {
 
 const priorityServices = [
   {
-    href: "/inventory/mobile-kitchen-models/",
+    href: "/equipment-rental/shower-trailer/",
     labels: [
-      "mobile commercial kitchen rentals",
-      "temporary kitchen facilities for rent",
-      "mobile kitchen trailer leasing",
+      "shower trailer rentals",
+      "temporary shower trailers for rent",
+      "mobile shower trailer leasing",
     ],
   },
   {
-    href: "/services/shower-restroom-combination-trailers/",
+    href: "/services/shower-containers/20ft-5-stall/",
     labels: [
-      "shower and restroom combination trailer rentals",
-      "temporary shower and restroom facilities",
-      "combination hygiene trailers for lease",
+      "20 ft shower container rentals",
+      "5-stall shower containers for rent",
+      "temporary shower containers for lease",
     ],
   },
   {
@@ -53,14 +52,6 @@ const priorityServices = [
       "22 ft 10-stall shower trailer rentals",
       "10-stall shower trailers for rent",
       "temporary 22 ft shower facilities",
-    ],
-  },
-  {
-    href: "/equipment-rental/mobile-sleep-trailers/",
-    labels: [
-      "sleeper and bunkbed trailer rentals",
-      "temporary crew accommodation for lease",
-      "mobile sleeper trailers for rent",
     ],
   },
 ] as const;
@@ -77,12 +68,8 @@ const cityContexts = [
 ] as const;
 
 const commercialIntentTemplates = [
-  "Compare temporary facilities for rent, short-term rentals and longer equipment leasing plans.",
-  "Temporary facility rental options include equipment for rent and longer lease arrangements.",
-  "Project teams can request temporary facilities for rent, flexible rentals or longer leasing terms.",
-  "Compare rentals for short assignments with temporary facility leasing and equipment for rent.",
-  "A temporary facilities rental can combine equipment for rent with longer lease options.",
-  "Rental planning covers temporary facilities for rent, available rentals and equipment leasing.",
+  "Compare shower trailers and shower containers for short-term rentals or longer leases. Confirm availability and the actual site layout with the rental team.",
+  "Plan temporary shower rental around peak use, hot water, drainage and the delivery route for the exact site.",
 ] as const;
 
 const buildCityLinks = (
@@ -92,7 +79,7 @@ const buildCityLinks = (
   path: string,
 ): ContextualLink[] =>
   cities.map((city, cityIndex) => {
-    const service = priorityServices[(globalIndex + cityIndex) % 4];
+    const service = priorityServices[(globalIndex + cityIndex) % priorityServices.length];
     const label =
       service.labels[(globalIndex + cityIndex * 2) % service.labels.length];
     const cityGuide = citiesForRegion(path).find(
@@ -119,26 +106,25 @@ const buildServiceLinks = (globalIndex: number): ContextualLink[] =>
       service.labels[(globalIndex + serviceIndex) % service.labels.length],
     ),
     context: [
-      "for temporary meal production.",
-      "for coordinated daily hygiene.",
-      "for dedicated shower capacity.",
-      "for base camps and man camps.",
+      "for private shower access.",
+      "for container-based shower capacity.",
+      "for dedicated 10-stall shower capacity.",
     ][serviceIndex],
   }));
 
 const introTemplates = [
   (state: string, region: string) =>
-    `Teams planning work in ${region}, ${state} can arrange temporary facilities around the site's access, occupancy and schedule. Rent mobile kitchens, shower and restroom combination trailers, and sleeper or bunkbed trailers when the project needs a reliable base camp.`,
+    `Teams planning work in ${region}, ${state} can arrange temporary shower trailers or shower containers around the site's access, users and schedule. Confirm hot water, drainage and servicing before choosing a unit.`,
   (state: string, region: string) =>
-    `A ${region} project in ${state} may need a temporary facility plan that connects food service, hygiene and crew support. Compare short-term rental options with a longer lease, then confirm delivery access and utility requirements for the exact site.`,
+    `A ${region} project in ${state} may need private shower access during construction, renovation or a facility shutdown. Compare trailer and container layouts, then confirm delivery access and utility requirements for the exact site.`,
   (state: string, region: string) =>
-    `For work across ${region}, ${state}, Temporary123 helps project teams plan rental facilities before mobilization. The conversation can cover mobile commercial kitchens, 22 ft 10-stall shower trailers, combination units and sleeper or bunkbed rentals for short or extended assignments.`,
+    `For work across ${region}, ${state}, Temporary123 helps project teams plan temporary showers before mobilization. Discuss the available stall count, expected peak use and servicing for short or extended assignments.`,
   (state: string, region: string) =>
-    `Project managers in ${region}, ${state} can use a temporary facilities rental plan to keep crews supported during construction, renovation or remote work. Review the site route, equipment footprint and servicing plan before choosing a rent or lease arrangement.`,
+    `Project managers in ${region}, ${state} can use shower rentals to support crews during construction, renovation or remote work. Review the site route, equipment footprint and servicing plan before choosing a rent or lease arrangement.`,
   (state: string, region: string) =>
-    `When a site is located in ${region}, ${state}, a coordinated temporary facility rental keeps the next phase moving. Discuss kitchen capacity, shower and restroom combinations, sleeper or bunkbed trailers and the delivery sequence with our team.`,
+    `When a site is located in ${region}, ${state}, temporary showers can help bridge a renovation or provide crew washing capacity. Discuss trailer or container placement, water supply and the delivery sequence with our team.`,
   (state: string, region: string) =>
-    `A clear rental brief for ${region}, ${state} should name the work area, crew size and operating dates. Temporary123 can help compare mobile kitchen, hygiene and sleeper trailer options for a short-term rent or a longer lease.`,
+    `A clear shower rental brief for ${region}, ${state} should name the work area, crew size and operating dates. Temporary123 can help compare shower trailer and shower container options for a short-term rent or a longer lease.`,
 ] as const;
 
 const formatCityList = (cities: string[]) => {
@@ -149,26 +135,26 @@ const formatCityList = (cities: string[]) => {
 
 const detailTemplates = [
   (state: string, region: string) =>
-    `In ${region}, the local access plan is the starting point. Share the nearest approach, turning space and service connections so a temporary facility rental can be positioned safely in ${state}.`,
+    `In ${region}, the local access plan is the starting point. Share the nearest approach, turning space and water and drainage connections so a shower rental can be positioned safely in ${state}.`,
   (state: string, region: string) =>
-    `For ${region} sites, match the facility mix to the people who use it each day. A rent or lease plan can combine food preparation, showers, restrooms and crew sleeping space without separating the servicing route.`,
+    `For ${region} sites, match shower stall capacity to the people who use it each day. A rent or lease plan should account for peak shifts, privacy, hot water and the servicing route in ${state}.`,
   (state: string, region: string) =>
-    `The ${region} work pattern may change between setup and peak operations. Confirm the dates, occupancy and utility plan before reserving a temporary facilities rental in ${state}.`,
+    `The ${region} work pattern may change between setup and peak operations. Confirm the dates, users and utility plan before reserving a shower rental in ${state}.`,
   (state: string, region: string) =>
-    `A practical ${region} brief should show where deliveries arrive and where the temporary units will sit. That detail helps our team review a short-term rent or longer lease for the ${state} project.`,
+    `A practical ${region} brief should show where deliveries arrive and where the shower unit will sit. That detail helps our team review a short-term rent or longer lease for the ${state} project.`,
   (state: string, region: string) =>
-    `For a ${region} deployment, keep the kitchen, hygiene and sleeping routes easy to service. We can discuss a temporary facility rental that fits the working footprint and the project timeline in ${state}.`,
+    `For a ${region} deployment, keep the shower access and servicing route clear. We can discuss a shower trailer or container that fits the working footprint and project timeline in ${state}.`,
   (state: string, region: string) =>
-    `Before equipment moves to ${region}, confirm the receiving contact, ground conditions and return route. These details support a transparent rent or lease conversation for temporary facilities in ${state}.`,
+    `Before a shower unit moves to ${region}, confirm the receiving contact, ground conditions and return route. These details support a transparent rent or lease conversation in ${state}.`,
 ] as const;
 
 const factTemplates = [
   (state: string, region: string, fact: string) =>
     `${fact} This regional guide helps teams connect that state context with a ${region} rental plan.`,
   (state: string, region: string, fact: string) =>
-    `${fact} Use the ${region} location name when requesting a temporary facility rent or lease in ${state}.`,
+    `${fact} Use the ${region} location name when requesting a temporary shower rent or lease in ${state}.`,
   (state: string, region: string, fact: string) =>
-    `${fact} The regional context is useful when arranging delivery for a ${region} temporary facilities rental.`,
+    `${fact} The regional context is useful when arranging delivery for a ${region} shower rental.`,
   (state: string, region: string, fact: string) =>
     `${fact} Include ${region} in the project brief so the right rental and servicing discussion can begin.`,
 ] as const;
@@ -180,7 +166,11 @@ const buildRegionVisuals = (
   state: string,
   region: string,
   cities: string[],
-) => equipmentSet(index);
+) => [
+  { image: "/images/service-heroes/20ft-shower-trailer-sink/01-960.webp", imageAlt: "Private shower stall inside a 20 ft shower trailer", caption: "20 ft shower trailer reference" },
+  { image: "/images/service-heroes/20ft-shower-container/01-960.webp", imageAlt: "Shower facilities inside a 20 ft shower container", caption: "20 ft shower container reference" },
+  { image: "/images/service-heroes/20ft-shower-trailer-sink/02-960.webp", imageAlt: "Three sinks on the exterior service side of a 20 ft shower trailer", caption: "20 ft shower trailer sink reference" },
+];
 
 export type RegionGuide = {
   state: string;
@@ -226,7 +216,7 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
         image: visuals[0].image,
         imageAlt: visuals[0].imageAlt,
         gallery: visuals.slice(1, 3),
-        intro: `Rent or lease Temporary Facilities in ${region}, ${state}. ${introTemplates[index % introTemplates.length](state, region)}`,
+        intro: `Rent or lease temporary shower equipment in ${region}, ${state}. ${introTemplates[index % introTemplates.length](state, region)}`,
         detail: detailTemplates[index % detailTemplates.length](state, region),
         fact: factTemplates[index % factTemplates.length](
           state,
@@ -324,7 +314,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             <p className="eyebrow">REGIONAL RENTAL GUIDE</p>
             <h1>{headline}</h1>
             <p className="region-intro" data-h1-intro>{alignedLocationIntro(headline, location, guide.cities)}</p>
-            <p className="region-emergency">Emergency 24/7</p>
+            <p className="region-emergency">24/7 live agent support</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call now {site.phoneDisplay}
             </a>
@@ -338,10 +328,10 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
         <div className="wrap section region-answer-card">
           <div className="region-answer-heading">
             <span className="eyebrow">QUICK ANSWER</span>
-            <h2 id="region-faq-title">What can you rent in {guide.region}?</h2>
+            <h2 id="region-faq-title">What shower equipment can you rent in {guide.region}?</h2>
             <p data-rental-planning>
               {locationRentalPlanningAnswer(headline) ||
-                "Rent or lease Temporary Facilities for construction, man camps, renovations and emergency base camps. Confirm availability, occupancy and utilities with our rental team."}
+                "Rent or lease shower trailers and shower containers for construction, renovations and temporary crew sites. Confirm stall capacity, hot water, drainage and access with our rental team."}
             </p>
           </div>
           <div className="region-answer-body">
@@ -353,11 +343,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
                 </li>
               ))}
             </ul>
-            <p className="supporting-rentals">
-              {/\blaundry\b/i.test(headline)
-                ? "Other supporting rentals: dishwashing, refrigeration, restrooms and handwashing trailers."
-                : "Supporting rentals: dishwashing, refrigeration, restrooms, laundry and handwashing trailers."}
-            </p>
+            <p className="supporting-rentals">The available shower layout and delivery method depend on the exact site and rental dates.</p>
           </div>
         </div>
       </section>
@@ -400,10 +386,9 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           <p>{stateGuides[guide.state].seasonal.summary[0]}</p>
           <p>{guide.seasonal.summary[1]}</p>
           <p>
-            Plan Temporary Facilities for construction seasons, camps, cleanup,
-            kitchen fires, Health Department closures, equipment failures and
-            renovations. Rental kitchens, hygiene units and crew accommodation
-            support the site while permanent facilities are unavailable.
+            Plan temporary showers for construction seasons, cleanup,
+            facility outages and renovations. Confirm water supply, drainage,
+            ground conditions and servicing while the unit is on site.
           </p>
         </div>
         <aside className="region-demand-card">

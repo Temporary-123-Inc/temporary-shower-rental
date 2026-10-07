@@ -19,14 +19,15 @@ import { panhandleGalleryCopy } from "../src/panhandleGalleryCopy";
 import { olympicPeninsulaGalleryCaption } from "../src/olympicPeninsulaGalleryCopy";
 import { serviceAreaGalleryCaption } from "../src/serviceAreaGalleryCopy";
 
-const titles = [
+const publishedTitles = [
   ...Object.keys(stateGuides).map(stateRentalHeadline),
   ...regionPages.map((g) => regionRentalHeadline(g.region, g.state, g.index)),
   ...reviewedCityPages.map(cityHeadline),
-].filter((title) => /\bMan Camp Temporary Facilities\b/.test(title));
+];
+const legacyManCampTitle = "Texas Remote Operations Man Camp Temporary Facilities Rental";
 
-describe("Authorized multifunctional placements in existing man-camp photo groups", () => {
-  it("replaces exactly two existing selections without adding a fourth group", () => {
+describe("Multifunctional photo policy and shower-focused location galleries", () => {
+  it("keeps the legacy man-camp group available without publishing it on shower location pages", () => {
     expect(
       equipmentPhotoPolicy.delegatedSelection.contextGalleries["man-camp"],
     ).toEqual([
@@ -34,10 +35,11 @@ describe("Authorized multifunctional placements in existing man-camp photo group
       "38ft All Electric Kitchen",
       "20 ft Shower Trailer",
     ]);
-    expect(titles).toHaveLength(42);
+    expect(publishedTitles).toHaveLength(301);
+    expect(publishedTitles.every((title) => /\bShower Trailer Rental\b/.test(title))).toBe(true);
   });
 
-  it.each(titles)(
+  it.each([legacyManCampTitle])(
     "displays new files in isolated, accurately labelled groups: %s",
     (title) => {
       const gallery = resolveLocationGallery(title);

@@ -27,7 +27,7 @@ const titles: Record<string, string> = {
   "/services/": "Temporary Shower and Restroom Trailer Solutions",
   "/equipment-rental/": "Temporary Shower Trailer Rental Inventory",
   "/industries/": "Industries We Serve",
-  "/service-areas/": "USA Temporary Facilities Rental Service Areas",
+  "/service-areas/": "USA Shower Trailer Rental Service Areas",
   "/seo-dashboard/": "SEO Migration Dashboard",
   "/planning/": "Plan Your Temporary Shower Rental",
   "/about-us/": "About Temporary Shower Rental 123 | Our Planning Approach",
@@ -41,8 +41,8 @@ const titles: Record<string, string> = {
   "/privacy/": "Privacy",
 };
 const descriptions: Record<string, string> = {
-  "/": "Rent commercial shower, restroom and combination trailers nationwide for construction, events, renovations and government sites. Call for 24/7 live agent support.",
-  "/home/": "Rent commercial shower, restroom and combination trailers nationwide for construction, events, renovations and government sites. Call for 24/7 live agent support.",
+  "/": "Rent commercial shower trailers and shower containers nationwide for construction, events, renovations and government sites. Call for 24/7 live agent support.",
+  "/home/": "Rent commercial shower trailers and shower containers nationwide for construction, events, renovations and government sites. Call for 24/7 live agent support.",
   "/equipment-rental/":
     "Browse temporary shower trailers, restroom trailers, combination units and workforce-support facilities. Confirm occupancy, access, utilities and rental dates with Temporary Shower Rental 123.",
   "/services/":
@@ -50,7 +50,7 @@ const descriptions: Record<string, string> = {
   "/industries/":
     "Explore temporary shower and restroom trailer support for construction, government, events, healthcare, schools and industrial projects.",
   "/service-areas/":
-    "Find temporary shower and restroom trailer rental service areas across the USA. Availability, delivery and installation require project confirmation.",
+    "Find temporary shower trailer and shower container rental service areas across the USA. Availability, delivery and installation require project confirmation.",
   "/seo-dashboard/":
     "Owner-facing Temporary Shower Rental 123 migration dashboard for crawl health, protected target URLs and controlled local review.",
   "/planning/":

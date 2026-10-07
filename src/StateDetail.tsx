@@ -3,9 +3,7 @@ import site from "../site.json" with { type: "json" };
 import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPages } from "./regionGuides";
-import { serviceCategories } from "./serviceMenu";
 import { stateRentalHeadline } from "./rentalHeadlines";
-import { capitalizeLinkLabel } from "./linkLabels";
 import { citiesForRegion } from "./cityDirectory";
 import { LocationImageCarousel } from "./LocationImageCarousel";
 
@@ -16,22 +14,11 @@ export function StateDetail({ name }: { name: string }) {
   const guide = stateGuides[name];
   const headline = stateRentalHeadline(name);
   const regions = regionPages.filter((region) => region.state === name);
-  const priority = [
-    "Mobile Kitchens",
-    "Shower and Restroom Combination Trailers",
-    "Shower",
-    "Sleeper",
+  const services = [
+    { href: "/equipment-rental/shower-trailer/", label: "Shower trailer rentals" },
+    { href: "/services/shower-trailers/22ft-10-stall/", label: "22 ft 10-stall shower trailer rentals" },
+    { href: "/services/shower-containers/20ft-5-stall/", label: "20 ft 5-stall shower container rentals" },
   ];
-  const services = [...serviceCategories].sort(
-    (a, b) =>
-      (priority.includes(a.name) ? priority.indexOf(a.name) : 9) -
-      (priority.includes(b.name) ? priority.indexOf(b.name) : 9),
-  );
-  const labels: Record<string, string> = {
-    "Mobile Kitchens": "Mobile commercial kitchen rentals",
-    Shower: "Shower trailer rentals, 20 ft with 5 stalls",
-    Sleeper: "Sleeper and bunkbed trailer rentals",
-  };
   return (
     <article className={`state-page region-page region-layout-${guide.layout}`}>
       <section className="region-hero">
@@ -47,7 +34,7 @@ export function StateDetail({ name }: { name: string }) {
             <p className="eyebrow">STATE RENTAL GUIDE</p>
             <h1>{headline}</h1>
             <p className="region-intro" data-h1-intro>{alignedLocationIntro(headline, name)}</p>
-            <p className="region-emergency">Emergency 24/7</p>
+            <p className="region-emergency">24/7 live agent support</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call the rental team {site.phoneDisplay}
             </a>
@@ -117,16 +104,16 @@ export function StateDetail({ name }: { name: string }) {
       <section className="wrap section state-guide-equipment">
         <div>
           <span className="eyebrow">RENTAL EQUIPMENT</span>
-          <h2>Temporary Facilities for your project</h2>
+          <h2>Shower rentals for your project</h2>
           <p>
-            Rent equipment for an assignment or discuss a longer lease.
-            Confirm occupancy, utilities and site access with the rental team.
+            Compare shower trailers and shower containers for an assignment or
+            longer lease. Confirm users, utilities and site access with the rental team.
           </p>
           <ul className="state-guide-services">
             {services.map((service) => (
               <li key={service.href}>
                 <a href={service.href}>
-                  {capitalizeLinkLabel(labels[service.name] || service.name)}
+                  {service.label}
                 </a>
               </li>
             ))}
@@ -144,7 +131,7 @@ export function StateDetail({ name }: { name: string }) {
       </section>
       <div className="wrap state-guide-call">
         <p>
-          Emergency 24/7. Call to confirm available equipment and a rental or
+          Call 24/7 to confirm available shower equipment and a rental or
           lease quote for your {name} project.
         </p>
         <a className="button" href={`tel:${site.phoneE164}`}>

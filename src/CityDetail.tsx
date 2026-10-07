@@ -3,48 +3,26 @@ import site from "../site.json" with { type: "json" };
 import { nearbyCities, type CityPage } from "./cityDirectory";
 import { cityEditorial } from "./cityEditorial";
 import { regionCities } from "./regionCities";
-import { cityRentalHeadline } from "./rentalHeadlines";
 import { buildRegionSeasonalDemand } from "./seasonalDemand";
 import { LocationImageCarousel } from "./LocationImageCarousel";
 
 const serviceLinks = [
   {
-    label: "Mobile commercial kitchen rentals",
-    href: "/inventory/mobile-kitchen-models/",
+    label: "Shower trailer rentals",
+    href: "/equipment-rental/shower-trailer/",
   },
   {
-    label: "Shower and restroom combination trailers",
-    href: "/services/shower-restroom-combination-trailers/",
+    label: "20 ft shower container rentals, 5 stalls",
+    href: "/services/shower-containers/20ft-5-stall/",
   },
   {
     label: "22 ft shower trailer rentals, 10 stalls",
     href: "/services/shower-trailers/22ft-10-stall/",
   },
-  {
-    label: "Sleeper and bunkbed trailer rentals",
-    href: "/equipment-rental/mobile-sleep-trailers/",
-  },
 ] as const;
 
-const approvedCityHeadlines: Record<string, string> = {
-  "5355365":
-    "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
-  "5370000":
-    "Tacoma, Washington Workforce Housing Sleeper Bunk-Bed Facility Leasing",
-  "5351300":
-    "Olympia, Washington Institutional Facility Shower and Restroom Combination Trailer For Rent",
-  "5363000":
-    "Seattle, Washington Construction Project Kitchen Emergency Trailer Rental",
-  "5363385":
-    "Sequim, Washington Remote Operations Man Camp Temporary Facilities Rental",
-};
-
 export const cityHeadline = (city: CityPage): string =>
-  approvedCityHeadlines[city.geoid] ||
-  cityRentalHeadline(
-    `${city.name}, ${city.state}`,
-    cityEditorial[city.geoid]?.heading || "Temporary Facilities",
-  );
+  `${city.name}, ${city.state} Emergency Basecamp Shower Trailer Rental`;
 
 export function CityDetail({ city }: { city: CityPage }) {
   const editorial = cityEditorial[city.geoid];
@@ -79,7 +57,7 @@ export function CityDetail({ city }: { city: CityPage }) {
             <h1>{headline}</h1>
             <p className="city-lead" data-h1-intro>{alignedLocationIntro(headline, location)}</p>
             <div className="city-hero-actions">
-              <span className="city-emergency">Emergency 24/7</span>
+              <span className="city-emergency">24/7 live agent support</span>
               <a className="button" href={`tel:${site.phoneE164}`}>
                 Call the rental team {site.phoneDisplay}
               </a>
@@ -97,7 +75,7 @@ export function CityDetail({ city }: { city: CityPage }) {
         <div>
           <span className="eyebrow">QUICK ANSWER</span>
           <h2 id="city-answer-title">What can you rent in {city.name}?</h2>
-          <p>{editorial.answer}</p>
+          <p>Compare shower trailers and shower containers for crews, renovations and temporary site operations in {city.name}. Confirm peak users, private stall layout, hot-water supply, drainage, servicing and delivery access for the exact project address.</p>
         </div>
         <div>
           <ul className="city-service-list">
@@ -112,10 +90,7 @@ export function CityDetail({ city }: { city: CityPage }) {
               </li>
             ))}
           </ul>
-          <p className="city-supporting">
-            Supporting rentals include refrigeration, dishwashing, laundry,
-            restrooms and handwashing trailers.
-          </p>
+          <p className="city-supporting">Ask the rental team which shower configuration and delivery schedule fit your site.</p>
         </div>
       </section>
       <section
@@ -128,7 +103,7 @@ export function CityDetail({ city }: { city: CityPage }) {
             Rental Planning Conditions in {city.name}
           </h2>
           <p>{editorial.local}</p>
-          <p>{editorial.seasonal}</p>
+          <p>Seasonal weather and project schedules can affect shower placement, safe access, water supply and wastewater servicing. Confirm the installation area and service route before reserving a unit.</p>
           <p className="city-planning-question">
             <strong>Ask before you rent:</strong> {editorial.question}
           </p>

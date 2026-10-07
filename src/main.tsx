@@ -903,7 +903,7 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     .forEach((node) => {
       node.textContent =
         guide?.dataset.stateHeadline ||
-        `Temporary Facilities Rental in ${name}`;
+        `Shower Trailer Rental in ${name}`;
     });
   const stateCode = stateDialog.querySelector<HTMLElement>("[data-state-code]");
   if (stateCode)
@@ -995,7 +995,7 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   if (servicesCopy)
     servicesCopy.textContent =
       guide?.querySelector("[data-guide-services]")?.textContent ||
-      "Basecamp and supporting temporary facility rentals are available.";
+      "Temporary shower trailer and shower container rentals are available.";
   const citySection = stateDialog.querySelector<HTMLElement>(
     "[data-state-cities]",
   );

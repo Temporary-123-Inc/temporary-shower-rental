@@ -31,18 +31,18 @@ export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
           <div>
             <span className="eyebrow">REGIONAL CITY DIRECTORY</span>
             <h1>
-              {regionLocationLabel(guide.region, guide.state)} Facility Rental
+              {regionLocationLabel(guide.region, guide.state)} Shower Trailer Rental
               Locations
             </h1>
             <p data-h1-intro>
               Browse {cities.length} Census-listed locations in{" "}
               {regionLocationLabel(guide.region, guide.state)}. Select a linked
-              city for its equipment-specific rental guide, or open the regional
-              guide to plan a facility rental for another listed community.
+              city for its shower rental guide, or open the regional
+              guide to plan shower access for another listed community.
               Confirm the exact delivery address and site access with your request.
             </p>
             <a className="button secondary" href={guide.path}>
-              View {guide.region} Rental Services
+              View {guide.region} Shower Rentals
             </a>
           </div>
           <div className="city-directory-count">
@@ -50,9 +50,9 @@ export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
             <span>locations</span>
           </div>
         </header>
-        <section className="city-directory-equipment" aria-label="Temporary facility equipment options">
+        <section className="city-directory-equipment" aria-label="Temporary shower equipment options">
           <LocationImageCarousel
-            headline={`${regionLocationLabel(guide.region, guide.state)} Facility Rental Locations`}
+            headline={`${regionLocationLabel(guide.region, guide.state)} Shower Trailer Rental Locations`}
           />
         </section>
         <div className="city-directory-toolbar">

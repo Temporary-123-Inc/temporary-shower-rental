@@ -112,13 +112,6 @@ const acceptedLocationHeadlineOptions: readonly LocationHeadlineOption[] = [
   },
 ] as const;
 
-const approvedStateOptions: Record<string, LocationHeadlineOption> = {
-  Alabama: locationHeadlineRotation[0],
-  California: locationHeadlineRotation[1],
-  Colorado: locationHeadlineRotation[4],
-  Texas: locationHeadlineRotation[7],
-};
-
 export const buildLocationRentalHeadline = (
   location: string,
   option: LocationHeadlineOption,
@@ -144,8 +137,8 @@ export const regionLocationLabel = (region: string, state: string) =>
     ? region
     : `${region}, ${state}`;
 
-export const stateRentalOption = (state: string): LocationHeadlineOption =>
-  approvedStateOptions[state] || select(locationHeadlineRotation, state);
+export const stateRentalOption = (_state: string): LocationHeadlineOption =>
+  locationHeadlineRotation[0];
 
 export const stateRentalHeadline = (state: string) =>
   buildLocationRentalHeadline(state, stateRentalOption(state));
@@ -153,13 +146,10 @@ export const stateRentalHeadline = (state: string) =>
 export const regionRentalHeadline = (
   region: string,
   state: string,
-  regionIndex: number,
+  _regionIndex: number,
 ) => {
   const location = regionLocationLabel(region, state);
-  const option =
-    locationHeadlineRotation[
-      (locationSeed(state) + regionIndex) % locationHeadlineRotation.length
-    ];
+  const option = locationHeadlineRotation[0];
   return buildLocationRentalHeadline(location, option);
 };
 

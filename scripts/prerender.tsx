@@ -292,8 +292,8 @@ for (const path of [...allRoutes, "/404/"]) {
           }
         : directoryRegion
           ? {
-              title: `${regionLocationLabel(directoryRegion.region, directoryRegion.state)} Facility Rental Locations | ${site.brand}`,
-              description: `Browse ${regionLocationLabel(directoryRegion.region, directoryRegion.state)} cities and communities for Temporary Facilities Rental planning. Find reviewed city guides and regional services.`,
+              title: `${regionLocationLabel(directoryRegion.region, directoryRegion.state)} Shower Trailer Rental Locations | ${site.brand}`,
+              description: `Browse ${regionLocationLabel(directoryRegion.region, directoryRegion.state)} cities and communities for temporary shower rental planning. Find reviewed city guides and regional shower options.`,
             }
           : region
             ? {
@@ -367,6 +367,7 @@ for (const path of [...allRoutes, "/404/"]) {
     (path === "/service-areas/oklahoma/panhandle/" || path === kellerLocation.path
       ? new URL(path, site.origin).href
       : "");
+  const showerShareImage = path === "/" || path.startsWith("/service-areas/");
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || `${site.brand} facilities`}. Call ${site.brand} at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
@@ -377,7 +378,7 @@ for (const path of [...allRoutes, "/404/"]) {
     `<meta name="description" content="${esc(info.description)}"><meta property="og:title" content="${esc(info.title)}"><meta property="og:description" content="${esc(info.description)}"><meta property="og:type" content="website">` +
     `<meta property="og:site_name" content="${esc(site.brand)}"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(info.title)}"><meta name="twitter:description" content="${esc(info.description)}">` +
     (canonical
-      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(region ? new URL(region.image, site.origin).href : site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(region?.imageAlt || site.brand + " temporary facility planning")}">`
+      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + (showerShareImage ? "/shower-social-card.png" : "/social-card.png"))}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(showerShareImage ? "Commercial shower trailer rentals nationwide" : site.brand + " temporary facility planning")}">`
       : "");
   const rawHtml = source
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)

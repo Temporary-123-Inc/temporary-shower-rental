@@ -594,8 +594,8 @@ export function Site({
                     <span aria-current="page">Service Areas</span>
                   </nav>
                   <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
-                  <h1>USA Temporary Facilities Rental Service Areas</h1>
-                  <p data-h1-intro>{alignedPageIntro(path, "USA Temporary Facilities Rental Service Areas")}</p>
+                  <h1>USA Shower Trailer Rental Service Areas</h1>
+                  <p data-h1-intro>Find temporary shower trailer and shower container rentals across all 50 states. Select your state or region to review shower options, then confirm availability, utilities and delivery access for the exact project address.</p>
                   <div className="location-stats" aria-label="Coverage summary">
                     <div>
                       <strong>50</strong>
@@ -649,14 +649,14 @@ export function Site({
                   <h2>Plan a rental for your location.</h2>
                 </div>
                 <p>
-                  Explore kitchen configurations with your project location in
+                  Explore shower trailer options with your project location in
                   mind. Confirm the state, delivery address and transport
                   arrangements with our team before booking.
                 </p>
               </div>
               <form
                 className="location-planner"
-                action="/inventory/mobile-kitchen-models/"
+                action="/equipment-rental/shower-trailer/"
                 method="get"
               >
                 <label className="search-label" htmlFor="project-location">
@@ -672,7 +672,7 @@ export function Site({
                     required
                   />
                   <button className="button" type="submit">
-                    Explore mobile kitchens <span aria-hidden="true">↗</span>
+                    Explore shower trailers <span aria-hidden="true">↗</span>
                   </button>
                 </div>
                 <datalist id="known-project-locations">
