@@ -1,6 +1,6 @@
 # Temporary123 Test Results
 
-## Shower-only homepage and location pages — 2026-10-07 (LOCAL VERIFIED)
+## Shower-only homepage and location pages — 2026-10-07 (PRODUCTION LIVE VERIFIED)
 
 - Used the owner's clarification to focus the homepage and service-area/state/region/city content on shower trailers and shower containers. Did not apply the attached mobile-kitchen JSON. Kept the existing routes and Keller's approved H1, metadata, address, local phone and schema.
 - `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
@@ -9,6 +9,8 @@
 - `npm run check:shower-focus`: PASS across 549 generated homepage and location pages; all checked H1s contain shower and main content has no kitchen, dishwashing, refrigeration, sleeper or laundry text or links.
 - `npm run check:headlines`: PASS, 548 distinct location headlines; `npm run check:cities`: PASS for 19,702 Census places, 246 directories and five reviewed city pages; `npm run check:links`: PASS across 755 pages, zero missing targets or capitalization errors. The city audit now includes the separately reviewed Keller route and checks the current 24/7 support wording.
 - `node scripts/check-keller-location.mjs`: PASS; Keller's approved local content and the general contact information remain correct. `git diff --check` on changed source and test files: PASS. The new 1200 × 630 shower sharing card was visually inspected and uses `1-866-455-7214`.
+- Source commit `79d527a` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy`. A clean checkout at that exact commit was linked to the confirmed `temporary-124/temporary-shower-rental` Vercel project, deployed as `dpl_A3prXkzeh2hdA8qzSeFEHV4Mdgta`, checked on its staged URL, then promoted to `https://temporary-shower-rental.com`.
+- Live canonical homepage, `/service-areas/`, `/service-areas/california/`, `/service-areas/washington/olympic-peninsula/port-angeles/`, Keller, and `/shower-social-card.png` returned HTTP 200. Homepage and sampled location pages have shower H1s, the new general phone, and no unrelated product terms in main content. Keller retains `(972) 544-6598` in its main content. The homepage references the shower sharing card.
 
 ## General contact details — 2026-10-06 (PRODUCTION LIVE VERIFIED)
 
