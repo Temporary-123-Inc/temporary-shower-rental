@@ -300,9 +300,7 @@ export function QuoteForm({ path = "" }: { path?: string }) {
             {...attrs("consent")}
           />
           <span>
-            I agree that{" "}
-            {path === "/contact-us/" ? site.contactBusinessName : site.brand}{" "}
-            may use these details to respond to my inquiry. {" "}
+            I agree that my details may be used to respond to my inquiry. {" "}
             <a href="/privacy/">Read the Privacy Notice.</a>
             {error("consent")}
           </span>

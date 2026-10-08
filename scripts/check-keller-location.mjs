@@ -18,7 +18,9 @@ assert.equal($("[data-h1-intro]").text(), "Mobile Shower Trailer Rental delivers
 assert.equal($("link[rel=canonical]").attr("href"), `https://temporary-shower-rental.com${path}`);
 assert.doesNotMatch(html, /1710 Keller Pkwy|Keller, TX 76248/);
 assert.equal($(".keller-business address").length, 0);
-assert.equal($(".keller-map").length, 0);
+assert.equal($(".keller-map").length, 1);
+assert.match($(".keller-map").attr("src"), /^https:\/\/www\.google\.com\/maps\/embed\?pb=/);
+assert.match($(".keller-map").attr("src"), /0x864dd770afc0e903%3A0x4e58a264201f8b55/);
 const phones = $("a[href^='tel:']").not(".site-footer a").map((_, el) => $(el).attr("href")).get();
 assert.ok(phones.length >= 7);
 assert.deepEqual([...new Set(phones)], ["tel:+19725446598"]);
@@ -148,6 +150,12 @@ assert.deepEqual(organization.address, {
   addressCountry: "US",
 });
 const contact = load(await readFile("dist/contact-us/index.html", "utf8"));
+for (const view of [home, contact, $]) {
+  const drawer = view("#contact-drawer").text().replace(/\s+/g, " ").trim();
+  assert.equal(view(".contact-drawer-call > span").text().trim(), "Project desk");
+  assert.match(drawer, /I agree that my details may be used to respond to my inquiry\./);
+  assert.doesNotMatch(drawer, /(?:Mobile|Temporary) Shower (?:Trailer )?Rental 123/i);
+}
 assert.equal(addressText(contact(".site-footer .footer-contact-address")), footerContact);
 assert.equal(addressText(contact("main .contact-address")), "Commercial Emergency Shower Rental International 11012 Kadota Ave unit 9 Pomona, CA 91766");
 assert.equal(contact("title").text(), "Contact Us | Commercial Emergency Shower Rental International");

@@ -1,5 +1,12 @@
 # Temporary123 Test Results
 
+## Sticky contact wording and Keller map — 2026-10-09 (LOCAL VERIFIED; RELEASE PENDING)
+
+- Replaced the shared sticky drawer's brand-bearing header with `Project desk` and its consent sentence with neutral wording. The server-rendered and hydrated `QuoteForm` now use the same wording regardless of route.
+- Restored the Keller page's existing Google Maps profile iframe and two-column layout; its visible address and `LocalBusiness.address`/`hasMap` remain absent. The existing `frame-src` policy permits the Google Maps embed.
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404. `scripts/check-keller-location.mjs`: PASS for the map iframe, omitted Keller street address and shared drawer wording on homepage, Contact Us and Keller.
+- `tests/browser/site.spec.ts` focused sticky drawer test: PASS against an isolated local preview after opening the drawer on Contact Us. An initial browser attempt reached another project's server on a shared port; the verified run used this project's unused port and passed 1/1.
+
 ## Footer, Contact Us and Keller address cleanup — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
 - Shared footer: exact `Commercial Emergency Shower Rental International · 11012 Kadota Ave unit 9, Pomona, CA 91766 · (866) 455-7214` line with a clickable 866 number. Contact Us uses that business name in page-specific title, address, project desk and form consent.

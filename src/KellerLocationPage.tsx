@@ -32,6 +32,7 @@ export function KellerLocationPage() {
               {location.socialProfiles.map(({name, url}) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{name} ↗</a>)}
             </div>
           </section>
+          <iframe className="keller-map" title="Keller, TX service-area map" src={location.embedUrl} width="600" height="450" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
         </div>
       </div>
     </section>

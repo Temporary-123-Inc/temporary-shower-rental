@@ -391,10 +391,7 @@ function ContactDrawer({ path = "" }: { path?: string }) {
     >
       <div className="contact-drawer-shell">
         <div className="contact-drawer-call">
-          <span>
-            {path === "/contact-us/" ? site.contactBusinessName : site.brand}{" "}
-            project desk
-          </span>
+          <span>Project desk</span>
           <button
             type="button"
             data-close-contact

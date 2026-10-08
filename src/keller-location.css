@@ -5,12 +5,13 @@
 .keller-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .keller-page .button { min-height: 48px; background: #104d5a; color: white; border: 1px solid #104d5a; }
 .keller-page .button.secondary { background: transparent; color: #104d5a; }
-.keller-business-grid { display: grid; grid-template-columns: 1fr; margin-top: 40px; border: 1px solid #b5cdce; border-radius: 16px; overflow: hidden; background: white; }
+.keller-business-grid { display: grid; grid-template-columns: 1fr 1.1fr; margin-top: 40px; border: 1px solid #b5cdce; border-radius: 16px; overflow: hidden; background: white; }
 .keller-business { padding: 34px; }
 .keller-page h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.2; margin: 14px 0 20px; }
 .keller-business h2 { font-size: 1.8rem; }
 .keller-phone { display: inline-block; font-size: 1.6rem; font-weight: 800; margin: 18px 0 4px; }
 .keller-profile-links { display: flex; align-items: flex-start; flex-direction: column; gap: 20px; margin-top: 24px; }
+.keller-map { display: block; width: 100%; height: 100%; min-height: 390px; border: 0; }
 .keller-section { padding-top: 64px; padding-bottom: 64px; }
 .keller-section > p { max-width: 850px; line-height: 1.8; }
 .keller-equipment { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; list-style: none; gap: 12px; margin-top: 26px; }
@@ -35,6 +36,7 @@
   .keller-hero { padding-bottom: 32px; }
   .keller-business-grid, .keller-equipment, .keller-delivery-areas, .keller-photos { grid-template-columns: 1fr; }
   .keller-business { padding: 24px; }
+  .keller-map { min-height: 320px; }
   .keller-section { padding-top: 42px; padding-bottom: 42px; }
   .keller-actions .button { width: 100%; justify-content: center; }
   .keller-photos img { height: 360px; }

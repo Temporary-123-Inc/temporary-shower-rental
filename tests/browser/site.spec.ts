@@ -386,6 +386,19 @@ test("Contact Us opens an in-page project drawer", async ({ page }) => {
   await expect(trigger).toBeFocused();
 });
 
+test("Contact Us sticky drawer keeps the consent text neutral after opening", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/contact-us/");
+  await page.locator(".contact-rail").click();
+  const drawer = page.getByRole("dialog", { name: "Request availability" });
+  await expect(drawer).toBeVisible();
+  await expect(drawer.locator(".contact-drawer-call > span")).toHaveText("Project desk");
+  const consent = drawer.locator("label.consent");
+  await expect(consent).toContainText("I agree that my details may be used to respond to my inquiry.");
+  await page.waitForTimeout(350);
+  await expect(consent).not.toContainText(/(?:Mobile|Temporary) Shower (?:Trailer )?Rental 123/i);
+});
+
 test("mobile Contact Us tab opens the drawer without navigating", async ({
   page,
 }) => {

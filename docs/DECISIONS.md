@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-09 — Keep the Keller map and remove the old drawer name
+
+The owner asked to restore the embedded Keller map after the street-address cleanup. Keep the existing Google map iframe and two-column panel, while omitting the Keller street address from page text and structured data. The shared sticky contact drawer no longer names “Temporary Shower Rental 123” in its header or consent sentence; use neutral project-desk wording on every route so the server-rendered form and hydrated form agree.
+
 ## 2026-10-09 — Use the Pomona contact identity and hide Keller's street address
 
 The owner's latest instruction supersedes the earlier choice to publish Keller's separate street address. Keep the Keller page and local phone, but remove the street address from visible content and `LocalBusiness` structured data. Remove the address-linked map and map link so the page does not surface that address visually. The shared footer uses the exact owner-supplied Commercial Emergency Shower Rental International name, Pomona address and 866 phone format on all pages that render the shared footer. Contact Us uses that business name in page-specific copy. Preserve the existing logo, URLs and unrelated site identity fields.
