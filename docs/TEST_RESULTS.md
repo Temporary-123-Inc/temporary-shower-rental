@@ -1,12 +1,13 @@
 # Temporary123 Test Results
 
-## Footer, Contact Us and Keller address cleanup — 2026-10-09 (LOCAL VERIFIED; RELEASE PENDING)
+## Footer, Contact Us and Keller address cleanup — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
 - Shared footer: exact `Commercial Emergency Shower Rental International · 11012 Kadota Ave unit 9, Pomona, CA 91766 · (866) 455-7214` line with a clickable 866 number. Contact Us uses that business name in page-specific title, address, project desk and form consent.
 - Keller's visible address, address-linked map, `LocalBusiness.address` and `hasMap` were removed. The existing Keller URL, local phone, hours, review/social links, equipment, breadcrumb, canonical and sitemap entry remain.
 - `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404. `scripts/check-keller-location.mjs`: PASS for the rendered Keller, homepage and Contact Us pages and structured data.
 - Full rendered scan: 755 HTML pages checked, 754 pages with shared footers matched the exact new line, and zero pages contained `1710 Keller Pkwy`. The owner-facing SEO dashboard has no shared footer.
 - `npm test`: 60/62 passed while the site-wide scan ran concurrently; two unrelated image-alt and migration checks timed out. The two test files passed 13/13 when rerun alone with serialized execution and a 60-second timeout.
+- Source commit `9edf3a7` was pushed to `Temporary-123-Inc/temporary-shower-rental` on `codex/homepage-keller-copy`. Its clean checkout produced READY Vercel deployment `dpl_9bgG1D2FL9pdqPYJjkGdYE6Bs2fA` (755 pages plus 404). Authenticated staged checks confirmed the exact footer line on homepage, Contact Us and Keller, the new Contact Us title and the absence of Keller address/map. After promotion, those three canonical pages each returned HTTP 200 with the same results. `vercel inspect temporary-shower-rental.com` resolved to that READY deployment.
 
 ## Remove 123 from eyebrows and descriptions — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
