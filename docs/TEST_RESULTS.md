@@ -1,5 +1,13 @@
 # Temporary123 Test Results
 
+## Footer, Contact Us and Keller address cleanup — 2026-10-09 (LOCAL VERIFIED; RELEASE PENDING)
+
+- Shared footer: exact `Commercial Emergency Shower Rental International · 11012 Kadota Ave unit 9, Pomona, CA 91766 · (866) 455-7214` line with a clickable 866 number. Contact Us uses that business name in page-specific title, address, project desk and form consent.
+- Keller's visible address, address-linked map, `LocalBusiness.address` and `hasMap` were removed. The existing Keller URL, local phone, hours, review/social links, equipment, breadcrumb, canonical and sitemap entry remain.
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404. `scripts/check-keller-location.mjs`: PASS for the rendered Keller, homepage and Contact Us pages and structured data.
+- Full rendered scan: 755 HTML pages checked, 754 pages with shared footers matched the exact new line, and zero pages contained `1710 Keller Pkwy`. The owner-facing SEO dashboard has no shared footer.
+- `npm test`: 60/62 passed while the site-wide scan ran concurrently; two unrelated image-alt and migration checks timed out. The two test files passed 13/13 when rerun alone with serialized execution and a 60-second timeout.
+
 ## Remove 123 from eyebrows and descriptions — 2026-10-08 (PRODUCTION LIVE VERIFIED)
 
 - Updated the homepage kicker, About and equipment eyebrow labels, current product descriptions, generated meta/social descriptions, and customer-facing text in migrated source pages. Source archives, logo artwork/path, URLs, contact details and factual numeric counts were preserved.

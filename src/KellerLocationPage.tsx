@@ -25,16 +25,13 @@ export function KellerLocationPage() {
           <section className="keller-business" aria-labelledby="keller-business-name">
             <span className="eyebrow">YOUR LOCAL RENTAL TEAM</span>
             <h2 id="keller-business-name">{location.name}</h2>
-            <address>{location.address}</address>
             <a className="keller-phone" href={`tel:${location.phoneE164}`}>{location.phoneDisplay}</a>
             <p><strong>Hours:</strong> {location.hours}</p>
             <div className="keller-profile-links">
-              <a href={location.mapUrl} target="_blank" rel="noopener noreferrer">View on Google Maps ↗</a>
               <a className="button secondary" href={location.reviewUrl} target="_blank" rel="noopener noreferrer">Review us on Google</a>
               {location.socialProfiles.map(({name, url}) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{name} ↗</a>)}
             </div>
           </section>
-          <iframe className="keller-map" title="Mobile Shower Trailer Rental Google Business Profile map in Keller, TX" src={location.embedUrl} width="600" height="450" loading="lazy" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
         </div>
       </div>
     </section>

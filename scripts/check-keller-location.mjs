@@ -16,13 +16,14 @@ assert.equal($("title").text(), "Shower Trailer Rental in Keller, TX | Mobile Sh
 assert.equal($("meta[name=description]").attr("content"), "Shower trailers delivered from Keller, TX to job sites across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598.");
 assert.equal($("[data-h1-intro]").text(), "Mobile Shower Trailer Rental delivers shower trailers from our Keller, TX yard to construction sites, events, renovations and emergency response operations across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598 for sizing and delivery times.");
 assert.equal($("link[rel=canonical]").attr("href"), `https://temporary-shower-rental.com${path}`);
-assert.ok($("address").text().includes("1710 Keller Pkwy #4114, Keller, TX 76248"));
+assert.doesNotMatch(html, /1710 Keller Pkwy|Keller, TX 76248/);
+assert.equal($(".keller-business address").length, 0);
+assert.equal($(".keller-map").length, 0);
 const phones = $("a[href^='tel:']").not(".site-footer a").map((_, el) => $(el).attr("href")).get();
 assert.ok(phones.length >= 7);
 assert.deepEqual([...new Set(phones)], ["tel:+19725446598"]);
 assert.doesNotMatch($("main").text(), /888.{0,8}385|866.{0,8}455|\[TO FILL\]|\[delivery time\]|\[lead time\]/);
-assert.equal($(".site-footer nav[aria-label='Get in touch'] a[href='tel:+18664557214']").text(), "1-866-455-7214");
-assert.ok($("iframe").attr("src").includes("0x864dd770afc0e903%3A0x4e58a264201f8b55"));
+assert.equal($(".site-footer nav[aria-label='Get in touch'] a[href='tel:+18664557214']").text(), "(866) 455-7214");
 assert.equal($("a[href='https://g.page/r/CVWLHyBkolhOECE/review']").length, 1);
 assert.equal($(".keller-actions a[href='/contact-us/?location=Keller%2C%20TX']").length, 2);
 const graph = JSON.parse($("script[type='application/ld+json']").text())["@graph"];
@@ -33,9 +34,9 @@ assert.deepEqual(
 const business = graph.find(node => node["@type"] === "LocalBusiness");
 assert.equal(business.name, "Mobile Shower Trailer Rental");
 assert.equal(business.telephone, "+19725446598");
-assert.equal(business.address.streetAddress, "1710 Keller Pkwy #4114");
+assert.equal(business.address, undefined);
 assert.equal(business.openingHours, "Mo-Su 00:00-24:00");
-assert.equal(business.hasMap, "https://maps.google.com/?cid=5645440683828284245");
+assert.equal(business.hasMap, undefined);
 assert.equal(business.url, `https://temporary-shower-rental.com${path}`);
 assert.equal(business.email, undefined);
 assert.deepEqual(business.sameAs, [
@@ -132,22 +133,27 @@ const home = load(await readFile("dist/index.html", "utf8"));
 assert.ok(home("a[href='tel:+18664557214']").length > 0);
 assert.equal(home("a[href='tel:+19725446598']").length, 0);
 const addressText = (element) => element.html().replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-assert.equal(addressText(home(".site-footer .footer-contact-address")), "11012 Kadota Ave Unit 9 Pomona, CA 91766");
+const footerContact = "Commercial Emergency Shower Rental International · 11012 Kadota Ave unit 9, Pomona, CA 91766 · (866) 455-7214";
+assert.equal(addressText(home(".site-footer .footer-contact-address")), footerContact);
+assert.equal(addressText($(".site-footer .footer-contact-address")), footerContact);
 const homeGraph = JSON.parse(home("script[type='application/ld+json']").text())["@graph"];
 const organization = homeGraph.find(node => node["@type"] === "Organization");
 assert.equal(organization.telephone, "+18664557214");
 assert.deepEqual(organization.address, {
   "@type": "PostalAddress",
-  streetAddress: "11012 Kadota Ave Unit 9",
+  streetAddress: "11012 Kadota Ave unit 9",
   addressLocality: "Pomona",
   addressRegion: "CA",
   postalCode: "91766",
   addressCountry: "US",
 });
 const contact = load(await readFile("dist/contact-us/index.html", "utf8"));
-assert.equal(addressText(contact("main .contact-address")), "Business address 11012 Kadota Ave Unit 9 Pomona, CA 91766");
+assert.equal(addressText(contact(".site-footer .footer-contact-address")), footerContact);
+assert.equal(addressText(contact("main .contact-address")), "Commercial Emergency Shower Rental International 11012 Kadota Ave unit 9 Pomona, CA 91766");
+assert.equal(contact("title").text(), "Contact Us | Commercial Emergency Shower Rental International");
+assert.doesNotMatch(contact("main").text(), /Mobile Shower Trailer Rental 123|Temporary Shower Rental 123/);
 assert.ok(contact("main a[href='tel:+18664557214']").length > 0);
-assert.match(contact("meta[name=description]").attr("content"), /1-866-455-7214.*11012 Kadota Ave Unit 9, Pomona, CA 91766/);
+assert.match(contact("meta[name=description]").attr("content"), /1-866-455-7214.*11012 Kadota Ave unit 9, Pomona, CA 91766/);
 for (const [url, name] of [
   ["https://www.facebook.com/mobileshowertrailerrental", "Facebook"],
   ["https://www.youtube.com/@temporaryshowerrental123", "YouTube"],

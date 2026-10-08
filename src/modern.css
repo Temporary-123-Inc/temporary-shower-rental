@@ -224,6 +224,14 @@ p {
   font-style: normal;
   line-height: 1.5;
 }
+.site-footer .footer-contact-address a {
+  display: inline;
+  min-height: 0;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .site-footer .footer a:hover {
   color: #76d6df;
 }

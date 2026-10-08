@@ -1,10 +1,12 @@
 {
   "brand": "Temporary Shower Rental 123",
+  "contactBusinessName": "Commercial Emergency Shower Rental International",
   "origin": "https://temporary-shower-rental.com",
   "phoneDisplay": "1-866-455-7214",
+  "contactPhoneDisplay": "(866) 455-7214",
   "phoneE164": "+18664557214",
   "address": {
-    "streetAddress": "11012 Kadota Ave Unit 9",
+    "streetAddress": "11012 Kadota Ave unit 9",
     "addressLocality": "Pomona",
     "addressRegion": "CA",
     "postalCode": "91766"

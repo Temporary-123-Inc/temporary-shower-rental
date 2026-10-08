@@ -391,7 +391,10 @@ function ContactDrawer({ path = "" }: { path?: string }) {
     >
       <div className="contact-drawer-shell">
         <div className="contact-drawer-call">
-          <span>{site.brand} project desk</span>
+          <span>
+            {path === "/contact-us/" ? site.contactBusinessName : site.brand}{" "}
+            project desk
+          </span>
           <button
             type="button"
             data-close-contact
@@ -486,10 +489,11 @@ export function Footer({ showClosing = true, path = "" }: { showClosing?: boolea
           </nav>
           <nav className="footer-nav" aria-label="Get in touch">
             <strong>Get in touch</strong>
-            <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a>
             <address className="footer-contact-address">
-              {site.address.streetAddress}<br />
-              {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}
+              {site.contactBusinessName}{" · "}
+              {site.address.streetAddress}, {site.address.addressLocality},{" "}
+              {site.address.addressRegion} {site.address.postalCode}{" · "}
+              <a href={"tel:" + site.phoneE164}>{site.contactPhoneDisplay}</a>
             </address>
             <a href="/contact-us/">Contact Us</a>
             <a href="/planning/">Project Planning</a>
@@ -547,7 +551,7 @@ export function Site({
               </a>
               <p>Specialist support available 24/7.</p>
               <address className="contact-address">
-                <strong>Business address</strong><br />
+                <strong>{site.contactBusinessName}</strong><br />
                 {site.address.streetAddress}<br />
                 {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}
               </address>

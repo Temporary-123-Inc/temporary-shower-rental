@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-09 — Use the Pomona contact identity and hide Keller's street address
+
+The owner's latest instruction supersedes the earlier choice to publish Keller's separate street address. Keep the Keller page and local phone, but remove the street address from visible content and `LocalBusiness` structured data. Remove the address-linked map and map link so the page does not surface that address visually. The shared footer uses the exact owner-supplied Commercial Emergency Shower Rental International name, Pomona address and 866 phone format on all pages that render the shared footer. Contact Us uses that business name in page-specific copy. Preserve the existing logo, URLs and unrelated site identity fields.
+
 ## 2026-10-08 — Omit the number from editorial copy
 
 The owner asked to remove `123` from eyebrow labels and descriptions. Use “Temporary Shower Rental” in customer-facing prose and generated meta/social descriptions, including migrated source-page text, while preserving the original source archives. Keep the existing logo artwork and asset path, URLs, factual counts, contact information and business identity in structural fields. A rendered audit checks all 755 pages for the unwanted suffix in eyebrow/kicker text, meta descriptions and customer-facing paragraphs; it excludes the owner-facing SEO dashboard's historical URLs and evidence.
