@@ -1,10 +1,12 @@
 """Generate the shower-only 1200 x 630 social preview."""
 
 from pathlib import Path
+import json
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public" / "shower-social-card.png"
+SITE = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
 FONT = Path("C:/Windows/Fonts/arial.ttf")
 BOLD = Path("C:/Windows/Fonts/arialbd.ttf")
 
@@ -22,6 +24,6 @@ draw.text((72, 149), "Commercial shower", font=ImageFont.truetype(BOLD, 70), fil
 draw.text((72, 236), "trailer rentals", font=ImageFont.truetype(BOLD, 70), fill="white")
 draw.text((72, 366), "Nationwide shower service areas", font=ImageFont.truetype(FONT, 34), fill="#d5f0f5")
 draw.line((72, 475, 774, 475), fill="#47717d", width=3)
-draw.text((72, 515), "1-866-455-7214", font=ImageFont.truetype(BOLD, 36), fill="#f5c451")
+draw.text((72, 515), SITE["phoneDisplay"], font=ImageFont.truetype(BOLD, 36), fill="#f5c451")
 image.save(OUT, optimize=True)
 print(OUT)

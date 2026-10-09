@@ -25,7 +25,9 @@ const phones = $("a[href^='tel:']").not(".site-footer a").map((_, el) => $(el).a
 assert.ok(phones.length >= 7);
 assert.deepEqual([...new Set(phones)], ["tel:+19725446598"]);
 assert.doesNotMatch($("main").text(), /888.{0,8}385|866.{0,8}455|\[TO FILL\]|\[delivery time\]|\[lead time\]/);
-assert.equal($(".site-footer nav[aria-label='Get in touch'] > a[href='tel:+18664557214']").text(), "1-866-455-7214");
+assert.equal($(".site-footer .footer-contact-name").length, 0);
+assert.equal($(".site-footer .footer-contact-address").length, 0);
+assert.equal($(".site-footer a[href^='tel:']").length, 0);
 assert.equal($("a[href='https://g.page/r/CVWLHyBkolhOECE/review']").length, 1);
 assert.equal($(".keller-actions a[href='/contact-us/?location=Keller%2C%20TX']").length, 2);
 const graph = JSON.parse($("script[type='application/ld+json']").text())["@graph"];
@@ -132,23 +134,17 @@ const product = load(await readFile("dist/services/shower-trailers/22ft-10-stall
 assert.equal(product("h1").text(), "22 ft 10-Stall Shower Trailer Rental");
 assert.ok(product("body").text().includes("These images do not depict a 22 ft ten-stall trailer"));
 const home = load(await readFile("dist/index.html", "utf8"));
-assert.ok(home("a[href='tel:+18664557214']").length > 0);
+assert.ok(home("a[href='tel:+18883855513']").length > 0);
 assert.equal(home("a[href='tel:+19725446598']").length, 0);
-const addressText = (element) => element.html().replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-const footerContact = "11012 Kadota Ave Unit 9 Pomona, CA 91766";
-assert.equal(addressText(home(".site-footer .footer-contact-address")), footerContact);
-assert.equal(addressText($(".site-footer .footer-contact-address")), footerContact);
+const footerName = "Commercial Emergency Shower Rental International";
+assert.equal(home(".site-footer .footer-contact-name").text().trim(), footerName);
+assert.equal(home(".site-footer .footer-contact-address").length, 0);
+assert.equal(home(".site-footer a[href^='tel:']").length, 0);
 const homeGraph = JSON.parse(home("script[type='application/ld+json']").text())["@graph"];
 const organization = homeGraph.find(node => node["@type"] === "Organization");
-assert.equal(organization.telephone, "+18664557214");
-assert.deepEqual(organization.address, {
-  "@type": "PostalAddress",
-  streetAddress: "11012 Kadota Ave Unit 9",
-  addressLocality: "Pomona",
-  addressRegion: "CA",
-  postalCode: "91766",
-  addressCountry: "US",
-});
+assert.equal(organization.telephone, "+18883855513");
+assert.equal(organization.contactPoint.telephone, "+18883855513");
+assert.equal(organization.address, undefined);
 const contact = load(await readFile("dist/contact-us/index.html", "utf8"));
 for (const view of [home, contact, $]) {
   const drawer = view("#contact-drawer").text().replace(/\s+/g, " ").trim();
@@ -156,12 +152,15 @@ for (const view of [home, contact, $]) {
   assert.match(drawer, /I agree that my details may be used to respond to my inquiry\./);
   assert.doesNotMatch(drawer, /(?:Mobile|Temporary) Shower (?:Trailer )?Rental 123/i);
 }
-assert.equal(addressText(contact(".site-footer .footer-contact-address")), footerContact);
-assert.equal(addressText(contact("main .contact-address")), "Commercial Emergency Shower Rental International 11012 Kadota Ave Unit 9 Pomona, CA 91766");
-assert.equal(contact("title").text(), "Contact Us | Commercial Emergency Shower Rental International");
+assert.equal(contact(".site-footer .footer-contact-name").text().trim(), footerName);
+assert.equal(contact("main .contact-address").length, 0);
+assert.equal(contact("title").text(), "Contact Our Team | Temporary Shower Rental 123");
 assert.doesNotMatch(contact("main").text(), /Mobile Shower Trailer Rental 123|Temporary Shower Rental 123/);
-assert.ok(contact("main a[href='tel:+18664557214']").length > 0);
-assert.match(contact("meta[name=description]").attr("content"), /1-866-455-7214.*11012 Kadota Ave Unit 9, Pomona, CA 91766/);
+assert.ok(contact("main a[href='tel:+18883855513']").length > 0);
+assert.match(contact("meta[name=description]").attr("content"), /\+1 \(888\) 385-5513/);
+for (const view of [home, contact, $]) assert.doesNotMatch(view.html(), /Pomona|11012 Kadota|866.{0,8}455/);
+const contactGraph = JSON.parse(contact("script[type='application/ld+json']").text())["@graph"];
+assert.equal(contactGraph.find(node => node["@type"] === "Organization")?.address, undefined);
 for (const [url, name] of [
   ["https://www.facebook.com/mobileshowertrailerrental", "Facebook"],
   ["https://www.youtube.com/@temporaryshowerrental123", "YouTube"],

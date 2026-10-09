@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-10 — Restore the pre-Pomona main phone and schema
+
+The owner clarified that the prior rollback kept the wrong version. Restore the earlier main phone `+1 (888) 385-5513` and remove the Pomona address from general content and Organization structured data. The earlier footer had no phone or address; add the exact name `Commercial Emergency Shower Rental International` there only on non-Keller pages. Keller retains its separate 972 phone and current local schema, map and page content. Keep the shared sticky contact drawer's neutral consent wording.
+
 ## 2026-10-09 — Restore the previous shared footer and general schema
 
 The owner requested the repository version from before the contact-line update for the shared footer, phone display and schema, while leaving the Keller page as deployed. Restore the earlier separate `1-866-455-7214` footer link and two-line Pomona address with `Unit 9` capitalization. The general Organization schema derives the same previous address from `site.json`. Keep the current Keller page, map, local 972 phone and Keller-specific LocalBusiness schema. Keep the neutral sticky drawer copy already released. The proposed Keller-area map experiment was not released.

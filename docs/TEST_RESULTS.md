@@ -1,5 +1,14 @@
 # Temporary123 Test Results
 
+## Main contact rollback and footer scope — 2026-10-10 (LOCAL VERIFIED; RELEASE PENDING)
+
+- Git reference: commit `3df39f3` before the Pomona contact update used `+1 (888) 385-5513`; its general Organization schema had no address and its footer had no phone/address block. Owner confirmed this version and requested `Commercial Emergency Shower Rental International` only as a general-page footer name.
+- Source changes restore that phone and schema shape, remove Pomona from Contact Us and its metadata, keep Keller's local 972 content, and update the shower social card.
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
+- `node scripts/check-keller-location.mjs`: PASS for the rendered homepage, Contact Us and Keller contact details and schema.
+- `node scripts/check-contact-rollback.mjs`: PASS across 756 HTML files; 754 general footers have the requested name, Keller's footer omits it, and 754 Organization schemas use the 888 number with no address. No generated HTML retained the old 866 number or Kadota address.
+- Focused Playwright test: PASS (1/1) after opening the homepage and Keller contact drawers in an isolated local preview. The shower social card was regenerated from `site.json` and visually checked with the 888 number. Production release verification is pending.
+
 ## Prior footer, phone format and general schema — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
 - Restored the exact pre-update shared footer structure: a separate `1-866-455-7214` link followed by `11012 Kadota Ave Unit 9` and `Pomona, CA 91766` on two lines. Restored the matching general Organization schema address value and removed the newer footer-only link styling.

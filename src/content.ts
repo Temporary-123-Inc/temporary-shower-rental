@@ -71,15 +71,13 @@ const descriptions: Record<string, string> = {
   "/404/":
     "The requested page could not be found. Browse the temporary facility rental inventory or return to the home page.",
   "/contact-us/":
-    `Call ${site.contactBusinessName} at ${site.phoneDisplay}, available 24/7. Find us at ${site.address.streetAddress}, ${site.address.addressLocality}, ${site.address.addressRegion} ${site.address.postalCode}. Discuss rental dates, access and utility requirements.`,
+    `Call Temporary Shower Rental 123 at ${site.phoneDisplay}, available 24/7. Discuss your location, occupancy, rental dates, access and utility requirements.`,
   "/privacy/":
     "Read how the Temporary Shower Rental 123 website handles visitor information and contact the team with questions about your information.",
 };
 export function pageInfo(path: string) {
   return {
-    title: path === "/contact-us/"
-      ? `Contact Us | ${site.contactBusinessName}`
-      : `${titles[path] || "Page not found"} | ${site.brand}`,
+    title: `${titles[path] || "Page not found"} | ${site.brand}`,
     description: removeBrandNumber(
       descriptions[path] ||
       `Find the right temporary shower or restroom facility for your project. Explore ${site.brand} equipment or call ${site.phoneDisplay} for help.`,

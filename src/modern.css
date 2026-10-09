@@ -217,11 +217,11 @@ p {
   min-height: 40px;
   color: #fff;
 }
-.site-footer .footer-contact-address {
+.site-footer .footer-contact-name {
+  display: block;
   margin-block: 0.35rem 0.6rem;
   color: #cfdee3;
   font-size: 0.82rem;
-  font-style: normal;
   line-height: 1.5;
 }
 .site-footer .footer a:hover {

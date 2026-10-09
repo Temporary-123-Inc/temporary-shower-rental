@@ -399,6 +399,21 @@ test("Contact Us sticky drawer keeps the consent text neutral after opening", as
   await expect(consent).not.toContainText(/(?:Mobile|Temporary) Shower (?:Trailer )?Rental 123/i);
 });
 
+test("main and Keller pages keep their separate contact numbers and footers", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto("/");
+  await expect(page.locator(".header-contact")).toHaveAttribute("href", "tel:+18883855513");
+  await expect(page.locator(".site-footer .footer-contact-name")).toHaveText("Commercial Emergency Shower Rental International");
+  await page.locator(".contact-rail").click();
+  await expect(page.locator(".contact-drawer-actions a[href='tel:+18883855513']")).toBeVisible();
+
+  await page.goto("/service-areas/texas/north-texas/keller/");
+  await expect(page.locator(".header-contact")).toHaveAttribute("href", "tel:+19725446598");
+  await expect(page.locator(".site-footer .footer-contact-name")).toHaveCount(0);
+  await page.locator(".contact-rail").click();
+  await expect(page.locator(".contact-drawer-actions a[href='tel:+19725446598']")).toBeVisible();
+});
+
 test("mobile Contact Us tab opens the drawer without navigating", async ({
   page,
 }) => {
