@@ -1,8 +1,12 @@
 # Temporary123 Decision Log
 
+## 2026-10-09 — Restore the previous shared footer and general schema
+
+The owner requested the repository version from before the contact-line update for the shared footer, phone display and schema, while leaving the Keller page as deployed. Restore the earlier separate `1-866-455-7214` footer link and two-line Pomona address with `Unit 9` capitalization. The general Organization schema derives the same previous address from `site.json`. Keep the current Keller page, map, local 972 phone and Keller-specific LocalBusiness schema. Keep the neutral sticky drawer copy already released. The proposed Keller-area map experiment was not released.
+
 ## 2026-10-09 — Keep the Keller map and remove the old drawer name
 
-The owner asked to restore the embedded Keller map after the street-address cleanup. Keep the existing Google map iframe and two-column panel, while omitting the Keller street address from page text and structured data. The shared sticky contact drawer no longer names “Temporary Shower Rental 123” in its header or consent sentence; use neutral project-desk wording on every route so the server-rendered form and hydrated form agree.
+The owner asked to restore the embedded Keller map after the street-address cleanup. The former business-profile embed showed the removed street address inside Google's own map card, so embed a Keller-area map instead and keep the two-column panel. Omit the Keller street address from page text and structured data. The shared sticky contact drawer no longer names “Temporary Shower Rental 123” in its header or consent sentence; use neutral project-desk wording on every route so the server-rendered form and hydrated form agree.
 
 ## 2026-10-09 — Use the Pomona contact identity and hide Keller's street address
 

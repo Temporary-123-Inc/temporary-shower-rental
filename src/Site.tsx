@@ -486,11 +486,10 @@ export function Footer({ showClosing = true, path = "" }: { showClosing?: boolea
           </nav>
           <nav className="footer-nav" aria-label="Get in touch">
             <strong>Get in touch</strong>
+            <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a>
             <address className="footer-contact-address">
-              {site.contactBusinessName}{" · "}
-              {site.address.streetAddress}, {site.address.addressLocality},{" "}
-              {site.address.addressRegion} {site.address.postalCode}{" · "}
-              <a href={"tel:" + site.phoneE164}>{site.contactPhoneDisplay}</a>
+              {site.address.streetAddress}<br />
+              {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}
             </address>
             <a href="/contact-us/">Contact Us</a>
             <a href="/planning/">Project Planning</a>

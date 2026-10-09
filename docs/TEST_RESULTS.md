@@ -1,11 +1,12 @@
 # Temporary123 Test Results
 
-## Sticky contact wording and Keller map — 2026-10-09 (LOCAL VERIFIED; RELEASE PENDING)
+## Prior footer, phone format and general schema — 2026-10-09 (LOCAL VERIFIED; RELEASE PENDING)
 
-- Replaced the shared sticky drawer's brand-bearing header with `Project desk` and its consent sentence with neutral wording. The server-rendered and hydrated `QuoteForm` now use the same wording regardless of route.
-- Restored the Keller page's existing Google Maps profile iframe and two-column layout; its visible address and `LocalBusiness.address`/`hasMap` remain absent. The existing `frame-src` policy permits the Google Maps embed.
-- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404. `scripts/check-keller-location.mjs`: PASS for the map iframe, omitted Keller street address and shared drawer wording on homepage, Contact Us and Keller.
-- `tests/browser/site.spec.ts` focused sticky drawer test: PASS against an isolated local preview after opening the drawer on Contact Us. An initial browser attempt reached another project's server on a shared port; the verified run used this project's unused port and passed 1/1.
+- Restored the exact pre-update shared footer structure: a separate `1-866-455-7214` link followed by `11012 Kadota Ave Unit 9` and `Pomona, CA 91766` on two lines. Restored the matching general Organization schema address value and removed the newer footer-only link styling.
+- Preserved the currently deployed Keller page, its local phone and LocalBusiness schema. The uncommitted generic area-map experiment was discarded; the deployed profile map remains. The neutral sticky contact drawer wording remains from the last deployment.
+- `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
+- `node scripts/check-keller-location.mjs`: PASS. Homepage, Contact Us and Keller render the prior footer phone and address; homepage Organization schema has the prior `Unit 9` address and 866 telephone; Keller retains its current 972 phone, iframe and address-free LocalBusiness schema.
+- Production release verification is pending.
 
 ## Footer, Contact Us and Keller address cleanup — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
