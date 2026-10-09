@@ -1,13 +1,15 @@
 # Temporary123 Test Results
 
-## Main contact rollback and footer scope — 2026-10-10 (LOCAL VERIFIED; RELEASE PENDING)
+## Main contact rollback and footer scope — 2026-10-10 (PRODUCTION LIVE VERIFIED)
 
 - Git reference: commit `3df39f3` before the Pomona contact update used `+1 (888) 385-5513`; its general Organization schema had no address and its footer had no phone/address block. Owner confirmed this version and requested `Commercial Emergency Shower Rental International` only as a general-page footer name.
 - Source changes restore that phone and schema shape, remove Pomona from Contact Us and its metadata, keep Keller's local 972 content, and update the shower social card.
 - `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
 - `node scripts/check-keller-location.mjs`: PASS for the rendered homepage, Contact Us and Keller contact details and schema.
 - `node scripts/check-contact-rollback.mjs`: PASS across 756 HTML files; 754 general footers have the requested name, Keller's footer omits it, and 754 Organization schemas use the 888 number with no address. No generated HTML retained the old 866 number or Kadota address.
-- Focused Playwright test: PASS (1/1) after opening the homepage and Keller contact drawers in an isolated local preview. The shower social card was regenerated from `site.json` and visually checked with the 888 number. Production release verification is pending.
+- Focused Playwright test: PASS (1/1) after opening the homepage and Keller contact drawers in an isolated local preview. The shower social card was regenerated from `site.json` and visually checked with the 888 number.
+- Source commit `e8c5ad6` was pushed to the official GitHub branch. Vercel built 755 pages plus 404 and staged a READY production deployment `dpl_Dhcs81fqbsX6eJmgpMDYpRwcHvHi`; protected homepage, Contact Us and Keller checks passed, including direct JSON-LD inspection of the 888 Organization phone and absent address. The deployment was promoted to `https://temporary-shower-rental.com`.
+- Public homepage, Contact Us and Keller checks: PASS for phone routing, general footer name scope, absence of the old Kadota/866 values, Keller's local 972 number and existing map, and the general Organization schema. `vercel inspect` resolves the canonical domain to the same READY deployment. The focused Playwright test passed again against the live domain (1/1) after opening both contact drawers.
 
 ## Prior footer, phone format and general schema — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
