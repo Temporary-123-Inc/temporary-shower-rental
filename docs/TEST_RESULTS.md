@@ -1,12 +1,13 @@
 # Temporary123 Test Results
 
-## Prior footer, phone format and general schema — 2026-10-09 (LOCAL VERIFIED; RELEASE PENDING)
+## Prior footer, phone format and general schema — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
 - Restored the exact pre-update shared footer structure: a separate `1-866-455-7214` link followed by `11012 Kadota Ave Unit 9` and `Pomona, CA 91766` on two lines. Restored the matching general Organization schema address value and removed the newer footer-only link styling.
 - Preserved the currently deployed Keller page, its local phone and LocalBusiness schema. The uncommitted generic area-map experiment was discarded; the deployed profile map remains. The neutral sticky contact drawer wording remains from the last deployment.
 - `npm run build`: PASS. TypeScript, Vite and production prerender generated 755 pages plus 404.
 - `node scripts/check-keller-location.mjs`: PASS. Homepage, Contact Us and Keller render the prior footer phone and address; homepage Organization schema has the prior `Unit 9` address and 866 telephone; Keller retains its current 972 phone, iframe and address-free LocalBusiness schema.
-- Production release verification is pending.
+- Source commit `ac9a473` was pushed to the official GitHub branch. The clean checkout deployed as READY Vercel production deployment `dpl_9sX2YAWyPyLKiicJSP7wzRXpBZqC` and was promoted to `https://temporary-shower-rental.com`.
+- Protected staged and public homepage checks: PASS for `1-866-455-7214`, `11012 Kadota Ave Unit 9`, matching Organization schema and absence of the newer combined contact line. Contact Us: PASS for the restored footer values and neutral drawer. Keller: PASS for its local 972 tel link, existing profile-map iframe and absence of its street address in rendered HTML. `vercel inspect` resolves the canonical domain to the same READY deployment.
 
 ## Footer, Contact Us and Keller address cleanup — 2026-10-09 (PRODUCTION LIVE VERIFIED)
 
