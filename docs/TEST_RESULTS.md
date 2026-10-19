@@ -1,5 +1,14 @@
 # Temporary123 Test Results
 
+## Keller plain-URL discovery and sitemap — 2026-10-20 (PRODUCTION LIVE VERIFIED)
+
+- `tsc --noEmit`: PASS. Vite build and production prerender: PASS, 755 pages plus 404.
+- Generated HTML: PASS, exact `https://temporary-shower-rental.com/service-areas/texas/north-texas/keller/` href on homepage (1), Service Areas (2), Texas (1), and North Texas (1). Keller canonical is the same URL and robots is `index,follow`. Generated sitemap has one matching `<loc>` and `<lastmod>2026-10-10</lastmod>`.
+- Internal-link audit: PASS, 755 pages, zero missing targets or capitalization issues.
+- Source commit `d40ec56` pushed to `Temporary-123-Inc/temporary-shower-rental` branch `codex/homepage-keller-copy`. Clean checkout deployed to Vercel production without assigning the public domain, yielding READY deployment `dpl_JAnxaewHC6Lpgszrva8zi5HhS38x`. Protected staged checks repeated all four links, Keller canonical/robots and sitemap values. The same deployment was promoted; public browser checks confirmed the new Texas, homepage, Service Areas and North Texas links, Keller canonical/robots, and the dated sitemap. `vercel inspect temporary-shower-rental.com` resolved to that READY deployment.
+- Live screenshots: `../audit/keller-indexing-2026-10-20/keller-texas-live-2026-10-20.jpg` and `../audit/keller-indexing-2026-10-20/keller-sitemap-live-2026-10-20.jpg`.
+- Search Console: no sitemap submission or indexing request was made. The user said another person handles indexing and directed us not to use their account.
+
 ## Main contact rollback and footer scope — 2026-10-10 (PRODUCTION LIVE VERIFIED)
 
 - Git reference: commit `3df39f3` before the Pomona contact update used `+1 (888) 385-5513`; its general Organization schema had no address and its footer had no phone/address block. Owner confirmed this version and requested `Commercial Emergency Shower Rental International` only as a general-page footer name.

@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-20 — Link Keller directly and date its sitemap entry
+
+Use the exact plain `https://temporary-shower-rental.com/service-areas/texas/north-texas/keller/` URL in direct links from the homepage, Service Areas hub, Texas guide and North Texas guide. Keep Keller's self-canonical and `index,follow` state. Record `2026-10-10` as Keller's sitemap last-modified date because the project log documents a Keller page change then; do not substitute the build date. Leave the controlled indexing policy for the broader parent guides unchanged. The user assigned Search Console submission and indexing to another person.
+
 ## 2026-10-10 — Restore the pre-Pomona main phone and schema
 
 The owner clarified that the prior rollback kept the wrong version. Restore the earlier main phone `+1 (888) 385-5513` and remove the Pomona address from general content and Organization structured data. The earlier footer had no phone or address; add the exact name `Commercial Emergency Shower Rental International` there only on non-Keller pages. Keller retains its separate 972 phone and current local schema, map and page content. Keep the shared sticky contact drawer's neutral consent wording.
