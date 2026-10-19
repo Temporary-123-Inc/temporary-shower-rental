@@ -4,6 +4,7 @@ import site from "../site.json" with { type: "json" };
 // The owner requested removal of the Keller street address from this site.
 export const kellerLocation = {
   path: "/service-areas/texas/north-texas/keller/",
+  lastModified: "2026-10-10",
   regionPath: "/service-areas/texas/north-texas/",
   name: "Mobile Shower Trailer Rental",
   phoneDisplay: "(972) 544-6598",
@@ -22,6 +23,8 @@ export const kellerLocation = {
   intro: "Mobile Shower Trailer Rental delivers shower trailers from our Keller, TX yard to construction sites, events, renovations and emergency response operations across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598 for sizing and delivery times.",
   cities: ["Keller", "Fort Worth", "Dallas", "Arlington", "Southlake", "Grapevine", "Denton", "Irving", "Plano", "Frisco"],
 } as const;
+
+export const kellerUrl = new URL(kellerLocation.path, site.origin).href;
 
 export function contactForPath(path: string) {
   return path.replace(/\/?$/, "/") === kellerLocation.path ? kellerLocation : site;

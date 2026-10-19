@@ -563,9 +563,11 @@ const registry = allRoutes.map((path) => ({
   path,
   indexable: release && releasedIndexableRoutes.includes(path),
   modified:
-    coreRoutes.includes(path) || modelDetails[path as keyof typeof modelDetails]
-      ? undefined
-      : pages.find((page) => page.path === path)?.modified,
+    path === kellerLocation.path
+      ? kellerLocation.lastModified
+      : coreRoutes.includes(path) || modelDetails[path as keyof typeof modelDetails]
+        ? undefined
+        : pages.find((page) => page.path === path)?.modified,
 }));
 await writeFile("dist/sitemap.xml", sitemapXml(registry, release));
 // Review artifact only. Never serve the future sitemap while domain routing is pending.

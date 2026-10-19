@@ -10,7 +10,7 @@ import {
 } from "./seasonalDemand";
 import { regionLocationLabel, regionRentalHeadline } from "./rentalHeadlines";
 import { capitalizeLinkLabel } from "./linkLabels";
-import { kellerLocation } from "./kellerLocation";
+import { kellerLocation, kellerUrl } from "./kellerLocation";
 import { LocationImageCarousel } from "./LocationImageCarousel";
 
 export const regionSlug = (value: string) =>
@@ -362,7 +362,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           </p>
         </div>
         <div className="region-city-link-grid">
-          {guide.path === kellerLocation.regionPath && <p><a href={kellerLocation.path}>Shower trailer rental in Keller, TX</a></p>}
+          {guide.path === kellerLocation.regionPath && <p><a href={kellerUrl}>Shower trailer rental in Keller, TX</a></p>}
           {guide.cityLinks.map((city) => (
             <p key={city.href}>
               <a href={city.href}>{city.label}</a>

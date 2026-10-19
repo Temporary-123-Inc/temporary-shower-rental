@@ -5,6 +5,7 @@ import { regionPages } from "./regionGuides";
 import { stateRentalHeadline } from "./rentalHeadlines";
 import { citiesForRegion } from "./cityDirectory";
 import { LocationImageCarousel } from "./LocationImageCarousel";
+import { kellerUrl } from "./kellerLocation";
 
 export const statePageByPath = Object.fromEntries(
   Object.keys(stateGuides).map((name) => [statePath(name), name]),
@@ -34,6 +35,7 @@ export function StateDetail({ name }: { name: string }) {
             <p className="eyebrow">STATE RENTAL GUIDE</p>
             <h1>{headline}</h1>
             <p className="region-intro" data-h1-intro>{guide.intro}</p>
+            {name === "Texas" && <p>For North Texas projects, see our <a href={kellerUrl}>Keller shower trailer rental guide</a>.</p>}
             <p className="region-emergency">24/7 live agent support</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call the rental team {site.phoneDisplay}

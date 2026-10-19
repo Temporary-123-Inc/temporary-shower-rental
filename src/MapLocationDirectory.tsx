@@ -2,7 +2,7 @@ import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPath } from "./regionGuides";
 import { cityPagesWithGuides } from "./cityDirectory";
-import { kellerLocation } from "./kellerLocation";
+import { kellerLocation, kellerUrl } from "./kellerLocation";
 
 export function MapLocationDirectory() {
   return (
@@ -37,7 +37,7 @@ export function MapLocationDirectory() {
                             <li>
                               <a
                                 data-directory-city
-                                href={kellerLocation.path}
+                                href={kellerUrl}
                               >
                                 Keller, Texas
                               </a>

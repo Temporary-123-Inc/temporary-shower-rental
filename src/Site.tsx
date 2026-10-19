@@ -7,7 +7,7 @@ import { rentalCategoryHeadline, rentalHubHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
 import { CityDetail } from "./CityDetail";
 import { KellerLocationPage } from "./KellerLocationPage";
-import { contactForPath, kellerLocation } from "./kellerLocation";
+import { contactForPath, kellerLocation, kellerUrl } from "./kellerLocation";
 import { cityPageByPath } from "./cityDirectory";
 import { CoverageMap } from "./CoverageMap";
 import { MapLocationDirectory } from "./MapLocationDirectory";
@@ -591,6 +591,7 @@ export function Site({
                   <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
                   <h1>USA Shower Trailer Rental Service Areas</h1>
                   <p data-h1-intro>Find temporary shower trailer and shower container rentals across all 50 states. Select your state or region to review shower options, then confirm availability, utilities and delivery access for the exact project address.</p>
+                  <p>Featured city guide: <a href={kellerUrl}>shower trailer rental in Keller, TX</a>.</p>
                   <div className="location-stats" aria-label="Coverage summary">
                     <div>
                       <strong>50</strong>
