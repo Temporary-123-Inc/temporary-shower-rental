@@ -1,5 +1,13 @@
 # Temporary123 Test Results
 
+## Keller address hold and map schema — 2026-10-20 (LOCAL PASS; RELEASE WAITING)
+
+- Live `https://temporary-shower-rental.com/sitemap.xml` still shows Keller once with `<lastmod>2026-10-10</lastmod>`. The local release candidate shows `2026-10-20` and needs verification when deployed.
+- TypeScript, Vite production build and prerender passed: 755 pages plus 404.
+- `node scripts/check-keller-location.mjs`: PASS for no site-authored Keller street address, no `LocalBusiness.address`, exact `hasMap` profile URL, existing map/review/phone/FAQ, canonical/internal links, and one local Keller sitemap entry dated `2026-10-20`.
+- `node scripts/check-contact-rollback.mjs`: PASS across 756 HTML files; 754 general Organization schemas still have no address and the Keller footer still omits the general business name.
+- No push, deployment, Google Profile edit, sitemap submission, or indexing request was made. Search Console work is queued for after the eventual deployment.
+
 ## Keller plain-URL discovery and sitemap — 2026-10-20 (PRODUCTION LIVE VERIFIED)
 
 - `tsc --noEmit`: PASS. Vite build and production prerender: PASS, 755 pages plus 404.

@@ -24,6 +24,7 @@ export function pageSchema(input: {
           "@type": "LocalBusiness", "@id": businessId,
           name: kellerLocation.name, url,
           telephone: kellerLocation.phoneE164,
+          hasMap: kellerLocation.mapUrl,
           openingHours: "Mo-Su 00:00-24:00",
           sameAs: kellerLocation.socialProfiles.map(({ url }) => url),
           areaServed: [

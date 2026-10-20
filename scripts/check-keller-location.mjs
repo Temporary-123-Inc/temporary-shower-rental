@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { load } from "cheerio";
 
 const path = "/service-areas/texas/north-texas/keller/";
+const canonicalUrl = `https://temporary-shower-rental.com${path}`;
 const html = await readFile(`dist${path}index.html`, "utf8");
 const $ = load(html);
 assert.equal($("h1").length, 1);
@@ -16,8 +17,8 @@ assert.equal($("title").text(), "Shower Trailer Rental in Keller, TX | Mobile Sh
 assert.equal($("meta[name=description]").attr("content"), "Shower trailers delivered from Keller, TX to job sites across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598.");
 assert.equal($("[data-h1-intro]").text(), "Mobile Shower Trailer Rental delivers shower trailers from our Keller, TX yard to construction sites, events, renovations and emergency response operations across Texas and nationwide. GPS-tracked delivery nationwide. Call (972) 544-6598 for sizing and delivery times.");
 assert.equal($("link[rel=canonical]").attr("href"), `https://temporary-shower-rental.com${path}`);
-assert.doesNotMatch(html, /1710 Keller Pkwy|Keller, TX 76248/);
 assert.equal($(".keller-business address").length, 0);
+assert.doesNotMatch($("main").text(), /1710 Keller Pkwy|Keller, TX 76248/);
 assert.equal($(".keller-map").length, 1);
 assert.match($(".keller-map").attr("src"), /^https:\/\/www\.google\.com\/maps\/embed\?pb=/);
 assert.match($(".keller-map").attr("src"), /0x864dd770afc0e903%3A0x4e58a264201f8b55/);
@@ -40,7 +41,7 @@ assert.equal(business.name, "Mobile Shower Trailer Rental");
 assert.equal(business.telephone, "+19725446598");
 assert.equal(business.address, undefined);
 assert.equal(business.openingHours, "Mo-Su 00:00-24:00");
-assert.equal(business.hasMap, undefined);
+assert.equal(business.hasMap, "https://maps.google.com/?cid=5645440683828284245");
 assert.equal(business.url, `https://temporary-shower-rental.com${path}`);
 assert.equal(business.email, undefined);
 assert.deepEqual(business.sameAs, [
@@ -59,19 +60,19 @@ const targets = [...new Set($("main a[href^='/']").map((_, el) => $(el).attr("hr
 for (const target of targets) await access(`dist${target}index.html`);
 assert.equal($(".keller-equipment a").length, 7);
 const parent = await readFile("dist/service-areas/texas/north-texas/index.html", "utf8");
-assert.ok(parent.includes(`href="${path}"`));
+assert.ok(parent.includes(`href="${canonicalUrl}"`));
 const directory = load(await readFile("dist/service-areas/index.html", "utf8"));
 const texas = directory(".map-location-grid > div").filter((_, el) => directory(el).find("summary").text() === "Regions and cities in Texas");
 assert.equal(
   texas
     .find("li")
     .filter((_, el) => directory(el).children("a").text() === "North Texas")
-    .find(`ul a[data-directory-city][href='${path}']`)
+    .find(`ul a[data-directory-city][href='${canonicalUrl}']`)
     .text(),
   "Keller, Texas",
 );
 assert.equal(
-  texas.find(`> ul > li > a[data-directory-city][href='${path}']`).length,
+  texas.find(`> ul > li > a[data-directory-city][href='${canonicalUrl}']`).length,
   0,
   "Keller should be nested under North Texas, not listed as a Texas-level sibling",
 );
@@ -170,8 +171,8 @@ for (const [url, name] of [
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
 assert.equal($("meta[name=robots]").attr("content"), "index,follow");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-const canonicalUrl = `https://temporary-shower-rental.com${path}`;
 assert.equal(sitemapUrls.filter((url) => url === canonicalUrl).length, 1);
+assert.match(sitemap, /<loc>https:\/\/temporary-shower-rental\.com\/service-areas\/texas\/north-texas\/keller\/<\/loc><lastmod>2026-10-20<\/lastmod>/);
 assert.equal(sitemapUrls.length, 26);
 assert.equal(new Set(sitemapUrls).size, 26);
 const robots = await readFile("dist/robots.txt", "utf8");

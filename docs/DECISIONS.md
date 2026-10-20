@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-20 — Hold Keller's street address and add the exact profile map URL
+
+The owner corrected the earlier local-only address restoration: do not publish Keller's street address in site-authored page text or LocalBusiness schema until the owner confirms that the profile displays it publicly. Set `LocalBusiness.hasMap` to `https://maps.google.com/?cid=5645440683828284245` and keep the existing profile embed and supplied review link. The local sitemap date remains `2026-10-20`; recheck it at deployment. Continue local work while the owner supplies other fixes. After a later deployment, resubmit the sitemap and request indexing for the exact Keller URL in Search Console. Do not edit the Google Profile.
+
 ## 2026-10-20 — Link Keller directly and date its sitemap entry
 
 Use the exact plain `https://temporary-shower-rental.com/service-areas/texas/north-texas/keller/` URL in direct links from the homepage, Service Areas hub, Texas guide and North Texas guide. Keep Keller's self-canonical and `index,follow` state. Record `2026-10-10` as Keller's sitemap last-modified date because the project log documents a Keller page change then; do not substitute the build date. Leave the controlled indexing policy for the broader parent guides unchanged. The user assigned Search Console submission and indexing to another person.
