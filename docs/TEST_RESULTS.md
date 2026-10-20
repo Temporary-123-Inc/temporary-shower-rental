@@ -1,11 +1,14 @@
 # Temporary123 Test Results
 
-## Keller release — 2026-10-21 Manila / 2026-10-20 UTC (LOCAL PASS; DEPLOYING)
+## Keller release — 2026-10-21 Manila / 2026-10-20 UTC (PRODUCTION LIVE VERIFIED)
 
 - TypeScript, Vite build and production prerender: PASS, 755 pages plus 404.
 - `scripts/check-keller-location.mjs`: PASS for Keller's exact profile `hasMap`, absent site-authored street address and `LocalBusiness.address`, existing phone/review/map/FAQs, canonical and plain links, and one sitemap entry dated `2026-10-20`.
 - `scripts/check-contact-rollback.mjs`: PASS across 756 HTML files; 754 general Organization schemas have no address and the Keller footer omits the general business name.
 - The sitemap date is October 20 UTC, when the October 21 Manila release began. The generator excludes future UTC dates.
+- Commit `f5c9177` was pushed to `Temporary-123-Inc/temporary-shower-rental` branch `codex/homepage-keller-copy`. Its clean source archive built 755 pages plus 404 on Vercel as READY production deployment `dpl_EgjCiHZ2FnBzTtiwujf2wRjjwY4P`. Authenticated staged Keller HTML and sitemap returned HTTP 200 and passed exact `hasMap`, absent address, review link and lastmod checks. The same deployment was promoted; Vercel inspection resolved `temporary-shower-rental.com` to its ID.
+- Public Keller HTML and sitemap returned HTTP 200 and passed the same map/address/review/lastmod checks. The Google Profile was not edited.
+- Search Console opened under the signed-in Google account but explicitly reported no access to the `temporary-shower-rental.com` property. The sitemap was not resubmitted, and the Keller indexing request was not made; both await property access.
 
 ## Keller address hold and map schema — 2026-10-20 (LOCAL PASS; RELEASE WAITING)
 
