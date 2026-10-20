@@ -1,5 +1,12 @@
 # Temporary123 Test Results
 
+## Keller release — 2026-10-21 Manila / 2026-10-20 UTC (LOCAL PASS; DEPLOYING)
+
+- TypeScript, Vite build and production prerender: PASS, 755 pages plus 404.
+- `scripts/check-keller-location.mjs`: PASS for Keller's exact profile `hasMap`, absent site-authored street address and `LocalBusiness.address`, existing phone/review/map/FAQs, canonical and plain links, and one sitemap entry dated `2026-10-20`.
+- `scripts/check-contact-rollback.mjs`: PASS across 756 HTML files; 754 general Organization schemas have no address and the Keller footer omits the general business name.
+- The sitemap date is October 20 UTC, when the October 21 Manila release began. The generator excludes future UTC dates.
+
 ## Keller address hold and map schema — 2026-10-20 (LOCAL PASS; RELEASE WAITING)
 
 - Live `https://temporary-shower-rental.com/sitemap.xml` still shows Keller once with `<lastmod>2026-10-10</lastmod>`. The local release candidate shows `2026-10-20` and needs verification when deployed.

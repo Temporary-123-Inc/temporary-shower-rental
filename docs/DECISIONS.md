@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-21 — Release Keller with its current UTC sitemap date
+
+The owner authorized the Vercel deployment of the pending Keller changes. Use `2026-10-20` as Keller's sitemap last-modified date because October 21 in Manila is still October 20 UTC at release time, and the sitemap policy rejects future UTC dates. Continue to omit the unconfirmed Keller street address from site-authored content and LocalBusiness schema. Keep the exact profile `hasMap`, existing review link and map embed. Release only committed source, leaving unrelated working files out. Verify the public page and sitemap before Search Console submission and the Keller indexing request.
+
 ## 2026-10-20 — Hold Keller's street address and add the exact profile map URL
 
 The owner corrected the earlier local-only address restoration: do not publish Keller's street address in site-authored page text or LocalBusiness schema until the owner confirms that the profile displays it publicly. Set `LocalBusiness.hasMap` to `https://maps.google.com/?cid=5645440683828284245` and keep the existing profile embed and supplied review link. The local sitemap date remains `2026-10-20`; recheck it at deployment. Continue local work while the owner supplies other fixes. After a later deployment, resubmit the sitemap and request indexing for the exact Keller URL in Search Console. Do not edit the Google Profile.
