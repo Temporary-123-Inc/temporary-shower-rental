@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-21 — Use the newly supplied Keller review link
+
+The owner supplied `https://g.page/r/CVWLHyBkolhOEBM/review`. It resolves to the same Google Place ID as Keller's previous review link, so use it for Keller's visible review button. The owner then authorized immediate production deployment; update Keller's sitemap lastmod to the current UTC date `2026-10-21`, stage a clean production build, verify its page and sitemap, then promote that same build. Preserve the public-address hold and all other Keller profile details. Other location pages require their exact page and Profile links.
+
 ## 2026-10-21 — Release Keller with its current UTC sitemap date
 
 The owner authorized the Vercel deployment of the pending Keller changes. Use `2026-10-20` as Keller's sitemap last-modified date because October 21 in Manila is still October 20 UTC at release time, and the sitemap policy rejects future UTC dates. Continue to omit the unconfirmed Keller street address from site-authored content and LocalBusiness schema. Keep the exact profile `hasMap`, existing review link and map embed. Release only committed source, leaving unrelated working files out. Verify the public page and sitemap before Search Console submission and the Keller indexing request.

@@ -1,5 +1,15 @@
 # Temporary123 Test Results
 
+## Keller owner-supplied review URL — 2026-10-21 (PRODUCTION LIVE VERIFIED)
+
+- The supplied `https://g.page/r/CVWLHyBkolhOEBM/review` and prior Keller review URL each redirected to a Google review page for Place ID `ChIJA-nAr3DXTYYRVYsfIGSiWE4` (HTTP 200 after redirects).
+- `npm run build`: PASS; TypeScript, Vite and 755-page-plus-404 production prerender completed.
+- `node scripts/check-keller-location.mjs`: PASS; rendered Keller page has the new review URL, existing map/schema/FAQ/internal links and the address hold.
+- Updated Keller's sitemap lastmod to `2026-10-21`; focused check passed with one Keller entry among 26 sitemap URLs.
+- Scoped runtime commit `134942c` pushed to `Temporary-123-Inc/temporary-shower-rental` branch `codex/homepage-keller-copy`. A clean archive of that commit, linked to project `prj_VPfhozMs436klsTIyCMURta8jOUT`, built as READY production deployment `dpl_53WdH9kHYBhTK7Dinx7UyxisqUnp` and was promoted to the custom domain.
+- Staged and public Keller HTML and sitemap each returned HTTP 200. The public files matched staged files by SHA-256; both had the new review link, exact profile `hasMap`, no site-authored Keller street address, 26 sitemap URLs and Keller `<lastmod>2026-10-21</lastmod>`. Vercel inspection resolved the custom domain to the same READY deployment ID.
+- No Google Profile edit, Search Console submission or indexing request. The signed-in Search Console account remains denied access to the property.
+
 ## Keller release — 2026-10-21 Manila / 2026-10-20 UTC (PRODUCTION LIVE VERIFIED)
 
 - TypeScript, Vite build and production prerender: PASS, 755 pages plus 404.
