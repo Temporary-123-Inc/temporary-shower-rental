@@ -18,6 +18,7 @@ import { releaseErrors } from "./release";
 import {
   authorityReleaseRoutes,
   canonicalFor,
+  modificationDate,
   productionBuild,
   routeInIndexingScope,
   routesForIndexingBatch,
@@ -116,6 +117,9 @@ const allRoutes = [
   ]),
 ].filter((path) => !redirectedRoutes.has(path));
 const editorialNoindex = new Set([
+  "/blog/",
+  "/about-temporary-shower-rental/",
+  "/seo-dashboard/",
   "/26ft-military-bulk-kitchen/",
   "/4000-correctional-facilities-series/",
   "/government/hospitals/",
@@ -152,11 +156,14 @@ const scopedIndexingRoutes = orderedIndexingRoutes.filter(
     !editorialNoindex.has(path) &&
     routeInIndexingScope(path, indexingScope),
 );
-const indexableRoutes = routesForIndexingBatch(
-  scopedIndexingRoutes,
-  site.activeIndexingBatch,
-  site.indexingBatchSize,
-);
+const indexableRoutes =
+  indexingScope === "published-public"
+    ? scopedIndexingRoutes
+    : routesForIndexingBatch(
+        scopedIndexingRoutes,
+        site.activeIndexingBatch,
+        site.indexingBatchSize,
+      );
 const priorityIndexingRoutes = site.priorityIndexingRoutes || [];
 for (const path of priorityIndexingRoutes) {
   if (
@@ -559,16 +566,35 @@ await writeFile(
     : "User-agent: *\nAllow: /\nDisallow: /api/\n# Revision HTML carries noindex while the primary domain remains elsewhere.\n",
 );
 const restoredAssets = await preserveMedia(media);
+// The 2026-10-10 contact and structured-data release changed every general
+// page. Earlier source dates cannot be the last modification of those pages.
+const documentedContentUpdate = "2026-10-10";
+const kitchenRelatedLinkRoutes = serviceCategories
+  .find((category) => category.name === "Mobile Kitchens")!
+  .links.map((link) => link.href)
+  .filter((path) => Boolean(modelDetails[path as keyof typeof modelDetails]));
+const laterRouteUpdates: Record<string, string> = {
+  "/": "2026-10-20",
+  "/service-areas/": "2026-10-20",
+  "/service-areas/texas/": "2026-10-20",
+  "/service-areas/texas/north-texas/": "2026-10-20",
+  "/inventory/mobile-kitchen-models/": "2026-10-21",
+  ...Object.fromEntries(kitchenRelatedLinkRoutes.map((path) => [path, "2026-10-21"])),
+  [kellerLocation.path]: kellerLocation.lastModified,
+};
 const registry = allRoutes.map((path) => ({
   path,
   indexable: release && releasedIndexableRoutes.includes(path),
-  modified:
-    path === kellerLocation.path
-      ? kellerLocation.lastModified
-      : coreRoutes.includes(path) || modelDetails[path as keyof typeof modelDetails]
-        ? undefined
-        : pages.find((page) => page.path === path)?.modified,
+  modified: [
+    documentedContentUpdate,
+    modificationDate(pages.find((page) => page.path === path)?.modified),
+    laterRouteUpdates[path],
+  ].filter((date): date is string => Boolean(date)).sort().at(-1),
 }));
+const effectiveBatchSize =
+  indexingScope === "published-public"
+    ? scopedIndexingRoutes.length
+    : site.indexingBatchSize;
 await writeFile("dist/sitemap.xml", sitemapXml(registry, release));
 // Review artifact only. Never serve the future sitemap while domain routing is pending.
 await writeFile(
@@ -588,7 +614,7 @@ await writeFile(
       generatedAt: new Date().toISOString(),
       mode: release ? "production" : "preview",
       indexingScope,
-      indexingBatchSize: site.indexingBatchSize,
+      indexingBatchSize: effectiveBatchSize,
       activeIndexingBatch: site.activeIndexingBatch,
       eligibleIndexingRoutes: scopedIndexingRoutes.length,
       activeIndexingRoutes: release ? releasedIndexableRoutes.length : 0,
@@ -601,9 +627,9 @@ await writeFile(
     2,
   ) + "\n",
 );
-const rolloutStart = new Date(`${site.indexingStartDate}T00:00:00Z`);
+const rolloutStart = new Date(`${indexingScope === "published-public" ? new Date().toISOString().slice(0, 10) : site.indexingStartDate}T00:00:00Z`);
 const rolloutBatches = Array.from(
-  { length: Math.ceil(scopedIndexingRoutes.length / site.indexingBatchSize) },
+  { length: Math.ceil(scopedIndexingRoutes.length / effectiveBatchSize) },
   (_, index) => {
     const date = new Date(rolloutStart);
     date.setUTCDate(date.getUTCDate() + index);
@@ -612,8 +638,8 @@ const rolloutBatches = Array.from(
       plannedDate: date.toISOString().slice(0, 10),
       active: index + 1 <= site.activeIndexingBatch,
       routes: scopedIndexingRoutes.slice(
-        index * site.indexingBatchSize,
-        (index + 1) * site.indexingBatchSize,
+        index * effectiveBatchSize,
+        (index + 1) * effectiveBatchSize,
       ),
     };
   },
@@ -625,7 +651,7 @@ await writeFile(
       generatedAt: new Date().toISOString(),
       origin: site.origin,
       indexingScope,
-      batchSize: site.indexingBatchSize,
+      batchSize: effectiveBatchSize,
       activeBatch: site.activeIndexingBatch,
       totalRoutes: scopedIndexingRoutes.length,
       totalBatches: rolloutBatches.length,

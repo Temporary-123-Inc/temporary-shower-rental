@@ -57,6 +57,15 @@ export const serviceCategories: ServiceCategory[] = [
         href: "/services/mobile-kitchen-trailers/28ft/",
       },
       {
+        name: "38ft Mobile Kitchen Trailer",
+        href: "/services/mobile-kitchen-trailers/38ft/",
+      },
+      {
+        name: "Existing Mobile Kitchen Layouts",
+        href: "/existing-mobile-kitchen-layouts/",
+        description: "Review kitchen layouts, workflow, utilities and delivery access before choosing a rental.",
+      },
+      {
         name: "26ft Mobile Kitchen Trailer",
         href: "/services/mobile-kitchen-trailers/26ft-bulk/",
       },

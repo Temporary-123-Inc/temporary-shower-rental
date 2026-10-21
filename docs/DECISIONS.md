@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-10-22 — Publish all eligible rendered pages in the sitemap
+
+The owner chose only indexable public pages. Release the 501 currently rendered public routes that pass the canonical, robots, internal-link and content checks. Keep 254 intentionally excluded routes noindex: 246 regional city directories, five thin source pages, the empty blog, private dashboard and `/about-temporary-shower-rental/`, which renders the same body as `/about-us/`. Point the About Us navigation to `/about-us/`; link the existing kitchen-layout and 38 ft model pages from the Mobile Kitchens category. Keep the full-migration gate for unrecovered legacy content. Use the documented 2026-10-10 sitewide contact/schema update as the conservative lastmod baseline, with later recorded route dates where appropriate. Do not submit the sitemap to Search Console before the owner's review.
+
 ## 2026-10-21 — Use the newly supplied Keller review link
 
 The owner supplied `https://g.page/r/CVWLHyBkolhOEBM/review`. It resolves to the same Google Place ID as Keller's previous review link, so use it for Keller's visible review button. The owner then authorized immediate production deployment; update Keller's sitemap lastmod to the current UTC date `2026-10-21`, stage a clean production build, verify its page and sitemap, then promote that same build. Preserve the public-address hold and all other Keller profile details. Other location pages require their exact page and Profile links.

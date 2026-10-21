@@ -4,8 +4,11 @@ import { publicOrigin } from "./seo-policy";
 export function releaseErrors() {
   const errors: string[] = [];
   const scopedIndexing = site.indexingScope !== "full";
+  const batchedIndexing =
+    site.indexingScope === "homepage-and-service-areas" ||
+    site.indexingScope === "locations-and-priority-services";
   if (
-    scopedIndexing &&
+    batchedIndexing &&
     (site.indexingBatchSize !== 25 ||
       !Number.isInteger(site.activeIndexingBatch) ||
       site.activeIndexingBatch < 1)

@@ -97,7 +97,7 @@ for (const file of htmlFiles) {
         issue: "regional-city-link-count",
         value: cityLinks.length,
       });
-    if (serviceLinks.length !== 4)
+    if (serviceLinks.length !== 3)
       problems.push({
         file,
         issue: "regional-service-link-count",
@@ -118,7 +118,7 @@ for (const file of htmlFiles) {
         issue: "regional-parent-link-count",
         value: parentLinks.length,
       });
-    if (contextualLinks < 12 || contextualLinks > 16)
+    if (contextualLinks < 11 || contextualLinks > 15)
       problems.push({
         file,
         issue: "regional-contextual-link-count",
@@ -252,6 +252,16 @@ const sitemapText = await readFile(resolve(root, "sitemap.xml"), "utf8");
 const sitemapUrls = [...sitemapText.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
   (match) => match[1].replaceAll("&amp;", "&"),
 );
+const sitemapDates = [...sitemapText.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(
+  (match) => match[1],
+);
+if (
+  registry.mode === "production" &&
+  (sitemapDates.length !== sitemapUrls.length ||
+    sitemapDates.some((date) =>
+      !/^\d{4}-\d{2}-\d{2}$/.test(date) || date > new Date().toISOString().slice(0, 10),
+    ))
+) problems.push({ issue: "sitemap-lastmod", urls: sitemapUrls.length, dates: sitemapDates.length });
 const expectedSitemapUrls = registry.pages
   .filter((page) => registry.mode === "production" && page.indexable)
   .map((page) => new URL(page.path, site.origin).href);

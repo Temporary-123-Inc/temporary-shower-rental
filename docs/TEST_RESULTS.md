@@ -1,5 +1,16 @@
 # Temporary123 Test Results
 
+## Public sitemap correction — 2026-10-22 (LOCAL PASS; PRODUCTION PENDING)
+
+- `npm run build`: PASS; TypeScript, Vite and prerender produced 755 pages plus 404.
+- `npm run check:seo`: PASS; 756 rendered HTML documents, 102,853 internal links, 9,725 local image references, zero problems and zero pending migration links. All 501 sitemap URLs are indexable and self-canonical; the other 254 rendered routes remain noindex.
+- The XML has 501 unique `<loc>` entries and 501 `<lastmod>` entries: 488 dated `2026-10-10`, four dated `2026-10-20`, and nine dated `2026-10-21`. The October 10 baseline is the documented sitewide contact and structured-data change, not the build date. Keller remains dated October 21.
+- The sitemap includes `/service-areas/`, all state and eligible region pages, `/service-areas/texas/`, `/service-areas/texas/north-texas/`, `/about-us/` and `/contact-us/`. It excludes 246 city directories, five thin pages, the empty blog, private dashboard and duplicate About alias.
+- `node scripts/check-keller-location.mjs`: PASS; Keller occurs once, its lastmod is unchanged, and the required parent and company pages occur in the sitemap.
+- `npm run check:release`, final `npm run typecheck`, and `git diff --check`: PASS.
+- `npm test`: 61/62 passed in the concurrent run; the military-seal alt-text test exceeded its five-second limit under parallel typechecking and passed on an isolated rerun with a 15-second limit. Effective result: all 62 passed.
+- No Search Console submission or indexing request was made; the owner asked to review the sitemap first.
+
 ## Keller owner-supplied review URL — 2026-10-21 (PRODUCTION LIVE VERIFIED)
 
 - The supplied `https://g.page/r/CVWLHyBkolhOEBM/review` and prior Keller review URL each redirected to a Google review page for Place ID `ChIJA-nAr3DXTYYRVYsfIGSiWE4` (HTTP 200 after redirects).

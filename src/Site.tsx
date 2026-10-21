@@ -45,7 +45,7 @@ export type SourcePage = {
 const nav = [
   ["Service Areas", "/service-areas/"],
   ["Rental Calculator", "/rental-calculator/"],
-  ["About Us", "/about-temporary-shower-rental/"],
+  ["About Us", "/about-us/"],
   ["Contact Us", "/contact-us/"],
 ];
 const locationPrefix = "/equipment-rental/shower-trailer/";

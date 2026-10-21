@@ -2,6 +2,10 @@
 
 This file consolidates current instructions so all tasks work from the same interpretation. Add dated clarifications rather than silently replacing earlier requirements.
 
+## 2026-10-22 public sitemap correction
+
+The owner asked for the sitemap to cover every currently live, indexable public page, including all states, the Service Areas hub, Texas and North Texas, About Us, and Contact Us. This supersedes the earlier 25-route batch limit for already rendered public pages. Keep the documented thin pages, empty blog, private dashboard, duplicate About alias, and regional city directories noindex and outside the sitemap. Give every sitemap URL a documented lastmod date. Do not submit the sitemap to Search Console until the owner reviews it. This direction does not release unrecovered legacy URLs or remove the full-migration quality gates.
+
 ## Location-page subject matter
 
 - Location pages must describe temporary base-camp and commercial/institutional deployment needs, not generic tourism or residential content.

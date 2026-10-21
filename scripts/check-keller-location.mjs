@@ -173,8 +173,15 @@ assert.equal($("meta[name=robots]").attr("content"), "index,follow");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 assert.equal(sitemapUrls.filter((url) => url === canonicalUrl).length, 1);
 assert.match(sitemap, /<loc>https:\/\/temporary-shower-rental\.com\/service-areas\/texas\/north-texas\/keller\/<\/loc><lastmod>2026-10-21<\/lastmod>/);
-assert.equal(sitemapUrls.length, 26);
-assert.equal(new Set(sitemapUrls).size, 26);
+assert.equal(sitemapUrls.length, 501);
+assert.equal(new Set(sitemapUrls).size, sitemapUrls.length);
+for (const route of ["/", "/service-areas/", "/service-areas/texas/", "/service-areas/texas/north-texas/", "/about-us/", "/contact-us/"]) {
+  assert.ok(sitemapUrls.includes(`https://temporary-shower-rental.com${route}`), `Missing public route: ${route}`);
+}
+for (const route of ["/blog/", "/seo-dashboard/", "/video/", "/about-temporary-shower-rental/", "/service-areas/texas/north-texas/cities/"]) {
+  assert.ok(!sitemapUrls.includes(`https://temporary-shower-rental.com${route}`), `Excluded route entered sitemap: ${route}`);
+}
+assert.equal((sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length, sitemapUrls.length);
 const robots = await readFile("dist/robots.txt", "utf8");
 assert.match(robots, /User-agent: \*\s+Allow: \/\s+Disallow: \/api\//);
 assert.ok(robots.includes("Sitemap: https://temporary-shower-rental.com/sitemap.xml"));
@@ -197,7 +204,7 @@ const result = {
   responseHeader: "PASS: canonical hosts exempt; preview and other hosts protected",
   robotsTxt: "PASS: public crawl policy and canonical sitemap reference",
   scope: "Local rendered candidate; no Google edits or deployment claimed",
-  indexing: "Owner-approved priority route; index,follow; self-canonical; included in sitemap alongside 25-page batch",
+  indexing: "Owner-approved priority route; index,follow; self-canonical; included in the public-page sitemap",
   onlineSubmission: "Disabled by existing site configuration; browser flow checked separately",
 };
 await mkdir("audit/keller-indexability-2026-10-02", { recursive: true });

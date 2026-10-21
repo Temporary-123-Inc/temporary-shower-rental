@@ -5,7 +5,7 @@
   "phoneDisplay": "+1 (888) 385-5513",
   "phoneE164": "+18883855513",
   "mode": "production",
-  "indexingScope": "homepage-and-service-areas",
+  "indexingScope": "published-public",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
   "priorityIndexingRoutes": [

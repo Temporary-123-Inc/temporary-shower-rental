@@ -1,7 +1,7 @@
 export const publicOrigin = "https://temporary-shower-rental.com";
 
 export type IndexingScope =
-  "full" | "homepage-and-service-areas" | "locations-and-priority-services";
+  "full" | "published-public" | "homepage-and-service-areas" | "locations-and-priority-services";
 
 // The first controlled production batch protects the canonical destinations
 // behind the 153 externally linked URLs in the 2026-09-18 backlink export.
@@ -35,7 +35,7 @@ export const authorityReleaseRoutes = [
 ] as const;
 
 export function routeInIndexingScope(path: string, scope: IndexingScope) {
-  if (scope === "full") return true;
+  if (scope === "full" || scope === "published-public") return true;
   if (
     scope === "locations-and-priority-services" &&
     (authorityReleaseRoutes as readonly string[]).includes(path)
