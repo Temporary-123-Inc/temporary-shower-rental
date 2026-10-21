@@ -3,13 +3,13 @@ import site from "../site.json" with { type: "json" };
 // Keep Keller's street address out of page text and schema until the owner confirms it.
 export const kellerLocation = {
   path: "/service-areas/texas/north-texas/keller/",
-  lastModified: "2026-10-20",
+  lastModified: "2026-10-21",
   regionPath: "/service-areas/texas/north-texas/",
   name: "Mobile Shower Trailer Rental",
   phoneDisplay: "(972) 544-6598",
   phoneE164: "+19725446598",
   hours: "Open 24 hours",
-  reviewUrl: "https://g.page/r/CVWLHyBkolhOECE/review",
+  reviewUrl: "https://g.page/r/CVWLHyBkolhOEBM/review",
   mapUrl: "https://maps.google.com/?cid=5645440683828284245",
   socialProfiles: [
     { name: "Facebook", url: "https://www.facebook.com/mobileshowertrailerrental" },

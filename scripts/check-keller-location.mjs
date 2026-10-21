@@ -29,7 +29,7 @@ assert.doesNotMatch($("main").text(), /888.{0,8}385|866.{0,8}455|\[TO FILL\]|\[d
 assert.equal($(".site-footer .footer-contact-name").length, 0);
 assert.equal($(".site-footer .footer-contact-address").length, 0);
 assert.equal($(".site-footer a[href^='tel:']").length, 0);
-assert.equal($("a[href='https://g.page/r/CVWLHyBkolhOECE/review']").length, 1);
+assert.equal($("a[href='https://g.page/r/CVWLHyBkolhOEBM/review']").length, 1);
 assert.equal($(".keller-actions a[href='/contact-us/?location=Keller%2C%20TX']").length, 2);
 const graph = JSON.parse($("script[type='application/ld+json']").text())["@graph"];
 assert.deepEqual(
@@ -172,7 +172,7 @@ const sitemap = await readFile("dist/sitemap.xml", "utf8");
 assert.equal($("meta[name=robots]").attr("content"), "index,follow");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 assert.equal(sitemapUrls.filter((url) => url === canonicalUrl).length, 1);
-assert.match(sitemap, /<loc>https:\/\/temporary-shower-rental\.com\/service-areas\/texas\/north-texas\/keller\/<\/loc><lastmod>2026-10-20<\/lastmod>/);
+assert.match(sitemap, /<loc>https:\/\/temporary-shower-rental\.com\/service-areas\/texas\/north-texas\/keller\/<\/loc><lastmod>2026-10-21<\/lastmod>/);
 assert.equal(sitemapUrls.length, 26);
 assert.equal(new Set(sitemapUrls).size, 26);
 const robots = await readFile("dist/robots.txt", "utf8");
