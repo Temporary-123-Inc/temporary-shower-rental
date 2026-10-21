@@ -1,6 +1,6 @@
 # Temporary123 Test Results
 
-## Public sitemap correction — 2026-10-22 (LOCAL PASS; PRODUCTION PENDING)
+## Public sitemap correction — 2026-10-22 (PRODUCTION LIVE VERIFIED)
 
 - `npm run build`: PASS; TypeScript, Vite and prerender produced 755 pages plus 404.
 - `npm run check:seo`: PASS; 756 rendered HTML documents, 102,853 internal links, 9,725 local image references, zero problems and zero pending migration links. All 501 sitemap URLs are indexable and self-canonical; the other 254 rendered routes remain noindex.
@@ -9,6 +9,9 @@
 - `node scripts/check-keller-location.mjs`: PASS; Keller occurs once, its lastmod is unchanged, and the required parent and company pages occur in the sitemap.
 - `npm run check:release`, final `npm run typecheck`, and `git diff --check`: PASS.
 - `npm test`: 61/62 passed in the concurrent run; the military-seal alt-text test exceeded its five-second limit under parallel typechecking and passed on an isolated rerun with a 15-second limit. Effective result: all 62 passed.
+- Commit `eb4f64c` was pushed to the official `codex/homepage-keller-copy` branch. Its clean archive built as READY production deployment `dpl_61cxagxpPtEbAd973pQKHuwQBat1`, then was promoted to the canonical domain.
+- The protected staged sitemap returned HTTP 200 and matched the local XML by SHA-256. The public `https://temporary-shower-rental.com/sitemap.xml` returned HTTP 200 and exactly matched the staged file: 501 URLs, 501 dates, all 50 state URLs, the requested parent/company URLs, and no intentionally excluded routes. Vercel inspection resolved the canonical domain to the same READY deployment ID.
+- Live Keller, North Texas, About Us and Contact Us each returned HTTP 200. Each live HTML file matched the staged response by SHA-256 and carried `index,follow` with the exact self-canonical. Live `robots.txt` named the canonical sitemap.
 - No Search Console submission or indexing request was made; the owner asked to review the sitemap first.
 
 ## Keller owner-supplied review URL — 2026-10-21 (PRODUCTION LIVE VERIFIED)
